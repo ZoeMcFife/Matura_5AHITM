@@ -1,0 +1,24 @@
+{
+  "example": "An Example for JSON",
+  "products":
+  [
+    {
+      "name": "chair",
+      "img": "chair.png",
+      "vendor":
+      {
+        "firstname": "Fox",
+        "lastname": "McCloud"
+      }
+    },
+    {
+      "name": "Vorpal Laserblaster of Pittenweem",
+      "img": "laserblaster.png",
+      "vendor":
+      {
+        "firstname": "Zargothrax",
+        "lastname": "Evil Wizard"
+      }
+    }
+  ]
+}

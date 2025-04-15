@@ -1,0 +1,49 @@
+/**
+ * Define the different thread states, which are New, Ready, Running,
+ * Timed Waiting, Waiting, Blocked, and Terminated
+ * Consider the task of the scheduler as well.
+ * Draw a corresponding state diagram.
+ */
+
+*** Thread States ***
+
+** NEW **
+A new Thread class has been created. Can't execute anything. Only start() method available.
+
+
+** READY / RUNNABLE **
+Start() method has been called. Thread is awaiting processor availability.
+If equal priority is present, time slots are assigned on a first-come, first-serve manner.
+
+* From RUNNING, WAITING, NEW, BLOCKED
+
+
+** RUNNING **
+In a running state, the thread is able to execute its functions.
+Thread scheduler selected this RUNNABLE thread.
+
+* From RUNNABLE
+
+
+** TIMED WAITING **
+Thread is stopped and waits for another thread to perform an action within a stipulated amount of time.
+
+* From RUNNABLE
+
+
+** WAITING **
+Thread is stopped and waits for another thread to perform an action within an indefinite amount of time.
+
+* From RUNNABLE
+
+
+** BLOCKED **
+Thread finished waiting and is now waiting for other another thread to stop locking onto an object that itself wants to hold a lock onto.
+
+* From WAITING, TIMED WAITING
+
+
+** TERMINATED **
+Thread exited the run() method or the stop() method has been used on it.
+
+* From RUNNING, RUNNABLE, WAITING, TIMED WAITING, BLOCKED, NEW
