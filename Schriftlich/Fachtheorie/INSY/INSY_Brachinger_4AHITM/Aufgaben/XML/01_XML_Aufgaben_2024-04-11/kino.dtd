@@ -1,0 +1,33 @@
+<!ELEMENT kino (standort, filme, spielplan)>
+
+<!ELEMENT standort (saal+)>
+
+<!ELEMENT saal (name)>
+
+<!ATTLIST saal kennung ID #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT filme (film+)>
+
+<!ELEMENT regie (#PCDATA)>
+
+<!ELEMENT darsteller (#PCDATA)>
+
+<!ELEMENT film (name, regie, darsteller, darsteller+)>
+
+<!ATTLIST film nr ID #REQUIRED>
+
+<!ELEMENT spielplan (auffuehrung*)>
+
+<!ELEMENT auffuehrung (ort*)>
+
+<!ELEMENT ort (#PCDATA)>
+
+<!ATTLIST auffuehrung datum CDATA #REQUIRED>
+
+<!ATTLIST auffuehrung film IDREF #REQUIRED>
+
+<!ATTLIST ort uhrzeit CDATA #REQUIRED>
+
+<!ATTLIST ort saal IDREF #REQUIRED>

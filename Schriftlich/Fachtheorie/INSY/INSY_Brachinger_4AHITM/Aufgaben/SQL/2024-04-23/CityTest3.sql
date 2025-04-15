@@ -1,0 +1,14 @@
+USE insyprocfuncuebung;
+
+DELIMITER $$
+DROP FUNCTION IF EXISTS CountCities3$$
+CREATE FUNCTION CountCities3() RETURNS INTEGER
+
+BEGIN
+   DECLARE cnt INTEGER;
+   SELECT COUNT(*) INTO cnt FROM city;
+   RETURN cnt;
+END $$
+DELIMITER $$;
+
+SELECT CountCities3();

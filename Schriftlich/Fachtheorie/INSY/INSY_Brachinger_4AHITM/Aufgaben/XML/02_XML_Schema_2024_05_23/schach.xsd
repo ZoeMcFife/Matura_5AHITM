@@ -1,0 +1,38 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="schach">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="eröffnung" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="weiß" type="weiß_typ"></xs:element>
+                        </xs:sequence>
+
+                        <xs:attribute name="name" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="weiß_typ" mixed="true">
+        <xs:sequence>
+            <xs:element name="schwarz" type="schwarz_typ" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="zug"></xs:attributeGroup>
+    </xs:complexType>
+
+    <xs:complexType name="schwarz_typ" mixed="true">
+        <xs:sequence>
+            <xs:element name="weiß" type="weiß_typ" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="zug"></xs:attributeGroup>
+    </xs:complexType>
+
+    <xs:attributeGroup name="zug">
+        <xs:attribute name="von" type="xs:string" use="required"></xs:attribute>
+        <xs:attribute name="nach" type="xs:string" use="required"></xs:attribute>
+        <xs:attribute name="schlägt" type="xs:boolean"></xs:attribute>
+    </xs:attributeGroup>
+
+</xs:schema>

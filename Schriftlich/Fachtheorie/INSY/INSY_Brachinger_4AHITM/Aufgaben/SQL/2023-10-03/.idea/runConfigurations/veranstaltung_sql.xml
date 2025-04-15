@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="veranstaltung.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+    <script-file value="$PROJECT_DIR$/veranstaltung.sql" />
+    <script-mode>FILE</script-mode>
+    <data-source id="653b4e35-efe4-4479-a02c-9195a46a5f07" />
+    <method v="2" />
+  </configuration>
+</component>

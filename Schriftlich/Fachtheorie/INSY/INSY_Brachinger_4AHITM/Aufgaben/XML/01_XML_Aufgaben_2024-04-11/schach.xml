@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schach>
+<eröffnung name="Englische eröffnung">
+<weiß von="c2" nach="c4">
+Englische Symmetrievariante:
+<schwarz von="c7" nach="c5"/>
+Sizilanisch im Anzuge:
+<schwarz von="e7" nach="e5"/>
+Neutraler Entwicklungszug:
+<schwarz von="g8" nach="f6"/>
+</weiß>
+</eröffnung>
+<eröffnung name="Damengambit">
+<weiß von="d2" nach="d4">
+<schwarz von="d7" nach="d5">
+<weiß von="c2" nach="c4">
+Angenommenes Damengambit:
+<schwarz von="d5" nach="c4" schlägt="true"/>
+Abgelehntes Damengambit:
+<schwarz von="e7" nach="e6"/>
+</weiß>
+</schwarz>
+</weiß>
+</eröffnung>
+<eröffnung name="Spanische eröffnung">
+<weiß von="e2" nach="e4">
+<schwarz von="e7" nach="e5">
+<weiß von="g1" nach="f3">
+<schwarz von="b8" nach="c6">
+<weiß von="f1" nach="b5"/>
+</schwarz>
+</weiß>
+</schwarz>
+</weiß>
+</eröffnung>
+</schach>

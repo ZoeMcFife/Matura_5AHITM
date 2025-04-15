@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="amongus.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+    <script-file value="$PROJECT_DIR$/amongus.sql" />
+    <script-mode>FILE</script-mode>
+    <data-source id="9cf08612-bdfa-4fa3-9133-eae9082fea04" />
+    <method v="2" />
+  </configuration>
+</component>

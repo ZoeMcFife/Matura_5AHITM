@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kino SYSTEM "kino.dtd">
+<kino>
+	<standort>
+		<saal kennung="am">
+			<name>Audi Max</name>
+		</saal>
+		<saal kennung="s2">
+			<name>Saal 2</name>
+		</saal>
+		<saal kennung="s3">
+			<name>Saal 3</name>
+		</saal>
+		<saal kennung="s4">
+			<name>Saal 4</name>
+		</saal>
+	</standort>
+	<filme>
+		<film nr="f123">
+			<name>Krieg der Sterne IV</name>
+			<regie>George Lucas</regie>
+			<darsteller>Mark Hamill</darsteller>
+			<darsteller>Harrison Ford</darsteller>
+		</film>
+		<film nr="f124">
+			<name>Der Herr der Ringe - Die Gefährten</name>
+			<regie>Peter Jackson</regie>
+			<darsteller>Elijah Wood</darsteller>
+			<darsteller>Ian McKellen</darsteller>
+		</film>
+		<film nr="f125">
+			<name>Der Pate</name>
+			<regie>Francis Ford Coppola</regie>
+			<darsteller>Marlon Brando</darsteller>
+			<darsteller>Al Pacino</darsteller>
+		</film>
+	</filme>
+	<spielplan>
+		<auffuehrung datum="2013-10-22" film="f123">
+			<ort uhrzeit="22:00" saal="am"/>
+			<ort uhrzeit="22:30" saal="s4"/>
+		</auffuehrung>
+		<auffuehrung datum="2013-10-22" film="f124">
+			<ort uhrzeit="19:15" saal="am"/>
+			<ort uhrzeit="21:00" saal="s2"/>
+			<ort uhrzeit="20:45" saal="s3"/>
+		</auffuehrung>
+		<auffuehrung datum="2013-10-22" film="f125">
+			<ort uhrzeit="20:15" saal="s3"/>
+		</auffuehrung>
+		<auffuehrung datum="2013-10-23" film="f123"/>
+	</spielplan>
+</kino>

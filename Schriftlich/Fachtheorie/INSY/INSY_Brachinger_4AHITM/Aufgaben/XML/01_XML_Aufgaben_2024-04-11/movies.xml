@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies>
+<movie url="http://www.imdb.com/?move=....">
+<title>Die Verurteilten</title>
+<releaseYear>1994</releaseYear>
+<imdbRating>9.2</imdbRating>
+<characters>
+<name>Tim Robbins</name>
+<name>Morgan Freeman</name>
+</characters>
+</movie>
+<movie url="http://www.imdb.com/?move=....">
+<title>Der Pate</title>
+<releaseYear>1972</releaseYear>
+<imdbRating>9.2</imdbRating>
+<characters>
+<name>Marlon Brando</name>
+<name>Al Pacino</name>
+</characters>
+</movie>
+<movie url="http://www.imdb.com/?move=....">
+<title>Der Pate 2</title>
+<releaseYear>1974</releaseYear>
+<imdbRating>9.0</imdbRating>
+<characters>
+<name>Al Pacino</name>
+<name>Robert De Niro</name>
+</characters>
+</movie>
+<movie url="http://www.imdb.com/?move=....">
+<title>Pulp Fiction</title>
+<releaseYear>1994</releaseYear>
+<imdbRating>8.9</imdbRating>
+<characters>
+<name>John Travolta</name>
+<name>Samuel L. Jackson</name>
+</characters>
+</movie>
+</movies>

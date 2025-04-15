@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE oper SYSTEM "oper.dtd">
+<oper>
+	<werke>
+		<werk id="w1">
+			<komponist>Verdi</komponist>
+			<name>La Traviata</name>
+			<urauffuehrung>1853</urauffuehrung>
+		</werk>
+		<werk id="w2">
+			<komponist>Puccini</komponist>
+			<name>Tosca</name>
+			<urauffuehrung>1900</urauffuehrung>
+		</werk>
+		<werk id="w3">
+			<komponist>Puccini</komponist>
+			<name>Turandot</name>
+			<urauffuehrung>1926</urauffuehrung>
+		</werk>
+		<werk id="w4">
+			<komponist>Mozart</komponist>
+			<name>Don Giovanni</name>
+			<urauffuehrung>1787</urauffuehrung>
+		</werk>
+	</werke>
+	<inszenierungen>
+		<inszenierung id="i1" werk="w4">
+			<regie>Willy Decker</regie>
+			<ort>Sachsische Staatsoper</ort>
+			<premiere>1993</premiere>
+		</inszenierung>
+			<inszenierung id="i2" werk="w1">
+			<regie>Hans Gratzer</regie>
+			<ort>Wiener Volksoper</ort>
+			<premiere>2007</premiere>
+		</inszenierung>
+		<inszenierung id="i3" werk="w2">
+			<regie>Margarethe Wallmann</regie>
+			<ort>Wiener Staatsoper</ort>
+			<premiere>1957</premiere>
+		</inszenierung>
+	</inszenierungen>
+	<wertungen>
+		<bewertung inszenierung="i1" wert="2"/>
+		<bewertung inszenierung="i3" wert="5"/>
+	</wertungen>
+</oper>
