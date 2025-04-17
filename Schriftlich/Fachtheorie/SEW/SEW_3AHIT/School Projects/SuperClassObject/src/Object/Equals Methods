@@ -1,0 +1,90 @@
+Java Compare Methods
+
+
+
+** String **
+
+
+The equals method of String returns True if the Strings are equal.
+
+public boolean equals(Object anObject)
+{
+    if (this == anObject)
+    {
+        return true;
+    }
+
+    return (anObject instanceof String aString)
+                && (!COMPACT_STRINGS || this.coder == aString.coder)
+                && StringLatin1.equals(value, aString.value);
+}
+
+It uses the equals method of the StringLatin1 class which compares two byte arrays.
+
+public static boolean equals(byte[] value, byte[] other)
+{
+    if (value.length == other.length)
+    {
+        for (int i = 0; i < value.length; i++)
+        {
+            if (value[i] != other[i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    return false;
+}
+
+
+
+** StringBuilder **
+
+
+StringBuilder has no equals implementation. It uses the equals implementation of Object.
+
+
+
+** Rectangle **
+
+
+Checks if two rectangles have the same corner, width and height. Returns true if they are the same.
+
+public boolean equals(Object obj)
+{
+    if (obj instanceof Rectangle)
+    {
+      Rectangle r = (Rectangle)obj;
+      return ((x == r.x) && (y == r.y) && (width == r.width) && (height == r.height));
+    }
+
+    return super.equals(obj);
+}
+
+
+
+** URL **
+
+
+URL equals calls the equals method of URLStreamHandler.
+
+URL
+public boolean equals(Object obj)
+{
+    if (!(obj instanceof URL u2))
+        return false;
+
+    return handler.equals(this, u2);
+}
+
+This method compares the references of both URLs.
+sameFile() compares the protocol, file, port and hosts of the URLs.
+If all are equal, it returns true.
+
+URLStreamHandler
+protected boolean equals(URL u1, URL u2)
+{
+    return Objects.equals(u1.getRef(), u2.getRef()) && sameFile(u1, u2);
+}
+
