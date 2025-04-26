@@ -89,23 +89,28 @@ ORDER BY
         JOIN weinkeller.protokoll p on w.nr = p.nr
     WHERE
         verwendung = 'Eigenbedarf'
+        AND
+        p.anzahl >= all
+           (
+                SELECT (p.anzahl)
+                FROM
+                    winzer as z JOIN weinkeller.wein w on z.wnr = w.wnr
+                    JOIN weinkeller.protokoll p on w.nr = p.nr
+                WHERE
+                    verwendung = 'Eigenbedarf'
+                GROUP BY
+                    Z.wnr, anzahl
+            )
     GROUP BY
-        Z.wnr
-    HAVING
-        SUM(p.anzahl) = (
-        SELECT
-            MAX( SUM(p2.anzahl) )
-        FROM
-            winzer AS z2
-        JOIN
-            weinkeller.wein w2 ON z2.wnr = w2.wnr
-        JOIN
-            weinkeller.protokoll p2 ON w2.nr = p2.nr
-        WHERE
-            p2.verwendung = 'Eigenbedarf'
-        GROUP BY
-            z2.name
-            );
+        Z.wnr, anzahl;
+
+insert into winzer values (9,'Zargothrax', 'Fife', '666', 'Evil Fortress', null);
+insert into keller value (9, 3, 3, 3);
+insert into wein values(9, 'Evil Wine', 'Wine', 1992, 10, 230, 9, 9);
+insert into protokoll values (8, 9, '2003-11-03', 'Eigenbedarf', 4);
+insert into keller value (10, 3, 12, 3);
+insert into wein values(10, 'Evil Wine 2: Electric Boogaloo', 'Wine', 1992, 6, 12, 9, 10);
+insert into protokoll values (9, 10, '2003-11-03', 'Eigenbedarf', 3);
 
 -- 5) Geben Sie für jeden Winzer aus, wie viele günstige (Preis ≤ 10 Euro, Preisklasse niedrig),
 --    wie viele im Mittelfeld (10 Euro - 20 Euro, Preisklasse mittel) und
