@@ -47,6 +47,30 @@ ORDER BY AVG DESC;
 --       7 | Riesling Federspiel    | Freie Weingarten Wachau
 --       8 | Chardonnay             | Weingut Biegler
 
+SELECT
+  w.nr,
+  w.bezzeichnung,
+  z.name
+FROM
+  wein AS w
+  JOIN winzer AS z ON w.wnr = z.wnr
+WHERE
+  NOT EXISTS (
+    SELECT 1
+    FROM protokoll AS p
+    WHERE p.nr = w.nr
+      AND p.verwendung = 'Eigenbedarf'
+      AND YEAR(p.pDatum) = 2003
+  )
+  AND EXISTS (
+    SELECT 1
+    FROM wein AS w2
+    WHERE w2.wnr = z.wnr
+      AND w2.anzahl > 0
+  )
+ORDER BY
+  w.nr;
+
 -- 4) Suchen Sie die Winzer, von denen der Kellereigentümer die meisten Flaschen getrunken
 --    (Verwendung in Protokoll = 'Eigenbedarf') hat.
 --    Geben Sie jeweils den Namen des Winzers sowie die Gesamtkosten
@@ -55,6 +79,33 @@ ORDER BY AVG DESC;
 --      name                    | anzahl | kosten
 --      ------------------------+--------+--------
 --      Weingut F.X. Pichler    | 4      | 112.00
+
+    SELECT
+        z.name,
+        p.anzahl,
+        sum(w.preis) AS kosten
+    FROM
+        winzer as z JOIN weinkeller.wein w on z.wnr = w.wnr
+        JOIN weinkeller.protokoll p on w.nr = p.nr
+    WHERE
+        verwendung = 'Eigenbedarf'
+    GROUP BY
+        Z.wnr
+    HAVING
+        SUM(p.anzahl) = (
+        SELECT
+            MAX( SUM(p2.anzahl) )
+        FROM
+            winzer AS z2
+        JOIN
+            weinkeller.wein w2 ON z2.wnr = w2.wnr
+        JOIN
+            weinkeller.protokoll p2 ON w2.nr = p2.nr
+        WHERE
+            p2.verwendung = 'Eigenbedarf'
+        GROUP BY
+            z2.name
+            );
 
 -- 5) Geben Sie für jeden Winzer aus, wie viele günstige (Preis ≤ 10 Euro, Preisklasse niedrig),
 --    wie viele im Mittelfeld (10 Euro - 20 Euro, Preisklasse mittel) und
