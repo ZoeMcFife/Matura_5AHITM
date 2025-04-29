@@ -1,0 +1,15 @@
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\bin\Debug\net8.0\BuchiBank.exe
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\bin\Debug\net8.0\BuchiBank.deps.json
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\bin\Debug\net8.0\BuchiBank.runtimeconfig.json
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\bin\Debug\net8.0\BuchiBank.dll
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\bin\Debug\net8.0\BuchiBank.pdb
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\obj\Debug\net8.0\BuchiBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\obj\Debug\net8.0\BuchiBank.AssemblyInfoInputs.cache
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\obj\Debug\net8.0\BuchiBank.AssemblyInfo.cs
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\obj\Debug\net8.0\BuchiBank.csproj.CoreCompileInputs.cache
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\obj\Debug\net8.0\BuchiBank.sourcelink.json
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\obj\Debug\net8.0\BuchiBank.dll
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\obj\Debug\net8.0\refint\BuchiBank.dll
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\obj\Debug\net8.0\BuchiBank.pdb
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\obj\Debug\net8.0\BuchiBank.genruntimeconfig.cache
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\BuchiBank\BuchiBank\BuchiBank\obj\Debug\net8.0\ref\BuchiBank.dll

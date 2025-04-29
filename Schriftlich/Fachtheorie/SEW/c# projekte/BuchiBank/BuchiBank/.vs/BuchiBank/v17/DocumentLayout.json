@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|c:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\buchibank\\buchibank\\buchibank\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|solutionrelative:buchibank\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|c:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\buchibank\\buchibank\\buchibank\\withdrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|solutionrelative:buchibank\\withdrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|c:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\buchibank\\buchibank\\buchibank\\depositer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|solutionrelative:buchibank\\depositer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|c:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\buchibank\\buchibank\\buchibank\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|solutionrelative:buchibank\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|c:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\buchibank\\buchibank\\buchibank\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|solutionrelative:buchibank\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|c:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\buchibank\\buchibank\\buchibank\\bankaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|solutionrelative:buchibank\\bankaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|c:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\buchibank\\buchibank\\buchibank\\buchibank.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{691EA706-1A65-4CF4-A4C5-ED9F3BB0603D}|BuchiBank\\BuchiBank.csproj|solutionrelative:buchibank\\buchibank.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BuchiBank",
+              "DocumentMoniker": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\BuchiBank.csproj",
+              "RelativeDocumentMoniker": "BuchiBank\\BuchiBank.csproj",
+              "ToolTip": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\BuchiBank.csproj",
+              "RelativeToolTip": "BuchiBank\\BuchiBank.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-29T09:15:27.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Withdrawer.cs",
+              "DocumentMoniker": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\Withdrawer.cs",
+              "RelativeDocumentMoniker": "BuchiBank\\Withdrawer.cs",
+              "ToolTip": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\Withdrawer.cs",
+              "RelativeToolTip": "BuchiBank\\Withdrawer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T10:34:00.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Worker.cs",
+              "DocumentMoniker": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\Worker.cs",
+              "RelativeDocumentMoniker": "BuchiBank\\Worker.cs",
+              "ToolTip": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\Worker.cs",
+              "RelativeToolTip": "BuchiBank\\Worker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T10:20:54.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Depositer.cs",
+              "DocumentMoniker": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\Depositer.cs",
+              "RelativeDocumentMoniker": "BuchiBank\\Depositer.cs",
+              "ToolTip": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\Depositer.cs",
+              "RelativeToolTip": "BuchiBank\\Depositer.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T10:14:05.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\Transaction.cs",
+              "RelativeDocumentMoniker": "BuchiBank\\Transaction.cs",
+              "ToolTip": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\Transaction.cs",
+              "RelativeToolTip": "BuchiBank\\Transaction.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T09:19:29.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BankAccount.cs",
+              "DocumentMoniker": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\BankAccount.cs",
+              "RelativeDocumentMoniker": "BuchiBank\\BankAccount.cs",
+              "ToolTip": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\BankAccount.cs",
+              "RelativeToolTip": "BuchiBank\\BankAccount.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAuwHYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T09:15:41.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\Program.cs",
+              "RelativeDocumentMoniker": "BuchiBank\\Program.cs",
+              "ToolTip": "C:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\BuchiBank\\BuchiBank\\BuchiBank\\Program.cs",
+              "RelativeToolTip": "BuchiBank\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T09:13:58.784Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
