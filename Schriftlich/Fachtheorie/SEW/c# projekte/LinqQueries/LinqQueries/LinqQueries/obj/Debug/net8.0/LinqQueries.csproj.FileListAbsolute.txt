@@ -1,0 +1,15 @@
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\bin\Debug\net8.0\LinqQueries.exe
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\bin\Debug\net8.0\LinqQueries.deps.json
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\bin\Debug\net8.0\LinqQueries.runtimeconfig.json
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\bin\Debug\net8.0\LinqQueries.dll
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\bin\Debug\net8.0\LinqQueries.pdb
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\obj\Debug\net8.0\LinqQueries.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\obj\Debug\net8.0\LinqQueries.AssemblyInfoInputs.cache
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\obj\Debug\net8.0\LinqQueries.AssemblyInfo.cs
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\obj\Debug\net8.0\LinqQueries.csproj.CoreCompileInputs.cache
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\obj\Debug\net8.0\LinqQueries.sourcelink.json
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\obj\Debug\net8.0\LinqQueries.dll
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\obj\Debug\net8.0\refint\LinqQueries.dll
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\obj\Debug\net8.0\LinqQueries.pdb
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\obj\Debug\net8.0\LinqQueries.genruntimeconfig.cache
+C:\GitHub\Matura_5AHITM\Schriftlich\Fachtheorie\SEW\c# projekte\LinqQueries\LinqQueries\LinqQueries\obj\Debug\net8.0\ref\LinqQueries.dll
