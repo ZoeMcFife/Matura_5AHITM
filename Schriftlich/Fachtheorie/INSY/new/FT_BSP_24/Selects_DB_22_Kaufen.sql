@@ -45,7 +45,7 @@ FROM
     kunden as k
 WHERE
     KndNr NOT IN
-    (SELECT KndNr FROM kunden NATURAL JOIN kreditkarten)
+    (SELECT KndNr FROM kunden NATURAL JOIN kreditkarten);
 
 /*
 d)
@@ -70,4 +70,5 @@ sollen gelöscht werden.
 Erstellen Sie das nötige DML-Statement.
 */
 
-DELETE kreditkarten
+DELETE FROM kreditkarten
+WHERE Ablaufdatum  < '2024-01-01';
