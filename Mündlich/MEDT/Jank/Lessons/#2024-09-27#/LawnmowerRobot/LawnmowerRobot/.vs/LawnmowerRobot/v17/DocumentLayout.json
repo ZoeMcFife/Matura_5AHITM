@@ -1,0 +1,380 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\addposition.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\addposition.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LawnmowerRobotContext_b0e31715_9696_4c90_9ae3_3307a27c07ea/True/SqlTable/dbo.Robot.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LawnmowerRobotContext_b0e31715_9696_4c90_9ae3_3307a27c07ea/True/SqlTable/dbo.Positions.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\addposition.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\addposition.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\model\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\model\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\model\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\model\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\data\\lawnmowerrobotcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\data\\lawnmowerrobotcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\pages\\robotpages\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\pages\\robotpages\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\migrations\\20241001121525_initial3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\migrations\\20241001121525_initial3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\migrations\\20241001120807_initial2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\migrations\\20241001120807_initial2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|c:\\github\\5ahitm\\medt\\jank\\lessons\\#2024-09-27#\\lawnmowerrobot\\lawnmowerrobot\\lawnmowerrobot\\migrations\\20241001114830_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61F0FA39-8FE3-4F9F-AF1A-1A0875087BC7}|LawnmowerRobot\\LawnmowerRobot.csproj|solutionrelative:lawnmowerrobot\\migrations\\20241001114830_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.Robot [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LawnmowerRobotContext_b0e31715_9696_4c90_9ae3_3307a27c07ea/True/SqlTable/dbo.Robot.sql",
+              "ToolTip": "dbo.Robot [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-11T09:54:59.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddPosition.cshtml.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\AddPosition.cshtml.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\AddPosition.cshtml.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\AddPosition.cshtml.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\AddPosition.cshtml.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T12:23:03.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Details.cshtml",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\Details.cshtml",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Details.cshtml",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\Details.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAcwEgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T11:34:36.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Position.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Model\\Position.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Model\\Position.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Model\\Position.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Model\\Position.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:28:02.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddPosition.cshtml",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\AddPosition.cshtml",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\AddPosition.cshtml",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\AddPosition.cshtml",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\AddPosition.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T12:22:08.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbo.Positions [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LawnmowerRobotContext_b0e31715_9696_4c90_9ae3_3307a27c07ea/True/SqlTable/dbo.Positions.sql",
+              "ToolTip": "dbo.Positions [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-11T09:59:09.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Robot.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Model\\Robot.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Model\\Robot.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Model\\Robot.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Model\\Robot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T09:26:17.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\Index.cshtml",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T11:30:22.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\Details.cshtml.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Details.cshtml.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\Details.cshtml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:34:36.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Program.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Program.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Program.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwCYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T09:27:03.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Index.cshtml",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\Index.cshtml",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Index.cshtml",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T11:34:37.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\Index.cshtml.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Index.cshtml.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:34:37.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Edit.cshtml",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\Edit.cshtml",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Edit.cshtml",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T11:34:36.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LawnmowerRobotContext.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Data\\LawnmowerRobotContext.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Data\\LawnmowerRobotContext.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Data\\LawnmowerRobotContext.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Data\\LawnmowerRobotContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:34:36.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\Create.cshtml.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Create.cshtml.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\Create.cshtml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAcwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:34:36.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Create.cshtml",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\Create.cshtml",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Create.cshtml",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\Create.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T11:34:36.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\Delete.cshtml.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Delete.cshtml.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\Delete.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:34:37.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Delete.cshtml",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\Delete.cshtml",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Delete.cshtml",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T11:34:36.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20241001121525_Initial3.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Migrations\\20241001121525_Initial3.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Migrations\\20241001121525_Initial3.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Migrations\\20241001121525_Initial3.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Migrations\\20241001121525_Initial3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T12:15:25.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20241001120807_Initial2.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Migrations\\20241001120807_Initial2.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Migrations\\20241001120807_Initial2.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Migrations\\20241001120807_Initial2.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Migrations\\20241001120807_Initial2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T12:08:07.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20241001114830_Initial.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Migrations\\20241001114830_Initial.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Migrations\\20241001114830_Initial.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Migrations\\20241001114830_Initial.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Migrations\\20241001114830_Initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:48:30.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "LawnmowerRobot\\Pages\\RobotPages\\Edit.cshtml.cs",
+              "ToolTip": "C:\\GitHub\\5AHITM\\MEDT\\Jank\\Lessons\\#2024-09-27#\\LawnmowerRobot\\LawnmowerRobot\\LawnmowerRobot\\Pages\\RobotPages\\Edit.cshtml.cs",
+              "RelativeToolTip": "LawnmowerRobot\\Pages\\RobotPages\\Edit.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:34:36.673Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+﻿@page
+@model LawnmowerRobot.Pages.RobotPages.AddPositionModel
+
+@{
+    ViewData["Title"] = "Add Position";
+}
+
+<h1>Add Position for @Model.Robot.Name</h1>
+
+<h4>Position</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Position.Latitude" class="control-label"></label>
+                <input asp-for="Position.Latitude" class="form-control" />
+                <span asp-validation-for="Position.Latitude" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Position.Longitude" class="control-label"></label>
+                <input asp-for="Position.Longitude" class="form-control" />
+                <span asp-validation-for="Position.Longitude" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Position.Battery" class="control-label"></label>
+                <input asp-for="Position.Battery" class="form-control" />
+                <span asp-validation-for="Position.Battery" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Position.Event" class="control-label"></label>
+                <input asp-for="Position.Event" class="form-control" />
+                <span asp-validation-for="Position.Event" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" asp-route-Id="@Model.Robot.Id" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

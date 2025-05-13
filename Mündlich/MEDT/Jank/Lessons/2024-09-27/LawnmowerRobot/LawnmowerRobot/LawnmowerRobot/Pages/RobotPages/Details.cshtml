@@ -1,0 +1,88 @@
+﻿@page
+@model LawnmowerRobot.Pages.RobotPages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+
+
+<h1>Details</h1>
+
+<div>
+    <h4>Robot</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Robot.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Robot.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Robot.Type)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Robot.Type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Robot.LastUse)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Robot.LastUse)
+        </dd>
+    </dl>
+    
+    <hr />
+
+    <h3>Positions</h3>
+
+    <ul>
+        @foreach (var position in Model.Positions)
+        {
+            <li>@position.Latitude - @position.Longitude | Battery: @position.Battery | Event: @position.Event </li>
+        }
+    </ul>
+
+    <a asp-page="./AddPosition" asp-route-id="@Model.Robot.Id">Add Position</a>
+
+</div>
+
+<div id="map" style="height: 400px; width: 100%;"></div>
+
+
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Robot?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+<script>
+    var map = L.map('map').setView([51.505, -0.09], 13); // default to London; adjust as needed
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    @foreach (var position in Model.Positions)
+    {
+        <text>
+                L.marker([@position.Latitude, @position.Longitude]).addTo(map)
+                .bindPopup('Battery: @position.Battery%<br>Event: @position.Event');
+        </text>
+    }
+
+        // Fit the map to the bounds of all markers (optional but recommended)
+        var bounds = new L.LatLngBounds(
+    @foreach (var position in Model.Positions)
+    {
+        <text>
+                new L.LatLng(@position.Latitude, @position.Longitude),
+        </text>
+    }
+        );
+    map.fitBounds(bounds);
+</script>
