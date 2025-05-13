@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1610435120 source:c:\users\redcr\onedrive\school\sew\c\sewwuerfel\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+

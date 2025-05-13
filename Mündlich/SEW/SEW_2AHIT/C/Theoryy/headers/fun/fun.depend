@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1645618356 source:c:\users\redcr\onedrive\school\sew\c\theoryy\headers\fun\main.c
+	"bib.h"
+
+1645618318 source:c:\users\redcr\onedrive\school\sew\c\theoryy\headers\fun\fun.c
+	<stdio.h>
+	"bib.h"
+
+1645618321 c:\users\redcr\onedrive\school\sew\c\theoryy\headers\fun\bib.h
+

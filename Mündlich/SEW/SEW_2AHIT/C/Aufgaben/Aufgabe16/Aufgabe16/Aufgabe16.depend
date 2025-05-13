@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1645623232 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe16\aufgabe16\main.c
+	<stdio.h>
+	<stdlib.h>
+	"library.h"
+
+1645621853 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe16\aufgabe16\count.c
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	"library.h"
+
+1645622262 c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe16\aufgabe16\library.h
+
+1645622249 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe16\aufgabe16\functions.c
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	"library.h"
+
+1645868971 source:c:\users\redcr\iclouddrive\school\sew\c\aufgaben\aufgabe16\aufgabe16\functions.c
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	"library.h"
+
+1645868971 c:\users\redcr\iclouddrive\school\sew\c\aufgaben\aufgabe16\aufgabe16\library.h
+
+1645868971 source:c:\users\redcr\iclouddrive\school\sew\c\aufgaben\aufgabe16\aufgabe16\main.c
+	<stdio.h>
+	<stdlib.h>
+	"library.h"
+

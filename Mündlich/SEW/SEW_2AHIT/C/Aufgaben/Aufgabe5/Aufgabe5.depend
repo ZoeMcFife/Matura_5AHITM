@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1635948085 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<windows.h>
+	<stdbool.h>
+	<string.h>
+	<unistd.h>
+

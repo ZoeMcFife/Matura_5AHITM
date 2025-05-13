@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1636365759 source:c:\users\redcr\onedrive\school\sew\c\theoryy\ fread\fread\main.c
+	<stdio.h>
+	<stdlib.h>
+

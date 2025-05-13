@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1606807419 source:c:\users\redcr\onedrive\school\sew\c\flaechenberechnung\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

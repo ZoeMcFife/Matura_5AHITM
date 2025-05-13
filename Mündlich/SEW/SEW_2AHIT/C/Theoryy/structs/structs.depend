@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1631526544 source:c:\users\redcr\onedrive\school\sew\c\theoryy\structs\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+

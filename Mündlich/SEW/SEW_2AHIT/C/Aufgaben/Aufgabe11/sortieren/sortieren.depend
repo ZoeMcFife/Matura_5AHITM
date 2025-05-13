@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1639575588 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe11\sortieren\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

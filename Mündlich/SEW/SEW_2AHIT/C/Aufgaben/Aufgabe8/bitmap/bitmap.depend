@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1638133010 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe8\bitmap\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<windows.h>
+	<time.h>
+	<unistd.h>
+

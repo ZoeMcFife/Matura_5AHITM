@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1637155788 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe 7\chat-write\main.c
+	<stdio.h>
+	<stdlib.h>
+	"../ConFun.h"
+	<ctype.h>
+	<string.h>
+
+1637150679 c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe 7\confun.h
+	<windows.h>
+	<conio.h>
+

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1634284575 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\beispiele\beispiel2\beispiel2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<ctype.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1638876796 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe9\sortingalgo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

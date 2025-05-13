@@ -1,0 +1,4 @@
+Quellcode
+Präprozzesor
+Compiler
+Linker

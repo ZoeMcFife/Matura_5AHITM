@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1643810146 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe14\aufgabe14\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<stdbool.h>
+	<ctype.h>
+	<unistd.h>
+	"ConFun.h"
+	<windows.h>
+
+1643361189 c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe14\aufgabe14\confun.h
+	<windows.h>
+	<conio.h>
+

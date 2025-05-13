@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1632130294 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe2\beispiel3\structs2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

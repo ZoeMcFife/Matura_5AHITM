@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1624344978 source:c:\users\redcr\onedrive\school\sew\c\highscore\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

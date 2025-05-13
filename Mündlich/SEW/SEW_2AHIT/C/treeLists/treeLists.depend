@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1648455747 source:c:\users\redcr\iclouddrive\school\sew\c\treelists\main.c
+	<stdio.h>
+	<stdlib.h>
+	"tree_and_list.h"
+
+1646216853 c:\users\redcr\iclouddrive\school\sew\c\treelists\tree_and_list.h
+
+1646216588 source:c:\users\redcr\iclouddrive\school\sew\c\treelists\tree_and_list.c
+	<stdio.h>
+	<stdlib.h>
+	"tree_and_list.h"
+

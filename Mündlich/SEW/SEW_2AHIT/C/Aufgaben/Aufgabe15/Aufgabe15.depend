@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1645017711 source:c:\users\redcr\onedrive\school\sew\c\aufgaben\aufgabe15\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+

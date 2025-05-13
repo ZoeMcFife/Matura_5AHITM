@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1606807722 source:c:\users\redcr\onedrive\school\sew\c\temperaturberechnungen\main.c
+	<stdio.h>
+	<stdlib.h>
+

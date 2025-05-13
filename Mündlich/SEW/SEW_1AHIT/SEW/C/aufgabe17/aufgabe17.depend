@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1620129014 source:c:\users\redcr\onedrive\school\sew\c\aufgabe17\main.c
+	<stdio.h>
+	<stdlib.h>
+	"conioex.h"
+	<stdbool.h>
+
+1612860291 c:\users\redcr\onedrive\school\sew\c\aufgabe17\conioex.h
+	<conio.h>
+	<windows.h>
+
