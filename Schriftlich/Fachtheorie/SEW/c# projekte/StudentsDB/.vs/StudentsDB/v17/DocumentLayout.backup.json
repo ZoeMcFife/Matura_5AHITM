@@ -1,0 +1,270 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\studentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\studentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\model\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\model\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\view\\controls\\classcombobox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\view\\controls\\classcombobox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\view\\controls\\classcombobox.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\view\\controls\\classcombobox.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\view\\controls\\classedititem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\view\\controls\\classedititem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\view\\controls\\studentviewitem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\view\\controls\\studentviewitem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\view\\controls\\createclassview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\view\\controls\\createclassview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\view\\controls\\createstudentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\view\\controls\\createstudentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\view\\controls\\studentedititem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\view\\controls\\studentedititem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\view\\studentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\view\\studentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|x:\\github\\matura_5ahitm\\schriftlich\\fachtheorie\\sew\\c# projekte\\studentsdb\\studentsdb\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D6D52809-762B-428E-BD1D-602D6E0B8F84}|StudentsDB\\StudentsDB.csproj|solutionrelative:studentsdb\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 268,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "StudentsDB\\AssemblyInfo.cs",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\AssemblyInfo.cs",
+              "RelativeToolTip": "StudentsDB\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T11:41:36.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClassComboBox.xaml.cs",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\ClassComboBox.xaml.cs",
+              "RelativeDocumentMoniker": "StudentsDB\\View\\Controls\\ClassComboBox.xaml.cs",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\ClassComboBox.xaml.cs*",
+              "RelativeToolTip": "StudentsDB\\View\\Controls\\ClassComboBox.xaml.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T11:22:25.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClassComboBox.xaml",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\ClassComboBox.xaml",
+              "RelativeDocumentMoniker": "StudentsDB\\View\\Controls\\ClassComboBox.xaml",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\ClassComboBox.xaml*",
+              "RelativeToolTip": "StudentsDB\\View\\Controls\\ClassComboBox.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-03T11:13:19.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateClassView.xaml",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\CreateClassView.xaml",
+              "RelativeDocumentMoniker": "StudentsDB\\View\\Controls\\CreateClassView.xaml",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\CreateClassView.xaml",
+              "RelativeToolTip": "StudentsDB\\View\\Controls\\CreateClassView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-03T10:52:40.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "StudentViewItem.xaml",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\StudentViewItem.xaml",
+              "RelativeDocumentMoniker": "StudentsDB\\View\\Controls\\StudentViewItem.xaml",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\StudentViewItem.xaml",
+              "RelativeToolTip": "StudentsDB\\View\\Controls\\StudentViewItem.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-03T10:52:15.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClassEditItem.xaml",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\ClassEditItem.xaml",
+              "RelativeDocumentMoniker": "StudentsDB\\View\\Controls\\ClassEditItem.xaml",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\ClassEditItem.xaml",
+              "RelativeToolTip": "StudentsDB\\View\\Controls\\ClassEditItem.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-03T10:51:59.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class.cs",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\Model\\Class.cs",
+              "RelativeDocumentMoniker": "StudentsDB\\Model\\Class.cs",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\Model\\Class.cs",
+              "RelativeToolTip": "StudentsDB\\Model\\Class.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:44:52.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentContext.cs",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\StudentContext.cs",
+              "RelativeDocumentMoniker": "StudentsDB\\StudentContext.cs",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\StudentContext.cs*",
+              "RelativeToolTip": "StudentsDB\\StudentContext.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:29:33.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "StudentsDB\\MainWindow.xaml.cs",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "StudentsDB\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:25:24.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateStudentView.xaml",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\CreateStudentView.xaml",
+              "RelativeDocumentMoniker": "StudentsDB\\View\\Controls\\CreateStudentView.xaml",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\CreateStudentView.xaml",
+              "RelativeToolTip": "StudentsDB\\View\\Controls\\CreateStudentView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-03T10:52:29.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "StudentsDB\\MainWindow.xaml",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\MainWindow.xaml",
+              "RelativeToolTip": "StudentsDB\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-03T10:25:25.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StudentEditItem.xaml",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\StudentEditItem.xaml",
+              "RelativeDocumentMoniker": "StudentsDB\\View\\Controls\\StudentEditItem.xaml",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\Controls\\StudentEditItem.xaml",
+              "RelativeToolTip": "StudentsDB\\View\\Controls\\StudentEditItem.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-03T10:51:29.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StudentView.xaml",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\StudentView.xaml",
+              "RelativeDocumentMoniker": "StudentsDB\\View\\StudentView.xaml",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\View\\StudentView.xaml*",
+              "RelativeToolTip": "StudentsDB\\View\\StudentView.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-03T10:49:34.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Student.cs",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\Model\\Student.cs",
+              "RelativeDocumentMoniker": "StudentsDB\\Model\\Student.cs",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\Model\\Student.cs*",
+              "RelativeToolTip": "StudentsDB\\Model\\Student.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:44:45.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "App.xaml",
+              "DocumentMoniker": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\App.xaml",
+              "RelativeDocumentMoniker": "StudentsDB\\App.xaml",
+              "ToolTip": "X:\\GitHub\\Matura_5AHITM\\Schriftlich\\Fachtheorie\\SEW\\c# projekte\\StudentsDB\\StudentsDB\\App.xaml",
+              "RelativeToolTip": "StudentsDB\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-03T10:32:12.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
