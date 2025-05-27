@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Carbon Dioxide Calculator</title>
+</head>
+<body>
+<header>
+    <h1>Carbon Dioxide Calculator</h1>
+</header>
+<main>
+    <section>
+        <h2>Calculator</h2>
+        <div id="carbonCalculator">
+            <label for="startPosition">Start Position</label>
+            <input type="text" id="startPosition" name="startPosition" required>
+
+            <label for="endPosition">End Position</label>
+            <input type="text" id="endPosition" name="endPosition" required>
+
+            <button onclick="calculateRoute()">Calculate</button>
+
+            <table id="vehicleTable">
+                <thead>
+                <tr>
+                    <th>Vehicle Type</th>
+                    <th>Distance</th>
+                    <th>CO2</th>
+                </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+            </table>
+            <p id="hint">click on row to show map</p>
+        </div>
+
+        <div id="map" style="height: 30rem; width: 30rem;"></div>
+        <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD87uQegogzfvRyDNaG8fgjJFWQKkWqtto&v=weekly"
+                defer
+        ></script>
+        <script src="script.js" defer></script>
+
+    </section>
+</main>
+
+
+</body>
+</html>

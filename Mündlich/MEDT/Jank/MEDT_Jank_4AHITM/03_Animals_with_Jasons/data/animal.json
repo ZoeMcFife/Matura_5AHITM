@@ -1,0 +1,32 @@
+{
+  "animals": [
+    {
+      "name": "Bingus",
+      "img": "cat.png",
+      "description": "evil incarnate"
+    },
+    {
+      "name": "Subi Imposter",
+      "img": "dog.jpg",
+      "description": "omg subi",
+      "partner": [{"firstname": "Zoe", "lastname": "McFife"}]
+    },
+    {
+      "name": "FOXFOX",
+      "img": "fox.jpg",
+      "description": "fop",
+      "partner": [{"firstname": "fox", "lastname": "fox"}]
+    },
+    {
+      "name": "Bazinga",
+      "img": "husky.png",
+      "description": "NEIL CICIRIEAGE LEMOn Demon"
+    },
+    {
+      "name": "RAWR",
+      "img": "lion.jpg",
+      "description": "i am a lion",
+      "partner": [{"firstname": "LION", "lastname": "OMG"}]
+    }
+  ]
+}

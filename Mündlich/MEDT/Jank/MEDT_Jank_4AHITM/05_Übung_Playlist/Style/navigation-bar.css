@@ -1,0 +1,178 @@
+nav
+{
+    user-select: none;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.2s ease-in-out;
+    height: 100vh;
+    z-index: 1;
+    width: var(--width-sidebar-closed);
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-container
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#playlist-column-container
+{
+    overflow-y: scroll;
+    max-height: calc(100% - var(--add-playlist-container-height));
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#playlist-column-container::-webkit-scrollbar
+{
+    display: none;
+}
+
+#burger-icon-container
+{
+    align-self: flex-start;
+}
+
+
+.blur-playlist-on-scroll
+{
+    margin: 10px;
+    width: auto;
+    height: 25px;
+    background: var(--main-color);
+    z-index: 3;
+    transition: 0.1s ease-in-out;
+}
+
+.blur-playlist-on-scroll-top
+{
+    box-shadow: 0 10px 20px 30px var(--main-color);
+}
+
+.blur-playlist-on-scroll-bottom
+{
+    box-shadow: 0 -10px 20px 30px var(--main-color);
+}
+
+#add-playlist-icon-container
+{
+    margin-top: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: var(--add-playlist-container-height);
+    transition: 0.2s ease-in-out;
+    z-index: 4;
+}
+
+nav.open #add-playlist-icon-container
+{
+    margin-right: calc(var(--width-sidebar-open) - 6rem - 4rem);
+    transition: 0.2s ease-in-out;
+}
+
+.playlist
+{
+    display: flex;
+    align-items: center;
+}
+
+.playlist img
+{
+    width: var(--playlist-image-size);
+    height: var(--playlist-image-size);
+    object-fit: cover;
+    border-radius: var(--playlist-border-radius);
+    margin: 1rem;
+    flex: 0 0 auto;
+}
+
+.playlist p
+{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    margin-left: 10px;
+    transition: 0.2s ease-in-out 0.1s;
+    font-size: 0;
+}
+
+nav.open
+{
+    width: var(--width-sidebar-open);
+    transition: 0.2s ease-in-out;
+}
+
+nav.open .playlist p
+{
+    font-size: calc(1em + 1vw);
+    display: block;
+    overflow: hidden;
+    opacity: 100%;
+    white-space: normal;
+    transition: 0.2s ease-in-out;
+}
+
+nav:not(.open) .playlist p
+{
+    opacity: 0;
+}
+
+.add-playlist-icon
+{
+    text-align: center;
+    height: var(--add-playlist-icon-size);
+}
+
+.add-playlist-icon img
+{
+    margin: auto;
+    width: var(--add-playlist-icon-size);
+    height: var(--add-playlist-icon-size);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 590px)
+{
+    nav
+    {
+        width: 100%;
+        min-height:80px;
+        height: 10vh;
+        position: absolute;
+    }
+
+    #burger-icon-container
+    {
+        margin: auto;
+    }
+
+    #Burger-icon
+    {
+
+        margin: 25px auto;
+    }
+
+    nav.open #add-playlist-icon-container
+    {
+        margin: auto;
+    }
+
+    nav.open
+    {
+        height: 100%;
+        width: 100%;
+    }
+}
+

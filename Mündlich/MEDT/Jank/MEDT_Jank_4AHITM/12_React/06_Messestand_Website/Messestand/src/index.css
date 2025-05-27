@@ -1,0 +1,227 @@
+/* styles.css */
+
+:root {
+    --primary-color: #E28E00;  /* Theme color from logo */
+    --secondary-color: #00AAC9;  /* Another theme color from logo */
+    --background-color: #eee;  /* White background */
+    --text-color: #282828;  /* Dark text color for contrast */
+    --muted-text-color: #707070;  /* Muted text color for secondary information */
+    --border-color: #E0E0E0;  /* Light border color */
+    --shadow-color: rgba(0, 0, 0, 0.1);  /* Shadow color for subtle depth */
+    --danger-color: red;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
+p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+.news-article-preview {
+    border: 1px solid var(--border-color);
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-article-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+.news-article-preview h2 {
+    font-size: 1.75em;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+}
+
+.news-article-preview p {
+    color: var(--text-color);
+    margin-bottom: 1em;
+}
+
+.news-article-preview .buttons-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-article-preview .buttons-container button {
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.news-article-preview .buttons-container button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.news-article-preview .buttons-container .delete-button {
+    background-color: var(--danger-color);
+}
+
+.news-article-preview .buttons-container .view-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.navbar {
+    background-color: var(--text-color);
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: var(--background-color) !important;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+button, .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--background-color);
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+button:hover, .btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.form-control {
+    border: 1px solid var(--border-color);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+}
+
+.form-label {
+    color: var(--muted-text-color);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5em;
+    }
+
+    .news-article-preview {
+        margin-bottom: 1em;
+    }
+}
+
+/* contact.css */
+
+:root {
+    --primary-color: #E28E00;  /* Theme color from logo */
+    --secondary-color: #00AAC9;  /* Another theme color from logo */
+    --background-color: #FFFFFF;  /* White background */
+    --text-color: #282828;  /* Dark text color for contrast */
+    --muted-text-color: #707070;  /* Muted text color for secondary information */
+    --border-color: #E0E0E0;  /* Light border color */
+    --shadow-color: rgba(0, 0, 0, 0.1);  /* Shadow color for subtle depth */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2em;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1em;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 1em;
+    }
+}

@@ -1,0 +1,39 @@
+.calculator-container
+{
+    height: 100%;
+    width: 80%;
+
+    background-color: rgba(222, 184, 135, 0.44);
+
+    border-radius: 4rem;
+
+    padding: 2rem;
+
+    margin: auto;
+
+    backdrop-filter: blur(0.2rem);
+
+    border-width: 0.5rem;
+    border-color: black;
+}
+
+.calculator
+{
+    margin: 1rem;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+}
+
+.equals
+{
+    grid-area: 4 / 5 / 5 / 7;
+    margin: 0;
+    padding: 0;
+}
+
+
+

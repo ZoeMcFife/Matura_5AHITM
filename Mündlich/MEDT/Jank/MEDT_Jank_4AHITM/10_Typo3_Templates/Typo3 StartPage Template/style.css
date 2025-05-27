@@ -1,0 +1,72 @@
+body
+{
+    margin: 0;
+    padding-top: 6rem;
+
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "BNCE" 20,
+    "INFM" 30,
+    "SPAC" 0;
+
+    font-size: 16px;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 800
+// <bounce>: Use a value from -100 to 100
+// <informality>: Use a value from 0 to 100*/
+
+/* General styling for the header */
+header
+{
+    margin: 0;
+    background-color: rgba(255, 0, 0, 0.6); /* Dark background for the header */
+    color: white; /* Light text color */
+    padding: 1rem 0; /* Padding around the header */
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(0.5rem);
+    top: 0;
+}
+
+/* Styling for the logo section */
+#logo img
+{
+    height: 3rem; /* Adjust the size of the logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the navigation bar */
+nav
+{
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between logo and navigation links */
+    align-items: center; /* Center items vertically */
+    padding: 0 1.2rem; /* Padding inside the nav bar */
+}
+
+/* Styling for the navigation list */
+#nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Display list items in a row */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+#nav ul li {
+    margin-left: 1.2rem; /* Space between list items */
+}
+
+#nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Light text color for links */
+    transition: color 0.3s ease; /* Smooth transition for link hover */
+}
+
+#nav ul li a:hover {
+    color: #FFD700; /* Gold color for hover effect */
+}

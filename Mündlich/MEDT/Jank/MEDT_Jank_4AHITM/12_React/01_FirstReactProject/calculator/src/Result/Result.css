@@ -1,0 +1,14 @@
+input
+{
+    width: 70%;
+    height: 3rem;
+
+    border-color: black;
+    background-color: antiquewhite;
+    color: black;
+
+    border-radius: 2rem;
+
+    font-size: 150%;
+    font-family: Pirate, sans-serif;
+}

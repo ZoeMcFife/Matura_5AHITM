@@ -1,0 +1,143 @@
+main
+{
+    transition: 0.4s ease-in-out;
+}
+
+.playlist-info
+{
+    margin: 4rem;
+    padding: 3rem;
+    background-color: white;
+    border-radius: var(--global-border-radius);
+}
+
+.playlist-info-container
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#playlistImg
+{
+    width: 15rem;
+    height: 15rem;
+
+    border-radius: var(--global-border-radius);
+}
+
+#playlist-description-container
+{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 1rem 3rem;
+}
+
+#playlistName
+{
+    font-size: 3rem;
+    margin: 0.1rem;
+    font-weight: bold;
+    text-overflow: ellipsis;
+}
+
+#playlistArtist
+{
+    font-size: 3rem;
+    margin: 0.1rem;
+    padding-top: 0.5rem;
+    font-weight: 1;
+    color: #555;
+    text-overflow: ellipsis;
+}
+
+#playlistDescription
+{
+    text-overflow: ellipsis;
+}
+
+#playlist-songs-container
+{
+    margin-top: 2rem;
+
+    max-height: 30vh;
+
+    overflow-y: scroll;
+}
+
+.song
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid #ccc;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.song-name {
+    text-align: left;
+    flex-grow: 1;
+    margin-left: 1rem;
+}
+
+.song-length {
+    text-align: right;
+}
+
+.song:last-child
+{
+    border-bottom: 1px solid #ccc;
+}
+
+#add-song-container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#add-song-container img
+{
+    width: 1rem;
+    height: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+
+@media screen and (orientation: portrait)
+{
+    #playlist-songs-container
+    {
+        max-height: 40vh;
+    }
+}
+
+@media screen and (max-width: 830px)
+{
+    .playlist-info-container
+    {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #playlist-description-container
+    {
+        margin-left: 0;
+        margin-right: 0;
+
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 590px)
+{
+    .playlist-info
+    {
+        margin: 4rem;
+        text-align: center;
+    }
+}

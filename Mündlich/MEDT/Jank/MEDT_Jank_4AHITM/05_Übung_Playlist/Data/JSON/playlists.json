@@ -1,0 +1,150 @@
+{
+    "playlists": [
+        {
+            "name": "GODS 🌟",
+            "cover": "gods.webp",
+            "description": "League of Legends Worlds 2023 Opening",
+            "songs": [1]
+        },
+        {
+            "name": "Lemons 🍋",
+            "cover": "lemon_demon.webp",
+            "description": "Spirit Phone",
+            "songs": [6, 7, 8, 9, 10, 11, 12]
+        },
+        {
+            "name": "Gaming 🎮",
+            "cover": "amongus.webp",
+            "description": "Songs to keep you in the zone while gaming",
+            "songs": [1, 4]
+        },
+        {
+            "name": "K-Pop 🎤",
+            "cover": "seven.webp",
+            "description": "Best of K-pop",
+            "songs": [1, 2, 3]
+        },
+        {
+            "name": "Drops 🎶",
+            "cover": "the_spectre.webp",
+            "description": "Songs with Epic Drops",
+            "songs": [5]
+        },
+        {
+            "name": "Nostalgia 🕰️",
+            "cover": "arctic_fox.webp",
+            "description": "Songs that take you back",
+            "songs": [5, 6]
+        }
+    ],
+    "songs": {
+        "1": {
+            "name": "Gods",
+            "singer":"League of Legends, NewJeans",
+            "length": "3:40",
+            "file": "gods.mp3",
+            "coverImage": "gods.webp",
+            "releaseDate": "2023-10-04",
+            "description": "Worlds 2023"
+        },
+        "2": {
+            "name": "Hold on Thight",
+            "singer":"aespa",
+            "length": "2:29",
+            "file": "hold_on_thight.mp3",
+            "coverImage": "hold_on_thight.webp",
+            "releaseDate": "2023-03-31",
+            "description": "TETRIS - Soundtrack from the Apple Original Film"
+        },
+        "3": {
+            "name": "Seven (Explicit Ver.)",
+            "singer":"yung cook",
+            "length": "3:04",
+            "file": "seven.mp3",
+            "coverImage": "seven.webp",
+            "releaseDate": "2023-07-14",
+            "description": "Seven (feat. Latto) (Explicit Ver.)"
+        },
+        "4": {
+            "name": "Among Us (Trap Remix)",
+            "singer":"Leonz",
+            "length": "1:01",
+            "file": "amongus.mp3",
+            "coverImage": "amongus.webp",
+            "releaseDate": "2020-10-11",
+            "description": "ඞ"
+        },
+        "5": {
+            "name": "The Spectre",
+            "singer":"Alan Walker",
+            "length": "3:50",
+            "file": "the_spectre.mp3",
+            "coverImage": "the_spectre.webp",
+            "releaseDate": "2017-09-15",
+            "description": "Smurf in the forest"
+        },
+        "6": {
+            "name": "Touch-Tone Telephone",
+            "singer": "Lemon Demon",
+            "length": "4:00",
+            "file": "touch_tone_telephone.mp3",
+            "coverImage": "lemon_demon.webp",
+            "releaseDate": "2016-02-29",
+            "description": "Spirit Phone"
+        },
+        "7": {
+            "name": "Cabinet Man",
+            "singer": "Lemon Demon",
+            "length": "3:37",
+            "file": "cabinet_man.mp3",
+            "coverImage": "lemon_demon.webp",
+            "releaseDate": "2016-02-29",
+            "description": "Spirit Phone"
+        },
+        "8": {
+            "name": "Soft Fuzzy Man",
+            "singer": "Lemon Demon",
+            "length": "3:21",
+            "file": "soft_fuzzy_man.mp3",
+            "coverImage": "lemon_demon.webp",
+            "releaseDate": "2016-02-29",
+            "description": "Spirit Phone"
+        },
+        "9": {
+            "name": "Eighth Wonder",
+            "singer": "Lemon Demon",
+            "length": "2:44",
+            "file": "eighth_wonder.mp3",
+            "coverImage": "lemon_demon.webp",
+            "releaseDate": "2016-02-29",
+            "description": "Spirit Phone"
+        },
+        "10": {
+            "name": "Ancient Aliens",
+            "singer": "Lemon Demon",
+            "length": "4:12",
+            "file": "ancient_aliens.mp3",
+            "coverImage": "lemon_demon.webp",
+            "releaseDate": "2016-02-29",
+            "description": "Spirit Phone"
+        },
+        "11": {
+            "name": "As Your Father I Expressly Forbid It",
+            "singer": "Lemon Demon",
+            "length": "2:50",
+            "file": "as_your_father.mp3",
+            "coverImage": "lemon_demon.webp",
+            "releaseDate": "2016-02-29",
+            "description": "Spirit Phone"
+        },
+        "12": {
+            "name": "I Earn My Life",
+            "singer": "Lemon Demon",
+            "length": "1:54",
+            "file": "i_earn_my_life.mp3",
+            "coverImage": "lemon_demon.webp",
+            "releaseDate": "2016-02-29",
+            "description": "Spirit Phone"
+        }
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js" integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>Carbon Dioxide Calculator</title>
+</head>
+<body>
+<header>
+    <h1>Carbon Dioxide Calculator</h1>
+</header>
+<main>
+    <section>
+        <h2>Calculator</h2>
+        <div id="carbonCalculator">
+            <label for="startPosition">Start Position</label>
+            <input type="text" id="startPosition" name="startPosition" required>
+
+            <label for="endPosition">End Position</label>
+            <input type="text" id="endPosition" name="endPosition" required>
+
+            <button onclick="calculateRoute()">Calculate</button>
+
+            <table id="vehicleTable">
+                <thead>
+                <tr>
+                    <th>Vehicle Type</th>
+                    <th>Distance</th>
+                    <th>CO2</th>
+                </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+            </table>
+            <p id="hint">click on row to show map</p>
+        </div>
+
+        <div id="map" style="height: 30rem; width: 30rem;"></div>
+        <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD87uQegogzfvRyDNaG8fgjJFWQKkWqtto&v=weekly"
+                defer
+        ></script>
+        <script src="script.js" defer></script>
+        <script>
+            $(document).ready( function () {
+                $('#vehicleTable').DataTable({
+                    columns: [
+                        { data: 'Vehicle Type', title: 'Vehicle Type' },
+                        { data: 'Distance', title: 'Distance' },
+                        { data: 'CO2', title: 'CO2 Emissions' }
+                    ]
+                });
+            });
+        </script>
+    </section>
+</main>
+
+
+</body>
+</html>

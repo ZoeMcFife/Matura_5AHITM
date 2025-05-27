@@ -1,0 +1,72 @@
+#Burger-icon
+{
+    width: 60px;
+    height: 45px;
+    position: relative;
+    margin: 50px 50px 0 50px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+#Burger-icon span
+{
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: var(--background-color-light);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+#Burger-icon:hover span
+{
+    background: var(--main-black);
+}
+
+#Burger-icon span:nth-child(1)
+{
+    top: 0;
+}
+
+#Burger-icon span:nth-child(2),
+#Burger-icon span:nth-child(3)
+{
+    top: 18px;
+}
+
+#Burger-icon span:nth-child(4)
+{
+    top: 36px;
+}
+
+#Burger-icon.open span:nth-child(1)
+{
+    top: 18px;
+    width: 0;
+    left: 50%;
+}
+
+#Burger-icon.open span:nth-child(2)
+{
+    transform: rotate(45deg);
+}
+
+#Burger-icon.open span:nth-child(3)
+{
+    transform: rotate(-45deg);
+}
+
+#Burger-icon.open span:nth-child(4)
+{
+    top: 18px;
+    width: 0;
+    left: 50%;
+}

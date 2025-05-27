@@ -1,0 +1,153 @@
+html
+{
+    background-color: antiquewhite;
+
+    font-family: -apple-system, sans-serif;
+    text-align: center;
+}
+
+body
+{
+    margin: 0 0 5rem;
+    height: 100%;
+}
+
+.exercises
+{
+    font-size: 120%;
+
+    color: blueviolet;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercises a
+{
+    margin: 0.4rem;
+    text-decoration: none;
+}
+
+/* Style the container for question blocks */
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adds space between question blocks */
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Style each question block */
+.question-block {
+    background-color: lightpink;
+    padding: 20px;
+    border-radius: 3rem;
+    width: 100%; /* Take the full width of the container */
+}
+
+/* Style question text */
+.question {
+    font-weight: bold;
+}
+
+/* Style answer text */
+.answer {
+    margin-top: 10px; /* Add space between question and answer */
+}
+
+/* Style answer image */
+.answer-img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    border-radius: 3rem;
+}
+
+/* Style the footer */
+footer
+{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Center-align the content */
+    padding: 20px 0; /* Add vertical padding */
+}
+
+/* Style the link within the footer */
+footer a
+{
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underlines from links */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Style link on hover */
+footer a:hover {
+    color: #ff9900; /* Change link color on hover */
+}
+
+/* Style for text inputs */
+input[type="text"], input[type="email"], input[type="password"] {
+    font-family: -apple-system, sans-serif;
+    font-size: 100%;
+    color: #333; /* Dark color for text */
+    background-color: #f8f8f8; /* Light background */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Comfortable padding */
+    width: 80%; /* Relative width */
+    max-width: 400px; /* Maximum width */
+    box-sizing: border-box; /* Include padding and border in width */
+    margin: 10px 0; /* Spacing between elements */
+}
+
+/* Style for buttons */
+button {
+    font-family: -apple-system, sans-serif;
+    font-size: 100%;
+    color: white; /* White text */
+    background-color: blueviolet; /* Consistent with .exercises color */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 20px; /* Horizontal and vertical padding */
+    cursor: pointer; /* Cursor indication */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #7a1f8b; /* Slightly darker on hover */
+    transform: scale(1.05); /* Slight increase in size */
+}
+
+/* Focus style for text inputs */
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: blueviolet; /* Highlight color on focus */
+    outline: none; /* Remove default outline */
+}
+
+#map
+{
+    height: 20rem;
+    border-radius: 3rem;
+}
+
+#map2
+{
+    height: 20rem;
+    border-radius: 3rem;
+}
+
+canvas
+{
+    width: 300px;
+    height: 300px;
+
+    border-radius: 2rem;
+
+}

@@ -1,0 +1,41 @@
+:root
+{
+    --main-color: #ff5555;
+    --accent-color: #1FB954;
+    --main-black: #191414;
+    --main-gray: #515154;
+    --background-color-light: #F5F5F5;
+    --width-sidebar-closed: 10rem;
+    --width-sidebar-open: 35rem;
+    --global-border-radius: 3rem;
+    --playlist-border-radius: 1rem;
+    --playlist-image-size: 8rem;
+    --add-playlist-container-height: 6rem;
+    --add-playlist-icon-size: 4rem;
+}
+
+.blur
+{
+    filter: blur(1rem);
+    transition: 0.4s ease-in-out;
+}
+
+body
+{
+    font-family: -apple-system, sans-serif;
+    background-color: var(--background-color-light);
+    margin-left: var(--width-sidebar-closed);
+}
+
+.drop-shadow
+{
+    filter: drop-shadow(0.5rem 0.5rem 1rem #555);
+}
+
+@media only screen and (max-width: 590px)
+{
+    body
+    {
+        margin-left: 0;
+    }
+}

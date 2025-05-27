@@ -1,0 +1,35 @@
+button
+{
+    height: 100%;
+    width: 100%;
+
+    background-color: saddlebrown;
+
+    border-width: 0.2rem;
+    border-color: black;
+    border-radius: 0.5rem;
+
+    color: white;
+
+    font-family: Pirate, sans-serif;
+
+    font-size: 150%;
+
+    transition: 0.1s ease-in-out;
+}
+
+button:hover
+{
+    background: black;
+
+    color: white;
+
+    transition: 0.1s ease-in-out;
+
+    rotate: 10deg;
+
+    height: 150%;
+    width: 150%;
+
+    border-radius: 4rem;
+}

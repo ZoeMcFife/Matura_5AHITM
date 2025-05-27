@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A playlist page.">
+    <title>Playlist</title>
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/burgericon.css">
+    <link rel="stylesheet" href="Style/navigation-bar.css">
+    <link rel="stylesheet" href="Style/playlist-info.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="Script/burgericon.js"></script>
+    <script src="Script/script.js"></script>
+</head>
+<body>
+    <header>
+      <nav>
+          <div class="nav-container">
+              <div id="burger-icon-container">
+                  <div id="Burger-icon" >
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div>
+              </div>
+              <div id="blur-top" class="blur-playlist-on-scroll"></div>
+              <div id="playlist-column-container">
+                  <div class="playlist-column">
+
+                  </div>
+              </div>
+              <div id="blur-bottom" class="blur-playlist-on-scroll blur-playlist-on-scroll-bottom"></div>
+              <div id="add-playlist-icon-container">
+                  <div class="add-playlist-icon">
+                      <img src="Icons/plus-solid.svg" alt="Add playlist">
+                  </div>
+              </div>
+          </div>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="playlist-info drop-shadow">
+          <div class="playlist-info-container">
+              <img id="playlistImg" src="Data/Images/amongus.webp" alt="PlaylistImage">
+              <div id="playlist-description-container">
+                  <h1 id="playlistName">Playlist</h1>
+                  <h2 id="playlistArtist">Artist</h2>
+                  <p id="playlistDescription">Description</p>
+              </div>
+          </div>
+
+          <div id="playlist-songs-container">
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+              <div class="song">
+                  <p class="song-track-number">1</p>
+                  <p class="song-name">Track name</p>
+                  <p class="song-length">5:23</p>
+              </div>
+          </div>
+
+          <div id="add-song-container">
+              <img src="Icons/plus-solid.svg" alt="Add Song">
+              <p>Add Track</p>
+          </div>
+
+
+      </div>
+    </main>
+    <script src="Script/navigation_bar_blur.js"></script>
+
+</body>
+</html>

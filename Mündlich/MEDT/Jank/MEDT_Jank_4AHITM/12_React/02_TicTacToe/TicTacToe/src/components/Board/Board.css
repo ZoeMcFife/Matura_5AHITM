@@ -1,0 +1,26 @@
+.board
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    width: 20rem;
+    height: 20rem;
+
+    margin: auto;
+}
+
+.status
+{
+    color: white;
+
+    text-align: center;
+
+    font-family: pirate, sans-serif;
+
+    font-size: 130%;
+
+    padding-top: 1rem;
+}

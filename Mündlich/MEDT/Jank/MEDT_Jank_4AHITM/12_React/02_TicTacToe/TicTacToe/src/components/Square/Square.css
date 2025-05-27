@@ -1,0 +1,13 @@
+.square
+{
+    height: 100%;
+    width: 100%;
+
+    border-width: 0.2rem;
+    border-color: black;
+
+    background-color: aliceblue;
+
+    font-size: 4rem;
+    font-family: Pirate, sans-serif;
+}

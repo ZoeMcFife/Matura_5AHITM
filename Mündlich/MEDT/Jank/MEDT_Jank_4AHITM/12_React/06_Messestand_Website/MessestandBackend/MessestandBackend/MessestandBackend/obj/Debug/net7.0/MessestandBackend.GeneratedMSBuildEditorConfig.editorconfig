@@ -1,0 +1,17 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MessestandBackend
+build_property.RootNamespace = MessestandBackend
+build_property.ProjectDir = C:\GitHub\MEDT_Jank_4AHITM\12_React\06_Messestand_Website\MessestandBackend\MessestandBackend\MessestandBackend\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\GitHub\MEDT_Jank_4AHITM\12_React\06_Messestand_Website\MessestandBackend\MessestandBackend\MessestandBackend
+build_property._RazorSourceGeneratorDebug = 
