@@ -1,0 +1,1552 @@
+<!DOCTYPE html><html><head>
+      <title>mRDP-SEW</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\redcr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<style>
+
+@font-face {
+  font-family: 'TheRumIsGone';
+  src: url('TheRumIsGone.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body 
+{
+  counter-reset: h1;
+}
+
+h1 {
+  counter-reset: h2;
+  font-family: 'TheRumIsGone', serif;
+  text-shadow: 2px 2px 4px #ccc;
+}
+
+h2 
+{
+  counter-reset: h3;
+  border-bottom: 2px solid #ffa500;
+}
+
+h3 {
+  counter-reset: h4;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h1::before {
+  counter-increment: h1;
+  content: counter(h1) ". ";
+}
+h2::before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) " ";
+}
+h3::before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) " ";
+}
+h4::before {
+    counter-increment: h4;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
+}
+
+</style>
+<h1 id="algorithmen-und-datenstrukturen">Algorithmen und Datenstrukturen </h1>
+<h2 id="oop-programmierung-c-java">OOP Programmierung (c#, java) </h2>
+<p><strong>What is OOP?</strong></p>
+<p>Object Oriented Programming</p>
+<h3 id="pros">Pros </h3>
+<ul>
+<li>Modular</li>
+<li>problems can be broken down into smaller bits</li>
+<li>multiple instances of objects</li>
+<li>data hiding</li>
+<li>eliminating redundant code</li>
+<li>data centered</li>
+</ul>
+<h3 id="cons">Cons </h3>
+<ul>
+<li>longer</li>
+<li>not always applicable</li>
+</ul>
+<hr>
+<h3 id="compared-to-procedural--functional">Compared to Procedural / Functional </h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>OOP</th>
+<th>Procedural</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Focus</strong></td>
+<td>Objects (data + behavior)</td>
+<td>Procedures/functions</td>
+</tr>
+<tr>
+<td><strong>Data Handling</strong></td>
+<td>Encapsulated within objects</td>
+<td>Global or passed between functions</td>
+</tr>
+<tr>
+<td><strong>Modularity</strong></td>
+<td>High – via classes and objects</td>
+<td>Moderate – via functions</td>
+</tr>
+<tr>
+<td><strong>Reusability</strong></td>
+<td>High – inheritance, polymorphism</td>
+<td>Low – copying or re-writing code</td>
+</tr>
+<tr>
+<td><strong>Best For</strong></td>
+<td>Complex systems, GUI apps, simulations</td>
+<td>Simple scripts, linear processes</td>
+</tr>
+<tr>
+<td><strong>Code Structure</strong></td>
+<td>More structured and hierarchical</td>
+<td>More linear and flat</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>OOP</th>
+<th>Functional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Focus</strong></td>
+<td>Objects and classes</td>
+<td>Functions and immutability</td>
+</tr>
+<tr>
+<td><strong>State</strong></td>
+<td>Objects maintain state</td>
+<td>Avoids state / uses immutable data</td>
+</tr>
+<tr>
+<td><strong>Side Effects</strong></td>
+<td>Common and accepted</td>
+<td>Avoided (pure functions)</td>
+</tr>
+<tr>
+<td><strong>Concurrency</strong></td>
+<td>More challenging</td>
+<td>Easier due to immutability</td>
+</tr>
+<tr>
+<td><strong>Reusability</strong></td>
+<td>Through inheritance and composition</td>
+<td>Through higher-order functions</td>
+</tr>
+<tr>
+<td><strong>Best For</strong></td>
+<td>Stateful applications, simulations</td>
+<td>Data transformation, concurrency</td>
+</tr>
+<tr>
+<td><strong>Learning Curve</strong></td>
+<td>Moderate (if procedural background)</td>
+<td>Steeper (especially for OOP devs)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="vererbung---inheritance">Vererbung - Inheritance </h2>
+<p>Eine Klasse kann von einer anderen erben</p>
+<ul>
+<li>Properties</li>
+<li>Methods</li>
+</ul>
+<hr>
+<h3 id="c">C# </h3>
+<p>In C# mit <code>NewClass : BaseClass</code></p>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token comment">// Basisklasse</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Schiff</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Name <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Fahren</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">Name</span><span class="token punctuation">}</span></span><span class="token string"> fährt durch den Kosmos."</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Abgeleitete Klasse</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Kampfschiff</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Schiff</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Feuern</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">Name</span><span class="token punctuation">}</span></span><span class="token string"> feuert mit den Plasma-Kanonen!"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Verwendung</span>
+<span class="token class-name"><span class="token keyword keyword-var">var</span></span> hootsforce <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Kampfschiff</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+hootsforce<span class="token punctuation">.</span>Name <span class="token operator">=</span> <span class="token string">"DSS Hootsforce"</span><span class="token punctuation">;</span>
+hootsforce<span class="token punctuation">.</span><span class="token function">Fahren</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// DSS Hootsforce fährt durch den Kosmos.</span>
+hootsforce<span class="token punctuation">.</span><span class="token function">Feuern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// DSS Hootsforce feuert mit den Plasma-Kanonen!</span>
+</code></pre><h3 id="java">Java </h3>
+<p>In Java mit <code>NewClass extends BaseClass</code></p>
+<pre data-role="codeBlock" data-info="Java" class="language-java Java"><code><span class="token comment">// Basisklasse</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Schiff</span>
+ <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">fahren</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name <span class="token operator">+</span> <span class="token string">" fährt durch den Kosmos."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Abgeleitete Klasse</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Kampfschiff</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Schiff</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">feuern</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name <span class="token operator">+</span> <span class="token string">" feuert mit den Plasma-Kanonen!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Verwendung</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">Kampfschiff</span> hootsforce <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Kampfschiff</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hootsforce<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"DSS Hootsforce"</span><span class="token punctuation">;</span>
+        hootsforce<span class="token punctuation">.</span><span class="token function">fahren</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// DSS Hootsforce fährt durch den Kosmos.</span>
+        hootsforce<span class="token punctuation">.</span><span class="token function">feuern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// DSS Hootsforce feuert mit den Plasma-Kanonen!</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre><hr>
+<h2 id="-interfaces">🧩 Interfaces </h2>
+<p>Interfaces stellen <strong>Schnittstellen</strong> bereit – sie definieren <strong>leere Methoden und Properties</strong>, die eine Klasse <strong>implementieren muss</strong>.<br>
+Sie dienen der <strong>Abstraktion</strong> und sorgen für <strong>einheitliches Verhalten</strong> bei verschiedenen Klassen.</p>
+<hr>
+<h3 id="️-c">⚙️ C# </h3>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token comment">// Interface</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">IFlugfaehig</span>
+<span class="token punctuation">{</span>
+    <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Fliegen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Antrieb <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Implementierende Klasse</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Drohne</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IFlugfaehig</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Antrieb <span class="token operator">=&gt;</span> <span class="token string">"Rotoren"</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Fliegen</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Die Drohne hebt ab!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Verwendung</span>
+<span class="token class-name"><span class="token keyword keyword-var">var</span></span> drohne <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Drohne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+drohne<span class="token punctuation">.</span><span class="token function">Fliegen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Die Drohne hebt ab!</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>drohne<span class="token punctuation">.</span>Antrieb<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Rotoren</span>
+</code></pre><h3 id="-java">🔧 Java </h3>
+<pre data-role="codeBlock" data-info="Java" class="language-java Java"><code><span class="token comment">// Interface</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">IFlugfaehig</span>
+ <span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">fliegen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">String</span> <span class="token function">getAntrieb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Implementierende Klasse</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Drohne</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">IFlugfaehig</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getAntrieb</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token string">"Rotoren"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">fliegen</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Die Drohne hebt ab!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Verwendung</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span>
+ <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">Drohne</span> drohne <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Drohne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        drohne<span class="token punctuation">.</span><span class="token function">fliegen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Die Drohne hebt ab!</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>drohne<span class="token punctuation">.</span><span class="token function">getAntrieb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Rotoren</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h2 id="-polymorphie">🌀 Polymorphie </h2>
+<p><strong>Polymorphie</strong> bedeutet, dass <strong>eine Methode mehrere Formen annehmen kann</strong>.<br>
+Ein Objekt kann auf unterschiedliche Weise reagieren – abhängig vom <strong>konkreten Typ</strong>, der dahintersteckt.<br>
+Das funktioniert oft über <strong>Vererbung</strong> oder <strong>Interfaces</strong>.</p>
+<hr>
+<h3 id="️-c-beispiel">⚙️ C# Beispiel </h3>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token comment">// Basisklasse</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Schiff</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-virtual">virtual</span> <span class="token keyword keyword-void">void</span> Begrüß<span class="token function">en</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Willkommen an Bord."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Abgeleitete Klasse</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Piratenschiff</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Schiff</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-override">override</span> <span class="token keyword keyword-void">void</span> Begrüß<span class="token function">en</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Arrr! Willkommen auf dem Piratenschiff!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Verwendung (Polymorphie)</span>
+<span class="token class-name">List<span class="token punctuation">&lt;</span>Schiff<span class="token punctuation">&gt;</span></span> flotte <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span>Schiff<span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Schiff</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Piratenschiff</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-foreach">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-var">var</span></span> schiff <span class="token keyword keyword-in">in</span> flotte<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    schiff<span class="token punctuation">.</span>Begrüß<span class="token function">en</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Output:</span>
+<span class="token comment">// Willkommen an Bord.</span>
+<span class="token comment">// Arrr! Willkommen auf dem Piratenschiff!</span>
+
+</code></pre><h3 id="java-1">Java </h3>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">// Basisklasse</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Schiff</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> begrüß<span class="token function">en</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Willkommen an Bord."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Abgeleitete Klasse</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Piratenschiff</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Schiff</span> 
+<span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> begrüß<span class="token function">en</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Arrr! Willkommen auf dem Piratenschiff!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Verwendung (Polymorphie)</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token class-name">Schiff</span><span class="token punctuation">[</span><span class="token punctuation">]</span> flotte <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token keyword keyword-new">new</span> <span class="token class-name">Schiff</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token keyword keyword-new">new</span> <span class="token class-name">Piratenschiff</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token class-name">Schiff</span> schiff <span class="token operator">:</span> flotte<span class="token punctuation">)</span> 
+        <span class="token punctuation">{</span>
+            schiff<span class="token punctuation">.</span>begrüß<span class="token function">en</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Output:</span>
+<span class="token comment">// Willkommen an Bord.</span>
+<span class="token comment">// Arrr! Willkommen auf dem Piratenschiff!</span>
+</code></pre><hr>
+<h2 id="-delegates">📡 Delegates </h2>
+<p>Ein <strong>Delegate</strong> ist ein <strong>Typ</strong>, der einen Verweis auf eine Methode speichert.<br>
+Er erlaubt es, Methoden <strong>wie Variablen</strong> zu behandeln – man kann sie übergeben, speichern und später aufrufen.</p>
+<hr>
+<h3 id="️-c-beispiel-1">⚙️ C# Beispiel </h3>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token comment">// Delegate definieren</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-delegate">delegate</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">MeldungDelegate</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span></span> text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Methoden, die dem Delegate-Signatur entsprechen</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Funk</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Senden</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span></span> text<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Sende über Funk: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">text</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Rufen</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span></span> text<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Rufe laut: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">text</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Verwendung</span>
+<span class="token class-name"><span class="token keyword keyword-var">var</span></span> funker <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Funk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">MeldungDelegate</span> meldung <span class="token operator">=</span> funker<span class="token punctuation">.</span>Senden<span class="token punctuation">;</span>
+<span class="token function">meldung</span><span class="token punctuation">(</span><span class="token string">"Feindliches Schiff voraus!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">// Sende über Funk: Feindliches Schiff voraus!</span>
+
+meldung <span class="token operator">=</span> funker<span class="token punctuation">.</span>Rufen<span class="token punctuation">;</span>
+<span class="token function">meldung</span><span class="token punctuation">(</span><span class="token string">"Alle Mann an Deck!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Rufe laut: Alle Mann an Deck!</span>
+</code></pre><h4 id="multicast">Multicast </h4>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token class-name">Notifier</span> greetings<span class="token punctuation">;</span>
+
+greetings <span class="token operator">=</span> SayHello<span class="token punctuation">;</span>
+
+greetings <span class="token operator">+=</span> SayGoodBye<span class="token punctuation">;</span>
+
+<span class="token function">greetings</span><span class="token punctuation">(</span><span class="token string">"John"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Hello from John</span>
+<span class="token comment">// Goodbye from John</span>
+
+greetings <span class="token operator">-=</span> SayHello<span class="token punctuation">;</span>
+
+<span class="token function">greetings</span><span class="token punctuation">(</span><span class="token string">"John"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Goodbye from John</span>
+
+</code></pre><h3 id="-java-vergleich-functional-interface--lambda">🔧 Java Vergleich (Functional Interface + Lambda) </h3>
+<p>Java kennt keine echten Delegates, aber man erreicht Ähnliches mit Functional Interfaces und Lambdas:</p>
+<p>A <strong>functional interface</strong> in Java is an interface that contains only one abstract method. Functional interfaces can have <strong>multiple default or static methods</strong>, but <strong>only one abstract method</strong>. Runnable, ActionListener, and Comparator are common examples of Java functional interfaces. From Java 8 onwards, lambda expressions and method references can be used to represent the instance of a functional interface.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">// Functional Interface</span>
+<span class="token annotation punctuation">@FunctionalInterface</span>
+<span class="token keyword keyword-interface">interface</span> <span class="token class-name">Meldung</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">senden</span><span class="token punctuation">(</span><span class="token class-name">String</span> text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Methoden</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Funk</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">senden</span><span class="token punctuation">(</span><span class="token class-name">String</span> text<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Sende über Funk: "</span> <span class="token operator">+</span> text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">rufen</span><span class="token punctuation">(</span><span class="token class-name">String</span> text<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Rufe laut: "</span> <span class="token operator">+</span> text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Verwendung</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token class-name">Funk</span> funker <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Funk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Meldung</span> meldung <span class="token operator">=</span> funker<span class="token operator">::</span><span class="token function">senden</span><span class="token punctuation">;</span>
+        meldung<span class="token punctuation">.</span><span class="token function">senden</span><span class="token punctuation">(</span><span class="token string">"Feindliches Schiff voraus!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Sende über Funk: Feindliches Schiff voraus!</span>
+
+        meldung <span class="token operator">=</span> funker<span class="token operator">::</span><span class="token function">rufen</span><span class="token punctuation">;</span>
+        meldung<span class="token punctuation">.</span><span class="token function">senden</span><span class="token punctuation">(</span><span class="token string">"Alle Mann an Deck!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Rufe laut: Alle Mann an Deck!</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="other-examples">Other examples </h4>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">// Define a functional interface</span>
+<span class="token annotation punctuation">@FunctionalInterface</span>
+
+<span class="token keyword keyword-interface">interface</span> <span class="token class-name">Square</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-int">int</span> <span class="token function">calculate</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Geeks</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-int">int</span> a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// lambda expression to </span>
+        <span class="token comment">// define the calculate method</span>
+        <span class="token class-name">Square</span> s <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> x<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> x <span class="token operator">*</span> x<span class="token punctuation">;</span>
+
+        <span class="token comment">// parameter passed and return type must be</span>
+        <span class="token comment">// same as defined in the prototype</span>
+        <span class="token keyword keyword-int">int</span> ans <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">calculate</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h2 id="datenkapselung-encapsulation">Datenkapselung (Encapsulation) </h2>
+<p><strong>Datenkapselung</strong> bedeutet, dass die internen Daten eines Objekts (z. B. Felder/Variablen) <em>privat</em> gehalten werden und nur über <strong>öffentliche Methoden</strong> (z. B. Getters und Setters) zugänglich sind.<br>
+Dadurch schützt man den internen Zustand vor unkontrollierten Zugriffen und kann Validierungen oder Logik in den Zugriffs-Methoden unterbringen.</p>
+<h3 id="vorteile">Vorteile </h3>
+<ul>
+<li><strong>Schutz der Integrität</strong>: Externe Klassen können die privaten Variablen nicht direkt manipulieren.</li>
+<li><strong>Kontrollierter Zugriff</strong>: Man kann prüfen, ob neue Werte gültig sind oder notwendige Aktionen ausführen.</li>
+<li><strong>Flexibilität</strong>: Die interne Implementierung kann sich ändern, ohne dass der öffentliche Vertrag (die Methoden/Properties) angepasst werden muss.</li>
+<li><strong>Lesbarkeit und Wartbarkeit</strong>: Man weiß genau, über welche Schnittstellen Daten verändert oder abgefragt werden.</li>
+</ul>
+<hr>
+<h3 id="️-c-beispiel-2">⚙️ C# Beispiel </h3>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-using">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">EscortShip</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Private field: cannot be accessed directly from outside</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name"><span class="token keyword keyword-string">string</span></span> name<span class="token punctuation">;</span>
+
+    <span class="token comment">// Public property with getter and setter</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Name
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-get">get</span> 
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-return">return</span> name<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-set">set</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-string">string</span><span class="token punctuation">.</span><span class="token function">IsNullOrWhiteSpace</span><span class="token punctuation">(</span><span class="token keyword keyword-value">value</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Name cannot be empty or whitespace."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            name <span class="token operator">=</span> <span class="token keyword keyword-value">value</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Private field: shield strength points</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name"><span class="token keyword keyword-int">int</span></span> shieldStrength<span class="token punctuation">;</span>
+
+    <span class="token comment">// Public method to set shield strength with validation</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">SetShieldStrength</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> strength<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>strength <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">ArgumentOutOfRangeException</span><span class="token punctuation">(</span><span class="token keyword keyword-nameof">nameof</span><span class="token punctuation">(</span>strength<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"Shield strength must be non-negative."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        shieldStrength <span class="token operator">=</span> strength<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Public method to get the current shield strength</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-int">int</span></span> <span class="token function">GetShieldStrength</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> shieldStrength<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">PrintStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Ship \"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">Name</span><span class="token punctuation">}</span></span><span class="token string">\" has </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">shieldStrength</span><span class="token punctuation">}</span></span><span class="token string"> shield points."</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Verwendung</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">EscortShip</span> ship <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">EscortShip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Zugriff über Property (Setter mit Validierung)</span>
+        ship<span class="token punctuation">.</span>Name <span class="token operator">=</span> <span class="token string">"HMS Blackfang"</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">// Zugriff über Methoden (ebenfalls validiert)</span>
+        ship<span class="token punctuation">.</span><span class="token function">SetShieldStrength</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        ship<span class="token punctuation">.</span><span class="token function">PrintStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: Ship "HMS Blackfang" has 150 shield points.</span>
+
+        <span class="token comment">// Folgender Zugriff wirft eine Exception, da der Name leer ist:</span>
+        <span class="token comment">// ship.Name = "";</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><h3 id="-java-beispiel">🔧 Java Beispiel </h3>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">EscortShip</span> 
+<span class="token punctuation">{</span>
+    <span class="token comment">// Private field: cannot be accessed directly from outside</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token comment">// Private field: shield strength points</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> shieldStrength<span class="token punctuation">;</span>
+
+    <span class="token comment">// Public getter for name</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Public setter for name with validation</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>name <span class="token operator">==</span> <span class="token keyword keyword-null">null</span> <span class="token operator">||</span> name<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Name cannot be empty or whitespace."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Public setter for shieldStrength with validation</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setShieldStrength</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> strength<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>strength <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Shield strength must be non-negative."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>shieldStrength <span class="token operator">=</span> strength<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Public getter for shieldStrength</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">getShieldStrength</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> shieldStrength<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Helper method to print status</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">printStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Ship \""</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">"\" has "</span> <span class="token operator">+</span> shieldStrength <span class="token operator">+</span> <span class="token string">" shield points."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Verwendung</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token class-name">EscortShip</span> ship <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">EscortShip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Zugriff über Setter (mit Validierung)</span>
+        ship<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"HMS Blackfang"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ship<span class="token punctuation">.</span><span class="token function">setShieldStrength</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        ship<span class="token punctuation">.</span><span class="token function">printStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: Ship "HMS Blackfang" has 150 shield points.</span>
+
+        <span class="token comment">// Folgender Aufruf wirft eine IllegalArgumentException, da der Name leer ist:</span>
+        <span class="token comment">// ship.setName("");</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre><hr>
+<h2 id="structs">Structs </h2>
+<p><strong>Structs</strong> are value types that allow you to create small, lightweight objects.<br>
+They are typically used for simple data containers and can offer performance benefits because they are stored on the stack (when used locally) rather than the heap.</p>
+<h3 id="when-to-use-structs">When to Use Structs </h3>
+<ul>
+<li>You need a small data structure to hold related values (e.g., a 2D point, RGB color, or complex number).</li>
+<li>The type will be immutable or have very simple behavior.</li>
+<li>Instances are short-lived and frequently created/destroyed.</li>
+<li>You want to avoid the overhead of heap allocation for many small objects.</li>
+</ul>
+<h3 id="c-example">C# Example </h3>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-using">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Define a struct to represent a 2D point</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">Point2D</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Public fields (or you can use properties)</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-int">int</span></span> X <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-int">int</span></span> Y <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token comment">// Constructor to initialize fields</span>
+    <span class="token keyword keyword-public">public</span> <span class="token function">Point2D</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> x<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword keyword-int">int</span></span> y<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        X <span class="token operator">=</span> x<span class="token punctuation">;</span>
+        Y <span class="token operator">=</span> y<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Method to calculate distance from origin</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-double">double</span></span> <span class="token function">DistanceFromOrigin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> Math<span class="token punctuation">.</span><span class="token function">Sqrt</span><span class="token punctuation">(</span>X <span class="token operator">*</span> X <span class="token operator">+</span> Y <span class="token operator">*</span> Y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Override ToString for easy printing</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-override">override</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> <span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token interpolation-string"><span class="token string">$"(</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">X</span><span class="token punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">Y</span><span class="token punctuation">}</span></span><span class="token string">)"</span></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Create two Point2D structs</span>
+        <span class="token class-name">Point2D</span> p1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Point2D</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Point2D</span> p2 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Point2D</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Point p1: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">p1</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>                   
+        <span class="token comment">// Output: Point p1: (3, 4)</span>
+
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Distance of p1 from origin: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">p1<span class="token punctuation">.</span><span class="token function">DistanceFromOrigin</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+        <span class="token comment">// Output: Distance of p1 from origin: 5</span>
+
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Point p2: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">p2</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>                   
+        <span class="token comment">// Output: Point p2: (0, 0)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Notes:</strong></p>
+<ul>
+<li>Structs in C# are declared with the struct keyword.</li>
+<li>Fields or automatic properties can be included, but they should be simple.</li>
+<li>You can define methods, constructors, and even override methods like ToString().</li>
+<li>Structs are value types, so assigning one struct to another copies all fields (no shared reference).</li>
+</ul>
+<h2 id="java-2">Java </h2>
+<p>Java doesn't have any structs</p>
+<pre data-role="codeBlock" data-info="Java" class="language-java Java"><code><span class="token comment">// A record automatically creates private final fields, constructor, getters, </span>
+<span class="token comment">// equals(), hashCode(), and toString() for you.</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-record">record</span> <span class="token class-name">Point2D</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> x<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// You can add additional methods if needed</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">distanceFromOrigin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>x <span class="token operator">*</span> x <span class="token operator">+</span> y <span class="token operator">*</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Usage</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Point2D</span> p1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Point2D</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Point2D</span> p2 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Point2D</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Point p1: "</span> <span class="token operator">+</span> p1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: Point p1: Point2D[x=3, y=4]</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Distance of p1 from origin: "</span> <span class="token operator">+</span> p1<span class="token punctuation">.</span><span class="token function">distanceFromOrigin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: Distance of p1 from origin: 5.0</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Point p2: "</span> <span class="token operator">+</span> p2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: Point p2: Point2D[x=0, y=0]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><hr>
+<h2 id="abstract-classes">Abstract Classes </h2>
+<p>An <strong>abstract class</strong> is a base class that cannot be instantiated directly. It can contain <strong>abstract methods</strong> (methods without implementation) that <strong>derived classes must override</strong>, as well as regular (concrete) methods or properties. Abstract classes are used to define a common interface and partial behavior for a group of related classes.</p>
+<h3 id="when-to-use-abstract-classes">When to Use Abstract Classes </h3>
+<ul>
+<li>You want to share code (fields, properties, or concrete methods) among subclasses.</li>
+<li>You need to force subclasses to implement certain methods.</li>
+<li>You don’t want the base class to be instantiated on its own.</li>
+</ul>
+<hr>
+<h3 id="️-c-example">⚙️ C# Example </h3>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-using">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Abstract base class</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">SpaceVessel</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Concrete property</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Name <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token comment">// Abstract method: no implementation here</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">EngageDrive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Concrete method: shared among all subclasses</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">ReportStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">Name</span><span class="token punctuation">}</span></span><span class="token string"> reports: All systems are nominal."</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Derived class must implement the abstract method</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Explorer</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">SpaceVessel</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-override">override</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">EngageDrive</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">Name</span><span class="token punctuation">}</span></span><span class="token string"> engages exploration drive into the abyss!"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Usage</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// SpaceVessel vessel = new SpaceVessel(); // Error: Cannot create an instance of the abstract class</span>
+        
+        <span class="token class-name">Explorer</span> hootsforce <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Explorer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hootsforce<span class="token punctuation">.</span>Name <span class="token operator">=</span> <span class="token string">"DSS Hootsforce"</span><span class="token punctuation">;</span>
+        
+        hootsforce<span class="token punctuation">.</span><span class="token function">ReportStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: DSS Hootsforce reports: All systems are nominal.</span>
+        
+        hootsforce<span class="token punctuation">.</span><span class="token function">EngageDrive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: DSS Hootsforce engages exploration drive into the abyss!</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="-java-example">🔧 Java Example </h3>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">// Abstract base class</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">SpaceVessel</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Concrete field</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">SpaceVessel</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Abstract method: no implementation here</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-void">void</span> <span class="token function">engageDrive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Concrete method: shared among all subclasses</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">reportStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name <span class="token operator">+</span> <span class="token string">" reports: All systems are nominal."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Getter for name (protected so subclasses can use it)</span>
+    <span class="token keyword keyword-protected">protected</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Derived class must implement the abstract method</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Explorer</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">SpaceVessel</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Explorer</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">engageDrive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" engages exploration drive into the abyss!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Usage</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// SpaceVessel vessel = new SpaceVessel("X"); // Error: Cannot instantiate abstract class</span>
+        
+        <span class="token class-name">Explorer</span> hootsforce <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Explorer</span><span class="token punctuation">(</span><span class="token string">"DSS Hootsforce"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        hootsforce<span class="token punctuation">.</span><span class="token function">reportStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: DSS Hootsforce reports: All systems are nominal.</span>
+        
+        hootsforce<span class="token punctuation">.</span><span class="token function">engageDrive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: DSS Hootsforce engages exploration drive into the abyss!</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><p><strong>Key Points:</strong></p>
+<ul>
+<li>
+<p>You cannot create an instance of an abstract class directly.</p>
+</li>
+<li>
+<p>Abstract classes may contain both abstract members (to be implemented by subclasses) and concrete members (shared code).</p>
+</li>
+<li>
+<p>Subclasses must override all abstract methods, or themselves become abstract.</p>
+</li>
+</ul>
+<hr>
+<h2 id="exception-handling">Exception Handling </h2>
+<p><strong>Exception handling</strong> allows a program to respond to unexpected events or errors (exceptions) in a controlled way, preventing crashes and enabling recovery or cleanup.</p>
+<h3 id="key-concepts">Key Concepts </h3>
+<ul>
+<li><strong>try</strong>: Block of code to monitor for exceptions.</li>
+<li><strong>catch</strong>: Block(s) to handle specific exception types.</li>
+<li><strong>finally</strong>: (Optional) Block that always executes for cleanup, regardless of whether an exception occurred.</li>
+<li><strong>throw</strong>: Keyword to raise an exception explicitly.</li>
+<li><strong>custom exceptions</strong>: User-defined exception classes for domain-specific error conditions.</li>
+</ul>
+<hr>
+<h3 id="️-c-example-1">⚙️ C# Example </h3>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-using">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Custom exception class</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">InsufficientCreditsException</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Exception</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token function">InsufficientCreditsException</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span></span> message<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword keyword-base">base</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">CreditAccount</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name"><span class="token keyword keyword-int">int</span></span> credits<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token function">CreditAccount</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> initialCredits<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        credits <span class="token operator">=</span> initialCredits<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">SpendCredits</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> amount<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>amount <span class="token operator">&gt;</span> credits<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Throw a custom exception if insufficient credits</span>
+            <span class="token keyword keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">InsufficientCreditsException</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Attempted to spend </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">amount</span><span class="token punctuation">}</span></span><span class="token string"> credits, but only </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">credits</span><span class="token punctuation">}</span></span><span class="token string"> available."</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        credits <span class="token operator">-=</span> amount<span class="token punctuation">;</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Spent </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">amount</span><span class="token punctuation">}</span></span><span class="token string"> credits, </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">credits</span><span class="token punctuation">}</span></span><span class="token string"> remaining."</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">AddCredits</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> amount<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>amount <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Throw a built-in exception for invalid argument</span>
+            <span class="token keyword keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">ArgumentOutOfRangeException</span><span class="token punctuation">(</span><span class="token keyword keyword-nameof">nameof</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"Cannot add a negative amount of credits."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        credits <span class="token operator">+=</span> amount<span class="token punctuation">;</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Added </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">amount</span><span class="token punctuation">}</span></span><span class="token string"> credits, now </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">credits</span><span class="token punctuation">}</span></span><span class="token string"> total."</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name"><span class="token keyword keyword-var">var</span></span> account <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">CreditAccount</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword keyword-try">try</span>
+        <span class="token punctuation">{</span>
+            account<span class="token punctuation">.</span><span class="token function">SpendCredits</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// Output: Spent 30 credits, 20 remaining.</span>
+
+            account<span class="token punctuation">.</span><span class="token function">SpendCredits</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// This line will throw InsufficientCreditsException</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">InsufficientCreditsException</span> ex<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Credit error: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">ex<span class="token punctuation">.</span>Message</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// Output: Credit error: Attempted to spend 25 credits, but only 20 available.</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> ex<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// General catch for any other exceptions</span>
+            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Unexpected error: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">ex<span class="token punctuation">.</span>Message</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-finally">finally</span>
+        <span class="token punctuation">{</span>
+            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"End of credit transaction."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// Output: End of credit transaction.</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword keyword-try">try</span>
+        <span class="token punctuation">{</span>
+            account<span class="token punctuation">.</span><span class="token function">AddCredits</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// This line will throw ArgumentOutOfRangeException</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">ArgumentOutOfRangeException</span> ex<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Invalid input: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">ex<span class="token punctuation">.</span>Message</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// Output: Invalid input: Cannot add a negative amount of credits.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="-java-example-1">🔧 Java Example </h3>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">// Custom exception class</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">InsufficientCreditsException</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Exception</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">InsufficientCreditsException</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">CreditAccount</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> credits<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">CreditAccount</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> initialCredits<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>credits <span class="token operator">=</span> initialCredits<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">spendCredits</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> amount<span class="token punctuation">)</span> <span class="token keyword keyword-throws">throws</span> <span class="token class-name">InsufficientCreditsException</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>amount <span class="token operator">&gt;</span> credits<span class="token punctuation">)</span> 
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Throw a custom exception if insufficient credits</span>
+            <span class="token keyword keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">InsufficientCreditsException</span><span class="token punctuation">(</span>
+                <span class="token string">"Attempted to spend "</span> <span class="token operator">+</span> amount <span class="token operator">+</span> <span class="token string">" credits, but only "</span> <span class="token operator">+</span> credits <span class="token operator">+</span> <span class="token string">" available."</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        credits <span class="token operator">-=</span> amount<span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Spent "</span> <span class="token operator">+</span> amount <span class="token operator">+</span> <span class="token string">" credits, "</span> <span class="token operator">+</span> credits <span class="token operator">+</span> <span class="token string">" remaining."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">addCredits</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> amount<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>amount <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+         <span class="token punctuation">{</span>
+            <span class="token comment">// Throw a built-in exception for invalid argument</span>
+            <span class="token keyword keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Cannot add a negative amount of credits."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        credits <span class="token operator">+=</span> amount<span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Added "</span> <span class="token operator">+</span> amount <span class="token operator">+</span> <span class="token string">" credits, now "</span> <span class="token operator">+</span> credits <span class="token operator">+</span> <span class="token string">" total."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Usage</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span>
+ <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token class-name">CreditAccount</span> account <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">CreditAccount</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword keyword-try">try</span>
+         <span class="token punctuation">{</span>
+            account<span class="token punctuation">.</span><span class="token function">spendCredits</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// Output: Spent 30 credits, 20 remaining.</span>
+
+            account<span class="token punctuation">.</span><span class="token function">spendCredits</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// This line will throw InsufficientCreditsException</span>
+        <span class="token punctuation">}</span> 
+        <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">InsufficientCreditsException</span> ex<span class="token punctuation">)</span> 
+        <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Credit error: "</span> <span class="token operator">+</span> ex<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// Output: Credit error: Attempted to spend 25 credits, but only 20 available.</span>
+        <span class="token punctuation">}</span> 
+        <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> ex<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// General catch for any other exceptions</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Unexpected error: "</span> <span class="token operator">+</span> ex<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> 
+        <span class="token keyword keyword-finally">finally</span> 
+        <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"End of credit transaction."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// Output: End of credit transaction.</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword keyword-try">try</span> 
+        <span class="token punctuation">{</span>
+            account<span class="token punctuation">.</span><span class="token function">addCredits</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// This line will throw IllegalArgumentException</span>
+        <span class="token punctuation">}</span> 
+        <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">IllegalArgumentException</span> ex<span class="token punctuation">)</span> 
+        <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Invalid input: "</span> <span class="token operator">+</span> ex<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// Output: Invalid input: Cannot add a negative amount of credits.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><hr>
+<h2 id="generics">Generics </h2>
+<p><strong>Generics</strong> allow you to write classes, methods, and data structures that work with any data type, without sacrificing type safety.<br>
+Sie bieten Flexibilität und Wiederverwendbarkeit, indem sie Typen erst zur Laufzeit festlegen – ganz ohne Casts und Box-/Unboxing-Kram.</p>
+<h3 id="vorteile-1">Vorteile </h3>
+<ul>
+<li><strong>Typensicherheit</strong>: Fehler werden früh vom Compiler erkannt, nicht erst zur Laufzeit.</li>
+<li><strong>Wiederverwendbarkeit</strong>: Ein Code-Template für verschiedene Datentypen.</li>
+<li><strong>Performance</strong>: Kein Box-/Unboxing (in C#) und weniger Casts.</li>
+<li><strong>Konsistenz</strong>: Einheitliche API für alle Typen, die die gleichen Operationen unterstützen.</li>
+</ul>
+<hr>
+<h3 id="️-c-example-2">⚙️ C# Example </h3>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-using">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-using">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Generic class: A simple Pair container</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Pair<span class="token punctuation">&lt;</span>TFirst<span class="token punctuation">,</span> TSecond<span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name">TFirst</span> First <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name">TSecond</span> Second <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token function">Pair</span><span class="token punctuation">(</span><span class="token class-name">TFirst</span> first<span class="token punctuation">,</span> <span class="token class-name">TSecond</span> second<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        First <span class="token operator">=</span> first<span class="token punctuation">;</span>
+        Second <span class="token operator">=</span> second<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-override">override</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> <span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token interpolation-string"><span class="token string">$"(</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">First</span><span class="token punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">Second</span><span class="token punctuation">}</span></span><span class="token string">)"</span></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Generic method: Swaps two elements in an array</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token generic-method"><span class="token function">SwapElements</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span><span class="token class-name">T<span class="token punctuation">[</span><span class="token punctuation">]</span></span> array<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword keyword-int">int</span></span> indexA<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword keyword-int">int</span></span> indexB<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">T</span> temp <span class="token operator">=</span> array<span class="token punctuation">[</span>indexA<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span>indexA<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>indexB<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span>indexB<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Using the generic Pair with different type combinations</span>
+        <span class="token class-name"><span class="token keyword keyword-var">var</span></span> nameAgePair <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Pair<span class="token punctuation">&lt;</span><span class="token keyword keyword-string">string</span><span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token string">"Zoe"</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name"><span class="token keyword keyword-var">var</span></span> coordPair <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Pair<span class="token punctuation">&lt;</span><span class="token keyword keyword-int">int</span><span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>nameAgePair<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: (Zoe, 28)</span>
+
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>coordPair<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: (3, 4)</span>
+
+        <span class="token comment">// Using the generic method SwapElements</span>
+        <span class="token class-name"><span class="token keyword keyword-int">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> numbers <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Before swap: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword keyword-string">string</span><span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span><span class="token string">", "</span><span class="token punctuation">,</span> numbers<span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: Before swap: 1, 2, 3, 4</span>
+
+        <span class="token function">SwapElements</span><span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"After swap: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword keyword-string">string</span><span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span><span class="token string">", "</span><span class="token punctuation">,</span> numbers<span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: After swap: 1, 4, 3, 2</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="-java-example-2">🔧 Java Example </h3>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Arrays</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">// Generic class: A simple Pair container</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Pair</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TFirst</span><span class="token punctuation">,</span> <span class="token class-name">TSecond</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">TFirst</span> first<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">TSecond</span> second<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Pair</span><span class="token punctuation">(</span><span class="token class-name">TFirst</span> first<span class="token punctuation">,</span> <span class="token class-name">TSecond</span> second<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>first <span class="token operator">=</span> first<span class="token punctuation">;</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>second <span class="token operator">=</span> second<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">TFirst</span> <span class="token function">getFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> first<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">TSecond</span> <span class="token function">getSecond</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> second<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token string">"("</span> <span class="token operator">+</span> first <span class="token operator">+</span> <span class="token string">", "</span> <span class="token operator">+</span> second <span class="token operator">+</span> <span class="token string">")"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Generic method: Swaps two elements in an array</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token keyword keyword-void">void</span> <span class="token function">swapElements</span><span class="token punctuation">(</span><span class="token class-name">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> indexA<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> indexB<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">T</span> temp <span class="token operator">=</span> array<span class="token punctuation">[</span>indexA<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span>indexA<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>indexB<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span>indexB<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Using the generic Pair with different type combinations</span>
+        <span class="token class-name">Pair</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> nameAgePair <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Pair</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token string">"Zoe"</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Pair</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> coordPair <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Pair</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>nameAgePair<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: (Zoe, 28)</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>coordPair<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: (3, 4)</span>
+
+        <span class="token comment">// Using the generic method swapElements</span>
+        <span class="token class-name">Integer</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Before swap: "</span> <span class="token operator">+</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: Before swap: [1, 2, 3, 4]</span>
+
+        <span class="token function">swapElements</span><span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"After swap: "</span> <span class="token operator">+</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Output: After swap: [1, 4, 3, 2]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><hr>
+<h2 id="oop-concepts">OOP Concepts </h2>
+<p><strong>Object-Oriented Programming (OOP)</strong> is built on four main pillars that work together to organize code into modular, reusable components. Here’s a quick rundown:</p>
+<ol>
+<li>
+<p><strong>Encapsulation</strong></p>
+<ul>
+<li><strong>Definition</strong>: Bundling data (fields) and methods (functions) that operate on that data into a single unit—an object—and restricting direct access to some of an object’s components.</li>
+<li><strong>Why it matters</strong>: Protects internal state, enforces validation, hides implementation details.</li>
+<li><strong>Key benefit</strong>: You expose only what’s necessary (via public methods or properties) and keep the rest private.</li>
+</ul>
+</li>
+<li>
+<p><strong>Inheritance</strong></p>
+<ul>
+<li><strong>Definition</strong>: A mechanism where a new class (subclass/derived class) inherits properties and methods from an existing class (base class).</li>
+<li><strong>Why it matters</strong>: Promotes code reuse, establishes an “is-a” relationship (e.g., <code>KampfShip is-a Ship</code>).</li>
+<li><strong>Key benefit</strong>: You write shared behavior once in the base class, and subclasses automatically get it (with the option to override).</li>
+</ul>
+</li>
+<li>
+<p><strong>Polymorphism</strong></p>
+<ul>
+<li><strong>Definition</strong>: The ability for different classes to be treated as instances of the same base type, with method calls resolving to the appropriate implementation at runtime.</li>
+<li><strong>Why it matters</strong>: You can write code against an abstract interface or base class and swap in any subclass without changing the calling code.</li>
+<li><strong>Key benefit</strong>: Flexible, extensible design—“one method, many behaviors.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Abstraction</strong></p>
+<ul>
+<li><strong>Definition</strong>: Hiding complex implementation details behind a simple interface or abstract class, exposing only the essential features.</li>
+<li><strong>Why it matters</strong>: Reduces complexity for the caller; you only see “what” happens, not “how.”</li>
+<li><strong>Key benefit</strong>: Simplifies the mental model of your system; you focus on functionality rather than internal mechanics.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="example-tying-them-together-in-c">Example: Tying Them Together in C# </h3>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token comment">// Abstract base class (Abstraction + Inheritance)</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">SpaceVessel</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name"><span class="token keyword keyword-int">int</span></span> hullIntegrity<span class="token punctuation">;</span> <span class="token comment">// Encapsulated field</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Name <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token comment">// Public property</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token function">SpaceVessel</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span></span> name<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword keyword-int">int</span></span> initialIntegrity<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        hullIntegrity <span class="token operator">=</span> initialIntegrity<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Abstract method (Abstraction)—subclasses must implement</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">EngageDrive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">ReportStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// Concrete method</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">Name</span><span class="token punctuation">}</span></span><span class="token string"> hull integrity: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">hullIntegrity</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Encapsulated method to modify internal state</span>
+    <span class="token keyword keyword-protected">protected</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">DamageHull</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> amount<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        hullIntegrity <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">Max</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> hullIntegrity <span class="token operator">-</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Derived class (Inheritance + Polymorphism)</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">PiratenJagdbote</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">SpaceVessel</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token function">PiratenJagdbote</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span></span> name<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword keyword-int">int</span></span> initialIntegrity<span class="token punctuation">)</span> 
+        <span class="token punctuation">:</span> <span class="token keyword keyword-base">base</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> initialIntegrity<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-override">override</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">EngageDrive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// Polymorphic implementation</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">Name</span><span class="token punctuation">}</span></span><span class="token string"> tears through the void with abyssal engines!"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">DamageHull</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Using an encapsulated method</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Usage</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">List<span class="token punctuation">&lt;</span>SpaceVessel<span class="token punctuation">&gt;</span></span> fleet <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span>SpaceVessel<span class="token punctuation">&gt;</span></span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">PiratenJagdbote</span><span class="token punctuation">(</span><span class="token string">"DSS Hootsforce"</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">PiratenJagdbote</span><span class="token punctuation">(</span><span class="token string">"Firebird"</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token keyword keyword-foreach">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-var">var</span></span> ship <span class="token keyword keyword-in">in</span> fleet<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            ship<span class="token punctuation">.</span><span class="token function">ReportStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// Calls base logic</span>
+            ship<span class="token punctuation">.</span><span class="token function">EngageDrive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// Calls overridden logic (Polymorphism)</span>
+            ship<span class="token punctuation">.</span><span class="token function">ReportStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// Output:</span>
+            <span class="token comment">// DSS Hootsforce hull integrity: 100</span>
+            <span class="token comment">// DSS Hootsforce tears through the void with abyssal engines!</span>
+            <span class="token comment">// DSS Hootsforce hull integrity: 95</span>
+            <span class="token comment">// Firebird hull integrity: 50</span>
+            <span class="token comment">// Firebird tears through the void with abyssal engines!</span>
+            <span class="token comment">// Firebird hull integrity: 45</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h2 id="clean-code">Clean Code </h2>
+<p><strong>Clean Code</strong> is all about writing code that’s <strong>readable</strong>, <strong>maintainable</strong>, and <strong>easy to understand</strong>—even if you come back months later (or your first mate tries to debug at 2 AM). Here are the core principles:</p>
+<ol>
+<li>
+<p><strong>Meaningful Names</strong></p>
+<ul>
+<li>Variables, methods, and classes should have descriptive names.</li>
+<li>Avoid abbreviations or single letters (unless it’s a short-lived loop index).</li>
+<li>Use domain terminology (e.g., <code>AbyssJump()</code> instead of <code>DoAction()</code> if it specifically jumps to another system).</li>
+</ul>
+</li>
+<li>
+<p><strong>Single Responsibility Principle (SRP)</strong></p>
+<ul>
+<li>Each class or method should do <strong>only one thing</strong> and do it well.</li>
+<li>If a method tries to load from disk and parse JSON and update UI, split it into three methods.</li>
+<li>Keeps code easier to test and debug.</li>
+</ul>
+</li>
+<li>
+<p><strong>Don’t Repeat Yourself (DRY)</strong></p>
+<ul>
+<li>Duplicate logic is a maintenance nightmare.</li>
+<li>Extract common code into helper methods or base classes.</li>
+<li>If “calculate jump range” appears in two places, make a single <code>CalculateAbyssRange()</code> method.</li>
+</ul>
+</li>
+<li>
+<p><strong>Small Functions / Methods</strong></p>
+<ul>
+<li>Aim for methods that fit on one screen without scrolling.</li>
+<li>Each method does a clear, focused task and has a descriptive name.</li>
+<li>Example:<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token comment">// NOT CLEAN:</span>
+<span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">ProcessOrder</span><span class="token punctuation">(</span><span class="token class-name">Order</span> order<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 50 lines doing validation, calculation, logging, database writes, and notification...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// BETTER:</span>
+<span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">ProcessOrder</span><span class="token punctuation">(</span><span class="token class-name">Order</span> order<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">ValidateOrder</span><span class="token punctuation">(</span>order<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword keyword-decimal">decimal</span></span> total <span class="token operator">=</span> <span class="token function">CalculateOrderTotal</span><span class="token punctuation">(</span>order<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">SaveOrderToDatabase</span><span class="token punctuation">(</span>order<span class="token punctuation">,</span> total<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">SendConfirmation</span><span class="token punctuation">(</span>order<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p><strong>Consistent Formatting</strong></p>
+<ul>
+<li>Consistent indentation, brace style, and spacing.</li>
+<li>Use your team’s style guide (or pick one if you fly solo).</li>
+<li>Example (C# – K&amp;R style):<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">JumpToSystem</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span></span> systemName<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-string">string</span><span class="token punctuation">.</span><span class="token function">IsNullOrEmpty</span><span class="token punctuation">(</span>systemName<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"System name is required."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// …perform jump logic…</span>
+<span class="token punctuation">}</span>
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p><strong>Meaningful Comments (When Needed)</strong></p>
+<ul>
+<li>Comments should explain <strong>why</strong> something is done, not <strong>what</strong> (the code should already show what).</li>
+<li>Remove outdated comments—stale comments are worse than none.</li>
+<li>Example:<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token comment">// BAD COMMENT: // Increment counter</span>
+counter<span class="token operator">++</span><span class="token punctuation">;</span>
+
+<span class="token comment">// GOOD COMMENT:</span>
+<span class="token comment">// We increment the counter here to offset the initial index shift from the Abyss drive calibration.</span>
+counter<span class="token operator">++</span><span class="token punctuation">;</span>
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p><strong>Prefer Immutability When Possible</strong></p>
+<ul>
+<li>Immutable objects are less error-prone and thread-safe by default.</li>
+<li>Use <code>readonly</code> fields (C#) or <code>final</code> fields (Java) for data that should not change once initialized.</li>
+<li>Example (C#):<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Coordinates</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-readonly">readonly</span> <span class="token class-name"><span class="token keyword keyword-int">int</span></span> X<span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-readonly">readonly</span> <span class="token class-name"><span class="token keyword keyword-int">int</span></span> Y<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token function">Coordinates</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> x<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword keyword-int">int</span></span> y<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        X <span class="token operator">=</span> x<span class="token punctuation">;</span>
+        Y <span class="token operator">=</span> y<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p><strong>Error Handling and Exceptions</strong></p>
+<ul>
+<li>Don’t swallow exceptions—handle them appropriately or propagate them.</li>
+<li>Use <code>try</code>/<code>catch</code>/<code>finally</code> sparingly; don’t wrap every line in a <code>try</code>.</li>
+<li>Example (C#):<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-try">try</span>
+<span class="token punctuation">{</span>
+    account<span class="token punctuation">.</span><span class="token function">SpendCredits</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">InsufficientCreditsException</span> ex<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Log the issue, inform the user, and let them retry</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Not enough credits: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">ex<span class="token punctuation">.</span>Message</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p><strong>Unit Tests and Testable Code</strong></p>
+<ul>
+<li>Design your classes so dependencies can be injected (e.g., via constructor).</li>
+<li>Keep methods small and focused so they’re easy to test.</li>
+<li>Example (C#):<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">CreditAccount</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-readonly">readonly</span> <span class="token class-name">ILogger</span> _logger<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token function">CreditAccount</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> initialCredits<span class="token punctuation">,</span> <span class="token class-name">ILogger</span> logger<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Credits <span class="token operator">=</span> initialCredits<span class="token punctuation">;</span>
+        _logger <span class="token operator">=</span> logger<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-int">int</span></span> Credits <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Spend</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> amount<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>amount <span class="token operator">&gt;</span> Credits<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            _logger<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span><span class="token string">"Insufficient credits."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">InvalidOperationException</span><span class="token punctuation">(</span><span class="token string">"Not enough credits."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        Credits <span class="token operator">-=</span> amount<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p><strong>Refactor Often</strong></p>
+<ul>
+<li>If you see “code smells” (long methods, duplicated logic, deeply nested conditionals), carve off a tidy little refactoring.</li>
+<li>Keep your ship tight—routine maintenance prevents catastrophic failures later.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>Pirate’s Note</strong>:<br>
+“Clean code is like a well-kept deck. If every plank’s in place, you won’t trip over a loose nail when battling foes—or merging code!”</p>
+</blockquote>
+<hr>
+<h2 id="big-o-notation">Big O Notation </h2>
+<h2 id="listen-trees-und-andere-datenstrukturen">Listen, Trees und andere Datenstrukturen </h2>
+<h2 id="speisende-philosphen">Speisende Philosphen </h2>
+<hr>
+<p style="page-break-before: always;"></p>
+<h1 id="gestaltung-von-grafischen-benutzerinterfaces">Gestaltung von grafischen Benutzerinterfaces </h1>
+<h2 id="wpf-anwendungen">WPF Anwendungen </h2>
+<hr>
+<h3 id="wpf-basics">WPF Basics </h3>
+<h3 id="event-handling">Event Handling </h3>
+<h3 id="wpf-routed-events">WPF Routed Events </h3>
+<h3 id="xaml">XAML </h3>
+<h3 id="wpf-container">WPF Container </h3>
+<h3 id="wpf-controls">WPF Controls </h3>
+<h2 id="java-ui">Java UI </h2>
+<hr>
+<h3 id="java-swing">Java Swing </h3>
+<h3 id="javafx">JavaFX </h3>
+<hr>
+<p style="page-break-before: always;"></p>
+<h1 id="gestaltung-von-web--und-mobilen-anwendungen">Gestaltung von Web- und Mobilen Anwendungen </h1>
+<h2 id="aspnet-core"><a href="http://ASP.NET">ASP.NET</a> CORE </h2>
+<hr>
+<h3 id="templates">Templates </h3>
+<h3 id="razorpages">RazorPages </h3>
+<h4 id="razor-syntax">Razor-Syntax </h4>
+<h3 id="usercontrols">UserControls </h3>
+<h3 id="werteübergabe">Werteübergabe </h3>
+<h3 id="datenbindung">Datenbindung </h3>
+<h3 id="validation">Validation </h3>
+<h3 id="konzept-und-funktionsweise">Konzept und Funktionsweise </h3>
+<h3 id="event-handling-1">Event-Handling </h3>
+<hr>
+<h2 id="android">Android </h2>
+<hr>
+<h3 id="activities">Activities </h3>
+<h3 id="intents">Intents </h3>
+<h3 id="fragments">Fragments </h3>
+<h3 id="lifecycle-von-activity-und-fragmenten">Lifecycle von Activity und Fragmenten </h3>
+<h3 id="android-manifest">Android Manifest </h3>
+<h3 id="ressourcen">Ressourcen </h3>
+<h3 id="android-workflow-instatllation-android-studio">Android-Workflow (Instatllation Android Studio) </h3>
+<hr>
+<p style="page-break-before: always;"></p>
+<h1 id="netzwerk-und-webprogrammierung">Netzwerk und Webprogrammierung </h1>
+<h2 id="client---server-konzepz">Client - Server Konzepz </h2>
+<hr>
+<h2 id="aspnet-core-api"><a href="http://ASP.NET">ASP.NET</a> Core API </h2>
+<hr>
+<h3 id="restapi">RestAPI </h3>
+<h3 id="webserver-configuration">WebServer Configuration </h3>
+<h3 id="api-testen">API Testen </h3>
+<h4 id="postman">Postman </h4>
+<h4 id="swagger">Swagger </h4>
+<hr>
+<h2 id="sockets">Sockets </h2>
+<hr>
+<p>sdsds</p>
+<hr>
+<h2 id="threads">Threads </h2>
+<hr>
+<h3 id="threading-in-c">Threading in C# </h3>
+<h4 id="synchronsation">Synchronsation </h4>
+<h4 id="tasks">Tasks </h4>
+<h3 id="threading-in-java">Threading in Java </h3>
+<hr>
+<p style="page-break-before: always;"></p>
+<h1 id="konzepte-moderner-datenspeicherung">Konzepte moderner Datenspeicherung </h1>
+<h2 id="entity-framework">Entity Framework </h2>
+<hr>
+<h3 id="basics">Basics </h3>
+<h3 id="linq">LINQ </h3>
+<h3 id="lambda">Lambda </h3>
+<h3 id="collections">Collections </h3>
+<h3 id="generics-1">Generics </h3>
+<h3 id="net-vs-net-core">.NET vs .NET CORE </h3>
+<hr>
+<h2 id="serialisierung">Serialisierung </h2>
+<hr>
+<p style="page-break-before: always;"></p>
+<h1 id="softwarearchitektur-und-design-patterns">Softwarearchitektur und Design Patterns </h1>
+<h2 id="design-patterns">Design Patterns </h2>
+<hr>
+<h3 id="c-1">C# </h3>
+<h3 id="java-3">Java </h3>
+<h3 id="android-1">Android </h3>
+<hr>
+<h2 id="mvvm-wpf">MVVM WPF </h2>
+<hr>
+<hr>
+<h2 id="mvc">MVC </h2>
+<hr>
+<hr>
+<h2 id="android-2">Android </h2>
+<hr>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

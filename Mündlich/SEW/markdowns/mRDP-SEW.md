@@ -1,13 +1,37 @@
 <style>
-body {
+
+@font-face {
+  font-family: 'TheRumIsGone';
+  src: url('TheRumIsGone.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body 
+{
   counter-reset: h1;
 }
+
 h1 {
   counter-reset: h2;
+  font-family: 'TheRumIsGone', serif;
+  text-shadow: 2px 2px 4px #ccc;
 }
-h2 {
+
+h2 
+{
   counter-reset: h3;
+  border-bottom: 2px solid #ffa500;
 }
+
+h3 {
+  counter-reset: h4;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
 h1::before {
   counter-increment: h1;
   content: counter(h1) ". ";
@@ -20,11 +44,14 @@ h3::before {
   counter-increment: h3;
   content: counter(h1) "." counter(h2) "." counter(h3) " ";
 }
+h4::before {
+    counter-increment: h4;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
+}
+
 </style>
 
-
 # Algorithmen und Datenstrukturen
----
 ## OOP Programmierung (c#, java)
 
 **What is OOP?**
@@ -1183,8 +1210,6 @@ public class Main {
 
 ---
 
----
-
 ## OOP Concepts
 
 **Object-Oriented Programming (OOP)** is built on four main pillars that work together to organize code into modular, reusable components. Here’s a quick rundown:
@@ -1431,3 +1456,173 @@ public class Program
 ## Listen, Trees und andere Datenstrukturen 
 
 ## Speisende Philosphen
+
+---
+
+<p style="page-break-before: always;"></p>
+
+# Gestaltung von grafischen Benutzerinterfaces
+
+## WPF Anwendungen
+---
+
+### WPF Basics
+
+### Event Handling
+
+### WPF Routed Events
+
+### XAML
+
+### WPF Container
+
+### WPF Controls
+
+## Java UI
+
+---
+
+
+### Java Swing
+
+### JavaFX
+
+---
+
+<p style="page-break-before: always;"></p>
+
+# Gestaltung von Web- und Mobilen Anwendungen
+## ASP.NET CORE
+---
+### Templates
+
+### RazorPages
+
+#### Razor-Syntax
+
+### UserControls
+
+### Werteübergabe
+
+### Datenbindung
+
+### Validation
+
+### Konzept und Funktionsweise
+
+### Event-Handling 
+
+---
+
+
+
+
+## Android
+
+---
+
+
+### Activities
+
+### Intents
+
+### Fragments
+
+### Lifecycle von Activity und Fragmenten
+
+### Android Manifest
+
+### Ressourcen
+
+### Android-Workflow (Instatllation Android Studio)
+
+
+---
+
+<p style="page-break-before: always;"></p>
+
+# Netzwerk und Webprogrammierung
+## Client - Server Konzepz
+---
+## ASP.NET Core API
+---
+
+### RestAPI
+
+### WebServer Configuration
+
+### API Testen
+
+#### Postman
+
+#### Swagger
+
+---
+## Sockets
+---
+
+sdsds
+
+--- 
+## Threads
+---
+
+### Threading in C#
+
+#### Synchronsation
+
+#### Tasks
+
+### Threading in Java
+
+---
+
+<p style="page-break-before: always;"></p>
+
+# Konzepte moderner Datenspeicherung
+
+
+## Entity Framework
+
+---
+
+### Basics
+
+### LINQ
+
+### Lambda
+
+### Collections
+
+### Generics
+
+### .NET vs .NET CORE
+
+---
+## Serialisierung
+---
+
+<p style="page-break-before: always;"></p>
+
+# Softwarearchitektur und Design Patterns
+
+
+## Design Patterns
+---
+
+### C#
+
+### Java
+
+### Android
+---
+## MVVM WPF
+---
+
+---
+## MVC
+---
+
+---
+## Android
+---
