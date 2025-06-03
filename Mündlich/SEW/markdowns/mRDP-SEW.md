@@ -51,6 +51,118 @@ h4::before {
 
 </style>
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Algorithmen und Datenstrukturen](#algorithmen-und-datenstrukturen)
+  - [OOP Programmierung (c#, java)](#oop-programmierung-c-java)
+    - [Pros](#pros)
+    - [Cons](#cons)
+    - [Compared to Procedural / Functional](#compared-to-procedural--functional)
+  - [Vererbung - Inheritance](#vererbung---inheritance)
+    - [C#](#c)
+    - [Java](#java)
+  - [🧩 Interfaces](#-interfaces)
+    - [⚙️ C#](#️-c)
+    - [🔧 Java](#-java)
+  - [🌀 Polymorphie](#-polymorphie)
+    - [⚙️ C# Beispiel](#️-c-beispiel)
+    - [Java](#java-1)
+  - [📡 Delegates](#-delegates)
+    - [⚙️ C# Beispiel](#️-c-beispiel-1)
+      - [Multicast](#multicast)
+    - [🔧 Java Vergleich (Functional Interface + Lambda)](#-java-vergleich-functional-interface--lambda)
+      - [Other examples](#other-examples)
+  - [Datenkapselung (Encapsulation)](#datenkapselung-encapsulation)
+    - [Vorteile](#vorteile)
+    - [⚙️ C# Beispiel](#️-c-beispiel-2)
+    - [🔧 Java Beispiel](#-java-beispiel)
+  - [Structs](#structs)
+    - [When to Use Structs](#when-to-use-structs)
+    - [C# Example](#c-example)
+  - [Java](#java-2)
+  - [Abstract Classes](#abstract-classes)
+    - [When to Use Abstract Classes](#when-to-use-abstract-classes)
+    - [⚙️ C# Example](#️-c-example)
+    - [🔧 Java Example](#-java-example)
+  - [Exception Handling](#exception-handling)
+    - [Key Concepts](#key-concepts)
+    - [⚙️ C# Example](#️-c-example-1)
+    - [🔧 Java Example](#-java-example-1)
+  - [Generics](#generics)
+    - [Vorteile](#vorteile-1)
+    - [⚙️ C# Example](#️-c-example-2)
+    - [🔧 Java Example](#-java-example-2)
+  - [OOP Concepts](#oop-concepts)
+    - [Example: Tying Them Together in C#](#example-tying-them-together-in-c)
+  - [Clean Code](#clean-code)
+  - [Big O Notation](#big-o-notation)
+  - [Listen, Trees und andere Datenstrukturen](#listen-trees-und-andere-datenstrukturen)
+  - [Speisende Philosphen](#speisende-philosphen)
+- [🎨 Gestaltung von grafischen Benutzerinterfaces](#-gestaltung-von-grafischen-benutzerinterfaces)
+  - [🪟 WPF Anwendungen](#-wpf-anwendungen)
+    - [🧱 WPF Basics](#-wpf-basics)
+    - [🎯 Event Handling](#-event-handling)
+    - [🌐 WPF Routed Events](#-wpf-routed-events)
+    - [✍️ XAML](#️-xaml)
+    - [📦 WPF Container](#-wpf-container)
+    - [🧩 WPF Controls](#-wpf-controls)
+  - [☕ Java UI](#-java-ui)
+    - [🖼️ Java Swing](#️-java-swing)
+    - [🌟 JavaFX](#-javafx)
+- [🌐 Gestaltung von Web- und Mobilen Anwendungen](#-gestaltung-von-web--und-mobilen-anwendungen)
+  - [🧩 ASP.NET CORE](#-aspnet-core)
+    - [📄 Templates](#-templates)
+    - [🧾 RazorPages](#-razorpages)
+      - [✒️ Razor-Syntax](#️-razor-syntax)
+    - [🧱 UserControls](#-usercontrols)
+    - [🔁 Werteübergabe](#-werteübergabe)
+    - [🔗 Datenbindung](#-datenbindung)
+    - [✅ Validation](#-validation)
+    - [🧠 Konzept und Funktionsweise](#-konzept-und-funktionsweise)
+    - [🎬 Event-Handling](#-event-handling-1)
+  - [🤖 Android](#-android)
+    - [🎬 Activities](#-activities)
+    - [📩 Intents](#-intents)
+    - [🧱 Fragments](#-fragments)
+    - [♻️ Lifecycle von Activity und Fragmenten](#️-lifecycle-von-activity-und-fragmenten)
+    - [📜 Android Manifest](#-android-manifest)
+    - [🎨 Ressourcen](#-ressourcen)
+    - [🛠️ Android-Workflow (Installation Android Studio)](#️-android-workflow-installation-android-studio)
+- [🌐 Netzwerk und Webprogrammierung](#-netzwerk-und-webprogrammierung)
+  - [🧑‍🤝‍🧑 Client - Server Konzept](#-client---server-konzept)
+  - [🌐 ASP.NET Core API](#-aspnet-core-api)
+    - [📡 RestAPI](#-restapi)
+    - [⚙️ WebServer Configuration](#️-webserver-configuration)
+    - [🧪 API Testen](#-api-testen)
+      - [🧰 Postman](#-postman)
+      - [🧭 Swagger](#-swagger)
+  - [🔌 Sockets](#-sockets)
+  - [🧵 Threads](#-threads)
+    - [🧠 Threading in C#](#-threading-in-c)
+      - [🔄 Synchronisation](#-synchronisation)
+      - [⏳ Tasks](#-tasks)
+    - [☕ Threading in Java](#-threading-in-java)
+- [💾 Konzepte moderner Datenspeicherung](#-konzepte-moderner-datenspeicherung)
+  - [🏗️ Entity Framework](#️-entity-framework)
+    - [🧩 Basics](#-basics)
+    - [🔍 LINQ](#-linq)
+    - [🧠 Lambda](#-lambda)
+    - [📚 Collections](#-collections)
+    - [🧰 Generics](#-generics)
+    - [⚔️ .NET vs .NET CORE](#️-net-vs-net-core)
+  - [📦 Serialisierung](#-serialisierung)
+- [🏛️ Softwarearchitektur und Design Patterns](#️-softwarearchitektur-und-design-patterns)
+  - [🧠 Design Patterns](#-design-patterns)
+    - [⚙️ C#](#️-c-1)
+    - [☕ Java](#-java-1)
+    - [📱 Android](#-android-1)
+  - [🧭 MVVM WPF](#-mvvm-wpf)
+  - [🏗️ MVC](#️-mvc)
+  - [📱 Android](#-android-2)
+
+---
+
 # Algorithmen und Datenstrukturen
 ## OOP Programmierung (c#, java)
 
@@ -1461,168 +1573,167 @@ public class Program
 
 <p style="page-break-before: always;"></p>
 
-# Gestaltung von grafischen Benutzerinterfaces
+# 🎨 Gestaltung von grafischen Benutzerinterfaces
 
-## WPF Anwendungen
+## 🪟 WPF Anwendungen
 ---
 
-### WPF Basics
+### 🧱 WPF Basics
 
-### Event Handling
+### 🎯 Event Handling
 
-### WPF Routed Events
+### 🌐 WPF Routed Events
 
-### XAML
+### ✍️ XAML
 
-### WPF Container
+### 📦 WPF Container
 
-### WPF Controls
+### 🧩 WPF Controls
 
-## Java UI
-
+## ☕ Java UI
 ---
 
+### 🖼️ Java Swing
 
-### Java Swing
-
-### JavaFX
-
----
-
-<p style="page-break-before: always;"></p>
-
-# Gestaltung von Web- und Mobilen Anwendungen
-## ASP.NET CORE
----
-### Templates
-
-### RazorPages
-
-#### Razor-Syntax
-
-### UserControls
-
-### Werteübergabe
-
-### Datenbindung
-
-### Validation
-
-### Konzept und Funktionsweise
-
-### Event-Handling 
-
----
-
-
-
-
-## Android
-
----
-
-
-### Activities
-
-### Intents
-
-### Fragments
-
-### Lifecycle von Activity und Fragmenten
-
-### Android Manifest
-
-### Ressourcen
-
-### Android-Workflow (Instatllation Android Studio)
-
+### 🌟 JavaFX
 
 ---
 
 <p style="page-break-before: always;"></p>
 
-# Netzwerk und Webprogrammierung
-## Client - Server Konzepz
+# 🌐 Gestaltung von Web- und Mobilen Anwendungen
+
+## 🧩 ASP.NET CORE
 ---
-## ASP.NET Core API
+### 📄 Templates
+
+### 🧾 RazorPages
+
+#### ✒️ Razor-Syntax
+
+### 🧱 UserControls
+
+### 🔁 Werteübergabe
+
+### 🔗 Datenbindung
+
+### ✅ Validation
+
+### 🧠 Konzept und Funktionsweise
+
+### 🎬 Event-Handling 
+
 ---
 
-### RestAPI
+## 🤖 Android
+---
 
-### WebServer Configuration
+### 🎬 Activities
 
-### API Testen
+### 📩 Intents
 
-#### Postman
+### 🧱 Fragments
 
-#### Swagger
+### ♻️ Lifecycle von Activity und Fragmenten
+
+### 📜 Android Manifest
+
+### 🎨 Ressourcen
+
+### 🛠️ Android-Workflow (Installation Android Studio)
 
 ---
-## Sockets
+
+<p style="page-break-before: always;"></p>
+
+# 🌐 Netzwerk und Webprogrammierung
+
+## 🧑‍🤝‍🧑 Client - Server Konzept
+---
+
+## 🌐 ASP.NET Core API
+---
+
+### 📡 RestAPI
+
+### ⚙️ WebServer Configuration
+
+### 🧪 API Testen
+
+#### 🧰 Postman
+
+#### 🧭 Swagger
+
+---
+
+## 🔌 Sockets
 ---
 
 sdsds
 
---- 
-## Threads
 ---
 
-### Threading in C#
-
-#### Synchronsation
-
-#### Tasks
-
-### Threading in Java
-
+## 🧵 Threads
 ---
 
-<p style="page-break-before: always;"></p>
+### 🧠 Threading in C#
 
-# Konzepte moderner Datenspeicherung
+#### 🔄 Synchronisation
 
+#### ⏳ Tasks
 
-## Entity Framework
+### ☕ Threading in Java
 
----
-
-### Basics
-
-### LINQ
-
-### Lambda
-
-### Collections
-
-### Generics
-
-### .NET vs .NET CORE
-
----
-## Serialisierung
 ---
 
 <p style="page-break-before: always;"></p>
 
-# Softwarearchitektur und Design Patterns
+# 💾 Konzepte moderner Datenspeicherung
 
-
-## Design Patterns
+## 🏗️ Entity Framework
 ---
 
-### C#
+### 🧩 Basics
 
-### Java
+### 🔍 LINQ
 
-### Android
+### 🧠 Lambda
+
+### 📚 Collections
+
+### 🧰 Generics
+
+### ⚔️ .NET vs .NET CORE
+
 ---
-## MVVM WPF
+
+## 📦 Serialisierung
+---
+
+<p style="page-break-before: always;"></p>
+
+# 🏛️ Softwarearchitektur und Design Patterns
+
+## 🧠 Design Patterns
+---
+
+### ⚙️ C#
+
+### ☕ Java
+
+### 📱 Android
+
+---
+
+## 🧭 MVVM WPF
 ---
 
 ---
-## MVC
+
+## 🏗️ MVC
 ---
 
 ---
-## Android
+
+## 📱 Android
 ---

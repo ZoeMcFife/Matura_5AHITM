@@ -76,6 +76,207 @@ h4::before {
 }
 
 </style>
+<h1 id="table-of-contents">Table of Contents </h1>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#algorithmen-und-datenstrukturen">Algorithmen und Datenstrukturen</a>
+<ul>
+<li><a href="#oop-programmierung-c-java">OOP Programmierung (c#, java)</a>
+<ul>
+<li><a href="#pros">Pros</a></li>
+<li><a href="#cons">Cons</a></li>
+<li><a href="#compared-to-procedural--functional">Compared to Procedural / Functional</a></li>
+</ul>
+</li>
+<li><a href="#vererbung---inheritance">Vererbung - Inheritance</a>
+<ul>
+<li><a href="#c">C#</a></li>
+<li><a href="#java">Java</a></li>
+</ul>
+</li>
+<li><a href="#-interfaces">🧩 Interfaces</a>
+<ul>
+<li><a href="#%EF%B8%8F-c">⚙️ C#</a></li>
+<li><a href="#-java">🔧 Java</a></li>
+</ul>
+</li>
+<li><a href="#-polymorphie">🌀 Polymorphie</a>
+<ul>
+<li><a href="#%EF%B8%8F-c-beispiel">⚙️ C# Beispiel</a></li>
+<li><a href="#java-1">Java</a></li>
+</ul>
+</li>
+<li><a href="#-delegates">📡 Delegates</a>
+<ul>
+<li><a href="#%EF%B8%8F-c-beispiel-1">⚙️ C# Beispiel</a>
+<ul>
+<li><a href="#multicast">Multicast</a></li>
+</ul>
+</li>
+<li><a href="#-java-vergleich-functional-interface--lambda">🔧 Java Vergleich (Functional Interface + Lambda)</a>
+<ul>
+<li><a href="#other-examples">Other examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#datenkapselung-encapsulation">Datenkapselung (Encapsulation)</a>
+<ul>
+<li><a href="#vorteile">Vorteile</a></li>
+<li><a href="#%EF%B8%8F-c-beispiel-2">⚙️ C# Beispiel</a></li>
+<li><a href="#-java-beispiel">🔧 Java Beispiel</a></li>
+</ul>
+</li>
+<li><a href="#structs">Structs</a>
+<ul>
+<li><a href="#when-to-use-structs">When to Use Structs</a></li>
+<li><a href="#c-example">C# Example</a></li>
+</ul>
+</li>
+<li><a href="#java-2">Java</a></li>
+<li><a href="#abstract-classes">Abstract Classes</a>
+<ul>
+<li><a href="#when-to-use-abstract-classes">When to Use Abstract Classes</a></li>
+<li><a href="#%EF%B8%8F-c-example">⚙️ C# Example</a></li>
+<li><a href="#-java-example">🔧 Java Example</a></li>
+</ul>
+</li>
+<li><a href="#exception-handling">Exception Handling</a>
+<ul>
+<li><a href="#key-concepts">Key Concepts</a></li>
+<li><a href="#%EF%B8%8F-c-example-1">⚙️ C# Example</a></li>
+<li><a href="#-java-example-1">🔧 Java Example</a></li>
+</ul>
+</li>
+<li><a href="#generics">Generics</a>
+<ul>
+<li><a href="#vorteile-1">Vorteile</a></li>
+<li><a href="#%EF%B8%8F-c-example-2">⚙️ C# Example</a></li>
+<li><a href="#-java-example-2">🔧 Java Example</a></li>
+</ul>
+</li>
+<li><a href="#oop-concepts">OOP Concepts</a>
+<ul>
+<li><a href="#example-tying-them-together-in-c">Example: Tying Them Together in C#</a></li>
+</ul>
+</li>
+<li><a href="#clean-code">Clean Code</a></li>
+<li><a href="#big-o-notation">Big O Notation</a></li>
+<li><a href="#listen-trees-und-andere-datenstrukturen">Listen, Trees und andere Datenstrukturen</a></li>
+<li><a href="#speisende-philosphen">Speisende Philosphen</a></li>
+</ul>
+</li>
+<li><a href="#-gestaltung-von-grafischen-benutzerinterfaces">🎨 Gestaltung von grafischen Benutzerinterfaces</a>
+<ul>
+<li><a href="#-wpf-anwendungen">🪟 WPF Anwendungen</a>
+<ul>
+<li><a href="#-wpf-basics">🧱 WPF Basics</a></li>
+<li><a href="#-event-handling">🎯 Event Handling</a></li>
+<li><a href="#-wpf-routed-events">🌐 WPF Routed Events</a></li>
+<li><a href="#%EF%B8%8F-xaml">✍️ XAML</a></li>
+<li><a href="#-wpf-container">📦 WPF Container</a></li>
+<li><a href="#-wpf-controls">🧩 WPF Controls</a></li>
+</ul>
+</li>
+<li><a href="#-java-ui">☕ Java UI</a>
+<ul>
+<li><a href="#%EF%B8%8F-java-swing">🖼️ Java Swing</a></li>
+<li><a href="#-javafx">🌟 JavaFX</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#-gestaltung-von-web--und-mobilen-anwendungen">🌐 Gestaltung von Web- und Mobilen Anwendungen</a>
+<ul>
+<li><a href="#-aspnet-core">🧩 ASP.NET CORE</a>
+<ul>
+<li><a href="#-templates">📄 Templates</a></li>
+<li><a href="#-razorpages">🧾 RazorPages</a>
+<ul>
+<li><a href="#%EF%B8%8F-razor-syntax">✒️ Razor-Syntax</a></li>
+</ul>
+</li>
+<li><a href="#-usercontrols">🧱 UserControls</a></li>
+<li><a href="#-werte%C3%BCbergabe">🔁 Werteübergabe</a></li>
+<li><a href="#-datenbindung">🔗 Datenbindung</a></li>
+<li><a href="#-validation">✅ Validation</a></li>
+<li><a href="#-konzept-und-funktionsweise">🧠 Konzept und Funktionsweise</a></li>
+<li><a href="#-event-handling-1">🎬 Event-Handling</a></li>
+</ul>
+</li>
+<li><a href="#-android">🤖 Android</a>
+<ul>
+<li><a href="#-activities">🎬 Activities</a></li>
+<li><a href="#-intents">📩 Intents</a></li>
+<li><a href="#-fragments">🧱 Fragments</a></li>
+<li><a href="#%EF%B8%8F-lifecycle-von-activity-und-fragmenten">♻️ Lifecycle von Activity und Fragmenten</a></li>
+<li><a href="#-android-manifest">📜 Android Manifest</a></li>
+<li><a href="#-ressourcen">🎨 Ressourcen</a></li>
+<li><a href="#%EF%B8%8F-android-workflow-installation-android-studio">🛠️ Android-Workflow (Installation Android Studio)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#-netzwerk-und-webprogrammierung">🌐 Netzwerk und Webprogrammierung</a>
+<ul>
+<li><a href="#-client---server-konzept">🧑‍🤝‍🧑 Client - Server Konzept</a></li>
+<li><a href="#-aspnet-core-api">🌐 ASP.NET Core API</a>
+<ul>
+<li><a href="#-restapi">📡 RestAPI</a></li>
+<li><a href="#%EF%B8%8F-webserver-configuration">⚙️ WebServer Configuration</a></li>
+<li><a href="#-api-testen">🧪 API Testen</a>
+<ul>
+<li><a href="#-postman">🧰 Postman</a></li>
+<li><a href="#-swagger">🧭 Swagger</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#-sockets">🔌 Sockets</a></li>
+<li><a href="#-threads">🧵 Threads</a>
+<ul>
+<li><a href="#-threading-in-c">🧠 Threading in C#</a>
+<ul>
+<li><a href="#-synchronisation">🔄 Synchronisation</a></li>
+<li><a href="#-tasks">⏳ Tasks</a></li>
+</ul>
+</li>
+<li><a href="#-threading-in-java">☕ Threading in Java</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#-konzepte-moderner-datenspeicherung">💾 Konzepte moderner Datenspeicherung</a>
+<ul>
+<li><a href="#%EF%B8%8F-entity-framework">🏗️ Entity Framework</a>
+<ul>
+<li><a href="#-basics">🧩 Basics</a></li>
+<li><a href="#-linq">🔍 LINQ</a></li>
+<li><a href="#-lambda">🧠 Lambda</a></li>
+<li><a href="#-collections">📚 Collections</a></li>
+<li><a href="#-generics">🧰 Generics</a></li>
+<li><a href="#%EF%B8%8F-net-vs-net-core">⚔️ .NET vs .NET CORE</a></li>
+</ul>
+</li>
+<li><a href="#-serialisierung">📦 Serialisierung</a></li>
+</ul>
+</li>
+<li><a href="#%EF%B8%8F-softwarearchitektur-und-design-patterns">🏛️ Softwarearchitektur und Design Patterns</a>
+<ul>
+<li><a href="#-design-patterns">🧠 Design Patterns</a>
+<ul>
+<li><a href="#%EF%B8%8F-c-1">⚙️ C#</a></li>
+<li><a href="#-java-1">☕ Java</a></li>
+<li><a href="#-android-1">📱 Android</a></li>
+</ul>
+</li>
+<li><a href="#-mvvm-wpf">🧭 MVVM WPF</a></li>
+<li><a href="#%EF%B8%8F-mvc">🏗️ MVC</a></li>
+<li><a href="#-android-2">📱 Android</a></li>
+</ul>
+</li>
+</ul>
+<hr>
 <h1 id="algorithmen-und-datenstrukturen">Algorithmen und Datenstrukturen </h1>
 <h2 id="oop-programmierung-c-java">OOP Programmierung (c#, java) </h2>
 <p><strong>What is OOP?</strong></p>
@@ -1448,95 +1649,95 @@ counter<span class="token operator">++</span><span class="token punctuation">;</
 <h2 id="speisende-philosphen">Speisende Philosphen </h2>
 <hr>
 <p style="page-break-before: always;"></p>
-<h1 id="gestaltung-von-grafischen-benutzerinterfaces">Gestaltung von grafischen Benutzerinterfaces </h1>
-<h2 id="wpf-anwendungen">WPF Anwendungen </h2>
+<h1 id="-gestaltung-von-grafischen-benutzerinterfaces">🎨 Gestaltung von grafischen Benutzerinterfaces </h1>
+<h2 id="-wpf-anwendungen">🪟 WPF Anwendungen </h2>
 <hr>
-<h3 id="wpf-basics">WPF Basics </h3>
-<h3 id="event-handling">Event Handling </h3>
-<h3 id="wpf-routed-events">WPF Routed Events </h3>
-<h3 id="xaml">XAML </h3>
-<h3 id="wpf-container">WPF Container </h3>
-<h3 id="wpf-controls">WPF Controls </h3>
-<h2 id="java-ui">Java UI </h2>
+<h3 id="-wpf-basics">🧱 WPF Basics </h3>
+<h3 id="-event-handling">🎯 Event Handling </h3>
+<h3 id="-wpf-routed-events">🌐 WPF Routed Events </h3>
+<h3 id="️-xaml">✍️ XAML </h3>
+<h3 id="-wpf-container">📦 WPF Container </h3>
+<h3 id="-wpf-controls">🧩 WPF Controls </h3>
+<h2 id="-java-ui">☕ Java UI </h2>
 <hr>
-<h3 id="java-swing">Java Swing </h3>
-<h3 id="javafx">JavaFX </h3>
-<hr>
-<p style="page-break-before: always;"></p>
-<h1 id="gestaltung-von-web--und-mobilen-anwendungen">Gestaltung von Web- und Mobilen Anwendungen </h1>
-<h2 id="aspnet-core"><a href="http://ASP.NET">ASP.NET</a> CORE </h2>
-<hr>
-<h3 id="templates">Templates </h3>
-<h3 id="razorpages">RazorPages </h3>
-<h4 id="razor-syntax">Razor-Syntax </h4>
-<h3 id="usercontrols">UserControls </h3>
-<h3 id="werteübergabe">Werteübergabe </h3>
-<h3 id="datenbindung">Datenbindung </h3>
-<h3 id="validation">Validation </h3>
-<h3 id="konzept-und-funktionsweise">Konzept und Funktionsweise </h3>
-<h3 id="event-handling-1">Event-Handling </h3>
-<hr>
-<h2 id="android">Android </h2>
-<hr>
-<h3 id="activities">Activities </h3>
-<h3 id="intents">Intents </h3>
-<h3 id="fragments">Fragments </h3>
-<h3 id="lifecycle-von-activity-und-fragmenten">Lifecycle von Activity und Fragmenten </h3>
-<h3 id="android-manifest">Android Manifest </h3>
-<h3 id="ressourcen">Ressourcen </h3>
-<h3 id="android-workflow-instatllation-android-studio">Android-Workflow (Instatllation Android Studio) </h3>
+<h3 id="️-java-swing">🖼️ Java Swing </h3>
+<h3 id="-javafx">🌟 JavaFX </h3>
 <hr>
 <p style="page-break-before: always;"></p>
-<h1 id="netzwerk-und-webprogrammierung">Netzwerk und Webprogrammierung </h1>
-<h2 id="client---server-konzepz">Client - Server Konzepz </h2>
+<h1 id="-gestaltung-von-web--und-mobilen-anwendungen">🌐 Gestaltung von Web- und Mobilen Anwendungen </h1>
+<h2 id="-aspnet-core">🧩 <a href="http://ASP.NET">ASP.NET</a> CORE </h2>
 <hr>
-<h2 id="aspnet-core-api"><a href="http://ASP.NET">ASP.NET</a> Core API </h2>
+<h3 id="-templates">📄 Templates </h3>
+<h3 id="-razorpages">🧾 RazorPages </h3>
+<h4 id="️-razor-syntax">✒️ Razor-Syntax </h4>
+<h3 id="-usercontrols">🧱 UserControls </h3>
+<h3 id="-werteübergabe">🔁 Werteübergabe </h3>
+<h3 id="-datenbindung">🔗 Datenbindung </h3>
+<h3 id="-validation">✅ Validation </h3>
+<h3 id="-konzept-und-funktionsweise">🧠 Konzept und Funktionsweise </h3>
+<h3 id="-event-handling-1">🎬 Event-Handling </h3>
 <hr>
-<h3 id="restapi">RestAPI </h3>
-<h3 id="webserver-configuration">WebServer Configuration </h3>
-<h3 id="api-testen">API Testen </h3>
-<h4 id="postman">Postman </h4>
-<h4 id="swagger">Swagger </h4>
+<h2 id="-android">🤖 Android </h2>
 <hr>
-<h2 id="sockets">Sockets </h2>
+<h3 id="-activities">🎬 Activities </h3>
+<h3 id="-intents">📩 Intents </h3>
+<h3 id="-fragments">🧱 Fragments </h3>
+<h3 id="️-lifecycle-von-activity-und-fragmenten">♻️ Lifecycle von Activity und Fragmenten </h3>
+<h3 id="-android-manifest">📜 Android Manifest </h3>
+<h3 id="-ressourcen">🎨 Ressourcen </h3>
+<h3 id="️-android-workflow-installation-android-studio">🛠️ Android-Workflow (Installation Android Studio) </h3>
+<hr>
+<p style="page-break-before: always;"></p>
+<h1 id="-netzwerk-und-webprogrammierung">🌐 Netzwerk und Webprogrammierung </h1>
+<h2 id="-client---server-konzept">🧑‍🤝‍🧑 Client - Server Konzept </h2>
+<hr>
+<h2 id="-aspnet-core-api">🌐 <a href="http://ASP.NET">ASP.NET</a> Core API </h2>
+<hr>
+<h3 id="-restapi">📡 RestAPI </h3>
+<h3 id="️-webserver-configuration">⚙️ WebServer Configuration </h3>
+<h3 id="-api-testen">🧪 API Testen </h3>
+<h4 id="-postman">🧰 Postman </h4>
+<h4 id="-swagger">🧭 Swagger </h4>
+<hr>
+<h2 id="-sockets">🔌 Sockets </h2>
 <hr>
 <p>sdsds</p>
 <hr>
-<h2 id="threads">Threads </h2>
+<h2 id="-threads">🧵 Threads </h2>
 <hr>
-<h3 id="threading-in-c">Threading in C# </h3>
-<h4 id="synchronsation">Synchronsation </h4>
-<h4 id="tasks">Tasks </h4>
-<h3 id="threading-in-java">Threading in Java </h3>
-<hr>
-<p style="page-break-before: always;"></p>
-<h1 id="konzepte-moderner-datenspeicherung">Konzepte moderner Datenspeicherung </h1>
-<h2 id="entity-framework">Entity Framework </h2>
-<hr>
-<h3 id="basics">Basics </h3>
-<h3 id="linq">LINQ </h3>
-<h3 id="lambda">Lambda </h3>
-<h3 id="collections">Collections </h3>
-<h3 id="generics-1">Generics </h3>
-<h3 id="net-vs-net-core">.NET vs .NET CORE </h3>
-<hr>
-<h2 id="serialisierung">Serialisierung </h2>
+<h3 id="-threading-in-c">🧠 Threading in C# </h3>
+<h4 id="-synchronisation">🔄 Synchronisation </h4>
+<h4 id="-tasks">⏳ Tasks </h4>
+<h3 id="-threading-in-java">☕ Threading in Java </h3>
 <hr>
 <p style="page-break-before: always;"></p>
-<h1 id="softwarearchitektur-und-design-patterns">Softwarearchitektur und Design Patterns </h1>
-<h2 id="design-patterns">Design Patterns </h2>
+<h1 id="-konzepte-moderner-datenspeicherung">💾 Konzepte moderner Datenspeicherung </h1>
+<h2 id="️-entity-framework">🏗️ Entity Framework </h2>
 <hr>
-<h3 id="c-1">C# </h3>
-<h3 id="java-3">Java </h3>
-<h3 id="android-1">Android </h3>
+<h3 id="-basics">🧩 Basics </h3>
+<h3 id="-linq">🔍 LINQ </h3>
+<h3 id="-lambda">🧠 Lambda </h3>
+<h3 id="-collections">📚 Collections </h3>
+<h3 id="-generics">🧰 Generics </h3>
+<h3 id="️-net-vs-net-core">⚔️ .NET vs .NET CORE </h3>
 <hr>
-<h2 id="mvvm-wpf">MVVM WPF </h2>
+<h2 id="-serialisierung">📦 Serialisierung </h2>
+<hr>
+<p style="page-break-before: always;"></p>
+<h1 id="️-softwarearchitektur-und-design-patterns">🏛️ Softwarearchitektur und Design Patterns </h1>
+<h2 id="-design-patterns">🧠 Design Patterns </h2>
+<hr>
+<h3 id="️-c-1">⚙️ C# </h3>
+<h3 id="-java-1">☕ Java </h3>
+<h3 id="-android-1">📱 Android </h3>
+<hr>
+<h2 id="-mvvm-wpf">🧭 MVVM WPF </h2>
 <hr>
 <hr>
-<h2 id="mvc">MVC </h2>
+<h2 id="️-mvc">🏗️ MVC </h2>
 <hr>
 <hr>
-<h2 id="android-2">Android </h2>
+<h2 id="-android-2">📱 Android </h2>
 <hr>
 
       </div>
