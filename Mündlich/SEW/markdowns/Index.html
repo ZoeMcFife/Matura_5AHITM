@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Pirate's Codex of Learning</title>
+  <style>
+    /* Font */
+    @font-face {
+      font-family: 'RumGone';
+      src: url('TheRumIsGone.ttf') format('truetype');
+    }
+
+    /* Color Palette */
+    :root {
+      --bg: #1b1f2b;
+      --card-bg: #fdfcfb;
+      --accent: #16a085;
+      --text-dark: #2c3e50;
+      --text-light: #34495e;
+    }
+
+    /* Global Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    header {
+      background-color: var(--bg);
+      text-align: center;
+      padding: 2.5rem 1rem;
+      border-bottom: 4px solid var(--accent);
+    }
+    header h1 {
+      font-family: 'RumGone', cursive;
+      font-size: 3rem;
+      color: var(--accent);
+      text-shadow: 1px 1px rgba(0,0,0,0.4);
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+    }
+
+    main {
+      flex: 1;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      color: var(--text-dark);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    .card h2 {
+      font-family: 'RumGone', cursive;
+      font-size: 1.75rem;
+      color: var(--accent);
+      padding: 1.5rem;
+      border-bottom: 3px solid var(--accent);
+      line-height: 1.2;
+    }
+    .card a {
+      margin: 1.5rem;
+      padding: 1rem;
+      text-align: center;
+      background-color: var(--accent);
+      color: #fdfcfb;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 0.75rem;
+      align-self: center;
+      width: calc(100% - 3rem);
+      transition: background-color 0.3s ease;
+    }
+    .card a:hover {
+      background-color: #13826e;
+    }
+
+    footer {
+      background-color: var(--bg);
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 3px solid var(--accent);
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    /* Responsive Typography */
+    @media (max-width: 480px) {
+      header h1 { font-size: 2.2rem; }
+      .card h2 { font-size: 1.5rem; padding: 1rem; }
+      .card a { font-size: 0.9rem; padding: 0.75rem; margin: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Pirate's Codex of Learning</h1>
+    <p>Chart yer course through the digital seas, Captain!</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Algorithmen &amp; Datenstrukturen</h2>
+      <a href="Algorithmen und Datenstrukturen/Algorithmen und Datenstrukturen.html">Enter the Depths</a>
+    </div>
+    <div class="card">
+      <h2>Grafische Benutzerinterfaces</h2>
+      <a href="Gestaltung von Grafischen Benutzerinterfaces/Gestaltung von Grafischen Benutzerinterfaces.html">Design Yer UI</a>
+    </div>
+    <div class="card">
+      <h2>Web- &amp; Mobile Anwendungen</h2>
+      <a href="Gestaltung von Web- und Mobilen Anwendungen/Gestaltung von Web- und Mobilen Anwendungen.html">Weave the Web</a>
+    </div>
+    <div class="card">
+      <h2>Moderne Datenspeicherung</h2>
+      <a href="Konzepte moderner Datenspeicherung/Konzepte moderner Datenspeicherung.html">Secure the Booty</a>
+    </div>
+    <div class="card">
+      <h2>Netzwerk &amp; Webprogrammierung</h2>
+      <a href="Netzwerk- und Webprogrammierung/Netzwerk- und Webprogrammierung.html">Cast the Lines</a>
+    </div>
+    <div class="card">
+      <h2>Softwarearchitektur &amp; Design Patterns</h2>
+      <a href="Softwarearchitektur und Design Patterns/Softwarearchitektur und Design Patterns.html">Forge the Frameworks</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© SPY 244 – Pirates of Fife. Code plundered and buried deep. 🏴‍☠️</p>
+  </footer>
+</body>
+</html>

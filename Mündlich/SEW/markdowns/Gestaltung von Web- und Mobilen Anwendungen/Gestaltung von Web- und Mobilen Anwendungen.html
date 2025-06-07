@@ -1,0 +1,1442 @@
+<!DOCTYPE html><html><head>
+      <title>Gestaltung von Web- und Mobilen Anwendungen</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\redcr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<style>
+
+@font-face {
+  font-family: 'TheRumIsGone';
+  src: url('TheRumIsGone.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body 
+{
+  counter-reset: h1;
+}
+
+h1 {
+  counter-reset: h2;
+  font-family: 'TheRumIsGone', serif;
+  text-shadow: 2px 2px 4px #ccc;
+}
+
+h2 
+{
+  counter-reset: h3;
+  border-bottom: 2px solid #ffa500;
+}
+
+h3 {
+  counter-reset: h4;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h1::before {
+  counter-increment: h1;
+  content: counter(h1) ". ";
+}
+h2::before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) " ";
+}
+h3::before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) " ";
+}
+h4::before {
+    counter-increment: h4;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
+}
+
+</style>
+<h1 id="table-of-contents">Table of Contents </h1>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#-gestaltung-von-web--und-mobilen-anwendungen">🌐 Gestaltung von Web- und Mobilen Anwendungen</a>
+<ul>
+<li><a href="#-aspnet-core">🧩 ASP.NET CORE</a>
+<ul>
+<li><a href="#-project-templates--structure">📄 Project Templates &amp; Structure</a></li>
+<li><a href="#-host--middleware-pipeline">🧠 Host &amp; Middleware Pipeline</a></li>
+<li><a href="#-routing--endpoints">🔁 Routing &amp; Endpoints</a></li>
+<li><a href="#-razor-pages-vs-mvc-vs-blazor">🧾 Razor Pages vs. MVC vs. Blazor</a></li>
+<li><a href="#-razorpages">🧾 RazorPages</a>
+<ul>
+<li><a href="#%EF%B8%8F-razor-syntax">✒️ Razor-Syntax</a></li>
+<li><a href="#inline">Inline</a></li>
+<li><a href="#tag-helper">Tag Helper</a></li>
+</ul>
+</li>
+<li><a href="#-model-binding--data-access">🔗 Model Binding &amp; Data Access</a>
+<ul>
+<li><a href="#binding-form-data">Binding Form Data</a>
+<ul>
+<li><a href="#razor-page">Razor Page</a></li>
+<li><a href="#pagemodel">PageModel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#-usercontrols">🧱 UserControls</a>
+<ul>
+<li><a href="#1%EF%B8%8F%E2%83%A3-partial-view-simple-include">1️⃣ Partial View (simple include)</a></li>
+<li><a href="#2%EF%B8%8F%E2%83%A3-view-component-logic--view">2️⃣ View Component (logic + view)</a></li>
+</ul>
+</li>
+<li><a href="#-validation--error-handling">✅ Validation &amp; Error Handling</a></li>
+<li><a href="#-auth--authorization">🔒 Auth &amp; Authorization</a></li>
+</ul>
+</li>
+<li><a href="#-event-handling-in-aspnet-core">⚡ Event Handling in ASP.NET Core</a>
+<ul>
+<li><a href="#%EF%B8%8F-razor-pages--mvc-handlers">🖥️ Razor Pages &amp; MVC Handlers</a></li>
+</ul>
+</li>
+<li><a href="#-android">🤖 Android</a>
+<ul>
+<li><a href="#-architektur">🚧 Architektur</a>
+<ul>
+<li><a href="#-applications">📱 Applications</a></li>
+<li><a href="#-application-frameworks">🧰 Application Frameworks</a></li>
+<li><a href="#-libraries-bibliotheken">📚 Libraries (Bibliotheken)</a></li>
+<li><a href="#%EF%B8%8F-android-runtime">⚙️ Android-Runtime</a></li>
+<li><a href="#-linux-kernel">🐧 Linux-Kernel</a></li>
+<li><a href="#-app-architektur">🧩 App-Architektur</a></li>
+<li><a href="#-wichtige-bestandteile-einer-android-app">⚓ Wichtige Bestandteile einer Android-App</a></li>
+</ul>
+</li>
+<li><a href="#-activities">🎬 Activities</a></li>
+<li><a href="#%EF%B8%8F-android-layouts-deklaration-und-struktur">🛠️ Android Layouts: Deklaration und Struktur</a>
+<ul>
+<li><a href="#-was-ist-ein-layout">🧱 Was ist ein Layout?</a></li>
+<li><a href="#-layout-deklarieren">📝 Layout deklarieren</a></li>
+<li><a href="#%EF%B8%8F-layout-in-der-activity-verwenden">⚙️ Layout in der Activity verwenden</a></li>
+<li><a href="#-wichtige-layout-typen">🧭 Wichtige Layout-Typen</a></li>
+<li><a href="#%EF%B8%8F-layout-editor-in-android-studio">🛠️ Layout Editor in Android Studio</a></li>
+<li><a href="#-layouts-wiederverwenden-mit-include">🔄 Layouts wiederverwenden mit <code>&lt;include&gt;</code></a></li>
+<li><a href="#-responsiveadaptive-design">📐 Responsive/Adaptive Design</a></li>
+</ul>
+</li>
+<li><a href="#-intents">📩 Intents</a>
+<ul>
+<li><a href="#example-navigate-to-new-activity">Example: Navigate to new Activity</a></li>
+<li><a href="#intent-with-data">Intent with Data</a></li>
+</ul>
+</li>
+<li><a href="#-fragments">🧱 Fragments</a>
+<ul>
+<li><a href="#put-data-into-a-fragment">Put data into a fragment</a></li>
+<li><a href="#fragment-class">Fragment Class</a></li>
+</ul>
+</li>
+<li><a href="#%EF%B8%8F-lifecycle-von-activity-und-fragmenten">♻️ Lifecycle von Activity und Fragmenten</a></li>
+<li><a href="#-androidmanifestxml">📜 AndroidManifest.xml</a>
+<ul>
+<li><a href="#-applikationsidenti%C3%A4t">🆔 Applikationsidentiät</a></li>
+<li><a href="#%EF%B8%8F-system-requirements">⚙️ System Requirements</a></li>
+<li><a href="#-plattform-requirements">🧩 Plattform Requirements</a></li>
+<li><a href="#-erlaubnisse-permissions">🔐 Erlaubnisse (Permissions)</a></li>
+<li><a href="#-activities-und-andere-komponenten-registrieren">📋 Activities und andere Komponenten registrieren</a></li>
+</ul>
+</li>
+<li><a href="#-ressourcen">🎨 Ressourcen</a>
+<ul>
+<li><a href="#%EF%B8%8F-ordnerstruktur-f%C3%BCr-ressourcen">🗂️ Ordnerstruktur für Ressourcen</a></li>
+<li><a href="#-zugriff-auf-ressourcen">🔑 Zugriff auf Ressourcen</a>
+<ul>
+<li><a href="#%EF%B8%8F-referenz-innerhalb-der-ressourcendefinition">🏷️ Referenz innerhalb der Ressourcendefinition</a></li>
+<li><a href="#-referenz-innerhalb-des-java-codes">💻 Referenz innerhalb des Java-Codes</a></li>
+<li><a href="#-direktzugriff-innerhalb-des-java-codes">📲 Direktzugriff innerhalb des Java-Codes</a></li>
+</ul>
+</li>
+<li><a href="#ressource-folder">Ressource Folder</a></li>
+<li><a href="#-der-assets-ordner">📂 Der <code>assets</code>-Ordner</a>
+<ul>
+<li><a href="#eigenschaften-des-assets-ordners">Eigenschaften des <code>assets</code>-Ordners</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#-what-is-adb">🤖 What is ADB?</a>
+<ul>
+<li><a href="#key-features-of-adb">Key Features of ADB</a></li>
+</ul>
+</li>
+<li><a href="#parcable">Parcable</a></li>
+<li><a href="#databases">Databases</a>
+<ul>
+<li><a href="#column-constants">Column Constants</a></li>
+<li><a href="#database">Database</a></li>
+<li><a href="#display-data">Display Data</a></li>
+</ul>
+</li>
+<li><a href="#%EF%B8%8F-preferences">⚙️ Preferences</a>
+<ul>
+<li><a href="#%EF%B8%8F-sharedpreferences">🗂️ SharedPreferences</a></li>
+<li><a href="#-verwendung">🔧 Verwendung</a>
+<ul>
+<li><a href="#-unterschiede-apply-vs-commit">📌 Unterschiede: apply() vs commit()</a></li>
+</ul>
+</li>
+<li><a href="#-preference-screen-ui">🧩 Preference Screen (UI)</a></li>
+</ul>
+</li>
+<li><a href="#%EF%B8%8F-android-workflow-installation-android-studio">🛠️ Android-Workflow (Installation Android Studio)</a>
+<ul>
+<li><a href="#neues-projekt-erstellen">Neues Projekt erstellen</a></li>
+<li><a href="#projektstruktur">Projektstruktur</a></li>
+<li><a href="#%EF%B8%8F-avd--android-virtual-device">🛰️ AVD — Android Virtual Device</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="-gestaltung-von-web--und-mobilen-anwendungen">🌐 Gestaltung von Web- und Mobilen Anwendungen </h1>
+<h2 id="-aspnet-core">🧩 <a href="http://ASP.NET">ASP.NET</a> CORE </h2>
+<p><a href="http://ASP.NET">ASP.NET</a> Core is an open-source modular web-application framework. It is a redesign of <a href="http://ASP.NET">ASP.NET</a> that unites the previously separate <a href="http://ASP.NET">ASP.NET</a> MVC and <a href="http://ASP.NET">ASP.NET</a> Web API into a single programming model. Despite being a new framework, built on a new web stack, it does have a high degree of concept compatibility with <a href="http://ASP.NET">ASP.NET</a>. The <a href="http://ASP.NET">ASP.NET</a> Core framework supports side-by-side versioning so that different applications being developed on a single machine can target different versions of <a href="http://ASP.NET">ASP.NET</a> Core. This was not possible with previous versions of <a href="http://ASP.NET">ASP.NET</a>. <a href="http://ASP.NET">ASP.NET</a> Core initially ran on both the Windows-only .NET Framework and the cross-platform .NET. However, support for the .NET Framework was dropped beginning with <a href="http://ASP.Net">ASP.Net</a> Core 3.0.</p>
+<p>Blazor is a recent (optional) component to support WebAssembly and since version 5.0, it has dropped support for some old web browsers. While current Microsoft Edge works, the legacy version of it, i.e. "Microsoft Edge Legacy" and Internet Explorer 11 was dropped when you use Blazor.</p>
+<hr>
+<h3 id="-project-templates--structure">📄 Project Templates &amp; Structure </h3>
+<p>Create with the CLI:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>dotnet new webapp <span class="token parameter variable">-o</span> MyRazorApp      <span class="token comment"># Razor Pages</span>
+dotnet new mvc <span class="token parameter variable">-o</span> MyMvcApp           <span class="token comment"># MVC + Controllers &amp; Views</span>
+dotnet new webapi <span class="token parameter variable">-o</span> MyApiApp        <span class="token comment"># REST API</span>
+dotnet new blazorserver <span class="token parameter variable">-o</span> BlazorSrv <span class="token comment"># Blazor Server</span>
+dotnet new blazorwasm <span class="token parameter variable">-o</span> BlazorWasm  <span class="token comment"># Blazor WebAssembly</span>
+</code></pre><p>Typical folder layout:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>/Program.cs      ← bootstraps host, DI, middleware
+/Startup.cs      ← (pre-6.0) configure services &amp; middleware
+/Pages or /Controllers &amp; /Views
+/Components       ← Blazor components or ViewComponents
+/appsettings.json ← config (env-overrides in appsettings.Development.json)
+/Properties/launchSettings.json
+</code></pre><h3 id="-host--middleware-pipeline">🧠 Host &amp; Middleware Pipeline </h3>
+<p>Program.cs</p>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token class-name"><span class="token keyword keyword-var">var</span></span> builder <span class="token operator">=</span> WebApplication<span class="token punctuation">.</span><span class="token function">CreateBuilder</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 1. Register services</span>
+builder<span class="token punctuation">.</span>Services<span class="token punctuation">.</span><span class="token function">AddControllersWithViews</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+builder<span class="token punctuation">.</span>Services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddDbContext</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>AppDb<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span>opts <span class="token operator">=&gt;</span> 
+  opts<span class="token punctuation">.</span><span class="token function">UseSqlServer</span><span class="token punctuation">(</span>builder<span class="token punctuation">.</span>Configuration<span class="token punctuation">[</span><span class="token string">"ConnStr"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+builder<span class="token punctuation">.</span>Services<span class="token punctuation">.</span><span class="token function">AddAuthentication</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">AddCookie</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 2. Build host</span>
+<span class="token class-name"><span class="token keyword keyword-var">var</span></span> app <span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">Build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3. Middleware pipeline</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>app<span class="token punctuation">.</span>Environment<span class="token punctuation">.</span><span class="token function">IsDevelopment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    app<span class="token punctuation">.</span><span class="token function">UseDeveloperExceptionPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">UseHttpsRedirection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">UseStaticFiles</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">UseRouting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">UseAuthentication</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">UseAuthorization</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">MapControllerRoute</span><span class="token punctuation">(</span>
+  <span class="token named-parameter punctuation">name</span><span class="token punctuation">:</span> <span class="token string">"default"</span><span class="token punctuation">,</span>
+  <span class="token named-parameter punctuation">pattern</span><span class="token punctuation">:</span> <span class="token string">"{controller=Home}/{action=Index}/{id?}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre><p>The middleware order is defined by the Use[Feature] method execution order when<br>
+creating the <a href="http://ASP.NET">ASP.NET</a> app.</p>
+<p><img src="image-9.png" alt="alt text"></p>
+<h3 id="-routing--endpoints">🔁 Routing &amp; Endpoints </h3>
+<ul>
+<li>Conventional MVC: in <code>MapControllerRoute</code></li>
+<li>Attribute Routing:</li>
+</ul>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Route</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">"api/books/[action]/{id?}"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">BooksController</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">ControllerBase</span></span> <span class="token punctuation">{</span> … <span class="token punctuation">}</span>
+</code></pre><ul>
+<li>Minimal APIs</li>
+</ul>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code>app<span class="token punctuation">.</span><span class="token function">MapGet</span><span class="token punctuation">(</span><span class="token string">"/ping"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Results<span class="token punctuation">.</span><span class="token function">Ok</span><span class="token punctuation">(</span><span class="token string">"pong"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">MapPost</span><span class="token punctuation">(</span><span class="token string">"/todo"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name">Todo</span> t<span class="token punctuation">,</span> <span class="token class-name">AppDb</span> db<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  db<span class="token punctuation">.</span>Todos<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span> db<span class="token punctuation">.</span><span class="token function">SaveChanges</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-return">return</span> Results<span class="token punctuation">.</span><span class="token function">Created</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"/todo/</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">t<span class="token punctuation">.</span>Id</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="-razor-pages-vs-mvc-vs-blazor">🧾 Razor Pages vs. MVC vs. Blazor </h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Razor Pages</th>
+<th>MVC Controllers</th>
+<th>Blazor Server/WA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use case</td>
+<td>Page-focused apps</td>
+<td>Complex sites</td>
+<td>Interactive UIs</td>
+</tr>
+<tr>
+<td>Code-behind</td>
+<td><code>.cshtml.cs</code></td>
+<td>Controllers</td>
+<td><code>.razor</code> + <code>@code</code></td>
+</tr>
+<tr>
+<td>Statefulness</td>
+<td>Stateless</td>
+<td>Stateless</td>
+<td>Stateful</td>
+</tr>
+<tr>
+<td>WebAssembly</td>
+<td>No</td>
+<td>No</td>
+<td>Yes (WASM)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-razorpages">🧾 RazorPages </h3>
+<h4 id="️-razor-syntax">✒️ Razor-Syntax </h4>
+<h4 id="inline">Inline </h4>
+<pre data-role="codeBlock" data-info="razor" class="language-razor razor"><code><span class="token directive"><span class="token keyword keyword-@page">@page</span> <span class="token csharp language-csharp"><span class="token string">"/hello"</span></span></span>
+<span class="token directive"><span class="token keyword keyword-@model">@model</span> <span class="token csharp language-csharp">HelloModel</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Hello, @Model.UserName!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token block"><span class="token keyword keyword-@if">@if</span><span class="token csharp language-csharp"><span class="token punctuation">(</span>Model<span class="token punctuation">.</span>Items<span class="token punctuation">.</span><span class="token function">Any</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token block"><span class="token keyword keyword-@foreach">@foreach</span><span class="token csharp language-csharp"><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-var">var</span></span> i <span class="token keyword keyword-in">in</span> Model<span class="token punctuation">.</span>Items<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token value variable"><span class="token keyword keyword-@">@</span><span class="token csharp language-csharp">i<span class="token punctuation">.</span>Name</span></span> (<span class="token value variable"><span class="token keyword keyword-@">@</span><span class="token csharp language-csharp">i<span class="token punctuation">.</span>Quantity</span></span>)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span></span>
+    <span class="token punctuation">}</span></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span></span>
+<span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+  <span class="token html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>No items onboard.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></span>
+<span class="token punctuation">}</span></span></span>
+</code></pre><h4 id="tag-helper">Tag Helper </h4>
+<pre data-role="codeBlock" data-info="razor" class="language-razor razor"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">asp-page</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Create<span class="token punctuation">"</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Title<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">asp-validation-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Save<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h3 id="-model-binding--data-access">🔗 Model Binding &amp; Data Access </h3>
+<ul>
+<li>Binding sources: <code>[FromQuery]</code>, <code>[FromRoute]</code>, <code>[FromBody]</code>, <code>[FromForm]</code>, <code>[FromServices]</code></li>
+</ul>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">AppDb</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">DbContext</span></span>
+<span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token return-type class-name">DbSet<span class="token punctuation">&lt;</span>Book<span class="token punctuation">&gt;</span></span> Books <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// In a Controller:</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-async">async</span> <span class="token return-type class-name">Task<span class="token punctuation">&lt;</span>IActionResult<span class="token punctuation">&gt;</span></span> <span class="token function">List</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">FromQuery</span></span><span class="token punctuation">]</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> page <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token class-name"><span class="token keyword keyword-var">var</span></span> books <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> _db<span class="token punctuation">.</span>Books
+    <span class="token punctuation">.</span><span class="token function">Skip</span><span class="token punctuation">(</span><span class="token punctuation">(</span>page<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToListAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-return">return</span> <span class="token function">View</span><span class="token punctuation">(</span>books<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="binding-form-data">Binding Form Data </h4>
+<h5 id="razor-page">Razor Page </h5>
+<pre data-role="codeBlock" data-info="razor" class="language-razor razor"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span>Name:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UserInput.Name<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span>Age:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UserInput.Age<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Submit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token block"><span class="token keyword keyword-@if">@if</span> <span class="token csharp language-csharp"><span class="token punctuation">(</span>Model<span class="token punctuation">.</span>Message <span class="token operator">!=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token value variable"><span class="token keyword keyword-@">@</span><span class="token csharp language-csharp">Model<span class="token punctuation">.</span>Message</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></span>
+<span class="token punctuation">}</span></span></span>
+</code></pre><h5 id="pagemodel">PageModel </h5>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">IndexModel</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">PageModel</span></span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">BindProperty</span></span><span class="token punctuation">]</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name">UserInputModel</span> UserInput <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Message <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">OnPost</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Message <span class="token operator">=</span> <span class="token interpolation-string"><span class="token string">$"Ahoy, </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">UserInput<span class="token punctuation">.</span>Name</span><span class="token punctuation">}</span></span><span class="token string">! You're </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">UserInput<span class="token punctuation">.</span>Age</span><span class="token punctuation">}</span></span><span class="token string"> years old!"</span></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">UserInputModel</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Name <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-int">int</span></span> Age <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="-usercontrols">🧱 UserControls </h3>
+<h4 id="1️⃣-partial-view-simple-include">1️⃣ Partial View (simple include) </h4>
+<p><strong>Create</strong>: <code>/Views/Shared/_UserCard.cshtml</code></p>
+<pre data-role="codeBlock" data-info="razor" class="language-razor razor"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user-card<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span><span class="token value variable"><span class="token keyword keyword-@">@</span><span class="token csharp language-csharp">Model<span class="token punctuation">.</span>Name</span></span> (<span class="token value variable"><span class="token keyword keyword-@">@</span><span class="token csharp language-csharp">Model<span class="token punctuation">.</span>Role</span></span>)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Crew: <span class="token value variable"><span class="token keyword keyword-@">@</span><span class="token csharp language-csharp">Model<span class="token punctuation">.</span>CrewName</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre><pre data-role="codeBlock" data-info="razor" class="language-razor razor"><code><span class="token value variable"><span class="token keyword keyword-@">@</span><span class="token csharp language-csharp"><span class="token keyword keyword-await">await</span> Html<span class="token punctuation">.</span><span class="token function">PartialAsync</span><span class="token punctuation">(</span><span class="token string">"_UserCard"</span><span class="token punctuation">,</span> Model<span class="token punctuation">.</span>User<span class="token punctuation">)</span></span></span>
+</code></pre><h4 id="2️⃣-view-component-logic--view">2️⃣ View Component (logic + view) </h4>
+<p><strong>Component class:</strong> <code>/ViewComponents/UserCardViewComponent.cs</code></p>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">UserCardViewComponent</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">ViewComponent</span></span>
+<span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token return-type class-name">IViewComponentResult</span> <span class="token function">Invoke</span><span class="token punctuation">(</span><span class="token class-name">User</span> u<span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+    <span class="token function">View</span><span class="token punctuation">(</span><span class="token string">"Default"</span><span class="token punctuation">,</span> u<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Default view:</strong> <code>/Views/Shared/Components/UserCard/Default.cshtml</code></p>
+<pre data-role="codeBlock" data-info="razor" class="language-razor razor"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user-card<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span><span class="token value variable"><span class="token keyword keyword-@">@</span><span class="token csharp language-csharp">Model<span class="token punctuation">.</span>Name</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span><span class="token punctuation">&gt;</span></span><span class="token value variable"><span class="token keyword keyword-@">@</span><span class="token csharp language-csharp">Model<span class="token punctuation">.</span>Role</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p><strong>Invoke in Razor:</strong></p>
+<pre data-role="codeBlock" data-info="razor" class="language-razor razor"><code><span class="token value variable"><span class="token keyword keyword-@">@</span><span class="token csharp language-csharp"><span class="token keyword keyword-await">await</span> Component<span class="token punctuation">.</span><span class="token function">InvokeAsync</span><span class="token punctuation">(</span><span class="token string">"UserCard"</span><span class="token punctuation">,</span> <span class="token keyword keyword-new">new</span> <span class="token punctuation">{</span> u <span class="token operator">=</span> Model<span class="token punctuation">.</span>User <span class="token punctuation">}</span><span class="token punctuation">)</span></span></span>
+</code></pre><h3 id="-validation--error-handling">✅ Validation &amp; Error Handling </h3>
+<ul>
+<li>Annotations</li>
+</ul>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">RegisterDto</span> 
+<span class="token punctuation">{</span>
+  <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Required</span><span class="token punctuation">,</span> <span class="token class-name">EmailAddress</span></span><span class="token punctuation">]</span> <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Email <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Required</span><span class="token punctuation">,</span> <span class="token class-name">MinLength</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span> <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Password <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>Client + server validation via <code>&lt;partial name="_ValidationScriptsPartial" /&gt;</code></li>
+<li>Global error handling middleware:</li>
+</ul>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code>app<span class="token punctuation">.</span><span class="token function">UseExceptionHandler</span><span class="token punctuation">(</span><span class="token string">"/Home/Error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">UseStatusCodePagesWithReExecute</span><span class="token punctuation">(</span><span class="token string">"/Home/Status"</span><span class="token punctuation">,</span> <span class="token string">"?code={0}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="-auth--authorization">🔒 Auth &amp; Authorization </h3>
+<ul>
+<li>
+<p><strong>Authentication:</strong> Cookies, JWT, OAuth, IdentityServer4</p>
+</li>
+<li>
+<p><strong><a href="http://ASP.NET">ASP.NET</a> Core Identity:</strong></p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code>builder<span class="token punctuation">.</span>Services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddIdentity</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>User<span class="token punctuation">,</span> Role<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddEntityFrameworkStores</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>AppDb<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">AddDefaultTokenProviders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">UseAuthentication</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li><strong>policies</strong></li>
+</ul>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code>services<span class="token punctuation">.</span><span class="token function">AddAuthorization</span><span class="token punctuation">(</span>opts <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  opts<span class="token punctuation">.</span><span class="token function">AddPolicy</span><span class="token punctuation">(</span><span class="token string">"PirateOnly"</span><span class="token punctuation">,</span> p <span class="token operator">=&gt;</span> p<span class="token punctuation">.</span><span class="token function">RequireClaim</span><span class="token punctuation">(</span><span class="token string">"Role"</span><span class="token punctuation">,</span> <span class="token string">"Captain"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Authorize</span><span class="token attribute-arguments"><span class="token punctuation">(</span>Policy<span class="token operator">=</span><span class="token string">"PirateOnly"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token keyword keyword-public">public</span> <span class="token return-type class-name">IActionResult</span> <span class="token function">Secret</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">View</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h2 id="-event-handling-in-aspnet-core">⚡ Event Handling in <a href="http://ASP.NET">ASP.NET</a> Core </h2>
+<p>Event handling in <a href="http://ASP.NET">ASP.NET</a> Core spans from simple request-based handlers in Razor/MVC to real-time hubs with SignalR and rich interactivity in Blazor. Let’s plunder each layer, Captain!</p>
+<hr>
+<h3 id="️-razor-pages--mvc-handlers">🖥️ Razor Pages &amp; MVC Handlers </h3>
+<p>Razor Pages and MVC use <em>handler methods</em> in the PageModel or Controller:</p>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token comment">// Razor Page: Pages/Tasks/Edit.cshtml.cs</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">EditModel</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">PageModel</span></span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">BindProperty</span></span><span class="token punctuation">]</span> <span class="token keyword keyword-public">public</span> <span class="token return-type class-name">TaskItem</span> Task <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">OnGet</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> id<span class="token punctuation">)</span> 
+        <span class="token operator">=&gt;</span> Task <span class="token operator">=</span> _db<span class="token punctuation">.</span>Tasks<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name">IActionResult</span> <span class="token function">OnPostSave</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// handler for &lt;button asp-page-handler="Save"&gt;</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>ModelState<span class="token punctuation">.</span>IsValid<span class="token punctuation">)</span> <span class="token keyword keyword-return">return</span> <span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        _db<span class="token punctuation">.</span><span class="token function">Update</span><span class="token punctuation">(</span>Task<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        _db<span class="token punctuation">.</span><span class="token function">SaveChanges</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-return">return</span> <span class="token function">RedirectToPage</span><span class="token punctuation">(</span><span class="token string">"Index"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><pre data-role="codeBlock" data-info="razor" class="language-razor razor"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Task.Name<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">asp-page-handler</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Save<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Save<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<h2 id="-android">🤖 Android </h2>
+<p>Android is an operating system based on a modified version of the Linux kernel and other open-source software, designed primarily for touchscreen-based mobile devices such as smartphones and tablets. Android has historically been developed by a consortium of developers known as the Open Handset Alliance, but its most widely used version is primarily developed by Google. First released in 2008, Android is the world's most widely used operating system; the latest version, released on October 15, 2024, is Android 15.</p>
+<p><img src="Android_2023_3D_logo_and_wordmark.svg.png" alt="alt text"></p>
+<hr>
+<h3 id="-architektur">🚧 Architektur </h3>
+<p><img src="image-11.png" alt="alt text"></p>
+<h4 id="-applications">📱 Applications </h4>
+<ul>
+<li><strong>Verschiedene fertige Kernanwendungen</strong> <em>(z. B. Home, Browser, Telefon, Kontakte usw.)</em></li>
+<li><strong>Java</strong></li>
+<li><strong>Android SDK nötig</strong></li>
+<li><strong>Java-Quelltext wird von einem Cross-Assembler für die Dalvik-VM angepasst</strong>
+<ul>
+<li><em>Ab <strong>Android 5</strong> wird der <strong>Bytecode in Maschinencode</strong> bei der <strong>Installation der App kompiliert</strong></em>
+<ul>
+<li>→ <strong>Maschinenunabhängigkeit bleibt erhalten</strong></li>
+<li>→ App muss <strong>nicht mehr zur Laufzeit</strong> umgewandelt werden</li>
+<li>→ <strong>Bessere Performance</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="-application-frameworks">🧰 Application Frameworks </h4>
+<ul>
+<li>
+<p><strong>Activity Manager</strong></p>
+<ul>
+<li>Kontrolliert den <strong>Lebenszyklus der Apps</strong></li>
+<li>Verwaltet das <strong>Navigieren zwischen Apps</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Content Providers</strong></p>
+<ul>
+<li>Versorgen Apps mit <strong>gemeinsamen Daten</strong> (z. B. Fotos, Musik-Sammlungen, Kontakte)</li>
+</ul>
+</li>
+<li>
+<p><strong>Location Manager</strong></p>
+<ul>
+<li>Liefert die <strong>Position des Geräts</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Notification Manager</strong></p>
+<ul>
+<li>Informiert Benutzer über <strong>signifikante Ereignisse</strong></li>
+<li>Jeder Event besitzt eine <strong>eindeutige ID</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Package Manager</strong></p>
+<ul>
+<li>Verwaltet <strong>installierte Packages</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Resource Manager</strong></p>
+<ul>
+<li>Zur <strong>Verwaltung und Zugriffen von Ressourcen</strong> (z. B. Strings, Grafiken, XML-Dateien usw.)</li>
+</ul>
+</li>
+<li>
+<p><strong>Telephony Manager</strong></p>
+<ul>
+<li>Zuständig für <strong>Telefon-Services</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>View System</strong></p>
+<ul>
+<li>Komponente, die <strong>UI-Elemente verwaltet</strong> und <strong>Ereignisse generiert</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Window Manager</strong></p>
+<ul>
+<li>Zur <strong>Verwaltung des Bildschirms</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="-libraries-bibliotheken">📚 Libraries (Bibliotheken) </h4>
+<ul>
+<li>
+<p><strong>FreeType</strong></p>
+<ul>
+<li>Für <strong>Bitmap</strong> und <strong>Fonts</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>(Bionic) libc</strong></p>
+<ul>
+<li>Angepasste und <strong>optimierte BSD-Implementierung</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>LibWebCore</strong></p>
+<ul>
+<li>Basiert auf <strong>WebKit</strong> <em>(Web Browser Engine, auch in Google Chrome und Apple Safari verwendet)</em></li>
+</ul>
+</li>
+<li>
+<p><strong>Media Framework</strong></p>
+<ul>
+<li>Basiert auf <strong>OpenCORE</strong> von PacketVideo</li>
+<li>Unterstützt: <strong>MPEG4, H.264, MP3, AAC, AMR, JPEG, PNG</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>OpenGL|ES</strong></p>
+<ul>
+<li>Für <strong>3D-Grafiken</strong> auf <strong>Embedded-Systemen</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>SGL</strong></p>
+<ul>
+<li><strong>2D Grafik-Engine</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>SQLite</strong></p>
+<ul>
+<li><strong>Schlankes, relationales Datenbanksystem</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>SSL</strong></p>
+<ul>
+<li>Für <strong>SSL-basierte Sicherheit</strong> bei der <strong>Netzwerkkommunikation</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Surface Manager</strong></p>
+<ul>
+<li>Verwaltung des <strong>Zugriffs auf das Display-Subsystem</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="️-android-runtime">⚙️ Android-Runtime </h4>
+<ul>
+<li>
+<p><strong>Kernbibliotheken</strong> für die Laufzeitumgebung</p>
+<ul>
+<li>Teilmenge der <strong>Apache Harmony Java 5 Implementierung</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Dalvik Virtuelle Maschine (DVM)</strong> → ab <strong>Android Lollipop: Android-Runtime (ART)</strong></p>
+<ul>
+<li><strong>Registerbasierte Maschine</strong></li>
+<li>DVM: <strong>interpretiert</strong> Dateien im <strong>Dalvik Executable (DEX)</strong>-Format</li>
+<li>ART: <strong>kompiliert Bytecode bei der Installation</strong> in <strong>nativen Binärcode (ODEX)</strong><br>
+→ <strong>Schnellere Ausführung</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Jede Applikation läuft in einem separaten Prozess</strong></p>
+<ul>
+<li>Hat ihre <strong>eigene DVM bzw. ART</strong></li>
+</ul>
+</li>
+<li>
+<p>Nutzt das <strong>Thread-Modell</strong> und die <strong>Low-Memory-Verwaltung von Linux</strong></p>
+</li>
+</ul>
+<h4 id="-linux-kernel">🐧 Linux-Kernel </h4>
+<ul>
+<li>
+<p>Dient als <strong>Abstraktionsschicht</strong> zwischen der <strong>Android-Welt</strong> und der <strong>Hardware</strong></p>
+</li>
+<li>
+<p>Stellt bereit:</p>
+<ul>
+<li><strong>Sicherheitsmodell</strong></li>
+<li><strong>Prozess- und Speicherverwaltung</strong></li>
+<li><strong>Netzwerkstack</strong></li>
+<li><strong>Treiber</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="-app-architektur">🧩 App-Architektur </h4>
+<ul>
+<li>
+<p>Die <strong>Android-App-Architektur</strong> basiert auf <strong>Komponenten</strong>, die über sogenannte <strong>Intents</strong> miteinander kommunizieren.</p>
+</li>
+<li>
+<p>Eine App besteht aus einer <strong>Sammlung von Komponenten</strong>:</p>
+<ul>
+<li><strong>Activities</strong></li>
+<li><strong>Services</strong></li>
+<li><strong>Content Providers</strong></li>
+<li><strong>Broadcast Receivers</strong><br>
+→ <strong>Nicht alle Komponenten</strong> müssen in jeder App enthalten sein.</li>
+</ul>
+</li>
+<li>
+<p><strong>Jede App läuft in einem eigenen Linux-Prozess</strong></p>
+<ul>
+<li>Android startet den Prozess <strong>erst, wenn eine Komponente benötigt wird</strong></li>
+<li>Es gibt <strong>keine klassische <code>main()</code>-Methode</strong> wie in Java oder C/C++
+<ul>
+<li>Im Manifest wird eine Start-Activity festgelegt</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Komponenten einer App <strong>teilen gemeinsame Ressourcen</strong>, z. B.:</p>
+<ul>
+<li><strong>Datenbanken</strong></li>
+<li><strong>Shared Preferences</strong></li>
+<li><strong>Dateisystem</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="-wichtige-bestandteile-einer-android-app">⚓ Wichtige Bestandteile einer Android-App </h4>
+<ul>
+<li>
+<p><strong>Activity</strong></p>
+<ul>
+<li>Sichtbarer Teil der Anwendung zur <strong>Interaktion mit dem Benutzer</strong></li>
+<li>Besitzt einen eigenen <strong>Lebenszyklus</strong></li>
+<li>Eine App enthält meist <strong>mehrere Activities</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Service</strong></p>
+<ul>
+<li>Läuft im <strong>Hintergrund</strong> (ähnlich wie Windows-Service oder Linux-Dämon)</li>
+<li><strong>Local Service:</strong> Läuft im <strong>gleichen Prozess</strong> wie die App</li>
+<li><strong>Remote Service:</strong> Läuft in einem <strong>separaten Prozess</strong> und kommuniziert über <strong>Interprozesskommunikation</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Content Providers</strong></p>
+<ul>
+<li>Stellen <strong>Daten für andere Apps</strong> bereit</li>
+</ul>
+</li>
+<li>
+<p><strong>Broadcast Receivers</strong></p>
+<ul>
+<li>Empfangen <strong>Systemereignisse</strong> und reagieren darauf</li>
+</ul>
+</li>
+</ul>
+<h3 id="-activities">🎬 Activities </h3>
+<p>Activities sind eigene Klassen die eine Seite auf der App repräsentieren.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MainActivity</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">AppCompatActivity</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Button</span> mainLoginButton<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-protected">protected</span> <span class="token keyword keyword-void">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-super">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">EdgeToEdge</span><span class="token punctuation">.</span><span class="token function">enable</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setContentView</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_main<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ViewCompat</span><span class="token punctuation">.</span><span class="token function">setOnApplyWindowInsetsListener</span><span class="token punctuation">(</span><span class="token function">findViewById</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>id<span class="token punctuation">.</span>main<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>v<span class="token punctuation">,</span> insets<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Insets</span> systemBars <span class="token operator">=</span> insets<span class="token punctuation">.</span><span class="token function">getInsets</span><span class="token punctuation">(</span><span class="token class-name">WindowInsetsCompat<span class="token punctuation">.</span>Type</span><span class="token punctuation">.</span><span class="token function">systemBars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            v<span class="token punctuation">.</span><span class="token function">setPadding</span><span class="token punctuation">(</span>systemBars<span class="token punctuation">.</span>left<span class="token punctuation">,</span> systemBars<span class="token punctuation">.</span>top<span class="token punctuation">,</span> systemBars<span class="token punctuation">.</span>right<span class="token punctuation">,</span> systemBars<span class="token punctuation">.</span>bottom<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-return">return</span> insets<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        mainLoginButton <span class="token operator">=</span> <span class="token function">findViewById</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>id<span class="token punctuation">.</span>mainLoginButton<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        mainLoginButton<span class="token punctuation">.</span><span class="token function">setOnClickListener</span><span class="token punctuation">(</span>v <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+           <span class="token class-name">Intent</span> intent <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Intent</span><span class="token punctuation">(</span><span class="token class-name">MainActivity</span><span class="token punctuation">.</span><span class="token keyword keyword-this">this</span><span class="token punctuation">,</span> <span class="token class-name">LoginActivity</span><span class="token punctuation">.</span><span class="token keyword keyword-class">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token function">startActivity</span><span class="token punctuation">(</span>intent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>In Java und XML Files geteilt.</p>
+<p><img src="image-16.png" alt="alt text"></p>
+<h3 id="️-android-layouts-deklaration-und-struktur">🛠️ Android Layouts: Deklaration und Struktur </h3>
+<p><img src="viewgroup_2x.png" alt="alt text"></p>
+<p><img src="layoutparams.png" alt="alt text"></p>
+<h4 id="-was-ist-ein-layout">🧱 Was ist ein Layout? </h4>
+<p>Ein Layout definiert die Struktur der Benutzeroberfläche (UI) deiner App, z. B. in einer Activity. Alle Elemente im Layout werden durch eine Hierarchie von <code>View</code>- und <code>ViewGroup</code>-Objekten aufgebaut:</p>
+<ul>
+<li><strong><code>View</code></strong>: Sichtbare UI-Elemente wie <code>Button</code>, <code>TextView</code>, <code>ImageView</code>.</li>
+<li><strong><code>ViewGroup</code></strong>: Unsichtbare Container, die die Struktur für <code>View</code>- und andere <code>ViewGroup</code>-Objekte festlegen, z. B. <code>LinearLayout</code>, <code>RelativeLayout</code>, <code>ConstraintLayout</code>.</li>
+</ul>
+<h4 id="-layout-deklarieren">📝 Layout deklarieren </h4>
+<p>Layouts werden in XML-Dateien im Verzeichnis <code>res/layout/</code> gespeichert. Jede Layout-Datei muss genau ein Root-Element enthalten, das ein <code>View</code> oder <code>ViewGroup</code> ist. Beispiel:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>LinearLayout</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>android</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.android.com/apk/res/android<span class="token punctuation">"</span></span>
+              <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span>
+              <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span>
+              <span class="token attr-name"><span class="token namespace">android:</span>orientation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>vertical<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TextView</span> <span class="token attr-name"><span class="token namespace">android:</span>id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@+id/text<span class="token punctuation">"</span></span>
+              <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrap_content<span class="token punctuation">"</span></span>
+              <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrap_content<span class="token punctuation">"</span></span>
+              <span class="token attr-name"><span class="token namespace">android:</span>text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Hallo, ich bin ein TextView<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name"><span class="token namespace">android:</span>id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@+id/button<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrap_content<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrap_content<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Hallo, ich bin ein Button<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>LinearLayout</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h4 id="️-layout-in-der-activity-verwenden">⚙️ Layout in der Activity verwenden </h4>
+<pre data-role="codeBlock" data-info="kotlin" class="language-kotlin kotlin"><code><span class="token keyword keyword-fun">fun</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token operator">:</span> Bundle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-super">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span>
+    <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>main_layout<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="-wichtige-layout-typen">🧭 Wichtige Layout-Typen </h4>
+<ul>
+<li>
+<p><strong>LinearLayout:</strong> Ordnet Kinder in einer Richtung an (vertikal oder horizontal).</p>
+</li>
+<li>
+<p><strong>RelativeLayout:</strong> Positioniert Kinder relativ zueinander oder zum Eltern-Layout.</p>
+</li>
+<li>
+<p><strong>ConstraintLayout:</strong> Bietet flexible Positionierung und Größenanpassung basierend auf Constraints. Empfohlen für komplexe Layouts.</p>
+</li>
+<li>
+<p><strong>FrameLayout:</strong> Zeigt ein einzelnes Element an, ideal für einfache UI-Komponenten.</p>
+</li>
+<li>
+<p><strong>TableLayout:</strong> Anordnung von Kindern in Zeilen und Spalten.</p>
+</li>
+<li>
+<p><strong>GridLayout:</strong> Erweitert TableLayout mit flexiblerer Zellenanordnung.</p>
+</li>
+</ul>
+<hr>
+<h4 id="️-layout-editor-in-android-studio">🛠️ Layout Editor in Android Studio </h4>
+<p>Der Layout Editor ermöglicht das schnelle Erstellen von Layouts durch Ziehen von UI-Elementen in einen visuellen Design-Editor. Er bietet eine Vorschau des Layouts auf verschiedenen Android-Geräten und -Versionen und ermöglicht das dynamische Anpassen der Layoutgröße, um sicherzustellen, dass es auf verschiedenen Bildschirmgrößen richtig funktioniert.</p>
+<hr>
+<h4 id="-layouts-wiederverwenden-mit-include">🔄 Layouts wiederverwenden mit <code>&lt;include&gt;</code> </h4>
+<p>Um Layouts effizient wiederzuverwenden, kannst du die Tags <code>&lt;include&gt;</code> und <code>&lt;merge&gt;</code> verwenden, um ein Layout in ein anderes einzubetten. Dies ermöglicht das Erstellen komplexer Layouts und das Verwalten gemeinsamer Elemente über mehrere Layouts hinweg.</p>
+<hr>
+<h4 id="-responsiveadaptive-design">📐 Responsive/Adaptive Design </h4>
+<p>Um deine App auf verschiedenen Bildschirmgrößen, -orientierungen und -konfigurationen zu unterstützen, implementiere responsive/adaptive Layouts. Dies sorgt für eine optimierte Benutzererfahrung, unabhängig von der Gerätekonfiguration.</p>
+<h3 id="-intents">📩 Intents </h3>
+<p>Intents are messaging Objects</p>
+<ul>
+<li>Activities</li>
+<li>Services</li>
+<li>Broadcast Delivery</li>
+</ul>
+<h4 id="example-navigate-to-new-activity">Example: Navigate to new Activity </h4>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code>mainLoginButton <span class="token operator">=</span> <span class="token function">findViewById</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>id<span class="token punctuation">.</span>mainLoginButton<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+mainLoginButton<span class="token punctuation">.</span><span class="token function">setOnClickListener</span><span class="token punctuation">(</span>v <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Intent</span> intent <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Intent</span><span class="token punctuation">(</span><span class="token class-name">MainActivity</span><span class="token punctuation">.</span><span class="token keyword keyword-this">this</span><span class="token punctuation">,</span> <span class="token class-name">LoginActivity</span><span class="token punctuation">.</span><span class="token keyword keyword-class">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">startActivity</span><span class="token punctuation">(</span>intent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h4 id="intent-with-data">Intent with Data </h4>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">Intent</span> intent <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Intent</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">,</span> <span class="token class-name">DashboardActivity</span><span class="token punctuation">.</span><span class="token keyword keyword-class">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+intent<span class="token punctuation">.</span><span class="token function">putExtra</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">,</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">startActivity</span><span class="token punctuation">(</span>intent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">User</span> user<span class="token punctuation">;</span>
+<span class="token class-name">Bundle</span> bundle <span class="token operator">=</span> <span class="token function">getIntent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getExtras</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>bundle <span class="token operator">!=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    user <span class="token operator">=</span> bundle<span class="token punctuation">.</span><span class="token function">getParcelable</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token punctuation">.</span><span class="token keyword keyword-class">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-else">else</span>
+<span class="token punctuation">{</span>
+    user <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">"empty"</span><span class="token punctuation">,</span> <span class="token string">"empty"</span><span class="token punctuation">,</span> <span class="token string">"empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="-fragments">🧱 Fragments </h3>
+<p><img src="image-17.png" alt="alt text"></p>
+<p><img src="image-18.png" alt="alt text"></p>
+<h4 id="put-data-into-a-fragment">Put data into a fragment </h4>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code>dashboardDataFragment <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">DashboardDataFragment</span><span class="token punctuation">)</span> <span class="token function">getSupportFragmentManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">findFragmentById</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>id<span class="token punctuation">.</span>fragmentContainerView<span class="token punctuation">)</span><span class="token punctuation">;</span>
+dashboardDataFragment<span class="token punctuation">.</span><span class="token function">setUser</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h4 id="fragment-class">Fragment Class </h4>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token doc-comment comment">/**
+ * A simple <span class="token punctuation">{</span><span class="token keyword keyword-@link">@link</span> <span class="token reference"><span class="token class-name">Fragment</span></span><span class="token punctuation">}</span> subclass.
+ * Use the <span class="token punctuation">{</span><span class="token keyword keyword-@link">@link</span> <span class="token reference"><span class="token class-name">DashboardDataFragment</span><span class="token punctuation">#</span><span class="token field">newInstance</span></span><span class="token punctuation">}</span> factory method to
+ * create an instance of this fragment.
+ */</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">DashboardDataFragment</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Fragment</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// TODO: Rename parameter arguments, choose names that match</span>
+    <span class="token comment">// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">ARG_PARAM1</span> <span class="token operator">=</span> <span class="token string">"param1"</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">ARG_PARAM2</span> <span class="token operator">=</span> <span class="token string">"param2"</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// TODO: Rename and change types of parameters</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> mParam1<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> mParam2<span class="token punctuation">;</span>
+
+    <span class="token class-name">TextView</span> dashboardUsernameText<span class="token punctuation">;</span>
+    <span class="token class-name">TextView</span> dashboardEmailText<span class="token punctuation">;</span>
+    <span class="token class-name">TextView</span> dashboardPasswordText<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">User</span> <span class="token function">getUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> user<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>user <span class="token operator">=</span> user<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token class-name">User</span> user<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">DashboardDataFragment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Required empty public constructor</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token doc-comment comment">/**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * <span class="token keyword keyword-@param">@param</span> <span class="token parameter">param1</span> Parameter 1.
+     * <span class="token keyword keyword-@param">@param</span> <span class="token parameter">param2</span> Parameter 2.
+     * <span class="token keyword keyword-@return">@return</span> A new instance of fragment DashboardDataFragment.
+     */</span>
+    <span class="token comment">// TODO: Rename and change types and number of parameters</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token class-name">DashboardDataFragment</span> <span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token class-name">String</span> param1<span class="token punctuation">,</span> <span class="token class-name">String</span> param2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">DashboardDataFragment</span> fragment <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">DashboardDataFragment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Bundle</span> args <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Bundle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        args<span class="token punctuation">.</span><span class="token function">putString</span><span class="token punctuation">(</span><span class="token constant">ARG_PARAM1</span><span class="token punctuation">,</span> param1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        args<span class="token punctuation">.</span><span class="token function">putString</span><span class="token punctuation">(</span><span class="token constant">ARG_PARAM2</span><span class="token punctuation">,</span> param2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fragment<span class="token punctuation">.</span><span class="token function">setArguments</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-return">return</span> fragment<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-super">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">getArguments</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            mParam1 <span class="token operator">=</span> <span class="token function">getArguments</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token constant">ARG_PARAM1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            mParam2 <span class="token operator">=</span> <span class="token function">getArguments</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token constant">ARG_PARAM2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">View</span> <span class="token function">onCreateView</span><span class="token punctuation">(</span><span class="token class-name">LayoutInflater</span> inflater<span class="token punctuation">,</span> <span class="token class-name">ViewGroup</span> container<span class="token punctuation">,</span>
+                             <span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Inflate the layout for this fragment</span>
+        <span class="token class-name">View</span> view <span class="token operator">=</span> inflater<span class="token punctuation">.</span><span class="token function">inflate</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>layout<span class="token punctuation">.</span>fragment_dashboard_data<span class="token punctuation">,</span> container<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        dashboardUsernameText <span class="token operator">=</span> view<span class="token punctuation">.</span><span class="token function">findViewById</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>id<span class="token punctuation">.</span>dashboardUsernameText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dashboardEmailText <span class="token operator">=</span> view<span class="token punctuation">.</span><span class="token function">findViewById</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>id<span class="token punctuation">.</span>dashboardEmailText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dashboardPasswordText <span class="token operator">=</span> view<span class="token punctuation">.</span><span class="token function">findViewById</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>id<span class="token punctuation">.</span>dashboardPasswordText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        dashboardUsernameText<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span><span class="token string">"Username: "</span> <span class="token operator">+</span> user<span class="token punctuation">.</span><span class="token function">getUsername</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dashboardEmailText<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span><span class="token string">"E-Mail: "</span> <span class="token operator">+</span> user<span class="token punctuation">.</span><span class="token function">getEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dashboardPasswordText<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span><span class="token string">"Password: "</span> <span class="token operator">+</span> user<span class="token punctuation">.</span><span class="token function">getPassword</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+        <span class="token keyword keyword-return">return</span> view<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="️-lifecycle-von-activity-und-fragmenten">♻️ Lifecycle von Activity und Fragmenten </h3>
+<p><img src="activity_lifecycle.png" alt="alt text"></p>
+<h3 id="-androidmanifestxml">📜 AndroidManifest.xml </h3>
+<ul>
+<li>Beschreibt die Andwendung</li>
+<li><strong>Gradle Scripts</strong>
+<ul>
+<li>werden automatisch erzeugt, für die verschiedenen Plattformen, Abhängigkeiten.</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>manifest</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>android</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.android.com/apk/res/android<span class="token punctuation">"</span></span>
+    <span class="token attr-name"><span class="token namespace">xmlns:</span>tools</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.android.com/tools<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>application</span>
+        <span class="token attr-name"><span class="token namespace">android:</span>allowBackup</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>dataExtractionRules</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@xml/data_extraction_rules<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>fullBackupContent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@xml/backup_rules<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@mipmap/ic_launcher<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@string/app_name<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>roundIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@mipmap/ic_launcher_round<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>supportsRtl</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>theme</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@style/Theme.LoginLayout<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">tools:</span>targetApi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>31<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
+            <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.ViewDataActivity<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>exported</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
+            <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.AddDataActivity<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>exported</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
+            <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.SettingsActivity<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>exported</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@string/title_activity_settings<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
+            <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.DashboardActivity<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>exported</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
+            <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.RegistrationActivity<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>exported</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
+            <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.LoginActivity<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>exported</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
+            <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.MainActivity<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>exported</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>intent-filter</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.intent.action.MAIN<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>category</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.intent.category.LAUNCHER<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>intent-filter</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activity</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>application</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>manifest</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul>
+<li>
+<p>Jede Android-Anwendung benötigt eine <strong>AndroidManifest.xml</strong>-Datei, die wichtige Informationen enthält, wie:</p>
+<ul>
+<li><strong>Anwendungsidentität</strong></li>
+<li><strong>Name der App</strong></li>
+<li><strong>Versionsnummer</strong></li>
+<li><strong>Beschreibung der Komponenten</strong> (Activities, Services, etc.)</li>
+<li><strong>Erlaubnisse</strong> (Permissions)</li>
+</ul>
+</li>
+<li>
+<p>Das <strong>Laufzeitsystem</strong> nutzt die Manifest-Datei, um:</p>
+<ul>
+<li>Die Anwendung zu <strong>installieren</strong> und <strong>upzudaten</strong></li>
+<li>Anwendungsdetails wie <strong>Name</strong>, <strong>Icon</strong> und <strong>Beschreibung</strong> anzuzeigen</li>
+<li><strong>Erlaubnisse zu überwachen</strong> und zu verwalten</li>
+<li><strong>Activities der Anwendung zu starten</strong></li>
+<li>Entwicklern das <strong>Debugging</strong> der App zu ermöglichen</li>
+</ul>
+</li>
+</ul>
+<h4 id="-applikationsidentiät">🆔 Applikationsidentiät </h4>
+<ul>
+<li>
+<p><strong>Paketname</strong></p>
+<ul>
+<li>Eindeutige Identifikation der App</li>
+<li>Muss <strong>sorgfältig gewählt</strong> werden, da er nach Veröffentlichung <strong>nicht mehr änderbar</strong> ist</li>
+</ul>
+</li>
+<li>
+<p><strong>Versionscode</strong></p>
+<ul>
+<li>Wird für <strong>Updates</strong> verwendet</li>
+<li>Interner Wert, der beim Update erhöht wird</li>
+</ul>
+</li>
+<li>
+<p><strong>Versionsname</strong></p>
+<ul>
+<li>Wird den <strong>Benutzern angezeigt</strong></li>
+<li>Menschlich lesbar, z.B. "1.0", "2.1 Beta"</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>manifest</span>
+  <span class="token attr-name"><span class="token namespace">xmlns:</span>android</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.android.com/apk/res/android<span class="token punctuation">"</span></span>
+  <span class="token attr-name">package</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>de.hs_kl.tran<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">android:</span>versionCode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">android:</span>versionName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1.0<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
+</code></pre><h4 id="️-system-requirements">⚙️ System Requirements </h4>
+<ul>
+<li>
+<p><strong>SDK-Versionen:</strong></p>
+<ul>
+<li><strong>minSdkVersion:</strong> Kleinster unterstützter API-Level (Mindestanforderung)</li>
+<li><strong>targetSdkVersion</strong> <em>(optional):</em> Optimal unterstützter API-Level (für Kompatibilität)</li>
+<li><strong>maxSdkVersion</strong> <em>(optional):</em> Größter unterstützter API-Level (Begrenzung)</li>
+</ul>
+</li>
+<li>
+<p><strong>Anwendungsdetails:</strong></p>
+<ul>
+<li><strong>Name</strong> und <strong>Icon</strong> für die Anzeige</li>
+<li>Optionale <strong>Beschreibung</strong></li>
+<li><strong>Debugging</strong> kann ein- oder ausgeschaltet werden</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>application</span>
+  <span class="token attr-name"><span class="token namespace">android:</span>icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@drawable/ic_launcher<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">android:</span>label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@string/app_name<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">android:</span>description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@string/app_desc<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">android:</span>debuggable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
+</code></pre><h4 id="-plattform-requirements">🧩 Plattform Requirements </h4>
+<ul>
+<li><strong>Externe Bibliotheken:</strong>
+<ul>
+<li>Standardmäßig sind folgende Pakete enthalten:
+<ul>
+<li><code>android.app</code></li>
+<li><code>android.content</code></li>
+<li><code>android.view</code></li>
+<li><code>android.widget</code></li>
+</ul>
+</li>
+<li>Wenn die App spezielle Pakete braucht (z.B. Google Maps), muss die passende Bibliothek eingebunden und angegeben werden.</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>application</span> <span class="token attr-name">...</span><span class="token punctuation">&gt;</span></span>
+  ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-library</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.google.android.maps<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>application</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h4 id="-erlaubnisse-permissions">🔐 Erlaubnisse (Permissions) </h4>
+<ul>
+<li>
+<p>Android-Anwendungen haben <strong>standardmäßig keinen Zugriff</strong> auf geschützte Ressourcen anderer Apps oder Systemfunktionen.</p>
+</li>
+<li>
+<p><strong>Zugriffe müssen explizit angefragt werden</strong>, und der Benutzer muss <strong>bei der Installation zustimmen</strong>.</p>
+</li>
+<li>
+<p>Geforderte Erlaubnisse werden in der <strong>Manifest-Datei</strong> angegeben. Beispiel:</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
+    <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.ManifestDemoActivity<span class="token punctuation">"</span></span>
+    <span class="token attr-name"><span class="token namespace">android:</span>label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@string/app_name<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>intent-filter</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.intent.action.MAIN<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>category</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.intent.category.LAUNCHER<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>intent-filter</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activity</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.permission.CAMERA<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.permission.READ_CONTACTS<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.permission.WRITE_CONTACTS<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre><h4 id="-activities-und-andere-komponenten-registrieren">📋 Activities und andere Komponenten registrieren </h4>
+<ul>
+<li>
+<p><strong>Liste von Komponenten:</strong></p>
+<ul>
+<li>Activities</li>
+<li>Services</li>
+<li>Content Providers</li>
+<li>Broadcast Receivers</li>
+</ul>
+</li>
+<li>
+<p><strong>Wichtig:</strong> Alle Komponenten <strong>müssen registriert</strong> sein, sonst werden sie nicht gestartet!</p>
+</li>
+<li>
+<p><strong>Activities, die nur innerhalb der App verwendet werden:</strong></p>
+<ul>
+<li>Haben eine einfache Beschreibung</li>
+<li>Der Punkt vor dem Namen kann entfallen, er zeigt nur, dass die Activity zum Paket gehört</li>
+</ul>
+</li>
+<li>
+<p><strong>Components (Activities, Services, Broadcast Receivers), die von anderen Apps oder vom System gestartet werden sollen:</strong></p>
+<ul>
+<li>Benötigen zusätzliche Angaben im Block <code>&lt;intent-filter&gt; ... &lt;/intent-filter&gt;</code> (kommt später noch)</li>
+</ul>
+</li>
+<li>
+<p>Eine Activity muss als Eintrittspunkt der Anwendung definiert werden.</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
+    <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.ManifestDemoActivity<span class="token punctuation">"</span></span>
+    <span class="token attr-name"><span class="token namespace">android:</span>label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@string/app_name<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>intent-filter</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.intent.action.MAIN<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>category</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.intent.category.LAUNCHER<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>intent-filter</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activity</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h3 id="-ressourcen">🎨 Ressourcen </h3>
+<ul>
+<li>Zum Programm gehören auch <strong>Grafiken, Icons, Klangdateien, Videos, Texte in verschiedenen Sprachen</strong>.</li>
+<li><strong>Farbdefinitionen, Menüeinträge, Listen, Layouts usw.</strong> werden in Android häufig <strong>nicht im Code definiert</strong>, sondern in <strong>XML als Ressourcen</strong> hinterlegt.</li>
+</ul>
+<h4 id="️-ordnerstruktur-für-ressourcen">🗂️ Ordnerstruktur für Ressourcen </h4>
+<ul>
+<li><strong>Alle Ressourcen liegen in einem Unterordner von <code>/res</code></strong>.</li>
+<li>Für <strong>Ordner- und Dateinamen</strong> darf nur <strong>Kleinschreibung oder Unterstrich</strong> verwendet werden<br>
+(Ausnahme: <strong>Länderkürzel</strong> wie z.B. DE, US).</li>
+<li><strong>Verschiedene Ressourcen müssen in verschiedenen Unterordnern liegen</strong>.</li>
+<li>Mit Ausnahme vom Ordner <strong><code>assets</code></strong> dürfen andere Unterordner <strong>keinen Unterordner</strong> beinhalten.</li>
+</ul>
+<h4 id="-zugriff-auf-ressourcen">🔑 Zugriff auf Ressourcen </h4>
+<ul>
+<li>Ressourcen (Ausnahme: Daten in <strong><code>assets</code></strong>) werden <strong>kompiliert</strong> und können über <strong>ID angesprochen</strong> werden.</li>
+</ul>
+<p>Es gibt <strong>3 Möglichkeiten</strong>, auf Ressourcen zuzugreifen:</p>
+<ul>
+<li><strong>per Referenz innerhalb der Ressourcendefinition</strong></li>
+<li><strong>per Referenz im Code</strong></li>
+<li><strong>per Direktzugriff im Code</strong></li>
+</ul>
+<hr>
+<h5 id="️-referenz-innerhalb-der-ressourcendefinition">🏷️ Referenz innerhalb der Ressourcendefinition </h5>
+<p>Zugriff mit dem <strong>@-Zeichen</strong> über einen Ressourcenschlüssel der Form:<br>
+<code>@[package:]ressourcenart/ressourcenname</code></p>
+<p>Beispiel in der Manifest-Datei:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>application</span>
+  <span class="token attr-name"><span class="token namespace">android:</span>debuggable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">android:</span>description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@string/app_desc<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">android:</span>icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@drawable/ic_launcher<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">android:</span>label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@string/app_name<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">android:</span>theme</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@android:style/Theme.Light<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
+</code></pre><h5 id="-referenz-innerhalb-des-java-codes">💻 Referenz innerhalb des Java-Codes </h5>
+<p>Zugriff über Konstanten aus <code>R.java</code>.<br>
+<strong>Vorsicht</strong>: Konsistenz (richtige ID für das richtige Objekt) kann erst zur Laufzeit geprüft werden – Absturz möglich!</p>
+<p><img src="image-15.png" alt="alt text"></p>
+<h5 id="-direktzugriff-innerhalb-des-java-codes">📲 Direktzugriff innerhalb des Java-Codes </h5>
+<p>Zugriff über <code>getResources()</code> und <code>R.java</code>, zum Beispiel:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">String</span> title <span class="token operator">=</span> <span class="token function">getResources</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>layout<span class="token punctuation">.</span>absolute_layout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Drawable</span> logo <span class="token operator">=</span> <span class="token function">getResources</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDrawable</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>drawable<span class="token punctuation">.</span>robot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h4 id="ressource-folder">Ressource Folder </h4>
+<ul>
+<li><strong>values</strong>
+<ul>
+<li>einfache werte</li>
+</ul>
+</li>
+<li><strong>drawable</strong>
+<ul>
+<li>komplexe formen</li>
+<li>Bilder</li>
+</ul>
+</li>
+<li><strong>raw</strong>
+<ul>
+<li>rohe daten
+<ul>
+<li>videos</li>
+<li>XML, dass nicht kompiliert werden soll</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="-der-assets-ordner">📂 Der <code>assets</code>-Ordner </h4>
+<p>Der <strong><code>assets</code>-Ordner</strong> wird <strong>selten verwendet</strong>. Hier können <strong>Ressourcen aller Art</strong> abgelegt werden.</p>
+<h5 id="eigenschaften-des-assets-ordners">Eigenschaften des <code>assets</code>-Ordners </h5>
+<ul>
+<li><strong>variable Ordnerstruktur</strong></li>
+<li><strong>keine Indizierung der Ressourcen</strong></li>
+<li>Zugriff nur über den <strong>Dateipfad</strong> (man öffnet dafür einen <strong>InputStream</strong>)</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">InputStream</span> f <span class="token operator">=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-try">try</span>
+<span class="token punctuation">{</span>
+    f <span class="token operator">=</span> <span class="token function">getAssets</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword keyword-open">open</span><span class="token punctuation">(</span><span class="token string">"/data/text.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> ex<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre><ul>
+<li>Ressourcen werden <strong>nicht vor-kompiliert</strong></li>
+</ul>
+<h3 id="-what-is-adb">🤖 What is ADB? </h3>
+<p><strong>ADB</strong> stands for <strong>Android Debug Bridge</strong>.</p>
+<p>It's a <strong>command-line tool</strong> that lets you communicate with and control an Android device (emulator or physical device) from your computer.</p>
+<hr>
+<h4 id="key-features-of-adb">Key Features of ADB </h4>
+<ul>
+<li><strong>Install and debug apps</strong> directly on your device</li>
+<li>Access <strong>device shell</strong> to run commands</li>
+<li>Transfer files between your computer and the device</li>
+<li>View device logs and system info</li>
+<li>Control the device remotely (like rebooting, installing updates)</li>
+</ul>
+<hr>
+<p>ADB is essential for <strong>Android development and troubleshooting</strong> — your go-to pirate tool for navigating the Android seas! ⚓</p>
+<h3 id="parcable">Parcable </h3>
+<ul>
+<li>Data Class Implements Parcable</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">User</span> user<span class="token punctuation">;</span>
+<span class="token class-name">Bundle</span> bundle <span class="token operator">=</span> <span class="token function">getIntent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getExtras</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>bundle <span class="token operator">!=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    user <span class="token operator">=</span> bundle<span class="token punctuation">.</span><span class="token function">getParcelable</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token punctuation">.</span><span class="token keyword keyword-class">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-else">else</span>
+<span class="token punctuation">{</span>
+    user <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">"empty"</span><span class="token punctuation">,</span> <span class="token string">"empty"</span><span class="token punctuation">,</span> <span class="token string">"empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="databases">Databases </h3>
+<h4 id="column-constants">Column Constants </h4>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">CatColumnConstants</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">BaseColumns</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">CAT_TABLE</span> <span class="token operator">=</span> <span class="token string">"cats"</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">CAT_NAME_COLUMN</span> <span class="token operator">=</span> <span class="token string">"cat_name"</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">CAT_AGE_COLUMN</span> <span class="token operator">=</span> <span class="token string">"cat_age"</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">USER_ID</span> <span class="token operator">=</span> <span class="token string">"user_id"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="database">Database </h4>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">CatDatabase</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">SQLiteOpenHelper</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">DATABASE_NAME</span> <span class="token operator">=</span> <span class="token string">"cat.db"</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-final">final</span> <span class="token keyword keyword-int">int</span> <span class="token constant">DATABASE_VERSION</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">CREATE_USERS_TABLE</span> <span class="token operator">=</span>
+            <span class="token string">"CREATE TABLE "</span> <span class="token operator">+</span> <span class="token class-name">UserColumnConstants</span><span class="token punctuation">.</span><span class="token constant">USER_TABLE</span> <span class="token operator">+</span> <span class="token string">" ("</span> <span class="token operator">+</span>
+                    <span class="token class-name">UserColumnConstants</span><span class="token punctuation">.</span>_ID <span class="token operator">+</span> <span class="token string">" INTEGER PRIMARY KEY AUTOINCREMENT, "</span> <span class="token operator">+</span>
+                    <span class="token class-name">UserColumnConstants</span><span class="token punctuation">.</span><span class="token constant">USERNAME_COLUMN</span> <span class="token operator">+</span> <span class="token string">" TEXT NOT NULL, "</span> <span class="token operator">+</span>
+                    <span class="token class-name">UserColumnConstants</span><span class="token punctuation">.</span><span class="token constant">EMAIL_COLUMN</span> <span class="token operator">+</span> <span class="token string">" TEXT NOT NULL UNIQUE, "</span> <span class="token operator">+</span>
+                    <span class="token class-name">UserColumnConstants</span><span class="token punctuation">.</span><span class="token constant">PASSWORD_COLUMN</span> <span class="token operator">+</span> <span class="token string">" TEXT NOT NULL);"</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">CREATE_CATS_TABLE</span> <span class="token operator">=</span>
+            <span class="token string">"CREATE TABLE "</span> <span class="token operator">+</span> <span class="token class-name">CatColumnConstants</span><span class="token punctuation">.</span><span class="token constant">CAT_TABLE</span> <span class="token operator">+</span> <span class="token string">" ("</span> <span class="token operator">+</span>
+                    <span class="token class-name">CatColumnConstants</span><span class="token punctuation">.</span>_ID <span class="token operator">+</span> <span class="token string">" INTEGER PRIMARY KEY AUTOINCREMENT, "</span> <span class="token operator">+</span>
+                    <span class="token class-name">CatColumnConstants</span><span class="token punctuation">.</span><span class="token constant">CAT_NAME_COLUMN</span> <span class="token operator">+</span> <span class="token string">" TEXT NOT NULL, "</span> <span class="token operator">+</span>
+                    <span class="token class-name">CatColumnConstants</span><span class="token punctuation">.</span><span class="token constant">CAT_AGE_COLUMN</span> <span class="token operator">+</span> <span class="token string">" INTEGER NOT NULL);"</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">CatDatabase</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> <span class="token string">"DATABASE_NAME"</span><span class="token punctuation">,</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span> <span class="token constant">DATABASE_VERSION</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">CatDatabase</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Nullable</span> <span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">SQLiteDatabase<span class="token punctuation">.</span>CursorFactory</span> factory<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> version<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> name<span class="token punctuation">,</span> factory<span class="token punctuation">,</span> version<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token class-name">SQLiteDatabase</span> db<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        db<span class="token punctuation">.</span><span class="token function">execSQL</span><span class="token punctuation">(</span><span class="token constant">CREATE_USERS_TABLE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        db<span class="token punctuation">.</span><span class="token function">execSQL</span><span class="token punctuation">(</span><span class="token constant">CREATE_CATS_TABLE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">onUpgrade</span><span class="token punctuation">(</span><span class="token class-name">SQLiteDatabase</span> db<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> oldVersion<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> newVersion<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        db<span class="token punctuation">.</span><span class="token function">execSQL</span><span class="token punctuation">(</span><span class="token string">"DROP TABLE IF EXISTS "</span> <span class="token operator">+</span> <span class="token class-name">UserColumnConstants</span><span class="token punctuation">.</span><span class="token constant">USER_TABLE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        db<span class="token punctuation">.</span><span class="token function">execSQL</span><span class="token punctuation">(</span><span class="token string">"DROP TABLE IF EXISTS "</span> <span class="token operator">+</span> <span class="token class-name">CatColumnConstants</span><span class="token punctuation">.</span><span class="token constant">CAT_TABLE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">onCreate</span><span class="token punctuation">(</span>db<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="display-data">Display Data </h4>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-private">private</span> <span class="token keyword keyword-void">void</span> <span class="token function">displayCatData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">SQLiteDatabase</span> db <span class="token operator">=</span> catDatabase<span class="token punctuation">.</span><span class="token function">getReadableDatabase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Cursor</span> cursor <span class="token operator">=</span> db<span class="token punctuation">.</span><span class="token function">rawQuery</span><span class="token punctuation">(</span><span class="token string">"SELECT * FROM "</span> <span class="token operator">+</span> <span class="token class-name">CatColumnConstants</span><span class="token punctuation">.</span><span class="token constant">CAT_TABLE</span><span class="token punctuation">,</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">StringBuilder</span> dataBuilder <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>cursor<span class="token punctuation">.</span><span class="token function">moveToFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-do">do</span> <span class="token punctuation">{</span>
+            <span class="token keyword keyword-int">int</span> id <span class="token operator">=</span> cursor<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span>cursor<span class="token punctuation">.</span><span class="token function">getColumnIndexOrThrow</span><span class="token punctuation">(</span><span class="token class-name">CatColumnConstants</span><span class="token punctuation">.</span>_ID<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">String</span> name <span class="token operator">=</span> cursor<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span>cursor<span class="token punctuation">.</span><span class="token function">getColumnIndexOrThrow</span><span class="token punctuation">(</span><span class="token class-name">CatColumnConstants</span><span class="token punctuation">.</span><span class="token constant">CAT_NAME_COLUMN</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-int">int</span> age <span class="token operator">=</span> cursor<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span>cursor<span class="token punctuation">.</span><span class="token function">getColumnIndexOrThrow</span><span class="token punctuation">(</span><span class="token class-name">CatColumnConstants</span><span class="token punctuation">.</span><span class="token constant">CAT_AGE_COLUMN</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            dataBuilder<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"🐱 ID: "</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"\n📛 Name: "</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"\n🎂 Age: "</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">" years\n\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>cursor<span class="token punctuation">.</span><span class="token function">moveToNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+        dataBuilder<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"No cat data found! 🐾"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    textOutput<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>dataBuilder<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cursor<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    db<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="️-preferences">⚙️ Preferences </h3>
+<p><strong>Preferences</strong> sind eine einfache Möglichkeit, kleine Mengen an Daten persistent zu speichern, typischerweise für Benutzereinstellungen. Android bietet dafür die <code>SharedPreferences</code>-API.</p>
+<hr>
+<h4 id="️-sharedpreferences">🗂️ SharedPreferences </h4>
+<ul>
+<li>Speichert Key-Value-Paare.</li>
+<li>Ideal für einfache Daten wie Einstellungen, Flags oder Konfigurationen.</li>
+<li>Daten werden als XML-Datei im privaten App-Speicher gespeichert.</li>
+</ul>
+<hr>
+<h4 id="-verwendung">🔧 Verwendung </h4>
+<p><strong>1. Zugriff auf die Preferences:</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">SharedPreferences</span> prefs <span class="token operator">=</span> <span class="token function">getSharedPreferences</span><span class="token punctuation">(</span><span class="token string">"EINSTELLUNGEN"</span><span class="token punctuation">,</span> <span class="token constant">MODE_PRIVATE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><strong>2. Lesen von Daten:</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-boolean">boolean</span> darkMode <span class="token operator">=</span> prefs<span class="token punctuation">.</span><span class="token function">getBoolean</span><span class="token punctuation">(</span><span class="token string">"dark_mode"</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><strong>3. Schreiben von Daten:</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">SharedPreferences<span class="token punctuation">.</span>Editor</span> editor <span class="token operator">=</span> prefs<span class="token punctuation">.</span><span class="token function">edit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+editor<span class="token punctuation">.</span><span class="token function">putBoolean</span><span class="token punctuation">(</span><span class="token string">"dark_mode"</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+editor<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// oder commit()</span>
+</code></pre><h5 id="-unterschiede-apply-vs-commit">📌 Unterschiede: apply() vs commit() </h5>
+<ul>
+<li><code>apply()</code> speichert asynchron (empfohlen).</li>
+<li><code>commit()</code> speichert synchron und gibt einen booleschen Wert zurück.</li>
+</ul>
+<h4 id="-preference-screen-ui">🧩 Preference Screen (UI) </h4>
+<p>Für benutzerfreundliche Einstellungen kannst du PreferenceFragmentCompat verwenden:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">SettingsFragment</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">PreferenceFragmentCompat</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">onCreatePreferences</span><span class="token punctuation">(</span><span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">,</span> <span class="token class-name">String</span> rootKey<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">setPreferencesFromResource</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>xml<span class="token punctuation">.</span>preferences<span class="token punctuation">,</span> rootKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PreferenceScreen</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>android</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.android.com/apk/res/android<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SwitchPreferenceCompat</span>
+        <span class="token attr-name"><span class="token namespace">android:</span>key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dark_mode<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Dark Mode aktivieren<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>defaultValue</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PreferenceScreen</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h3 id="️-android-workflow-installation-android-studio">🛠️ Android-Workflow (Installation Android Studio) </h3>
+<h4 id="neues-projekt-erstellen">Neues Projekt erstellen </h4>
+<p><img src="image-13.png" alt="alt text"></p>
+<p><img src="image-14.png" alt="alt text"></p>
+<h4 id="projektstruktur">Projektstruktur </h4>
+<ul>
+<li><strong>java</strong>
+<ul>
+<li>Erstellte Klassen</li>
+</ul>
+</li>
+<li><strong>res</strong>
+<ul>
+<li>Ressourcen, wie zb
+<ul>
+<li>Strings</li>
+<li>Grafiken</li>
+<li>Layouts</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-12.png" alt="alt text"></p>
+<h4 id="️-avd--android-virtual-device">🛰️ AVD — Android Virtual Device </h4>
+<ul>
+<li>
+<p><strong>What it is:</strong><br>
+AVD is an <strong>emulator configuration</strong> that simulates a real Android device on your computer.</p>
+</li>
+<li>
+<p><strong>Purpose:</strong><br>
+Allows developers to <strong>test and debug Android apps</strong> without needing physical hardware.</p>
+</li>
+<li>
+<p><strong>Features:</strong></p>
+<ul>
+<li>Emulates various device types (phones, tablets, TVs, wearables)</li>
+<li>Supports different Android versions and system images</li>
+<li>Configurable hardware profiles (RAM, CPU, screen size, resolution, sensors)</li>
+<li>Network and GPS simulation</li>
+<li>Snapshot support for quick booting</li>
+</ul>
+</li>
+<li>
+<p><strong>Usage:</strong><br>
+Run your app inside the AVD from Android Studio or command line to simulate how it behaves on different devices and Android versions.</p>
+</li>
+<li>
+<p><strong>Why it matters:</strong><br>
+Saves time and credits by avoiding the need for multiple physical test devices, essential for compatibility testing across the vast Android ecosystem.</p>
+</li>
+</ul>
+<hr>
+<p style="page-break-before: always;"></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

@@ -1,13 +1,37 @@
 <style>
-body {
+
+@font-face {
+  font-family: 'TheRumIsGone';
+  src: url('TheRumIsGone.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body 
+{
   counter-reset: h1;
 }
+
 h1 {
   counter-reset: h2;
+  font-family: 'TheRumIsGone', serif;
+  text-shadow: 2px 2px 4px #ccc;
 }
-h2 {
+
+h2 
+{
   counter-reset: h3;
+  border-bottom: 2px solid #ffa500;
 }
+
+h3 {
+  counter-reset: h4;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
 h1::before {
   counter-increment: h1;
   content: counter(h1) ". ";
@@ -20,11 +44,83 @@ h3::before {
   counter-increment: h3;
   content: counter(h1) "." counter(h2) "." counter(h3) " ";
 }
+h4::before {
+    counter-increment: h4;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
+}
+
 </style>
+
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Algorithmen und Datenstrukturen](#algorithmen-und-datenstrukturen)
+  - [OOP Programmierung (c#, java)](#oop-programmierung-c-java)
+    - [Pros](#pros)
+    - [Cons](#cons)
+    - [Compared to Procedural / Functional](#compared-to-procedural--functional)
+  - [Vererbung - Inheritance](#vererbung---inheritance)
+    - [C#](#c)
+    - [Java](#java)
+  - [🧩 Interfaces](#-interfaces)
+    - [⚙️ C#](#️-c)
+    - [🔧 Java](#-java)
+  - [🌀 Polymorphie](#-polymorphie)
+    - [⚙️ C# Beispiel](#️-c-beispiel)
+    - [Java](#java-1)
+  - [📡 Delegates](#-delegates)
+    - [⚙️ C# Beispiel](#️-c-beispiel-1)
+      - [Multicast](#multicast)
+    - [🔧 Java Vergleich (Functional Interface + Lambda)](#-java-vergleich-functional-interface--lambda)
+      - [Other examples](#other-examples)
+  - [Datenkapselung (Encapsulation)](#datenkapselung-encapsulation)
+    - [Vorteile](#vorteile)
+    - [⚙️ C# Beispiel](#️-c-beispiel-2)
+    - [🔧 Java Beispiel](#-java-beispiel)
+  - [Structs](#structs)
+    - [When to Use Structs](#when-to-use-structs)
+    - [C# Example](#c-example)
+  - [Java](#java-2)
+  - [Abstract Classes](#abstract-classes)
+    - [When to Use Abstract Classes](#when-to-use-abstract-classes)
+    - [⚙️ C# Example](#️-c-example)
+    - [🔧 Java Example](#-java-example)
+  - [Exception Handling](#exception-handling)
+    - [Key Concepts](#key-concepts)
+    - [⚙️ C# Example](#️-c-example-1)
+    - [🔧 Java Example](#-java-example-1)
+  - [Generics](#generics)
+    - [Vorteile](#vorteile-1)
+    - [⚙️ C# Example](#️-c-example-2)
+    - [🔧 Java Example](#-java-example-2)
+  - [OOP Concepts](#oop-concepts)
+    - [Example: Tying Them Together in C#](#example-tying-them-together-in-c)
+  - [Clean Code](#clean-code)
+  - [🧠 Big O Notation](#-big-o-notation)
+    - [⚙️ Common Types of Big O](#️-common-types-of-big-o)
+    - [🪜 Comparison (From Fastest to Slowest)](#-comparison-from-fastest-to-slowest)
+    - [🏴‍☠️ Pirate Tips](#️-pirate-tips)
+    - [🔀 Common Sorting Algorithms](#-common-sorting-algorithms)
+    - [🧭 Quick Guide to Use 'Em](#-quick-guide-to-use-em)
+  - [⚔️ Common Data Structures with Code Examples](#️-common-data-structures-with-code-examples)
+    - [📦 Array (List in Python)](#-array-list-in-python)
+    - [🔗 Linked List (Manually)](#-linked-list-manually)
+    - [🧠 Stack (Using list)](#-stack-using-list)
+    - [📬 Queue (Using `collections.deque`)](#-queue-using-collectionsdeque)
+    - [🗺️ Hash Map (Dictionary in Python)](#️-hash-map-dictionary-in-python)
+    - [🎯 Set](#-set)
+    - [🌲 Binary Search Tree (Simple version)](#-binary-search-tree-simple-version)
+    - [🔺 Heap (Min-Heap using `heapq`)](#-heap-min-heap-using-heapq)
+    - [🔤 Trie (Prefix Tree)](#-trie-prefix-tree)
+    - [🌌 Graph (Adjacency List)](#-graph-adjacency-list)
+  - [Dining philosophers problem](#dining-philosophers-problem)
+    - [Problems](#problems)
+    - [Dijkstra's solution](#dijkstras-solution)
+    - [Resource hierarchy solution](#resource-hierarchy-solution)
+    - [Arbitrator solution](#arbitrator-solution)
 
 
 # Algorithmen und Datenstrukturen
----
 ## OOP Programmierung (c#, java)
 
 **What is OOP?**
@@ -1183,8 +1279,6 @@ public class Main {
 
 ---
 
----
-
 ## OOP Concepts
 
 **Object-Oriented Programming (OOP)** is built on four main pillars that work together to organize code into modular, reusable components. Here’s a quick rundown:
@@ -1425,9 +1519,313 @@ public class Program
 
 ---
 
-## Big O Notation
+## 🧠 Big O Notation
+
+Big O notation is a way to describe **how efficient an algorithm is** in terms of **time** or **space** as the size of the input grows.
+
+It helps us understand the *worst-case scenario* of how long something might take (time complexity) or how much memory it might use (space complexity).
+
+---
+
+### ⚙️ Common Types of Big O
+
+| Big O Notation | Name                  | Example                          | Description                                     |
+|----------------|-----------------------|----------------------------------|-------------------------------------------------|
+| `O(1)`         | Constant Time         | Accessing an array element       | 🟢 Fast and doesn't grow with input size.       |
+| `O(log n)`     | Logarithmic Time      | Binary Search                    | 🟡 Grows slowly as input size increases.        |
+| `O(n)`         | Linear Time           | Loop through an array            | 🟠 Time grows directly with input size.         |
+| `O(n log n)`   | Linearithmic Time     | Merge Sort, Quick Sort (avg)     | 🟠 Slightly slower than linear, but efficient.  |
+| `O(n²)`        | Quadratic Time        | Nested loops (e.g., Bubble Sort) | 🔴 Time grows quickly as input doubles.         |
+| `O(2ⁿ)`        | Exponential Time      | Solving a subset of problems     | ⚠️ Grows *very* fast – avoid if possible.       |
+| `O(n!)`        | Factorial Time        | Brute force permutations         | ☠️ Grows insanely fast – only for tiny inputs.  |
+
+---
+
+### 🪜 Comparison (From Fastest to Slowest)
+
+```
+O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)
+```
+
+---
+
+### 🏴‍☠️ Pirate Tips
+
+- Try to **aim for O(1), O(log n), or O(n)** whenever possible.
+- Avoid `O(n²)` and worse unless your input size is *really small*.
+- Big O doesn't care about small differences—it's about **how fast things get worse** as input grows.
+
+### 🔀 Common Sorting Algorithms
+
+| Algorithm        | Best Time   | Worst Time  | Average Time | Space | Method        | Notes                                                                 |
+|------------------|-------------|-------------|---------------|--------|----------------|-----------------------------------------------------------------------|
+| **Bubble Sort**  | O(n)        | O(n²)       | O(n²)         | O(1)   | Comparison     | Repeatedly swaps adjacent items if they're in the wrong order. Slow. |
+| **Selection Sort** | O(n²)     | O(n²)       | O(n²)         | O(1)   | Comparison     | Finds the smallest item and puts it in place. Simple but inefficient.|
+| **Insertion Sort** | O(n)      | O(n²)       | O(n²)         | O(1)   | Comparison     | Builds the sorted list one item at a time. Good for small data.      |
+| **Merge Sort**   | O(n log n)  | O(n log n)  | O(n log n)    | O(n)   | Divide & Conquer | Splits list into halves, sorts, and merges. Very stable and fast.   |
+| **Quick Sort**   | O(n log n)  | O(n²)       | O(n log n)    | O(log n) | Divide & Conquer | Picks a pivot and sorts around it. Fast but worst case can hurt.     |
+| **Heap Sort**    | O(n log n)  | O(n log n)  | O(n log n)    | O(1)   | Heap-based     | Turns array into a heap and sorts. Not stable.                       |
+| **Radix Sort**   | O(nk)       | O(nk)       | O(nk)         | O(n + k) | Non-Comparison | Sorts by digits/characters. Fast for integers or fixed-length data.  |
+| **Counting Sort**| O(n + k)    | O(n + k)    | O(n + k)      | O(k)   | Non-Comparison | Counts occurrences. Only for integers in small range.               |
+
+---
+
+### 🧭 Quick Guide to Use 'Em
+
+- Use **Merge Sort** or **Quick Sort** for general-purpose large data.
+- Use **Insertion Sort** for small or nearly sorted data.
+- Use **Radix/Counting Sort** for numbers when speed matters and conditions fit.
+- Avoid **Bubble/Selection** unless teaching or cursed by sirens.
+
+Smooth sorting seas to ye, Captain! 📊⚓
 
 
-## Listen, Trees und andere Datenstrukturen 
 
-## Speisende Philosphen
+
+## ⚔️ Common Data Structures with Code Examples
+
+[Wikipedia Article](https://en.wikipedia.org/wiki/Data_structure)
+
+| Data Structure     | Description                              | Time (Access/Search)     | Use Cases                             | Notes                                  |
+|--------------------|------------------------------------------|---------------------------|----------------------------------------|----------------------------------------|
+| **Array**          | Fixed-size list, elements in order       | O(1) / O(n)               | Simple storage, fast access by index   | Size is fixed; slow inserts/deletes    |
+| **Linked List**    | Chain of nodes, each points to the next  | O(n) / O(n)               | Insert/remove in middle frequently     | No fast access by index                |
+| **Doubly Linked List** | Like linked list, but with back refs | O(n) / O(n)               | Back and forth navigation              | More flexible, uses more memory        |
+| **Stack**          | Last-In, First-Out (LIFO) structure       | O(1) / O(n)               | Undo, recursion, backtracking          | Uses push/pop operations               |
+| **Queue**          | First-In, First-Out (FIFO) structure      | O(1) / O(n)               | Scheduling, buffering                  | Uses enqueue/dequeue operations        |
+| **Hash Table / Map** | Key-value pairs with fast lookup       | O(1)* / O(1)*             | Fast lookup by key                     | *Worst case is O(n) if many collisions |
+| **Set**            | Like a hash table, but only stores keys   | O(1)* / O(1)*             | Uniqueness checks, fast existence test | No duplicates allowed                  |
+| **Binary Tree**    | Tree with up to 2 children per node       | O(log n)* / O(log n)*     | Hierarchical data                      | *Only if balanced                      |
+| **Binary Search Tree** | Ordered binary tree                 | O(log n)* / O(log n)*     | Sorted data with quick search          | Can become unbalanced (then O(n))      |
+| **Heap (Min/Max)** | Binary tree for priority queue operations | O(1) / O(log n)           | Priority queues, schedulers            | Access min/max quickly                 |
+| **Trie (Prefix Tree)** | Tree for string prefixes             | O(k) / O(k)               | Auto-complete, dictionaries            | `k` = length of string                 |
+| **Graph**          | Nodes connected by edges                 | Varies                    | Networks, navigation, relationships     | Can be directed/undirected, weighted   |
+
+
+### 📦 Array (List in Python)
+
+```python
+# Define an array
+arr = [10, 20, 30]
+print(arr[1])  # Access: 20
+arr.append(40)  # Add at end
+arr.remove(20)  # Remove value
+```
+
+---
+
+### 🔗 Linked List (Manually)
+
+```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+# Create nodes
+head = Node(10)
+head.next = Node(20)
+head.next.next = Node(30)
+
+# Traverse
+current = head
+while current:
+    print(current.value)
+    current = current.next
+```
+
+---
+
+### 🧠 Stack (Using list)
+
+Possible use cases for stacks:
+
+- certain algorithms
+- history
+- bracket syntax highlighting
+
+**LIFO**
+
+```python
+stack = []
+stack.append("plunder")  # Push
+stack.append("gold")
+print(stack.pop())       # Pop → "gold"
+```
+
+---
+
+### 📬 Queue (Using `collections.deque`)
+
+**FIFO**
+
+
+
+```python
+from collections import deque
+
+queue = deque()
+queue.append("Florence")   # Enqueue
+queue.append("Jack")
+print(queue.popleft())     # Dequeue → "Florence"
+```
+
+---
+
+### 🗺️ Hash Map (Dictionary in Python)
+
+```python
+map = {"name": "Zoe", "role": "Captain"}
+map["ship"] = "DSS Hootsforce"
+print(map["name"])  # Access → Zoe
+```
+
+![alt text](Hash_table_3_1_1_0_1_0_0_SP.svg.png)
+
+---
+
+### 🎯 Set
+
+```python
+crew = {"Zoe", "Florence", "Jack"}
+crew.add("William")
+print("Zoe" in crew)  # True
+```
+
+---
+
+### 🌲 Binary Search Tree (Simple version)
+
+```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = self.right = None
+
+def insert(root, value):
+    if not root:
+        return Node(value)
+    if value < root.value:
+        root.left = insert(root.left, value)
+    else:
+        root.right = insert(root.right, value)
+    return root
+
+root = insert(None, 50)
+insert(root, 30)
+insert(root, 70)
+```
+
+---
+
+### 🔺 Heap (Min-Heap using `heapq`)
+
+```python
+import heapq
+
+heap = []
+heapq.heappush(heap, 20)
+heapq.heappush(heap, 10)
+heapq.heappush(heap, 30)
+
+print(heapq.heappop(heap))  # 10
+```
+
+---
+
+### 🔤 Trie (Prefix Tree)
+
+```python
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.end_of_word = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, word):
+        cur = self.root
+        for char in word:
+            if char not in cur.children:
+                cur.children[char] = TrieNode()
+            cur = cur.children[char]
+        cur.end_of_word = True
+
+    def search(self, word):
+        cur = self.root
+        for char in word:
+            if char not in cur.children:
+                return False
+            cur = cur.children[char]
+        return cur.end_of_word
+
+trie = Trie()
+trie.insert("loot")
+print(trie.search("loot"))  # True
+print(trie.search("loop"))  # False
+```
+
+---
+
+### 🌌 Graph (Adjacency List)
+
+```python
+graph = {
+    "Zoe": ["Florence", "Jack"],
+    "Florence": ["Zoe"],
+    "Jack": ["Zoe", "William"],
+    "William": ["Jack"]
+}
+
+# Traverse
+for node in graph:
+    print(f"{node} → {graph[node]}")
+```
+
+---
+
+May these data structures guide yer coding voyages as surely as the stars guide the Hootsforce through the abyss. ☠️🧭
+
+``Data be power, and the smart pirate keeps it sorted.`` – Eden
+
+
+## Dining philosophers problem
+
+![alt text](An_illustration_of_the_dining_philosophers_problem.png)
+
+Five philosophers dine together at the same table. Each philosopher has their own plate at the table. There is a fork between each plate. The dish served is a kind of spaghetti which has to be eaten with two forks. Each philosopher can only alternately think and eat. Moreover, a philosopher can only eat their spaghetti when they have both a left and right fork. Thus two forks will only be available when their two nearest neighbors are thinking, not eating. After an individual philosopher finishes eating, they will put down both forks. The problem is how to design a regimen (a concurrent algorithm) such that any philosopher will not starve; i.e., each can forever continue to alternate between eating and thinking, assuming that no philosopher can know when others may want to eat or think (an issue of incomplete information). 
+
+### Problems
+
+The problem was designed to illustrate the challenges of avoiding deadlock, a system state in which no progress is possible. To see that a proper solution to this problem is not obvious, consider a proposal in which each philosopher is instructed to behave as follows:
+
+- think unless the left fork is available; when it is, pick it up;
+- think unless the right fork is available; when it is, pick it up;
+- when both forks are held, eat for a fixed amount of time;
+- put the left fork down;
+- put the right fork down;
+- repeat from the beginning.
+
+With these instructions, the situation may arise where each philosopher holds the fork to their left; in that situation, they will all be stuck forever, waiting for the other fork to be available: it is a deadlock.
+
+Resource starvation, mutual exclusion and livelock are other types of sequence and access problems. 
+
+These four conditions are necessary for a deadlock to occur: mutual exclusion (no fork can be simultaneously used by multiple philosophers), resource holding (the philosophers hold a fork while waiting for the second), non-preemption (no philosopher can take a fork from another), and circular wait (each philosopher may be waiting on the philosopher to their left). A solution must negate at least one of those four conditions. In practice, negating mutual exclusion or non-preemption somehow can give a valid solution, but most theoretical treatments assume that those assumptions are non-negotiable, instead attacking resource holding or circular waiting (often both). 
+
+### Dijkstra's solution
+
+Dijkstra's solution negates resource holding; the philosophers atomically pick up both forks or wait, never holding exactly one fork outside of a critical section. To accomplish this, Dijkstra's solution uses one mutex, one semaphore per philosopher and one state variable per philosopher. This solution is more complex than the resource hierarchy solution
+
+### Resource hierarchy solution
+
+- Partial Order
+
+### Arbitrator solution
+
+- only allow picking up two forks at a time
+
+---
+
+<p style="page-break-before: always;"></p>
