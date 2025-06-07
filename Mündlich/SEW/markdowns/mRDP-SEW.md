@@ -122,8 +122,8 @@ h4::before {
   - [🪟 WPF Anwendungen](#-wpf-anwendungen)
     - [🧱 WPF Basics](#-wpf-basics)
       - [📦 Key Components](#-key-components)
-        - [1. **XAML (eXtensible Application Markup Language)**](#1-xaml-extensible-application-markup-language)
-        - [2. **Code-Behind**](#2-code-behind)
+        - [1. XAML (eXtensible Application Markup Language)](#1-xaml-extensible-application-markup-language)
+        - [2. Code-Behind](#2-code-behind)
       - [🧠 Key Concepts](#-key-concepts)
         - [🎯 Data Binding](#-data-binding)
         - [📦 MVVM Pattern](#-mvvm-pattern)
@@ -137,8 +137,8 @@ h4::before {
       - [🧪 Example: Tunneling vs Bubbling](#-example-tunneling-vs-bubbling)
       - [📣 Raising Custom Routed Events](#-raising-custom-routed-events)
       - [🛑 Event Handling Options](#-event-handling-options)
-        - [1. **`e.Handled = true`**](#1-ehandled--true)
-        - [2. **`AddHandler` with `handledEventsToo`**](#2-addhandler-with-handledeventstoo)
+        - [1. `e.Handled = true`](#1-ehandled--true)
+        - [2. `AddHandler` with `handledEventsToo`](#2-addhandler-with-handledeventstoo)
       - [🧪 RoutedCommand \& InputGesture](#-routedcommand--inputgesture)
       - [🔧 Advanced Scenario: Routed Event for a Custom Control](#-advanced-scenario-routed-event-for-a-custom-control)
       - [🧰 Routed Events vs .NET Events](#-routed-events-vs-net-events)
@@ -183,23 +183,49 @@ h4::before {
   - [🤖 Android](#-android)
     - [🚧 Architektur](#-architektur)
       - [📱 Applications](#-applications)
-      - [🧰 **Application Frameworks**](#-application-frameworks)
-      - [📚 **Libraries (Bibliotheken)**](#-libraries-bibliotheken)
-      - [⚙️ **Android-Runtime**](#️-android-runtime)
-      - [🐧 **Linux-Kernel**](#-linux-kernel)
-      - [🧩 **App-Architektur**](#-app-architektur)
-      - [⚓ **Wichtige Bestandteile einer Android-App**](#-wichtige-bestandteile-einer-android-app)
+      - [🧰 Application Frameworks](#-application-frameworks)
+      - [📚 Libraries (Bibliotheken)](#-libraries-bibliotheken)
+      - [⚙️ Android-Runtime](#️-android-runtime)
+      - [🐧 Linux-Kernel](#-linux-kernel)
+      - [🧩 App-Architektur](#-app-architektur)
+      - [⚓ Wichtige Bestandteile einer Android-App](#-wichtige-bestandteile-einer-android-app)
     - [🎬 Activities](#-activities)
-      - [Activy Life Cycle](#activy-life-cycle)
+    - [🛠️ Android Layouts: Deklaration und Struktur](#️-android-layouts-deklaration-und-struktur)
+      - [🧱 Was ist ein Layout?](#-was-ist-ein-layout)
+      - [📝 Layout deklarieren](#-layout-deklarieren)
+      - [⚙️ Layout in der Activity verwenden](#️-layout-in-der-activity-verwenden)
+      - [🧭 Wichtige Layout-Typen](#-wichtige-layout-typen)
+      - [🛠️ Layout Editor in Android Studio](#️-layout-editor-in-android-studio)
+      - [🔄 Layouts wiederverwenden mit `<include>`](#-layouts-wiederverwenden-mit-include)
+      - [📐 Responsive/Adaptive Design](#-responsiveadaptive-design)
     - [📩 Intents](#-intents)
+      - [Example: Navigate to new Activity](#example-navigate-to-new-activity)
+      - [Intent with Data](#intent-with-data)
     - [🧱 Fragments](#-fragments)
+      - [Put data into a fragment](#put-data-into-a-fragment)
+      - [Fragment Class](#fragment-class)
     - [♻️ Lifecycle von Activity und Fragmenten](#️-lifecycle-von-activity-und-fragmenten)
-    - [📜 Android Manifest](#-android-manifest)
+    - [📜 AndroidManifest.xml](#-androidmanifestxml)
+      - [🆔 Applikationsidentiät](#-applikationsidentiät)
+      - [⚙️ System Requirements](#️-system-requirements)
+      - [🧩 Plattform Requirements](#-plattform-requirements)
+      - [🔐 Erlaubnisse (Permissions)](#-erlaubnisse-permissions)
+      - [📋 Activities und andere Komponenten registrieren](#-activities-und-andere-komponenten-registrieren)
     - [🎨 Ressourcen](#-ressourcen)
+      - [🗂️ Ordnerstruktur für Ressourcen](#️-ordnerstruktur-für-ressourcen)
+      - [🔑 Zugriff auf Ressourcen](#-zugriff-auf-ressourcen)
+        - [🏷️ Referenz innerhalb der Ressourcendefinition](#️-referenz-innerhalb-der-ressourcendefinition)
+        - [💻 Referenz innerhalb des Java-Codes](#-referenz-innerhalb-des-java-codes)
+        - [📲 Direktzugriff innerhalb des Java-Codes](#-direktzugriff-innerhalb-des-java-codes)
+      - [Ressource Folder](#ressource-folder)
+      - [📂 Der `assets`-Ordner](#-der-assets-ordner)
+        - [Eigenschaften des `assets`-Ordners](#eigenschaften-des-assets-ordners)
+    - [🤖 What is ADB?](#-what-is-adb)
+      - [Key Features of ADB](#key-features-of-adb)
     - [🛠️ Android-Workflow (Installation Android Studio)](#️-android-workflow-installation-android-studio)
       - [Neues Projekt erstellen](#neues-projekt-erstellen)
       - [Projektstruktur](#projektstruktur)
-      - [AVD](#avd)
+      - [🛰️ AVD — Android Virtual Device](#️-avd--android-virtual-device)
 - [🌐 Netzwerk und Webprogrammierung](#-netzwerk-und-webprogrammierung)
   - [🧑‍🤝‍🧑 Client - Server Konzept](#-client---server-konzept)
   - [🌐 ASP.NET Core API](#-aspnet-core-api)
@@ -1967,7 +1993,7 @@ For MVVM see [MMVM WPF Chapter](#mvvm)
 
 #### 📦 Key Components
 
-##### 1. **XAML (eXtensible Application Markup Language)**
+##### 1. XAML (eXtensible Application Markup Language)
 Used to define the UI declaratively.
 
 ```xml
@@ -1980,7 +2006,7 @@ Used to define the UI declaratively.
 </Window>
 ```
 
-##### 2. **Code-Behind**
+##### 2. Code-Behind
 C# code that runs logic behind the UI.
 
 ```csharp
@@ -2160,7 +2186,7 @@ void RaiseWarp()
 
 #### 🛑 Event Handling Options
 
-##### 1. **`e.Handled = true`**
+##### 1. `e.Handled = true`
 Stops the routed event from traveling further.
 
 ```csharp
@@ -2170,7 +2196,7 @@ private void Button_PreviewMouseDown(object sender, MouseButtonEventArgs e)
 }
 ```
 
-##### 2. **`AddHandler` with `handledEventsToo`**
+##### 2. `AddHandler` with `handledEventsToo`
 Listens even if the event was already handled.
 
 ```csharp
@@ -2809,7 +2835,7 @@ Android is an operating system based on a modified version of the Linux kernel a
     - → App muss **nicht mehr zur Laufzeit** umgewandelt werden
     - → **Bessere Performance**
 
-#### 🧰 **Application Frameworks**
+#### 🧰 Application Frameworks
 
 - **Activity Manager**
   - Kontrolliert den **Lebenszyklus der Apps**
@@ -2840,7 +2866,7 @@ Android is an operating system based on a modified version of the Linux kernel a
 - **Window Manager**
   - Zur **Verwaltung des Bildschirms**
 
-#### 📚 **Libraries (Bibliotheken)**
+#### 📚 Libraries (Bibliotheken)
 
 - **FreeType**
   - Für **Bitmap** und **Fonts**
@@ -2870,7 +2896,7 @@ Android is an operating system based on a modified version of the Linux kernel a
 - **Surface Manager**
   - Verwaltung des **Zugriffs auf das Display-Subsystem**
 
-#### ⚙️ **Android-Runtime**
+#### ⚙️ Android-Runtime
 
 - **Kernbibliotheken** für die Laufzeitumgebung  
   - Teilmenge der **Apache Harmony Java 5 Implementierung**
@@ -2886,7 +2912,7 @@ Android is an operating system based on a modified version of the Linux kernel a
 
 - Nutzt das **Thread-Modell** und die **Low-Memory-Verwaltung von Linux**
 
-#### 🐧 **Linux-Kernel**
+#### 🐧 Linux-Kernel
 
 - Dient als **Abstraktionsschicht** zwischen der **Android-Welt** und der **Hardware**
 
@@ -2896,7 +2922,7 @@ Android is an operating system based on a modified version of the Linux kernel a
   - **Netzwerkstack**
   - **Treiber**
 
-#### 🧩 **App-Architektur**
+#### 🧩 App-Architektur
 
 - Die **Android-App-Architektur** basiert auf **Komponenten**, die über sogenannte **Intents** miteinander kommunizieren.
 
@@ -2917,7 +2943,7 @@ Android is an operating system based on a modified version of the Linux kernel a
   - **Shared Preferences**
   - **Dateisystem**
 
-#### ⚓ **Wichtige Bestandteile einer Android-App**
+#### ⚓ Wichtige Bestandteile einer Android-App
 
 - **Activity**  
   - Sichtbarer Teil der Anwendung zur **Interaktion mit dem Benutzer**  
@@ -2938,15 +2964,258 @@ Android is an operating system based on a modified version of the Linux kernel a
 
 ### 🎬 Activities
 
-#### Activy Life Cycle
+Activities sind eigene Klassen die eine Seite auf der App repräsentieren.
+
+``` java
+public class MainActivity extends AppCompatActivity
+{
+    private Button mainLoginButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        mainLoginButton = findViewById(R.id.mainLoginButton);
+
+        mainLoginButton.setOnClickListener(v -> {
+           Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+           startActivity(intent);
+        });
+    }
+}
+```
+
+In Java und XML Files geteilt.
+
+![alt text](image-16.png)
+
+### 🛠️ Android Layouts: Deklaration und Struktur
+
+![alt text](viewgroup_2x.png)
+
+![alt text](layoutparams.png)
+
+#### 🧱 Was ist ein Layout?
+
+Ein Layout definiert die Struktur der Benutzeroberfläche (UI) deiner App, z. B. in einer Activity. Alle Elemente im Layout werden durch eine Hierarchie von `View`- und `ViewGroup`-Objekten aufgebaut:
+
+- **`View`**: Sichtbare UI-Elemente wie `Button`, `TextView`, `ImageView`.
+- **`ViewGroup`**: Unsichtbare Container, die die Struktur für `View`- und andere `ViewGroup`-Objekte festlegen, z. B. `LinearLayout`, `RelativeLayout`, `ConstraintLayout`.
+
+#### 📝 Layout deklarieren
+
+Layouts werden in XML-Dateien im Verzeichnis `res/layout/` gespeichert. Jede Layout-Datei muss genau ein Root-Element enthalten, das ein `View` oder `ViewGroup` ist. Beispiel:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <TextView android:id="@+id/text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Hallo, ich bin ein TextView" />
+    <Button android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hallo, ich bin ein Button" />
+</LinearLayout>
+```
+
+#### ⚙️ Layout in der Activity verwenden
+
+``` kotlin
+fun onCreate(savedInstanceState: Bundle) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.main_layout)
+}
+```
+
+#### 🧭 Wichtige Layout-Typen
+
+- **LinearLayout:** Ordnet Kinder in einer Richtung an (vertikal oder horizontal).
+
+- **RelativeLayout:** Positioniert Kinder relativ zueinander oder zum Eltern-Layout.
+
+- **ConstraintLayout:** Bietet flexible Positionierung und Größenanpassung basierend auf Constraints. Empfohlen für komplexe Layouts.
+
+- **FrameLayout:** Zeigt ein einzelnes Element an, ideal für einfache UI-Komponenten.
+
+- **TableLayout:** Anordnung von Kindern in Zeilen und Spalten.
+
+- **GridLayout:** Erweitert TableLayout mit flexiblerer Zellenanordnung.
+
+---
+
+#### 🛠️ Layout Editor in Android Studio
+
+Der Layout Editor ermöglicht das schnelle Erstellen von Layouts durch Ziehen von UI-Elementen in einen visuellen Design-Editor. Er bietet eine Vorschau des Layouts auf verschiedenen Android-Geräten und -Versionen und ermöglicht das dynamische Anpassen der Layoutgröße, um sicherzustellen, dass es auf verschiedenen Bildschirmgrößen richtig funktioniert.
+
+---
+
+#### 🔄 Layouts wiederverwenden mit `<include>`
+
+Um Layouts effizient wiederzuverwenden, kannst du die Tags `<include>` und `<merge>` verwenden, um ein Layout in ein anderes einzubetten. Dies ermöglicht das Erstellen komplexer Layouts und das Verwalten gemeinsamer Elemente über mehrere Layouts hinweg.
+
+---
+
+#### 📐 Responsive/Adaptive Design
+
+Um deine App auf verschiedenen Bildschirmgrößen, -orientierungen und -konfigurationen zu unterstützen, implementiere responsive/adaptive Layouts. Dies sorgt für eine optimierte Benutzererfahrung, unabhängig von der Gerätekonfiguration.
+
 
 ### 📩 Intents
 
+Intents are messaging Objects
+
+- Activities
+- Services
+- Broadcast Delivery
+
+#### Example: Navigate to new Activity
+
+``` java
+mainLoginButton = findViewById(R.id.mainLoginButton);
+
+mainLoginButton.setOnClickListener(v -> {
+    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+    startActivity(intent);
+});
+```
+
+#### Intent with Data
+
+``` java
+Intent intent = new Intent(this, DashboardActivity.class);
+intent.putExtra("user", user);
+startActivity(intent);
+```
+
+``` java
+User user;
+Bundle bundle = getIntent().getExtras();
+
+if (bundle != null)
+{
+    user = bundle.getParcelable("user", User.class);
+}
+else
+{
+    user = new User("empty", "empty", "empty");
+}
+```
+
 ### 🧱 Fragments
+
+![alt text](image-17.png)
+
+![alt text](image-18.png)
+
+#### Put data into a fragment
+
+``` java
+dashboardDataFragment = (DashboardDataFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
+dashboardDataFragment.setUser(user);
+```
+
+#### Fragment Class
+
+``` java
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link DashboardDataFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class DashboardDataFragment extends Fragment {
+
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+    TextView dashboardUsernameText;
+    TextView dashboardEmailText;
+    TextView dashboardPasswordText;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    User user;
+
+    public DashboardDataFragment() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment DashboardDataFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static DashboardDataFragment newInstance(String param1, String param2) {
+        DashboardDataFragment fragment = new DashboardDataFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_dashboard_data, container, false);
+
+        dashboardUsernameText = view.findViewById(R.id.dashboardUsernameText);
+        dashboardEmailText = view.findViewById(R.id.dashboardEmailText);
+        dashboardPasswordText = view.findViewById(R.id.dashboardPasswordText);
+
+        dashboardUsernameText.setText("Username: " + user.getUsername());
+        dashboardEmailText.setText("E-Mail: " + user.getEmail());
+        dashboardPasswordText.setText("Password: " + user.getPassword());
+
+
+        return view;
+    }
+}
+```
 
 ### ♻️ Lifecycle von Activity und Fragmenten
 
-### 📜 Android Manifest
+![alt text](activity_lifecycle.png)
+
+### 📜 AndroidManifest.xml
 
 - Beschreibt die Andwendung
 - **Gradle Scripts**
@@ -3000,7 +3269,244 @@ Android is an operating system based on a modified version of the Linux kernel a
 </manifest>
 ```
 
+- Jede Android-Anwendung benötigt eine **AndroidManifest.xml**-Datei, die wichtige Informationen enthält, wie:  
+  - **Anwendungsidentität**  
+  - **Name der App**  
+  - **Versionsnummer**  
+  - **Beschreibung der Komponenten** (Activities, Services, etc.)  
+  - **Erlaubnisse** (Permissions)  
+
+- Das **Laufzeitsystem** nutzt die Manifest-Datei, um:  
+  - Die Anwendung zu **installieren** und **upzudaten**  
+  - Anwendungsdetails wie **Name**, **Icon** und **Beschreibung** anzuzeigen  
+  - **Erlaubnisse zu überwachen** und zu verwalten  
+  - **Activities der Anwendung zu starten**  
+  - Entwicklern das **Debugging** der App zu ermöglichen
+
+#### 🆔 Applikationsidentiät
+
+- **Paketname**  
+  - Eindeutige Identifikation der App  
+  - Muss **sorgfältig gewählt** werden, da er nach Veröffentlichung **nicht mehr änderbar** ist  
+
+- **Versionscode**  
+  - Wird für **Updates** verwendet  
+  - Interner Wert, der beim Update erhöht wird  
+
+- **Versionsname**  
+  - Wird den **Benutzern angezeigt**  
+  - Menschlich lesbar, z.B. "1.0", "2.1 Beta"  
+
+
+```xml
+<manifest
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  package="de.hs_kl.tran"
+  android:versionCode="1"
+  android:versionName="1.0" >
+```
+
+#### ⚙️ System Requirements
+
+- **SDK-Versionen:**  
+  - **minSdkVersion:** Kleinster unterstützter API-Level (Mindestanforderung)  
+  - **targetSdkVersion** *(optional):* Optimal unterstützter API-Level (für Kompatibilität)  
+  - **maxSdkVersion** *(optional):* Größter unterstützter API-Level (Begrenzung)  
+
+- **Anwendungsdetails:**  
+  - **Name** und **Icon** für die Anzeige  
+  - Optionale **Beschreibung**  
+  - **Debugging** kann ein- oder ausgeschaltet werden  
+
+
+```xml
+<application
+  android:icon="@drawable/ic_launcher"
+  android:label="@string/app_name"
+  android:description="@string/app_desc"
+  android:debuggable="true" >
+```
+#### 🧩 Plattform Requirements
+
+- **Externe Bibliotheken:**  
+  - Standardmäßig sind folgende Pakete enthalten:  
+    - `android.app`  
+    - `android.content`  
+    - `android.view`  
+    - `android.widget`  
+  - Wenn die App spezielle Pakete braucht (z.B. Google Maps), muss die passende Bibliothek eingebunden und angegeben werden.  
+
+```xml
+<application ...>
+  ...
+  <uses-library android:name="com.google.android.maps" />
+  ...
+</application>
+```
+
+#### 🔐 Erlaubnisse (Permissions)
+
+- Android-Anwendungen haben **standardmäßig keinen Zugriff** auf geschützte Ressourcen anderer Apps oder Systemfunktionen.
+
+- **Zugriffe müssen explizit angefragt werden**, und der Benutzer muss **bei der Installation zustimmen**.
+
+- Geforderte Erlaubnisse werden in der **Manifest-Datei** angegeben. Beispiel:
+
+```xml
+<activity
+    android:name=".ManifestDemoActivity"
+    android:label="@string/app_name" >
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+
+<permission android:name="android.permission.CAMERA" />
+<permission android:name="android.permission.READ_CONTACTS" />
+<permission android:name="android.permission.WRITE_CONTACTS" />
+```
+
+#### 📋 Activities und andere Komponenten registrieren
+
+- **Liste von Komponenten:**  
+  - Activities  
+  - Services  
+  - Content Providers  
+  - Broadcast Receivers  
+
+- **Wichtig:** Alle Komponenten **müssen registriert** sein, sonst werden sie nicht gestartet!  
+
+- **Activities, die nur innerhalb der App verwendet werden:**  
+  - Haben eine einfache Beschreibung  
+  - Der Punkt vor dem Namen kann entfallen, er zeigt nur, dass die Activity zum Paket gehört  
+
+- **Components (Activities, Services, Broadcast Receivers), die von anderen Apps oder vom System gestartet werden sollen:**  
+  - Benötigen zusätzliche Angaben im Block `<intent-filter> ... </intent-filter>` (kommt später noch)  
+
+-  Eine Activity muss als Eintrittspunkt der Anwendung definiert werden.
+  
+
+``` xml
+<activity
+    android:name=".ManifestDemoActivity"
+    android:label="@string/app_name" >
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+```
 ### 🎨 Ressourcen
+
+- Zum Programm gehören auch **Grafiken, Icons, Klangdateien, Videos, Texte in verschiedenen Sprachen**.  
+- **Farbdefinitionen, Menüeinträge, Listen, Layouts usw.** werden in Android häufig **nicht im Code definiert**, sondern in **XML als Ressourcen** hinterlegt.
+
+
+#### 🗂️ Ordnerstruktur für Ressourcen
+
+- **Alle Ressourcen liegen in einem Unterordner von `/res`**.  
+- Für **Ordner- und Dateinamen** darf nur **Kleinschreibung oder Unterstrich** verwendet werden  
+  (Ausnahme: **Länderkürzel** wie z.B. DE, US).  
+- **Verschiedene Ressourcen müssen in verschiedenen Unterordnern liegen**.  
+- Mit Ausnahme vom Ordner **`assets`** dürfen andere Unterordner **keinen Unterordner** beinhalten.
+
+#### 🔑 Zugriff auf Ressourcen
+
+- Ressourcen (Ausnahme: Daten in **`assets`**) werden **kompiliert** und können über **ID angesprochen** werden.
+
+Es gibt **3 Möglichkeiten**, auf Ressourcen zuzugreifen:  
+- **per Referenz innerhalb der Ressourcendefinition**  
+- **per Referenz im Code**  
+- **per Direktzugriff im Code**
+
+---
+
+##### 🏷️ Referenz innerhalb der Ressourcendefinition
+
+Zugriff mit dem **@-Zeichen** über einen Ressourcenschlüssel der Form:  
+`@[package:]ressourcenart/ressourcenname`
+
+Beispiel in der Manifest-Datei:  
+```xml
+<application
+  android:debuggable="true"
+  android:description="@string/app_desc"
+  android:icon="@drawable/ic_launcher"
+  android:label="@string/app_name"
+  android:theme="@android:style/Theme.Light" >
+```
+
+##### 💻 Referenz innerhalb des Java-Codes
+
+Zugriff über Konstanten aus `R.java`.
+**Vorsicht**: Konsistenz (richtige ID für das richtige Objekt) kann erst zur Laufzeit geprüft werden – Absturz möglich!
+
+![alt text](image-15.png)
+
+##### 📲 Direktzugriff innerhalb des Java-Codes
+
+Zugriff über `getResources()` und `R.java`, zum Beispiel:
+
+```java
+String title = getResources().getString(R.layout.absolute_layout);
+Drawable logo = getResources().getDrawable(R.drawable.robot);
+```
+
+#### Ressource Folder
+
+- **values**
+  - einfache werte
+- **drawable**
+  - komplexe formen
+  - Bilder
+- **raw**
+  - rohe daten
+    - videos
+    - XML, dass nicht kompiliert werden soll
+  
+#### 📂 Der `assets`-Ordner
+
+Der **`assets`-Ordner** wird **selten verwendet**. Hier können **Ressourcen aller Art** abgelegt werden.
+
+##### Eigenschaften des `assets`-Ordners
+
+- **variable Ordnerstruktur**  
+- **keine Indizierung der Ressourcen**  
+- Zugriff nur über den **Dateipfad** (man öffnet dafür einen **InputStream**) 
+
+``` java
+InputStream f = null;
+
+try
+{
+    f = getAssets().open("/data/text.txt");
+}
+catch (IOException ex) {}
+```
+
+- Ressourcen werden **nicht vor-kompiliert**
+
+### 🤖 What is ADB?
+
+**ADB** stands for **Android Debug Bridge**.  
+
+It's a **command-line tool** that lets you communicate with and control an Android device (emulator or physical device) from your computer.
+
+---
+
+#### Key Features of ADB
+
+- **Install and debug apps** directly on your device  
+- Access **device shell** to run commands  
+- Transfer files between your computer and the device  
+- View device logs and system info  
+- Control the device remotely (like rebooting, installing updates)
+
+---
+
+ADB is essential for **Android development and troubleshooting** — your go-to pirate tool for navigating the Android seas! ⚓
+
 
 ### 🛠️ Android-Workflow (Installation Android Studio)
 
@@ -3023,7 +3529,26 @@ Android is an operating system based on a modified version of the Linux kernel a
 
 ![alt text](image-12.png)
 
-#### AVD
+#### 🛰️ AVD — Android Virtual Device
+
+- **What it is:**  
+  AVD is an **emulator configuration** that simulates a real Android device on your computer.
+
+- **Purpose:**  
+  Allows developers to **test and debug Android apps** without needing physical hardware.
+
+- **Features:**  
+  - Emulates various device types (phones, tablets, TVs, wearables)  
+  - Supports different Android versions and system images  
+  - Configurable hardware profiles (RAM, CPU, screen size, resolution, sensors)  
+  - Network and GPS simulation  
+  - Snapshot support for quick booting
+
+- **Usage:**  
+  Run your app inside the AVD from Android Studio or command line to simulate how it behaves on different devices and Android versions.
+
+- **Why it matters:**  
+  Saves time and credits by avoiding the need for multiple physical test devices, essential for compatibility testing across the vast Android ecosystem.
 
 
 
@@ -3036,6 +3561,8 @@ Android is an operating system based on a modified version of the Linux kernel a
 
 ## 🧑‍🤝‍🧑 Client - Server Konzept
 ---
+
+
 
 ## 🌐 ASP.NET Core API
 ---
