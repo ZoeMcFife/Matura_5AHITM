@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Pirate's Codex of Learning</title>
   <style>
+    /* Import Title Font */
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
     /* Font */
     @font-face {
       font-family: 'RumGone';
@@ -13,19 +16,15 @@
 
     /* Color Palette */
     :root {
-      --bg: #1b1f2b;
-      --card-bg: #fdfcfb;
-      --accent: #16a085;
+      --bg: #121212;
+      --card-bg: #ffffff;
+      --accent: #c0392b;
       --text-dark: #2c3e50;
-      --text-light: #34495e;
+      --text-light: #bdc3c7;
     }
 
-    /* Global Reset */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* Reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: Arial, sans-serif;
@@ -40,85 +39,85 @@
     header {
       background-color: var(--bg);
       text-align: center;
-      padding: 2.5rem 1rem;
+      padding: 2rem 1rem;
       border-bottom: 4px solid var(--accent);
     }
     header h1 {
       font-family: 'RumGone', cursive;
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: var(--accent);
       text-shadow: 1px 1px rgba(0,0,0,0.4);
       margin-bottom: 0.5rem;
     }
     header p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--text-light);
     }
 
     main {
       flex: 1;
       display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       padding: 2rem;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: auto;
     }
 
     .card {
       background-color: var(--card-bg);
       color: var(--text-dark);
-      border-radius: 1rem;
+      border-radius: 0.5rem;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
     }
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     }
     .card h2 {
-      font-family: 'RumGone', cursive;
-      font-size: 1.75rem;
+      font-family: 'Merriweather', serif;
+      font-size: 1.5rem;
       color: var(--accent);
-      padding: 1.5rem;
-      border-bottom: 3px solid var(--accent);
-      line-height: 1.2;
+      padding: 1rem;
+      border-bottom: 2px solid var(--accent);
+      line-height: 1.3;
     }
     .card a {
-      margin: 1.5rem;
-      padding: 1rem;
+      margin: 1rem;
+      padding: 0.75rem;
       text-align: center;
       background-color: var(--accent);
-      color: #fdfcfb;
+      color: var(--card-bg);
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
-      border-radius: 0.75rem;
+      font-size: 0.95rem;
+      border-radius: 0.5rem;
       align-self: center;
-      width: calc(100% - 3rem);
-      transition: background-color 0.3s ease;
+      width: calc(100% - 2rem);
+      transition: background-color 0.2s ease;
     }
     .card a:hover {
-      background-color: #13826e;
+      background-color: #922b21;
     }
 
     footer {
       background-color: var(--bg);
       text-align: center;
-      padding: 1.5rem;
-      border-top: 3px solid var(--accent);
-      font-size: 0.9rem;
+      padding: 1rem;
+      border-top: 2px solid var(--accent);
+      font-size: 0.85rem;
       color: var(--text-light);
     }
 
-    /* Responsive Typography */
+    /* Responsive */
     @media (max-width: 480px) {
-      header h1 { font-size: 2.2rem; }
-      .card h2 { font-size: 1.5rem; padding: 1rem; }
-      .card a { font-size: 0.9rem; padding: 0.75rem; margin: 1rem; }
+      header h1 { font-size: 2rem; }
+      .card h2 { font-size: 1.3rem; padding: 0.75rem; }
+      .card a { font-size: 0.85rem; padding: 0.6rem; margin: 0.8rem; }
     }
   </style>
 </head>
@@ -127,7 +126,6 @@
     <h1>The Pirate's Codex of Learning</h1>
     <p>Chart yer course through the digital seas, Captain!</p>
   </header>
-
   <main>
     <div class="card">
       <h2>Algorithmen &amp; Datenstrukturen</h2>
@@ -154,7 +152,6 @@
       <a href="Softwarearchitektur und Design Patterns/Softwarearchitektur und Design Patterns.html">Forge the Frameworks</a>
     </div>
   </main>
-
   <footer>
     <p>© SPY 244 – Pirates of Fife. Code plundered and buried deep. 🏴‍☠️</p>
   </footer>

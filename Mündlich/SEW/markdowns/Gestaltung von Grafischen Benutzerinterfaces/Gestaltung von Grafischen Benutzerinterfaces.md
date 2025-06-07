@@ -1,5 +1,4 @@
 <style>
-
 @font-face {
   font-family: 'TheRumIsGone';
   src: url('TheRumIsGone.ttf') format('truetype');
@@ -48,8 +47,30 @@ h4::before {
     counter-increment: h4;
     content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
 }
+.back-home-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;             /* or left:1rem; if you prefer */
+  background-color: #c0392b; 
+  color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  z-index: 9999;
+}
+.back-home-btn:hover {
+  background-color: #922b21;
+  transform: translateY(-2px);
+}
+
+
 
 </style>
+
 
 # Table of Contents
 
@@ -617,3 +638,40 @@ public class FXDemo extends Application {
 ---
 
 <p style="page-break-before: always;"></p>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Create the button
+    const btn = document.createElement("a");
+    btn.href = "../index.html";  // adjust your path
+    btn.textContent = "🏠 Home";
+    // Style it so it truly fixes to the viewport
+    Object.assign(btn.style, {
+      position: "fixed",
+      bottom: "1rem",
+      right: "1rem",
+      backgroundColor: "#c0392b",
+      color: "#ffffff",
+      padding: "0.5rem 0.75rem",
+      fontFamily: "Arial, sans-serif",
+      fontSize: "0.9rem",
+      textDecoration: "none",
+      borderRadius: "0.5rem",
+      boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
+      zIndex: "9999",
+      transition: "background-color 0.2s ease, transform 0.2s ease",
+      display: "inline-block",
+    });
+    // Hover effects
+    btn.addEventListener("mouseover", () => {
+      btn.style.backgroundColor = "#922b21";
+      btn.style.transform = "translateY(-2px)";
+    });
+    btn.addEventListener("mouseout", () => {
+      btn.style.backgroundColor = "#c0392b";
+      btn.style.transform = "none";
+    });
+    // Append to the real <body>
+    document.body.appendChild(btn);
+  });
+</script>

@@ -49,6 +49,7 @@ h4::before {
     content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
 }
 
+
 </style>
 
 # Table of Contents
@@ -144,3 +145,40 @@ WPF is kinda cringe ngl
 ## 🏗️ 3 Schichten Architektur
 
 ![alt text](image-10.png)
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Create the button
+    const btn = document.createElement("a");
+    btn.href = "../index.html";  // adjust your path
+    btn.textContent = "🏠 Home";
+    // Style it so it truly fixes to the viewport
+    Object.assign(btn.style, {
+      position: "fixed",
+      bottom: "1rem",
+      right: "1rem",
+      backgroundColor: "#c0392b",
+      color: "#ffffff",
+      padding: "0.5rem 0.75rem",
+      fontFamily: "Arial, sans-serif",
+      fontSize: "0.9rem",
+      textDecoration: "none",
+      borderRadius: "0.5rem",
+      boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
+      zIndex: "9999",
+      transition: "background-color 0.2s ease, transform 0.2s ease",
+      display: "inline-block",
+    });
+    // Hover effects
+    btn.addEventListener("mouseover", () => {
+      btn.style.backgroundColor = "#922b21";
+      btn.style.transform = "translateY(-2px)";
+    });
+    btn.addEventListener("mouseout", () => {
+      btn.style.backgroundColor = "#c0392b";
+      btn.style.transform = "none";
+    });
+    // Append to the real <body>
+    document.body.appendChild(btn);
+  });
+</script>
