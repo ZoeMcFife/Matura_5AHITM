@@ -181,13 +181,25 @@ h4::before {
   - [⚡ Event Handling in ASP.NET Core](#-event-handling-in-aspnet-core)
     - [🖥️ Razor Pages \& MVC Handlers](#️-razor-pages--mvc-handlers)
   - [🤖 Android](#-android)
+    - [🚧 Architektur](#-architektur)
+      - [📱 Applications](#-applications)
+      - [🧰 **Application Frameworks**](#-application-frameworks)
+      - [📚 **Libraries (Bibliotheken)**](#-libraries-bibliotheken)
+      - [⚙️ **Android-Runtime**](#️-android-runtime)
+      - [🐧 **Linux-Kernel**](#-linux-kernel)
+      - [🧩 **App-Architektur**](#-app-architektur)
+      - [⚓ **Wichtige Bestandteile einer Android-App**](#-wichtige-bestandteile-einer-android-app)
     - [🎬 Activities](#-activities)
+      - [Activy Life Cycle](#activy-life-cycle)
     - [📩 Intents](#-intents)
     - [🧱 Fragments](#-fragments)
     - [♻️ Lifecycle von Activity und Fragmenten](#️-lifecycle-von-activity-und-fragmenten)
     - [📜 Android Manifest](#-android-manifest)
     - [🎨 Ressourcen](#-ressourcen)
     - [🛠️ Android-Workflow (Installation Android Studio)](#️-android-workflow-installation-android-studio)
+      - [Neues Projekt erstellen](#neues-projekt-erstellen)
+      - [Projektstruktur](#projektstruktur)
+      - [AVD](#avd)
 - [🌐 Netzwerk und Webprogrammierung](#-netzwerk-und-webprogrammierung)
   - [🧑‍🤝‍🧑 Client - Server Konzept](#-client---server-konzept)
   - [🌐 ASP.NET Core API](#-aspnet-core-api)
@@ -2782,7 +2794,151 @@ Android is an operating system based on a modified version of the Linux kernel a
 
 ---
 
+### 🚧 Architektur
+
+![alt text](image-11.png)
+
+#### 📱 Applications
+
+- **Verschiedene fertige Kernanwendungen** *(z. B. Home, Browser, Telefon, Kontakte usw.)*
+- **Java**
+- **Android SDK nötig**
+- **Java-Quelltext wird von einem Cross-Assembler für die Dalvik-VM angepasst**
+  - *Ab **Android 5** wird der **Bytecode in Maschinencode** bei der **Installation der App kompiliert***
+    - → **Maschinenunabhängigkeit bleibt erhalten**
+    - → App muss **nicht mehr zur Laufzeit** umgewandelt werden
+    - → **Bessere Performance**
+
+#### 🧰 **Application Frameworks**
+
+- **Activity Manager**
+  - Kontrolliert den **Lebenszyklus der Apps**
+  - Verwaltet das **Navigieren zwischen Apps**
+
+- **Content Providers**
+  - Versorgen Apps mit **gemeinsamen Daten** (z. B. Fotos, Musik-Sammlungen, Kontakte)
+
+- **Location Manager**
+  - Liefert die **Position des Geräts**
+
+- **Notification Manager**
+  - Informiert Benutzer über **signifikante Ereignisse**
+  - Jeder Event besitzt eine **eindeutige ID**
+
+- **Package Manager**
+  - Verwaltet **installierte Packages**
+
+- **Resource Manager**
+  - Zur **Verwaltung und Zugriffen von Ressourcen** (z. B. Strings, Grafiken, XML-Dateien usw.)
+
+- **Telephony Manager**
+  - Zuständig für **Telefon-Services**
+
+- **View System**
+  - Komponente, die **UI-Elemente verwaltet** und **Ereignisse generiert**
+
+- **Window Manager**
+  - Zur **Verwaltung des Bildschirms**
+
+#### 📚 **Libraries (Bibliotheken)**
+
+- **FreeType**
+  - Für **Bitmap** und **Fonts**
+
+- **(Bionic) libc**
+  - Angepasste und **optimierte BSD-Implementierung**
+
+- **LibWebCore**
+  - Basiert auf **WebKit** *(Web Browser Engine, auch in Google Chrome und Apple Safari verwendet)*
+
+- **Media Framework**
+  - Basiert auf **OpenCORE** von PacketVideo
+  - Unterstützt: **MPEG4, H.264, MP3, AAC, AMR, JPEG, PNG**
+
+- **OpenGL|ES**
+  - Für **3D-Grafiken** auf **Embedded-Systemen**
+
+- **SGL**
+  - **2D Grafik-Engine**
+
+- **SQLite**
+  - **Schlankes, relationales Datenbanksystem**
+
+- **SSL**
+  - Für **SSL-basierte Sicherheit** bei der **Netzwerkkommunikation**
+
+- **Surface Manager**
+  - Verwaltung des **Zugriffs auf das Display-Subsystem**
+
+#### ⚙️ **Android-Runtime**
+
+- **Kernbibliotheken** für die Laufzeitumgebung  
+  - Teilmenge der **Apache Harmony Java 5 Implementierung**
+
+- **Dalvik Virtuelle Maschine (DVM)** → ab **Android Lollipop: Android-Runtime (ART)**
+  - **Registerbasierte Maschine**
+  - DVM: **interpretiert** Dateien im **Dalvik Executable (DEX)**-Format
+  - ART: **kompiliert Bytecode bei der Installation** in **nativen Binärcode (ODEX)**  
+    → **Schnellere Ausführung**
+
+- **Jede Applikation läuft in einem separaten Prozess**  
+  - Hat ihre **eigene DVM bzw. ART**
+
+- Nutzt das **Thread-Modell** und die **Low-Memory-Verwaltung von Linux**
+
+#### 🐧 **Linux-Kernel**
+
+- Dient als **Abstraktionsschicht** zwischen der **Android-Welt** und der **Hardware**
+
+- Stellt bereit:
+  - **Sicherheitsmodell**
+  - **Prozess- und Speicherverwaltung**
+  - **Netzwerkstack**
+  - **Treiber**
+
+#### 🧩 **App-Architektur**
+
+- Die **Android-App-Architektur** basiert auf **Komponenten**, die über sogenannte **Intents** miteinander kommunizieren.
+
+- Eine App besteht aus einer **Sammlung von Komponenten**:
+  - **Activities**
+  - **Services**
+  - **Content Providers**
+  - **Broadcast Receivers**  
+  → **Nicht alle Komponenten** müssen in jeder App enthalten sein.
+
+- **Jede App läuft in einem eigenen Linux-Prozess**  
+  - Android startet den Prozess **erst, wenn eine Komponente benötigt wird**  
+  - Es gibt **keine klassische `main()`-Methode** wie in Java oder C/C++
+    - Im Manifest wird eine Start-Activity festgelegt
+
+- Komponenten einer App **teilen gemeinsame Ressourcen**, z. B.:
+  - **Datenbanken**
+  - **Shared Preferences**
+  - **Dateisystem**
+
+#### ⚓ **Wichtige Bestandteile einer Android-App**
+
+- **Activity**  
+  - Sichtbarer Teil der Anwendung zur **Interaktion mit dem Benutzer**  
+  - Besitzt einen eigenen **Lebenszyklus**  
+  - Eine App enthält meist **mehrere Activities**
+
+- **Service**  
+  - Läuft im **Hintergrund** (ähnlich wie Windows-Service oder Linux-Dämon)  
+  - **Local Service:** Läuft im **gleichen Prozess** wie die App  
+  - **Remote Service:** Läuft in einem **separaten Prozess** und kommuniziert über **Interprozesskommunikation**
+
+- **Content Providers**  
+  - Stellen **Daten für andere Apps** bereit
+
+- **Broadcast Receivers**  
+  - Empfangen **Systemereignisse** und reagieren darauf
+
+
 ### 🎬 Activities
+
+#### Activy Life Cycle
 
 ### 📩 Intents
 
@@ -2792,9 +2948,85 @@ Android is an operating system based on a modified version of the Linux kernel a
 
 ### 📜 Android Manifest
 
+- Beschreibt die Andwendung
+- **Gradle Scripts**
+  - werden automatisch erzeugt, für die verschiedenen Plattformen, Abhängigkeiten.
+
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LoginLayout"
+        tools:targetApi="31">
+        <activity
+            android:name=".ViewDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+```
+
 ### 🎨 Ressourcen
 
 ### 🛠️ Android-Workflow (Installation Android Studio)
+
+#### Neues Projekt erstellen
+
+![alt text](image-13.png)
+
+![alt text](image-14.png)
+
+#### Projektstruktur
+
+- **java**
+  - Erstellte Klassen
+- **res**
+  - Ressourcen, wie zb
+    - Strings
+    - Grafiken
+    - Layouts
+    - ...
+
+![alt text](image-12.png)
+
+#### AVD
+
+
+
 
 ---
 
