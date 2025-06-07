@@ -96,31 +96,90 @@ h4::before {
   - [OOP Concepts](#oop-concepts)
     - [Example: Tying Them Together in C#](#example-tying-them-together-in-c)
   - [Clean Code](#clean-code)
-  - [Big O Notation](#big-o-notation)
-  - [Listen, Trees und andere Datenstrukturen](#listen-trees-und-andere-datenstrukturen)
-  - [Speisende Philosphen](#speisende-philosphen)
+  - [🧠 Big O Notation](#-big-o-notation)
+    - [⚙️ Common Types of Big O](#️-common-types-of-big-o)
+    - [🪜 Comparison (From Fastest to Slowest)](#-comparison-from-fastest-to-slowest)
+    - [🏴‍☠️ Pirate Tips](#️-pirate-tips)
+    - [🔀 Common Sorting Algorithms](#-common-sorting-algorithms)
+    - [🧭 Quick Guide to Use 'Em](#-quick-guide-to-use-em)
+  - [⚔️ Common Data Structures with Code Examples](#️-common-data-structures-with-code-examples)
+    - [📦 Array (List in Python)](#-array-list-in-python)
+    - [🔗 Linked List (Manually)](#-linked-list-manually)
+    - [🧠 Stack (Using list)](#-stack-using-list)
+    - [📬 Queue (Using `collections.deque`)](#-queue-using-collectionsdeque)
+    - [🗺️ Hash Map (Dictionary in Python)](#️-hash-map-dictionary-in-python)
+    - [🎯 Set](#-set)
+    - [🌲 Binary Search Tree (Simple version)](#-binary-search-tree-simple-version)
+    - [🔺 Heap (Min-Heap using `heapq`)](#-heap-min-heap-using-heapq)
+    - [🔤 Trie (Prefix Tree)](#-trie-prefix-tree)
+    - [🌌 Graph (Adjacency List)](#-graph-adjacency-list)
+  - [Dining philosophers problem](#dining-philosophers-problem)
+    - [Problems](#problems)
+    - [Dijkstra's solution](#dijkstras-solution)
+    - [Resource hierarchy solution](#resource-hierarchy-solution)
+    - [Arbitrator solution](#arbitrator-solution)
 - [🎨 Gestaltung von grafischen Benutzerinterfaces](#-gestaltung-von-grafischen-benutzerinterfaces)
   - [🪟 WPF Anwendungen](#-wpf-anwendungen)
     - [🧱 WPF Basics](#-wpf-basics)
+      - [📦 Key Components](#-key-components)
+        - [1. **XAML (eXtensible Application Markup Language)**](#1-xaml-extensible-application-markup-language)
+        - [2. **Code-Behind**](#2-code-behind)
+      - [🧠 Key Concepts](#-key-concepts)
+        - [🎯 Data Binding](#-data-binding)
+        - [📦 MVVM Pattern](#-mvvm-pattern)
+        - [🎨 Styling and Templates](#-styling-and-templates)
+      - [⚙️ Dependency Properties](#️-dependency-properties)
+    - [🌊 Animations \& Media](#-animations--media)
+      - [🛠️ Common Controls](#️-common-controls)
+      - [🚀 Getting Started](#-getting-started)
     - [🎯 Event Handling](#-event-handling)
-    - [🌐 WPF Routed Events](#-wpf-routed-events)
+      - [🧭 Routing Strategies](#-routing-strategies)
+      - [🧪 Example: Tunneling vs Bubbling](#-example-tunneling-vs-bubbling)
+      - [📣 Raising Custom Routed Events](#-raising-custom-routed-events)
+      - [🛑 Event Handling Options](#-event-handling-options)
+        - [1. **`e.Handled = true`**](#1-ehandled--true)
+        - [2. **`AddHandler` with `handledEventsToo`**](#2-addhandler-with-handledeventstoo)
+      - [🧪 RoutedCommand \& InputGesture](#-routedcommand--inputgesture)
+      - [🔧 Advanced Scenario: Routed Event for a Custom Control](#-advanced-scenario-routed-event-for-a-custom-control)
+      - [🧰 Routed Events vs .NET Events](#-routed-events-vs-net-events)
+      - [📍 When to Use What](#-when-to-use-what)
     - [✍️ XAML](#️-xaml)
+      - [🛠️ Basic XAML Structure](#️-basic-xaml-structure)
     - [📦 WPF Container](#-wpf-container)
     - [🧩 WPF Controls](#-wpf-controls)
   - [☕ Java UI](#-java-ui)
     - [🖼️ Java Swing](#️-java-swing)
+      - [Key Points:](#key-points)
+      - [Basic Structure:](#basic-structure)
+      - [Layout Managers (crucial for UI layout):](#layout-managers-crucial-for-ui-layout)
+      - [Programming Basics - A Window to the World!](#programming-basics---a-window-to-the-world)
+      - [Events](#events)
     - [🌟 JavaFX](#-javafx)
+      - [Key Points:](#key-points-1)
+      - [Basic Structure:](#basic-structure-1)
+      - [Important JavaFX Concepts:](#important-javafx-concepts)
+    - [Summary Table](#summary-table)
 - [🌐 Gestaltung von Web- und Mobilen Anwendungen](#-gestaltung-von-web--und-mobilen-anwendungen)
   - [🧩 ASP.NET CORE](#-aspnet-core)
-    - [📄 Templates](#-templates)
+    - [📄 Project Templates \& Structure](#-project-templates--structure)
+    - [🧠 Host \& Middleware Pipeline](#-host--middleware-pipeline)
+    - [🔁 Routing \& Endpoints](#-routing--endpoints)
+    - [🧾 Razor Pages vs. MVC vs. Blazor](#-razor-pages-vs-mvc-vs-blazor)
     - [🧾 RazorPages](#-razorpages)
       - [✒️ Razor-Syntax](#️-razor-syntax)
+      - [Inline](#inline)
+      - [Tag Helper](#tag-helper)
+    - [🔗 Model Binding \& Data Access](#-model-binding--data-access)
+      - [Binding Form Data](#binding-form-data)
+        - [Razor Page](#razor-page)
+        - [PageModel](#pagemodel)
     - [🧱 UserControls](#-usercontrols)
-    - [🔁 Werteübergabe](#-werteübergabe)
-    - [🔗 Datenbindung](#-datenbindung)
-    - [✅ Validation](#-validation)
-    - [🧠 Konzept und Funktionsweise](#-konzept-und-funktionsweise)
-    - [🎬 Event-Handling](#-event-handling-1)
+      - [1️⃣ Partial View (simple include)](#1️⃣-partial-view-simple-include)
+      - [2️⃣ View Component (logic + view)](#2️⃣-view-component-logic--view)
+    - [✅ Validation \& Error Handling](#-validation--error-handling)
+    - [🔒 Auth \& Authorization](#-auth--authorization)
+  - [⚡ Event Handling in ASP.NET Core](#-event-handling-in-aspnet-core)
+    - [🖥️ Razor Pages \& MVC Handlers](#️-razor-pages--mvc-handlers)
   - [🤖 Android](#-android)
     - [🎬 Activities](#-activities)
     - [📩 Intents](#-intents)
@@ -158,8 +217,14 @@ h4::before {
     - [☕ Java](#-java-1)
     - [📱 Android](#-android-1)
   - [🧭 MVVM WPF](#-mvvm-wpf)
+    - [MVVM](#mvvm)
+    - [View](#view)
+    - [ViewModel](#viewmodel)
+    - [Model](#model)
+    - [Example](#example)
   - [🏗️ MVC](#️-mvc)
   - [📱 Android](#-android-2)
+  - [🏗️ 3 Schichten Architektur](#️-3-schichten-architektur)
 
 ---
 
@@ -1562,12 +1627,312 @@ public class Program
 
 ---
 
-## Big O Notation
+## 🧠 Big O Notation
+
+Big O notation is a way to describe **how efficient an algorithm is** in terms of **time** or **space** as the size of the input grows.
+
+It helps us understand the *worst-case scenario* of how long something might take (time complexity) or how much memory it might use (space complexity).
+
+---
+
+### ⚙️ Common Types of Big O
+
+| Big O Notation | Name                  | Example                          | Description                                     |
+|----------------|-----------------------|----------------------------------|-------------------------------------------------|
+| `O(1)`         | Constant Time         | Accessing an array element       | 🟢 Fast and doesn't grow with input size.       |
+| `O(log n)`     | Logarithmic Time      | Binary Search                    | 🟡 Grows slowly as input size increases.        |
+| `O(n)`         | Linear Time           | Loop through an array            | 🟠 Time grows directly with input size.         |
+| `O(n log n)`   | Linearithmic Time     | Merge Sort, Quick Sort (avg)     | 🟠 Slightly slower than linear, but efficient.  |
+| `O(n²)`        | Quadratic Time        | Nested loops (e.g., Bubble Sort) | 🔴 Time grows quickly as input doubles.         |
+| `O(2ⁿ)`        | Exponential Time      | Solving a subset of problems     | ⚠️ Grows *very* fast – avoid if possible.       |
+| `O(n!)`        | Factorial Time        | Brute force permutations         | ☠️ Grows insanely fast – only for tiny inputs.  |
+
+---
+
+### 🪜 Comparison (From Fastest to Slowest)
+
+```
+O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)
+```
+
+---
+
+### 🏴‍☠️ Pirate Tips
+
+- Try to **aim for O(1), O(log n), or O(n)** whenever possible.
+- Avoid `O(n²)` and worse unless your input size is *really small*.
+- Big O doesn't care about small differences—it's about **how fast things get worse** as input grows.
+
+### 🔀 Common Sorting Algorithms
+
+| Algorithm        | Best Time   | Worst Time  | Average Time | Space | Method        | Notes                                                                 |
+|------------------|-------------|-------------|---------------|--------|----------------|-----------------------------------------------------------------------|
+| **Bubble Sort**  | O(n)        | O(n²)       | O(n²)         | O(1)   | Comparison     | Repeatedly swaps adjacent items if they're in the wrong order. Slow. |
+| **Selection Sort** | O(n²)     | O(n²)       | O(n²)         | O(1)   | Comparison     | Finds the smallest item and puts it in place. Simple but inefficient.|
+| **Insertion Sort** | O(n)      | O(n²)       | O(n²)         | O(1)   | Comparison     | Builds the sorted list one item at a time. Good for small data.      |
+| **Merge Sort**   | O(n log n)  | O(n log n)  | O(n log n)    | O(n)   | Divide & Conquer | Splits list into halves, sorts, and merges. Very stable and fast.   |
+| **Quick Sort**   | O(n log n)  | O(n²)       | O(n log n)    | O(log n) | Divide & Conquer | Picks a pivot and sorts around it. Fast but worst case can hurt.     |
+| **Heap Sort**    | O(n log n)  | O(n log n)  | O(n log n)    | O(1)   | Heap-based     | Turns array into a heap and sorts. Not stable.                       |
+| **Radix Sort**   | O(nk)       | O(nk)       | O(nk)         | O(n + k) | Non-Comparison | Sorts by digits/characters. Fast for integers or fixed-length data.  |
+| **Counting Sort**| O(n + k)    | O(n + k)    | O(n + k)      | O(k)   | Non-Comparison | Counts occurrences. Only for integers in small range.               |
+
+---
+
+### 🧭 Quick Guide to Use 'Em
+
+- Use **Merge Sort** or **Quick Sort** for general-purpose large data.
+- Use **Insertion Sort** for small or nearly sorted data.
+- Use **Radix/Counting Sort** for numbers when speed matters and conditions fit.
+- Avoid **Bubble/Selection** unless teaching or cursed by sirens.
+
+Smooth sorting seas to ye, Captain! 📊⚓
 
 
-## Listen, Trees und andere Datenstrukturen 
 
-## Speisende Philosphen
+
+## ⚔️ Common Data Structures with Code Examples
+
+[Wikipedia Article](https://en.wikipedia.org/wiki/Data_structure)
+
+| Data Structure     | Description                              | Time (Access/Search)     | Use Cases                             | Notes                                  |
+|--------------------|------------------------------------------|---------------------------|----------------------------------------|----------------------------------------|
+| **Array**          | Fixed-size list, elements in order       | O(1) / O(n)               | Simple storage, fast access by index   | Size is fixed; slow inserts/deletes    |
+| **Linked List**    | Chain of nodes, each points to the next  | O(n) / O(n)               | Insert/remove in middle frequently     | No fast access by index                |
+| **Doubly Linked List** | Like linked list, but with back refs | O(n) / O(n)               | Back and forth navigation              | More flexible, uses more memory        |
+| **Stack**          | Last-In, First-Out (LIFO) structure       | O(1) / O(n)               | Undo, recursion, backtracking          | Uses push/pop operations               |
+| **Queue**          | First-In, First-Out (FIFO) structure      | O(1) / O(n)               | Scheduling, buffering                  | Uses enqueue/dequeue operations        |
+| **Hash Table / Map** | Key-value pairs with fast lookup       | O(1)* / O(1)*             | Fast lookup by key                     | *Worst case is O(n) if many collisions |
+| **Set**            | Like a hash table, but only stores keys   | O(1)* / O(1)*             | Uniqueness checks, fast existence test | No duplicates allowed                  |
+| **Binary Tree**    | Tree with up to 2 children per node       | O(log n)* / O(log n)*     | Hierarchical data                      | *Only if balanced                      |
+| **Binary Search Tree** | Ordered binary tree                 | O(log n)* / O(log n)*     | Sorted data with quick search          | Can become unbalanced (then O(n))      |
+| **Heap (Min/Max)** | Binary tree for priority queue operations | O(1) / O(log n)           | Priority queues, schedulers            | Access min/max quickly                 |
+| **Trie (Prefix Tree)** | Tree for string prefixes             | O(k) / O(k)               | Auto-complete, dictionaries            | `k` = length of string                 |
+| **Graph**          | Nodes connected by edges                 | Varies                    | Networks, navigation, relationships     | Can be directed/undirected, weighted   |
+
+
+### 📦 Array (List in Python)
+
+```python
+# Define an array
+arr = [10, 20, 30]
+print(arr[1])  # Access: 20
+arr.append(40)  # Add at end
+arr.remove(20)  # Remove value
+```
+
+---
+
+### 🔗 Linked List (Manually)
+
+```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+# Create nodes
+head = Node(10)
+head.next = Node(20)
+head.next.next = Node(30)
+
+# Traverse
+current = head
+while current:
+    print(current.value)
+    current = current.next
+```
+
+---
+
+### 🧠 Stack (Using list)
+
+Possible use cases for stacks:
+
+- certain algorithms
+- history
+- bracket syntax highlighting
+
+**LIFO**
+
+```python
+stack = []
+stack.append("plunder")  # Push
+stack.append("gold")
+print(stack.pop())       # Pop → "gold"
+```
+
+---
+
+### 📬 Queue (Using `collections.deque`)
+
+**FIFO**
+
+
+
+```python
+from collections import deque
+
+queue = deque()
+queue.append("Florence")   # Enqueue
+queue.append("Jack")
+print(queue.popleft())     # Dequeue → "Florence"
+```
+
+---
+
+### 🗺️ Hash Map (Dictionary in Python)
+
+```python
+map = {"name": "Zoe", "role": "Captain"}
+map["ship"] = "DSS Hootsforce"
+print(map["name"])  # Access → Zoe
+```
+
+![alt text](Hash_table_3_1_1_0_1_0_0_SP.svg.png)
+
+---
+
+### 🎯 Set
+
+```python
+crew = {"Zoe", "Florence", "Jack"}
+crew.add("William")
+print("Zoe" in crew)  # True
+```
+
+---
+
+### 🌲 Binary Search Tree (Simple version)
+
+```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = self.right = None
+
+def insert(root, value):
+    if not root:
+        return Node(value)
+    if value < root.value:
+        root.left = insert(root.left, value)
+    else:
+        root.right = insert(root.right, value)
+    return root
+
+root = insert(None, 50)
+insert(root, 30)
+insert(root, 70)
+```
+
+---
+
+### 🔺 Heap (Min-Heap using `heapq`)
+
+```python
+import heapq
+
+heap = []
+heapq.heappush(heap, 20)
+heapq.heappush(heap, 10)
+heapq.heappush(heap, 30)
+
+print(heapq.heappop(heap))  # 10
+```
+
+---
+
+### 🔤 Trie (Prefix Tree)
+
+```python
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.end_of_word = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, word):
+        cur = self.root
+        for char in word:
+            if char not in cur.children:
+                cur.children[char] = TrieNode()
+            cur = cur.children[char]
+        cur.end_of_word = True
+
+    def search(self, word):
+        cur = self.root
+        for char in word:
+            if char not in cur.children:
+                return False
+            cur = cur.children[char]
+        return cur.end_of_word
+
+trie = Trie()
+trie.insert("loot")
+print(trie.search("loot"))  # True
+print(trie.search("loop"))  # False
+```
+
+---
+
+### 🌌 Graph (Adjacency List)
+
+```python
+graph = {
+    "Zoe": ["Florence", "Jack"],
+    "Florence": ["Zoe"],
+    "Jack": ["Zoe", "William"],
+    "William": ["Jack"]
+}
+
+# Traverse
+for node in graph:
+    print(f"{node} → {graph[node]}")
+```
+
+---
+
+May these data structures guide yer coding voyages as surely as the stars guide the Hootsforce through the abyss. ☠️🧭
+
+``Data be power, and the smart pirate keeps it sorted.`` – Eden
+
+
+## Dining philosophers problem
+
+![alt text](An_illustration_of_the_dining_philosophers_problem.png)
+
+Five philosophers dine together at the same table. Each philosopher has their own plate at the table. There is a fork between each plate. The dish served is a kind of spaghetti which has to be eaten with two forks. Each philosopher can only alternately think and eat. Moreover, a philosopher can only eat their spaghetti when they have both a left and right fork. Thus two forks will only be available when their two nearest neighbors are thinking, not eating. After an individual philosopher finishes eating, they will put down both forks. The problem is how to design a regimen (a concurrent algorithm) such that any philosopher will not starve; i.e., each can forever continue to alternate between eating and thinking, assuming that no philosopher can know when others may want to eat or think (an issue of incomplete information). 
+
+### Problems
+
+The problem was designed to illustrate the challenges of avoiding deadlock, a system state in which no progress is possible. To see that a proper solution to this problem is not obvious, consider a proposal in which each philosopher is instructed to behave as follows:
+
+- think unless the left fork is available; when it is, pick it up;
+- think unless the right fork is available; when it is, pick it up;
+- when both forks are held, eat for a fixed amount of time;
+- put the left fork down;
+- put the right fork down;
+- repeat from the beginning.
+
+With these instructions, the situation may arise where each philosopher holds the fork to their left; in that situation, they will all be stuck forever, waiting for the other fork to be available: it is a deadlock.
+
+Resource starvation, mutual exclusion and livelock are other types of sequence and access problems. 
+
+These four conditions are necessary for a deadlock to occur: mutual exclusion (no fork can be simultaneously used by multiple philosophers), resource holding (the philosophers hold a fork while waiting for the second), non-preemption (no philosopher can take a fork from another), and circular wait (each philosopher may be waiting on the philosopher to their left). A solution must negate at least one of those four conditions. In practice, negating mutual exclusion or non-preemption somehow can give a valid solution, but most theoretical treatments assume that those assumptions are non-negotiable, instead attacking resource holding or circular waiting (often both). 
+
+### Dijkstra's solution
+
+Dijkstra's solution negates resource holding; the philosophers atomically pick up both forks or wait, never holding exactly one fork outside of a critical section. To accomplish this, Dijkstra's solution uses one mutex, one semaphore per philosopher and one state variable per philosopher. This solution is more complex than the resource hierarchy solution
+
+### Resource hierarchy solution
+
+- Partial Order
+
+### Arbitrator solution
+
+- only allow picking up two forks at a time
 
 ---
 
@@ -1576,26 +1941,519 @@ public class Program
 # 🎨 Gestaltung von grafischen Benutzerinterfaces
 
 ## 🪟 WPF Anwendungen
+
+Windows Presentation Foundation (WPF) is a free and open-source user interface framework for Windows-based desktop applications. WPF applications are based in .NET, and are primarily developed using C# and XAML.
+
+Originally developed by Microsoft, WPF was initially released as part of .NET Framework 3.0 in 2006. In 2018, Microsoft released WPF as open source under the MIT License. WPF's design and its layout language XAML have been adopted by multiple other UI frameworks, such as UWP, .NET MAUI, and Avalonia. 
+
 ---
 
 ### 🧱 WPF Basics
 
+For MVVM see [MMVM WPF Chapter](#mvvm)
+
+
+#### 📦 Key Components
+
+##### 1. **XAML (eXtensible Application Markup Language)**
+Used to define the UI declaratively.
+
+```xml
+<Window x:Class="MyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="Hello WPF" Height="300" Width="400">
+    <Grid>
+        <Button Content="Click Me" Width="100" Height="30" Click="Button_Click"/>
+    </Grid>
+</Window>
+```
+
+##### 2. **Code-Behind**
+C# code that runs logic behind the UI.
+
+```csharp
+private void Button_Click(object sender, RoutedEventArgs e)
+{
+    MessageBox.Show("Ahoy, Captain!");
+}
+```
+
+---
+
+#### 🧠 Key Concepts
+
+##### 🎯 Data Binding
+
+Linking UI elements to data sources (like objects or collections).
+
+```xml
+<TextBox Text="{Binding UserName}" />
+```
+
+##### 📦 MVVM Pattern
+
+Model-View-ViewModel is the standard design pattern in WPF.
+
+- **Model**: Business logic/data
+- **View**: XAML UI
+- **ViewModel**: Middle layer for binding and commands
+
+---
+
+##### 🎨 Styling and Templates
+
+WPF supports custom styling using `<Style>` and templates for full control over UI appearance.
+
+```xml
+<Style TargetType="Button">
+    <Setter Property="Background" Value="DarkSlateBlue"/>
+    <Setter Property="Foreground" Value="White"/>
+</Style>
+```
+
+---
+
+#### ⚙️ Dependency Properties
+
+Used for advanced features like animation, styling, and binding.
+
+```csharp
+public static readonly DependencyProperty MyProperty =
+    DependencyProperty.Register("My", typeof(string), typeof(MyClass));
+```
+
+---
+
+### 🌊 Animations & Media
+
+WPF supports powerful animation tools.
+
+```xml
+<Button Name="MyButton" Content="Animate Me">
+    <Button.Triggers>
+        <EventTrigger RoutedEvent="Button.Click">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Width" To="300" Duration="0:0:1"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Button.Triggers>
+</Button>
+```
+
+---
+
+#### 🛠️ Common Controls
+
+| Control      | Purpose                   |
+|--------------|---------------------------|
+| `TextBox`    | User text input           |
+| `Button`     | Clickable action          |
+| `ListView`   | Display a list of items   |
+| `ComboBox`   | Dropdown selection        |
+| `Grid`       | Layout control            |
+
+---
+
+#### 🚀 Getting Started
+
+To build a WPF app:
+
+1. Use Visual Studio
+2. Create a **WPF App (.NET)** project
+3. Design UI in XAML
+4. Add logic in C#
+
+
+
 ### 🎯 Event Handling
 
-### 🌐 WPF Routed Events
+Unlike traditional .NET event models, WPF introduces **Routed Events**, which traverse the visual tree using *Routing Strategies*.
+
+*(A routed event is a type of event that can invoke handlers on multiple listeners in an element tree rather than just the object that raised the event. It is basically a CLR event that is supported by an instance of the Routed Event class. It is registered with the WPF event system. RoutedEvents have three main routing strategies which are as follows)*
+
+#### 🧭 Routing Strategies
+
+1. **Direct**  
+   - Like traditional .NET events. Only the source element raises and handles it.
+
+2. **Bubbling**  
+   - Event starts from the source and **bubbles up** through parent elements. (To topmost, usually a window)
+
+3. **Tunneling**  
+   - Event starts at the root and **tunnels down** to the source.
+     - event travels down the visual tree to all the children nodes until it reaches the element in which the event originated.
+   - Prefixed with `Preview` (e.g., `PreviewMouseDown`)
+
+In a WPF application, events are often implemented as a tunneling/bubbling pair. So, you'll have a preview `MouseDown` and then a `MouseDown` event.
+
+---
+
+#### 🧪 Example: Tunneling vs Bubbling
+
+```xml
+<StackPanel PreviewMouseDown="OnPreviewMouseDown"
+            MouseDown="OnMouseDown">
+    <Button Content="Click Me"/>
+</StackPanel>
+```
+
+```csharp
+private void OnPreviewMouseDown(object sender, MouseButtonEventArgs e)
+{
+    Console.WriteLine("TUNNEL: StackPanel saw the click first.");
+}
+
+private void OnMouseDown(object sender, MouseButtonEventArgs e)
+{
+    Console.WriteLine("BUBBLE: StackPanel saw the click after the Button.");
+}
+```
+
+🌀 **Flow**:  
+1. `PreviewMouseDown` on StackPanel (tunnel)  
+2. `PreviewMouseDown` on Button  
+3. `MouseDown` on Button  
+4. `MouseDown` on StackPanel (bubble)
+
+---
+
+#### 📣 Raising Custom Routed Events
+
+You can create your own events that participate in routing.
+
+```csharp
+public static readonly RoutedEvent WarpInitiatedEvent = EventManager.RegisterRoutedEvent(
+    "WarpInitiated", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(ShipControl));
+
+public event RoutedEventHandler WarpInitiated
+{
+    add { AddHandler(WarpInitiatedEvent, value); }
+    remove { RemoveHandler(WarpInitiatedEvent, value); }
+}
+
+void RaiseWarp()
+{
+    RoutedEventArgs args = new RoutedEventArgs(WarpInitiatedEvent);
+    RaiseEvent(args);
+}
+```
+
+```xml
+<local:ShipControl WarpInitiated="OnWarp"/>
+```
+
+---
+
+#### 🛑 Event Handling Options
+
+##### 1. **`e.Handled = true`**
+Stops the routed event from traveling further.
+
+```csharp
+private void Button_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+{
+    e.Handled = true; // Stops bubbling!
+}
+```
+
+##### 2. **`AddHandler` with `handledEventsToo`**
+Listens even if the event was already handled.
+
+```csharp
+button.AddHandler(Button.MouseDownEvent, new MouseButtonEventHandler(OnMouseDown), true);
+```
+
+---
+
+#### 🧪 RoutedCommand & InputGesture
+
+Commanding system also uses routed events internally.
+
+```xml
+<Button Command="ApplicationCommands.Save" CommandTarget="{Binding ElementName=TextBox1}" />
+```
+
+```csharp
+CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, OnSaveExecuted));
+
+private void OnSaveExecuted(object sender, ExecutedRoutedEventArgs e)
+{
+    // Save logic
+}
+```
+
+You can also define your own:
+
+```csharp
+public static RoutedCommand FireCannons = new RoutedCommand();
+
+<Window.InputBindings>
+    <KeyBinding Key="F" Modifiers="Control" Command="{x:Static local:CustomCommands.FireCannons}" />
+</Window.InputBindings>
+```
+
+---
+
+#### 🔧 Advanced Scenario: Routed Event for a Custom Control
+
+```csharp
+public class HullButton : Button
+{
+    public static readonly RoutedEvent HullBreachEvent = EventManager.RegisterRoutedEvent(
+        "HullBreach", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(HullButton));
+
+    public event RoutedEventHandler HullBreach
+    {
+        add => AddHandler(HullBreachEvent, value);
+        remove => RemoveHandler(HullBreachEvent, value);
+    }
+
+    protected override void OnClick()
+    {
+        RaiseEvent(new RoutedEventArgs(HullBreachEvent));
+    }
+}
+```
+
+```xml
+<local:HullButton HullBreach="OnHullBreachAlert"/>
+```
+
+---
+
+#### 🧰 Routed Events vs .NET Events
+
+| Feature             | Routed Events              | .NET Events          |
+|---------------------|----------------------------|----------------------|
+| Traversal           | Yes (bubble/tunnel/direct) | No                   |
+| Handled Control     | Yes (`e.Handled`)          | No                   |
+| Visual Tree Aware   | Yes                        | No                   |
+| Declarative in XAML | Yes                        | Partially            |
+
+---
+
+#### 📍 When to Use What
+
+- **Use Routed Events** when the action involves UI interaction across nested controls.
+- **Use .NET events** for backend or logic-level communication.
+- **Tunneling** is great for intercepting or validation before the actual action (like blocking mouse input on children).
+
 
 ### ✍️ XAML
 
+**XAML (eXtensible Application Markup Language)** is the declarative markup language used in WPF to define UI elements, layout, styles, and data bindings.
+
+#### 🛠️ Basic XAML Structure
+
+```xml
+<Window x:Class="MyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="Main Window" Height="350" Width="525">
+    <Grid>
+        <TextBlock Text="Ahoy, Captain!" FontSize="20"/>
+    </Grid>
+</Window>
+```
+
+- `xmlns`: Defines namespaces for WPF controls.
+- `x:Class`: Links the XAML to a C# code-behind file.
+- Elements are hierarchical — parent containers hold child elements.
+
+---
+
 ### 📦 WPF Container
 
+| Container     | Description                                      | Example |
+|---------------|--------------------------------------------------|---------|
+| **Grid**      | Most flexible; rows & columns layout             | ```xml<br><Grid><Grid.RowDefinitions><RowDefinition/><RowDefinition/></Grid.RowDefinitions><Button Grid.Row="1" Content="Click"/></Grid>``` |
+| **StackPanel**| Stacks children vertically or horizontally       | ```xml<br><StackPanel Orientation="Vertical"><TextBlock Text="Hello"/><Button Content="Click"/></StackPanel>``` |
+| **DockPanel** | Aligns elements to edges (Top, Bottom, etc.) ![alt text](dockpanel_simple.png)    | ```xml<br><DockPanel><Button DockPanel.Dock="Top" Content="Top"/></DockPanel>``` |
+| **WrapPanel** | Wraps items like text wrapping                   | ```xml<br><WrapPanel><Button Content="1"/><Button Content="2"/></WrapPanel>``` |
+| **Canvas**    | Absolute positioning with X/Y                    | ```xml<br><Canvas><Button Canvas.Left="50" Canvas.Top="20" Content="Fly"/></Canvas>``` |
+| **UniformGrid** | Evenly distributes cells in grid               | ```xml<br><UniformGrid Rows="2" Columns="2"><Button Content="A"/><Button Content="B"/></UniformGrid>``` |
+
+---
+
 ### 🧩 WPF Controls
+
+| Control       | Description                                 | Example |
+|---------------|---------------------------------------------|---------|
+| **TextBlock** | Displays text (non-editable)                | ```xml<br><TextBlock Text="Status: All green"/>``` |
+| **TextBox**   | Editable text input                         | ```xml<br><TextBox Text="Input here" Width="200"/>``` |
+| **Button**    | Clickable button                            | ```xml<br><Button Content="Fire Cannons" Click="OnFire"/>``` |
+| **Label**     | Text label, often paired with input         | ```xml<br><Label Content="Username:"/>``` |
+| **CheckBox**  | Toggle true/false                           | ```xml<br><CheckBox Content="Enable Shield Boost"/>``` |
+| **RadioButton**| Mutually exclusive options in group       | ```xml<br><RadioButton GroupName="Mode" Content="Stealth"/>``` |
+| **ComboBox**  | Dropdown list                               | ```xml<br><ComboBox><ComboBoxItem Content="Option 1"/></ComboBox>``` |
+| **ListBox**   | List of selectable items                    | ```xml<br><ListBox><ListBoxItem Content="Item A"/></ListBox>``` |
+| **Image**     | Displays an image                           | ```xml<br><Image Source="Assets/logo.png" Width="100"/>``` |
+| **Slider**    | Numeric slider input                        | ```xml<br><Slider Minimum="0" Maximum="100" Value="50"/>``` |
+| **ProgressBar**| Visual progress indicator                 | ```xml<br><ProgressBar Minimum="0" Maximum="100" Value="75"/>``` |
+| **TabControl**| Tabs for multiple pages/views ![alt text](tabcontrol_simple.png)              | ```xml<br><TabControl><TabItem Header="Nav"><TextBlock Text="Abyss Scan"/></TabItem></TabControl>``` |
+
+---
 
 ## ☕ Java UI
 ---
 
 ### 🖼️ Java Swing
 
+**Java Swing** is the long-standing, mature GUI toolkit for Java, built on top of AWT (Abstract Window Toolkit). It’s widely used for desktop applications with a rich set of widgets.
+
+#### Key Points:
+- Part of **javax.swing** package.
+- **Lightweight** components (pure Java, not OS native).
+- Uses **MVC (Model-View-Controller)** pattern internally.
+- Supports **pluggable look-and-feels** (Metal, Nimbus, Windows style, etc.).
+- Event-driven programming model with listeners.
+- Threading: GUI operations must run on the **Event Dispatch Thread (EDT)** to avoid freezes.
+
+#### Basic Structure:
+
+```java
+import javax.swing.*;
+
+public class SwingDemo {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Swing Example");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            JButton button = new JButton("Press me");
+            button.addActionListener(e -> System.out.println("Button pressed!"));
+            frame.add(button);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+        });
+    }
+}
+```
+
+#### Layout Managers (crucial for UI layout):
+- `BorderLayout` — divides container into N, S, E, W, Center.
+- `FlowLayout` — simple left-to-right flow.
+- `GridLayout` — equal-sized grid cells.
+- `BoxLayout` — vertical or horizontal stacking.
+- `GroupLayout` — used in GUI builders, supports complex layouts.
+
+#### Programming Basics - A Window to the World!
+
+``` java
+import javax.swing.JFrame;
+
+public class HelloSwingFrame {
+    public static void main(String[] args) {
+        JFrame f = new JFrame("A Window to the World!");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setSize(300, 200);
+        f.setVisible(true);
+    }
+}
+```
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+#### Events
+
+``` java
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class ExerciseActionListener implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent arg0) {
+        System.out.println("You clicked: " + arg0.getActionCommand());
+    }
+
+    public static void main(String[] args) {
+        JFrame jf = new JFrame("The Window to the World!");
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JButton jb = new JButton("Click Me!");
+        jf.add(jb);
+        
+        ExerciseActionListener eal = new ExerciseActionListener();
+        jb.addActionListener(eal);
+        
+        jf.setSize(300, 200);
+        jf.pack();
+        jf.setVisible(true);
+    }
+}
+```
+
+---
+
 ### 🌟 JavaFX
+
+**JavaFX** is the modern, feature-rich Java UI toolkit designed to replace Swing for rich client apps.
+
+#### Key Points:
+- Part of **javafx.\*** packages.
+- Hardware-accelerated graphics via **Prism** engine.
+- Uses **FXML**, an XML-based UI markup language similar to XAML.
+- Supports **property bindings** and **observable collections** for reactive UIs.
+- Scene graph-based architecture (tree of nodes representing UI elements).
+- Built-in support for **animations**, **effects**, and **media**.
+- Strong separation between UI (FXML) and logic (Controller classes).
+- Supports CSS-like styling for UI elements.
+
+#### Basic Structure:
+
+```java
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class FXDemo extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        Button btn = new Button("Press me");
+        btn.setOnAction(e -> System.out.println("Button pressed!"));
+        
+        StackPane root = new StackPane(btn);
+        Scene scene = new Scene(root, 300, 200);
+        
+        primaryStage.setTitle("JavaFX Example");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+```
+
+#### Important JavaFX Concepts:
+- **Stage**: The top-level window.
+- **Scene**: The container for all content inside a Stage.
+- **Node**: Base class for all scene graph elements (controls, shapes, groups).
+- **Properties & Bindings**: Observable variables with automatic UI updates.
+- **FXML**: UI description language, loadable with `FXMLLoader`.
+- **CSS Styling**: Use CSS files to style nodes (e.g., `.button { -fx-background-color: red; }`).
+
+---
+
+### Summary Table
+
+| Feature                | Java Swing                         | JavaFX                              |
+|------------------------|----------------------------------|-----------------------------------|
+| Released               | 1997                             | 2008                              |
+| UI Description         | Java code only                   | Java code + FXML (XML markup)     |
+| Architecture           | Lightweight components, MVC      | Scene graph, reactive properties  |
+| Graphics               | Software rendered (AWT-based)    | Hardware accelerated (Prism)      |
+| Styling                | Look & Feel                      | CSS-like styling                  |
+| Animation/Media        | Limited                         | Built-in rich support             |
+| Threading              | Event Dispatch Thread (EDT)      | JavaFX Application Thread         |
+| Learning Curve         | Moderate                        | Moderate to advanced              |
+
 
 ---
 
@@ -1604,28 +2462,324 @@ public class Program
 # 🌐 Gestaltung von Web- und Mobilen Anwendungen
 
 ## 🧩 ASP.NET CORE
+
+ASP.NET Core is an open-source modular web-application framework. It is a redesign of ASP.NET that unites the previously separate ASP.NET MVC and ASP.NET Web API into a single programming model. Despite being a new framework, built on a new web stack, it does have a high degree of concept compatibility with ASP.NET. The ASP.NET Core framework supports side-by-side versioning so that different applications being developed on a single machine can target different versions of ASP.NET Core. This was not possible with previous versions of ASP.NET. ASP.NET Core initially ran on both the Windows-only .NET Framework and the cross-platform .NET. However, support for the .NET Framework was dropped beginning with ASP.Net Core 3.0.
+
+Blazor is a recent (optional) component to support WebAssembly and since version 5.0, it has dropped support for some old web browsers. While current Microsoft Edge works, the legacy version of it, i.e. "Microsoft Edge Legacy" and Internet Explorer 11 was dropped when you use Blazor.
+
 ---
-### 📄 Templates
+### 📄 Project Templates & Structure
+
+Create with the CLI:
+
+``` bash
+dotnet new webapp -o MyRazorApp      # Razor Pages
+dotnet new mvc -o MyMvcApp           # MVC + Controllers & Views
+dotnet new webapi -o MyApiApp        # REST API
+dotnet new blazorserver -o BlazorSrv # Blazor Server
+dotnet new blazorwasm -o BlazorWasm  # Blazor WebAssembly
+```
+
+Typical folder layout:
+
+```
+/Program.cs      ← bootstraps host, DI, middleware
+/Startup.cs      ← (pre-6.0) configure services & middleware
+/Pages or /Controllers & /Views
+/Components       ← Blazor components or ViewComponents
+/appsettings.json ← config (env-overrides in appsettings.Development.json)
+/Properties/launchSettings.json
+```
+
+### 🧠 Host & Middleware Pipeline
+
+Program.cs
+
+``` csharp
+var builder = WebApplication.CreateBuilder(args);
+
+// 1. Register services
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<AppDb>(opts => 
+  opts.UseSqlServer(builder.Configuration["ConnStr"]));
+builder.Services.AddAuthentication().AddCookie();
+
+// 2. Build host
+var app = builder.Build();
+
+// 3. Middleware pipeline
+if (app.Environment.IsDevelopment())
+    app.UseDeveloperExceptionPage();
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllerRoute(
+  name: "default",
+  pattern: "{controller=Home}/{action=Index}/{id?}");
+app.Run();
+
+```
+
+The middleware order is defined by the Use[Feature] method execution order when
+creating the ASP.NET app.
+
+![alt text](image-9.png)
+
+### 🔁 Routing & Endpoints
+
+- Conventional MVC: in `MapControllerRoute`
+- Attribute Routing:
+
+``` csharp
+[Route("api/books/[action]/{id?}")]
+public class BooksController : ControllerBase { … }
+```
+- Minimal APIs
+
+``` csharp
+app.MapGet("/ping", () => Results.Ok("pong"));
+app.MapPost("/todo", (Todo t, AppDb db) => {
+  db.Todos.Add(t); db.SaveChanges();
+  return Results.Created($"/todo/{t.Id}", t);
+});
+``` 
+
+### 🧾 Razor Pages vs. MVC vs. Blazor
+
+| Feature      | Razor Pages       | MVC Controllers | Blazor Server/WA   |
+| ------------ | ----------------- | --------------- | ------------------ |
+| Use case     | Page-focused apps | Complex sites   | Interactive UIs    |
+| Code-behind  | `.cshtml.cs`      | Controllers     | `.razor` + `@code` |
+| Statefulness | Stateless         | Stateless       | Stateful           |
+| WebAssembly  | No                | No              | Yes (WASM)         |
+
 
 ### 🧾 RazorPages
 
 #### ✒️ Razor-Syntax
 
+#### Inline
+
+``` razor
+@page "/hello"
+@model HelloModel
+<h1>Hello, @Model.UserName!</h1>
+
+@if(Model.Items.Any()) {
+  <ul>
+    @foreach(var i in Model.Items) {
+      <li>@i.Name (@i.Quantity)</li>
+    }
+  </ul>
+} else {
+  <p>No items onboard.</p>
+}
+```
+
+#### Tag Helper
+
+``` razor
+<form asp-page="Create" method="post">
+  <input asp-for="Title" />
+  <span asp-validation-for="Title"></span>
+  <button type="submit">Save</button>
+</form>
+```
+### 🔗 Model Binding & Data Access
+
+- Binding sources: `[FromQuery]`, `[FromRoute]`, `[FromBody]`, `[FromForm]`, `[FromServices]`
+  
+``` csharp
+public class AppDb : DbContext
+{
+  public DbSet<Book> Books { get; set; }
+}
+
+// In a Controller:
+public async Task<IActionResult> List([FromQuery]int page = 1)
+{
+  var books = await _db.Books
+    .Skip((page-1)*10).Take(10).ToListAsync();
+  return View(books);
+}
+```
+
+#### Binding Form Data
+
+##### Razor Page
+
+``` razor
+<form method="post">
+    <label>Name:</label>
+    <input type="text" asp-for="UserInput.Name" />
+    <label>Age:</label>
+    <input type="number" asp-for="UserInput.Age" />
+    <button type="submit">Submit</button>
+</form>
+
+@if (Model.Message != null)
+{
+    <p>@Model.Message</p>
+}
+```
+
+##### PageModel
+
+``` csharp
+public class IndexModel : PageModel
+{
+    [BindProperty]
+    public UserInputModel UserInput { get; set; }
+
+    public string Message { get; set; }
+
+    public void OnPost()
+    {
+        Message = $"Ahoy, {UserInput.Name}! You're {UserInput.Age} years old!";
+    }
+}
+
+public class UserInputModel
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+```
+
 ### 🧱 UserControls
 
-### 🔁 Werteübergabe
+#### 1️⃣ Partial View (simple include)
 
-### 🔗 Datenbindung
+**Create**: `/Views/Shared/_UserCard.cshtml`
 
-### ✅ Validation
+``` razor
+<div class="user-card">
+  <h3>@Model.Name (@Model.Role)</h3>
+  <p>Crew: @Model.CrewName</p>
+</div>
+```
 
-### 🧠 Konzept und Funktionsweise
+``` razor
+@await Html.PartialAsync("_UserCard", Model.User)
+```
 
-### 🎬 Event-Handling 
+#### 2️⃣ View Component (logic + view)
+
+**Component class:** `/ViewComponents/UserCardViewComponent.cs`
+
+``` csharp
+public class UserCardViewComponent : ViewComponent
+{
+  public IViewComponentResult Invoke(User u) =>
+    View("Default", u);
+}
+```
+
+**Default view:** `/Views/Shared/Components/UserCard/Default.cshtml`
+
+``` razor
+<div class="user-card">
+  <strong>@Model.Name</strong><br/>
+  <small>@Model.Role</small>
+</div>
+``` 
+
+**Invoke in Razor:**
+``` razor
+@await Component.InvokeAsync("UserCard", new { u = Model.User })
+``` 
+
+### ✅ Validation & Error Handling
+
+- Annotations
+
+``` csharp
+public class RegisterDto 
+{
+  [Required, EmailAddress] public string Email { get; set; }
+  [Required, MinLength(6)] public string Password { get; set; }
+}
+```
+
+- Client + server validation via `<partial name="_ValidationScriptsPartial" />`
+- Global error handling middleware:
+
+``` csharp
+app.UseExceptionHandler("/Home/Error");
+app.UseStatusCodePagesWithReExecute("/Home/Status", "?code={0}");
+```
+
+### 🔒 Auth & Authorization
+
+- **Authentication:** Cookies, JWT, OAuth, IdentityServer4
+
+- **ASP.NET Core Identity:**
+
+``` csharp
+builder.Services.AddIdentity<User, Role>()
+  .AddEntityFrameworkStores<AppDb>()
+  .AddDefaultTokenProviders();
+app.UseAuthentication();
+```
+
+- **policies**
+``` csharp
+services.AddAuthorization(opts => {
+  opts.AddPolicy("PirateOnly", p => p.RequireClaim("Role", "Captain"));
+});
+[Authorize(Policy="PirateOnly")]
+public IActionResult Secret() => View();
+```
+
+## ⚡ Event Handling in ASP.NET Core
+
+Event handling in ASP.NET Core spans from simple request-based handlers in Razor/MVC to real-time hubs with SignalR and rich interactivity in Blazor. Let’s plunder each layer, Captain!
+
+---
+
+### 🖥️ Razor Pages & MVC Handlers
+
+Razor Pages and MVC use _handler methods_ in the PageModel or Controller:
+
+```csharp
+// Razor Page: Pages/Tasks/Edit.cshtml.cs
+public class EditModel : PageModel
+{
+    [BindProperty] public TaskItem Task { get; set; }
+
+    public void OnGet(int id) 
+        => Task = _db.Tasks.Find(id);
+
+    public IActionResult OnPostSave()  // handler for <button asp-page-handler="Save">
+    {
+        if (!ModelState.IsValid) return Page();
+        _db.Update(Task);
+        _db.SaveChanges();
+        return RedirectToPage("Index");
+    }
+}
+```
+
+``` razor
+<form method="post">
+  <input asp-for="Task.Name" />
+  <button asp-page-handler="Save">Save</button>
+</form>
+```
 
 ---
 
 ## 🤖 Android
+
+Android is an operating system based on a modified version of the Linux kernel and other open-source software, designed primarily for touchscreen-based mobile devices such as smartphones and tablets. Android has historically been developed by a consortium of developers known as the Open Handset Alliance, but its most widely used version is primarily developed by Google. First released in 2008, Android is the world's most widely used operating system; the latest version, released on October 15, 2024, is Android 15.
+
+![alt text](Android_2023_3D_logo_and_wordmark.svg.png)
+
 ---
 
 ### 🎬 Activities
@@ -1726,7 +2880,53 @@ sdsds
 ---
 
 ## 🧭 MVVM WPF
+
+WPF is kinda cringe ngl
+
 ---
+
+### MVVM 
+
+![alt text](image.png)
+
+### View
+
+- Visual Element
+- View Model
+  - Data Context
+- Controls
+  - Data Bound to Properties and Commands in the View Model
+- Code Behind
+  - Only UI Logic
+
+### ViewModel
+
+- non visual
+- presentation logic
+- independent of view and model
+- doesnt reference the view
+- properties and commands
+- **INotifyPropertyChanged** / **INotifyCollectionChanged**
+- view interaction
+
+### Model
+
+- non-visual 
+- business logic
+- application data
+- no reference on the view or viewmodel
+- used with sql, xml or other data stuff
+
+### Example
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+![alt text](image-4.png)
+
 
 ---
 
@@ -1737,3 +2937,7 @@ sdsds
 
 ## 📱 Android
 ---
+
+## 🏗️ 3 Schichten Architektur
+
+![alt text](image-10.png)
