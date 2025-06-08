@@ -83,29 +83,793 @@ h4::before {
 <li><a href="#%EF%B8%8F-entity-framework">🏗️ Entity Framework</a>
 <ul>
 <li><a href="#-basics">🧩 Basics</a></li>
-<li><a href="#-linq">🔍 LINQ</a></li>
-<li><a href="#-lambda">🧠 Lambda</a></li>
-<li><a href="#-collections">📚 Collections</a></li>
-<li><a href="#-generics">🧰 Generics</a></li>
-<li><a href="#%EF%B8%8F-net-vs-net-core">⚔️ .NET vs .NET CORE</a></li>
+<li><a href="#-linq">🔍 LINQ</a>
+<ul>
+<li><a href="#linq-on-objects">LINQ on Objects</a></li>
+<li><a href="#translation">Translation</a></li>
+<li><a href="#query-syntax">Query Syntax</a>
+<ul>
+<li><a href="#7-main-linq-query-clauses">7 Main LINQ Query Clauses</a></li>
 </ul>
 </li>
-<li><a href="#-serialisierung">📦 Serialisierung</a></li>
+</ul>
+</li>
+<li><a href="#-lambda">🧠 Lambda</a>
+<ul>
+<li><a href="#example">Example</a></li>
+</ul>
+</li>
+<li><a href="#-collections">📚 Collections</a>
+<ul>
+<li><a href="#common-collection-types">Common Collection Types:</a></li>
+<li><a href="#why-use-collections">Why Use Collections?</a></li>
+</ul>
+</li>
+<li><a href="#-generics">🧰 Generics</a>
+<ul>
+<li><a href="#why-use-generics">Why Use Generics?</a></li>
+<li><a href="#example-generic-list">Example: Generic List</a></li>
+<li><a href="#generic-class">Generic Class</a></li>
+</ul>
+</li>
+<li><a href="#%EF%B8%8F-net-vs-net-core">⚔️ .NET vs .NET CORE</a>
+<ul>
+<li><a href="#net-basics">.NET Basics</a></li>
+<li><a href="#-differences-between-net-framework-and-net-core">🔍 Differences Between .NET Framework and .NET Core</a></li>
+<li><a href="#-transition-to-net-567">🌐 Transition to .NET 5/6/7+</a></li>
+</ul>
+</li>
+<li><a href="#%EF%B8%8F-orm-mapping">🖨️ ORM Mapping</a>
+<ul>
+<li><a href="#what-is-orm">What is ORM?</a></li>
+<li><a href="#why-use-orm">Why Use ORM?</a></li>
+<li><a href="#example-mapping-pirate-class-to-table">Example Mapping: Pirate Class to Table</a></li>
+<li><a href="#common-orm-features">Common ORM Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#-serialization">📦 Serialization</a>
+<ul>
+<li><a href="#-serialization-in-c">🔹 Serialization in C#</a>
+<ul>
+<li><a href="#-example-json-serialization-using-systemtextjson">✅ Example: JSON Serialization using <code>System.Text.Json</code></a></li>
+</ul>
+</li>
+<li><a href="#-serialization-in-java">🔸 Serialization in Java</a>
+<ul>
+<li><a href="#-example-json-serialization-with-gson">✅ Example: JSON Serialization with Gson</a></li>
+</ul>
+</li>
+<li><a href="#-comparison-table">🔁 Comparison Table</a></li>
+</ul>
+</li>
+<li><a href="#xml">XML</a>
+<ul>
+<li><a href="#markup">Markup</a></li>
+<li><a href="#dtd-and-xml-schema">DTD and XML Schema</a></li>
+<li><a href="#xsl">XSL</a></li>
+<li><a href="#dom">DOM</a></li>
+<li><a href="#xml-parser">XML Parser</a></li>
+<li><a href="#example-xml-document">Example XML Document</a></li>
+<li><a href="#xml-declaration">XML Declaration</a></li>
+<li><a href="#document-type-declaration-dtd">Document Type Declaration (DTD)</a></li>
+<li><a href="#elements">Elements</a></li>
+<li><a href="#attributes">Attributes</a></li>
+<li><a href="#entities">Entities</a></li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#namespaces">Namespaces</a></li>
+<li><a href="#well-formed-vs-valid">Well-Formed vs. Valid</a></li>
+<li><a href="#dtd--document-type-definition">DTD – Document Type Definition</a>
+<ul>
+<li><a href="#elemente">Elemente</a></li>
+<li><a href="#attribute">Attribute</a></li>
+</ul>
+</li>
+<li><a href="#xml-schema">XML Schema</a>
+<ul>
+<li><a href="#grundlagen">Grundlagen</a></li>
+<li><a href="#schemadateien-referenzieren">Schemadateien referenzieren</a>
+<ul>
+<li><a href="#mit-namespaces">Mit Namespaces</a></li>
+<li><a href="#ohne-namespaces">Ohne Namespaces</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#vergleich-dtd-vs-xml-schema">Vergleich DTD vs. XML Schema</a></li>
+</ul>
+</li>
+<li><a href="#android-persistence">Android Persistence</a></li>
 </ul>
 </li>
 </ul>
 <h1 id="-konzepte-moderner-datenspeicherung">💾 Konzepte moderner Datenspeicherung </h1>
 <h2 id="️-entity-framework">🏗️ Entity Framework </h2>
+<p>Entity Framework (EF) is an open source object–relational mapping (ORM) framework for <a href="http://ADO.NET">ADO.NET</a>. It was originally shipped as an integral part of .NET Framework, however starting with Entity Framework version 6.0 it has been delivered separately from the .NET Framework.</p>
 <hr>
 <h3 id="-basics">🧩 Basics </h3>
+<ul>
+<li><strong>ORM (Object-Relational Mapping):</strong> Maps database tables to .NET classes and rows to objects.</li>
+<li><strong>DbContext:</strong> The main class for interacting with the database, managing entity objects during runtime.</li>
+<li><strong>Entities:</strong> Classes that represent tables in the database.</li>
+<li><strong>LINQ Queries:</strong> Write queries using LINQ (Language Integrated Query) instead of SQL.</li>
+<li><strong>Migrations:</strong> Track and apply database schema changes based on your model classes.</li>
+</ul>
+<p>Entity Framework simplifies database operations and helps maintain a clean separation between your application code and database logic.</p>
 <h3 id="-linq">🔍 LINQ </h3>
+<p>Allows SQL-like queries in C#</p>
+<ul>
+<li>LINQ to <strong>objects</strong></li>
+<li>LINQ to <strong>XML</strong></li>
+<li>LINQ to <strong>SQL</strong></li>
+</ul>
+<p>LINQ is fully type checked!</p>
+<h4 id="linq-on-objects">LINQ on Objects </h4>
+<ul>
+<li>Queries on Collections</li>
+</ul>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token comment">// Example LINQ query on a collection of pirates</span>
+<span class="token class-name">List<span class="token punctuation">&lt;</span><span class="token keyword keyword-string">string</span><span class="token punctuation">&gt;</span></span> pirates <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword keyword-string">string</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span> <span class="token string">"Zoe"</span><span class="token punctuation">,</span> <span class="token string">"Jack"</span><span class="token punctuation">,</span> <span class="token string">"William"</span><span class="token punctuation">,</span> <span class="token string">"Florence"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Query: select all pirates whose name starts with 'J'</span>
+<span class="token class-name"><span class="token keyword keyword-var">var</span></span> jPirates <span class="token operator">=</span> <span class="token keyword keyword-from">from</span> pirate <span class="token keyword keyword-in">in</span> pirates
+               <span class="token keyword keyword-where">where</span> <span class="token class-name">pirate</span><span class="token punctuation">.</span><span class="token function">StartsWith</span><span class="token punctuation">(</span><span class="token string">"J"</span><span class="token punctuation">)</span>
+               <span class="token keyword keyword-select">select</span> pirate<span class="token punctuation">;</span>
+
+<span class="token comment">// Output the results</span>
+<span class="token keyword keyword-foreach">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-var">var</span></span> pirate <span class="token keyword keyword-in">in</span> jPirates<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>pirate<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: Jack</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="translation">Translation </h4>
+<p><img src="image.png" alt="alt text"></p>
+<h4 id="query-syntax">Query Syntax </h4>
+<p>LINQ query syntax in C# is a declarative way to query collections (like arrays, lists, or databases). It resembles SQL and makes queries readable and expressive.</p>
+<p>The basic structure of a LINQ query is:</p>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token class-name"><span class="token keyword keyword-var">var</span></span> result <span class="token operator">=</span> from <span class="token operator">&lt;</span>range variable<span class="token operator">&gt;</span> <span class="token keyword keyword-in">in</span> <span class="token operator">&lt;</span>data source<span class="token operator">&gt;</span>
+             <span class="token operator">&lt;</span>query clauses<span class="token operator">&gt;</span>
+             <span class="token keyword keyword-select">select</span> <span class="token operator">&lt;</span>result<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li><strong>from:</strong> Specifies the data source and introduces a range variable to iterate over it.</li>
+<li><strong>where:</strong> Filters elements based on a condition.</li>
+<li><strong>select:</strong> Projects each element into a new form (like picking fields or transforming data).</li>
+</ul>
+<h5 id="7-main-linq-query-clauses">7 Main LINQ Query Clauses </h5>
+<table>
+<thead>
+<tr>
+<th>Clause</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>from</strong></td>
+<td>Introduces the data source and range variable</td>
+<td><code>from p in pirates</code></td>
+</tr>
+<tr>
+<td><strong>where</strong></td>
+<td>Filters elements by a condition</td>
+<td><code>where p.StartsWith("J")</code></td>
+</tr>
+<tr>
+<td><strong>select</strong></td>
+<td>Projects the result into a new form</td>
+<td><code>select p</code></td>
+</tr>
+<tr>
+<td><strong>orderby</strong></td>
+<td>Sorts the elements by one or more keys</td>
+<td><code>orderby p.Length descending</code></td>
+</tr>
+<tr>
+<td><strong>group</strong></td>
+<td>Groups elements by a key</td>
+<td><code>group p by p[0] into g</code></td>
+</tr>
+<tr>
+<td><strong>join</strong></td>
+<td>Joins two data sources based on matching keys</td>
+<td><code>join b in bList on a.Id equals b.AId</code></td>
+</tr>
+<tr>
+<td><strong>let</strong></td>
+<td>Introduces a new range variable for a sub-expression</td>
+<td><code>let nameLength = p.Length</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="-lambda">🧠 Lambda </h3>
-<h3 id="-collections">📚 Collections </h3>
+<p>In C#, LINQ queries can also be written using <strong>lambda expressions</strong> and <strong>method syntax</strong>, which is often more concise and preferred for complex queries.</p>
+<p>Instead of the SQL-like query syntax, you chain methods like <code>.Where()</code>, <code>.Select()</code>, <code>.OrderBy()</code>, etc., passing <strong>lambda expressions</strong> as arguments.</p>
+<hr>
+<h4 id="example">Example </h4>
+<p>Using the earlier example of pirates whose names start with "J":</p>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token class-name">List<span class="token punctuation">&lt;</span><span class="token keyword keyword-string">string</span><span class="token punctuation">&gt;</span></span> pirates <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword keyword-string">string</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span> <span class="token string">"Zoe"</span><span class="token punctuation">,</span> <span class="token string">"Jack"</span><span class="token punctuation">,</span> <span class="token string">"William"</span><span class="token punctuation">,</span> <span class="token string">"Florence"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name"><span class="token keyword keyword-var">var</span></span> jPirates <span class="token operator">=</span> pirates<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>p <span class="token operator">=&gt;</span> p<span class="token punctuation">.</span><span class="token function">StartsWith</span><span class="token punctuation">(</span><span class="token string">"J"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                      <span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span>p <span class="token operator">=&gt;</span> p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-foreach">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-var">var</span></span> pirate <span class="token keyword keyword-in">in</span> jPirates<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>pirate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="-collections">📚 Collections </h3>
+<p>Collections in C# are data structures used to store, manage, and manipulate groups of related objects. They come in various forms to suit different needs—like lists, arrays, dictionaries, sets, and queues.</p>
+<h4 id="common-collection-types">Common Collection Types: </h4>
+<table>
+<thead>
+<tr>
+<th>Collection</th>
+<th>Description</th>
+<th>Example Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Array</strong></td>
+<td>Fixed-size, strongly typed sequence of elements</td>
+<td>Storing a fixed number of crew members</td>
+</tr>
+<tr>
+<td><strong>List<t></t></strong></td>
+<td>Dynamic array that can grow or shrink at runtime</td>
+<td>Managing your crew roster</td>
+</tr>
+<tr>
+<td><strong>Dictionary&lt;TKey, TValue&gt;</strong></td>
+<td>Key-value pairs for fast lookup</td>
+<td>Mapping ship parts to their specifications</td>
+</tr>
+<tr>
+<td><strong>HashSet<t></t></strong></td>
+<td>Collection of unique elements</td>
+<td>Keeping track of unique bounty targets</td>
+</tr>
+<tr>
+<td><strong>Queue<t></t></strong></td>
+<td>FIFO (First-In, First-Out) collection</td>
+<td>Managing tasks or orders in sequence</td>
+</tr>
+<tr>
+<td><strong>Stack<t></t></strong></td>
+<td>LIFO (Last-In, First-Out) collection</td>
+<td>Undo operations or backtracking actions</td>
+</tr>
+</tbody>
+</table>
+<h4 id="why-use-collections">Why Use Collections? </h4>
+<ul>
+<li>Organize data logically and efficiently</li>
+<li>Support powerful operations (searching, sorting, filtering)</li>
+<li>Enable easy data manipulation and iteration</li>
+</ul>
 <h3 id="-generics">🧰 Generics </h3>
-<h3 id="️-net-vs-net-core">⚔️ .NET vs .NET CORE </h3>
+<p>Generics in C# let you create flexible, reusable classes, methods, and data structures that work with any data type while maintaining type safety. Instead of writing separate code for each type (like <code>int</code>, <code>string</code>, or your custom <code>Laikan</code> classes), generics let you define a template that adapts to the type you specify.</p>
+<h4 id="why-use-generics">Why Use Generics? </h4>
+<ul>
+<li><strong>Type Safety:</strong> Catch type errors at compile time, avoiding runtime surprises.</li>
+<li><strong>Code Reusability:</strong> Write once, use for many types without duplication.</li>
+<li><strong>Performance:</strong> Avoid boxing/unboxing with value types, leading to faster code.</li>
+</ul>
 <hr>
-<h2 id="-serialisierung">📦 Serialisierung </h2>
+<h4 id="example-generic-list">Example: Generic List </h4>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token class-name">List<span class="token punctuation">&lt;</span><span class="token keyword keyword-string">string</span><span class="token punctuation">&gt;</span></span> crewNames <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword keyword-string">string</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+crewNames<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token string">"Zoe"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+crewNames<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token string">"Jack"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h4 id="generic-class">Generic Class </h4>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">CargoHold<span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">List<span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> items <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">AddItem</span><span class="token punctuation">(</span><span class="token class-name">T</span> item<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        items<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name">T</span> <span class="token function">GetItem</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-int">int</span></span> index<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> items<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>You can create a <code>CargoHold</code> for any type:</p>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token class-name">CargoHold<span class="token punctuation">&lt;</span><span class="token keyword keyword-string">string</span><span class="token punctuation">&gt;</span></span> foodHold <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">CargoHold<span class="token punctuation">&lt;</span><span class="token keyword keyword-string">string</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">CargoHold<span class="token punctuation">&lt;</span><span class="token keyword keyword-int">int</span><span class="token punctuation">&gt;</span></span> ammoHold <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">CargoHold<span class="token punctuation">&lt;</span><span class="token keyword keyword-int">int</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="️-net-vs-net-core">⚔️ .NET vs .NET CORE </h3>
+<h4 id="net-basics">.NET Basics </h4>
+<p>The <strong>.NET Framework</strong> and <strong>.NET Core</strong> are both development platforms from Microsoft used to build and run apps, but they target different needs and environments.</p>
+<ul>
+<li><strong>.NET Framework</strong>: Released in the early 2000s, it is Windows-only and designed for building desktop and web applications.</li>
+<li><strong>.NET Core</strong>: A cross-platform, open-source, and modernized version of .NET introduced in 2016. It is designed for performance, scalability, and cloud-based solutions.</li>
+</ul>
+<p>With the release of <strong>.NET 5+</strong>, Microsoft unified the two into one platform — simply called <strong>.NET</strong> — carrying forward the best parts of both worlds.</p>
+<p><img src="image-6.png" alt="alt text"></p>
+<p><img src="image-7.png" alt="alt text"></p>
+<p><img src="image-1.png" alt="alt text"></p>
+<p><img src="image-2.png" alt="alt text"></p>
+<p><img src="image-3.png" alt="alt text"></p>
+<p><img src="image-4.png" alt="alt text"></p>
+<p><img src="image-5.png" alt="alt text"></p>
+<p><img src="image-8.png" alt="alt text"></p>
+<h4 id="-differences-between-net-framework-and-net-core">🔍 Differences Between .NET Framework and .NET Core </h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>.NET Framework</th>
+<th>.NET Core</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Platform</strong></td>
+<td>Windows-only</td>
+<td>Cross-platform (Windows, Linux, macOS)</td>
+</tr>
+<tr>
+<td><strong>Open Source</strong></td>
+<td>Partially</td>
+<td>Fully open-source (MIT/Apache)</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Slower in some areas</td>
+<td>High-performance, optimized for modern workloads</td>
+</tr>
+<tr>
+<td><strong>App Types</strong></td>
+<td>WinForms, WPF, <a href="http://ASP.NET">ASP.NET</a></td>
+<td>Console, <a href="http://ASP.NET">ASP.NET</a> Core, Web APIs, Microservices</td>
+</tr>
+<tr>
+<td><strong>Deployment</strong></td>
+<td>System-wide only</td>
+<td>Can be self-contained or system-wide</td>
+</tr>
+<tr>
+<td><strong>Versioning</strong></td>
+<td>Global install, version conflicts</td>
+<td>Side-by-side installation supported</td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td>Long-term support for legacy apps</td>
+<td>Active development and future-focused</td>
+</tr>
+<tr>
+<td><strong>Unified Platform</strong></td>
+<td>No</td>
+<td>Yes (from .NET 5 onward)</td>
+</tr>
+</tbody>
+</table>
 <hr>
+<h4 id="-transition-to-net-567">🌐 Transition to .NET 5/6/7+ </h4>
+<p>With the advent of <strong>.NET 5 and later</strong>, .NET Core became the <strong>main</strong> development platform, absorbing and improving upon the old framework. All new apps should target the latest .NET (now just ".NET"), unless there’s a legacy need to stick with the older Framework.</p>
+<h3 id="️-orm-mapping">🖨️ ORM Mapping </h3>
+<h4 id="what-is-orm">What is ORM? </h4>
+<p><strong>ORM (Object-Relational Mapping)</strong> is a programming technique used to convert data between incompatible systems — specifically between <strong>object-oriented code</strong> (like C# classes) and <strong>relational databases</strong> (like SQL tables).</p>
+<p>ORM lets you work with your database using high-level objects instead of raw SQL queries. It simplifies data access and boosts productivity, especially in large applications.</p>
+<hr>
+<h4 id="why-use-orm">Why Use ORM? </h4>
+<ul>
+<li>🔄 <strong>Automatic Mapping</strong>: Classes ↔ Tables, Properties ↔ Columns</li>
+<li>🔐 <strong>Type Safety</strong>: Avoid SQL injection and data conversion errors</li>
+<li>🚀 <strong>Rapid Development</strong>: Focus on code, not queries</li>
+<li>🧰 <strong>Maintainability</strong>: Centralized models are easier to update</li>
+</ul>
+<hr>
+<h4 id="example-mapping-pirate-class-to-table">Example Mapping: Pirate Class to Table </h4>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Pirate</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-int">int</span></span> Id <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Name <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Ship <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>This might map to a SQL table like:</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-TABLE">TABLE</span> Pirates 
+<span class="token punctuation">(</span>
+    Id <span class="token keyword keyword-INT">INT</span> <span class="token keyword keyword-PRIMARY">PRIMARY</span> <span class="token keyword keyword-KEY">KEY</span><span class="token punctuation">,</span>
+    Name NVARCHAR<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    Ship NVARCHAR<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>ORM frameworks (like Entity Framework) handle this conversion automatically.</p>
+<h4 id="common-orm-features">Common ORM Features </h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entity Mapping</strong></td>
+<td>Maps classes to database tables</td>
+</tr>
+<tr>
+<td><strong>Change Tracking</strong></td>
+<td>Detects changes to objects for database updates</td>
+</tr>
+<tr>
+<td><strong>Lazy Loading</strong></td>
+<td>Loads related data only when accessed</td>
+</tr>
+<tr>
+<td><strong>Relationships</strong></td>
+<td>Handles foreign keys, navigation properties</td>
+</tr>
+<tr>
+<td><strong>Migrations</strong></td>
+<td>Tracks and applies schema changes over time</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-serialization">📦 Serialization </h2>
+<p><strong>Serialization</strong> is the process of converting an object into a format that can be stored (like on disk) or transferred (like over a network). Common formats include <strong>JSON</strong>, <strong>XML</strong>, or <strong>binary</strong>.<br>
+<strong>Deserialization</strong> is the reverse — turning that format back into a usable object in your code.</p>
+<hr>
+<h3 id="-serialization-in-c">🔹 Serialization in C# </h3>
+<p>C# offers several ways to serialize data: <code>System.Text.Json</code>, <code>Newtonsoft.Json</code>, <code>XmlSerializer</code>, and the older <code>BinaryFormatter</code>.</p>
+<h4 id="-example-json-serialization-using-systemtextjson">✅ Example: JSON Serialization using <code>System.Text.Json</code> </h4>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token keyword keyword-using">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Text<span class="token punctuation">.</span>Json</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Pirate</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Name <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Ship <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Serialize</span>
+<span class="token class-name">Pirate</span> p <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Pirate</span> <span class="token punctuation">{</span> Name <span class="token operator">=</span> <span class="token string">"Zoe"</span><span class="token punctuation">,</span> Ship <span class="token operator">=</span> <span class="token string">"DSS Hootsforce"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword keyword-string">string</span></span> json <span class="token operator">=</span> JsonSerializer<span class="token punctuation">.</span><span class="token function">Serialize</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Deserialize</span>
+<span class="token class-name">Pirate</span> deserialized <span class="token operator">=</span> JsonSerializer<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Deserialize</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>Pirate<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span>json<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"Name"</span><span class="token operator">:</span><span class="token string">"Zoe"</span><span class="token punctuation">,</span>
+  <span class="token property">"Ship"</span><span class="token operator">:</span><span class="token string">"DSS Hootsforce"</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="-serialization-in-java">🔸 Serialization in Java </h3>
+<p>Java uses <code>ObjectOutputStream</code> and the <code>Serializable</code> interface for binary serialization, or libraries like Gson and Jackson for JSON.</p>
+<h4 id="-example-json-serialization-with-gson">✅ Example: JSON Serialization with Gson </h4>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">com<span class="token punctuation">.</span>google<span class="token punctuation">.</span>gson<span class="token punctuation">.</span></span><span class="token class-name">Gson</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Pirate</span> <span class="token punctuation">{</span>
+    <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token class-name">String</span> ship<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Serialize</span>
+<span class="token class-name">Gson</span> gson <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Gson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Pirate</span> p <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Pirate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+p<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"Zoe"</span><span class="token punctuation">;</span>
+p<span class="token punctuation">.</span>ship <span class="token operator">=</span> <span class="token string">"DSS Hootsforce"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> json <span class="token operator">=</span> gson<span class="token punctuation">.</span><span class="token function">toJson</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Deserialize</span>
+<span class="token class-name">Pirate</span> deserialized <span class="token operator">=</span> gson<span class="token punctuation">.</span><span class="token function">fromJson</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span> <span class="token class-name">Pirate</span><span class="token punctuation">.</span><span class="token keyword keyword-class">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="-comparison-table">🔁 Comparison Table </h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>C#</th>
+<th>Java</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Built-in JSON libs</td>
+<td><code>System.Text.Json</code>, <code>Newtonsoft.Json</code></td>
+<td>None by default (Gson, Jackson common)</td>
+</tr>
+<tr>
+<td>XML Support</td>
+<td><code>XmlSerializer</code>, <code>DataContractSerializer</code></td>
+<td>JAXB, XMLEncoder</td>
+</tr>
+<tr>
+<td>Binary Format</td>
+<td><code>BinaryFormatter</code> (obsolete)</td>
+<td><code>ObjectOutputStream</code>, <code>Serializable</code></td>
+</tr>
+<tr>
+<td>Needs Interface?</td>
+<td>No (for JSON/XML)</td>
+<td>Yes (for binary: <code>Serializable</code>)</td>
+</tr>
+<tr>
+<td>Common JSON lib</td>
+<td><code>Newtonsoft.Json</code>, <code>System.Text.Json</code></td>
+<td>Gson, Jackson</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="xml">XML </h2>
+<h3 id="markup">Markup </h3>
+<p>Markup is information added to a document to enhance its semantic content, by tagging individual parts and defining how they relate to each other.<br>
+<em>Source: <a href="http://www.wikipedia.org">http://www.wikipedia.org</a></em></p>
+<h3 id="dtd-and-xml-schema">DTD and XML Schema </h3>
+<p>Beyond the basic syntax rules of the markup language, you can require that documents conform to custom structural rules. XML first adopted the Document Type Definition (DTD) from SGML. Later, XML Schema Definitions (XSD) were introduced to provide stronger typing, namespaces, and richer validation.</p>
+<h3 id="xsl">XSL </h3>
+<p>The Extensible Stylesheet Language (XSL) consists of three main parts:</p>
+<ul>
+<li><strong>XSLT (XSL Transformations):</strong> Defines transformations from XML documents into other XML-based or text-based formats (e.g. HTML, plain text).</li>
+<li><strong>XSL-FO (Formatting Objects):</strong> A formatting vocabulary (PDF-like) for paged output.</li>
+<li><strong>XPath:</strong> A query language used by XSLT to navigate and select nodes in an XML document.</li>
+</ul>
+<h3 id="dom">DOM </h3>
+<p>The Document Object Model (DOM) is a tree-like in-memory representation of an XML (or HTML) document. The DOM API allows applications to dynamically read, modify, and navigate the document structure in a non-sequential way.</p>
+<h3 id="xml-parser">XML Parser </h3>
+<p>An XML parser is a program that checks XML documents for syntactic correctness. A <em>validating</em> XML parser additionally checks against a DTD or XML Schema.</p>
+<hr>
+<h3 id="example-xml-document">Example XML Document </h3>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">TeilnehmerS</span> <span class="token name">SYSTEM</span> <span class="token string">"teilnehmer0.dtd"</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TeilnehmerS</span> <span class="token attr-name">vorlesung</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Einführung in XML<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Teilnehmer</span> <span class="token attr-name">matrNr</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4711<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nachname</span><span class="token punctuation">&gt;</span></span>Kulator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nachname</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>vorname</span><span class="token punctuation">&gt;</span></span>Karl<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>vorname</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>semester</span><span class="token punctuation">&gt;</span></span>6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>semester</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fachb</span><span class="token punctuation">&gt;</span></span>16<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fachb</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Teilnehmer</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Teilnehmer</span> <span class="token attr-name">matrNr</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4722<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nachname</span><span class="token punctuation">&gt;</span></span>Ralwasser<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nachname</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>vorname</span><span class="token punctuation">&gt;</span></span>Mina<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>vorname</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>semester</span><span class="token punctuation">&gt;</span></span>8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>semester</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fachb</span><span class="token punctuation">&gt;</span></span>17<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fachb</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Teilnehmer</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TeilnehmerS</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The first line is the XML declaration, indicating XML version 1.0 and character encoding ISO-8859-1.</p>
+<p><code>&lt;TeilnehmerS&gt;</code> and <code>&lt;Teilnehmer&gt;</code> are structural elements; <code>&lt;nachname&gt;</code> holds text content.</p>
+<p>Attributes like <code>matrNr="..."</code> and <code>vorlesung="..."</code> provide additional information about elements.</p>
+<h3 id="xml-declaration">XML Declaration </h3>
+<p>The XML declaration (first line) should appear in every XML document. It may include:</p>
+<ul>
+<li><strong>version</strong> (e.g. <code>"1.0"</code>) — specifies the XML version.</li>
+<li><strong>encoding</strong> (e.g. <code>"UTF-8"</code>, <code>"ISO-8859-1"</code>) — specifies character encoding; defaults to UTF-8 if omitted.</li>
+<li><strong>standalone</strong> (<code>"yes"</code> or <code>"no"</code>) — indicates whether external DTDs or schemas must be loaded.<br>
+If omitted and external declarations exist, it defaults to <code>"no"</code>.</li>
+</ul>
+<h3 id="document-type-declaration-dtd">Document Type Declaration (DTD) </h3>
+<p>To use a DTD, declare it with one of these forms:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">root-element</span> <span class="token name">PUBLIC</span> <span class="token string">"name"</span> <span class="token string">"URL-of-DTD"</span><span class="token punctuation">&gt;</span></span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">root-element</span> <span class="token name">SYSTEM</span> <span class="token string">"URL-of-DTD"</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>Or embed the DTD inline:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token prolog">&lt;?xml version="1.0"?&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">root-element</span> <span class="token punctuation">[</span><span class="token internal-subset">
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">root-element</span> <span class="token attr-name">(child1,</span> <span class="token attr-name">child2*)</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">child1</span> <span class="token attr-name">(#PCDATA)</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">child2</span> <span class="token attr-name">EMPTY</span><span class="token punctuation">&gt;</span></span>
+</span><span class="token punctuation">]</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h3 id="elements">Elements </h3>
+<ul>
+<li>
+<p><strong>Element names</strong>: Can include letters, digits, hyphens (<code>-</code>), dots (<code>.</code>), and underscores (<code>_</code>).<br>
+<strong>Must not</strong> begin with a digit, hyphen, or dot.<br>
+Colons (<code>:</code>) are used to separate namespace prefixes.</p>
+</li>
+<li>
+<p><strong>Start tag</strong>:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>elementName</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li>
+<p><strong>End tag</strong>:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>elementName</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li>
+<p><strong>Empty elements</strong> (self-closing):</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>elementName</span><span class="token punctuation">/&gt;</span></span>
+</code></pre></li>
+<li>
+<p><strong>Content</strong>: Can be plain text, child elements, or a mix of both.</p>
+</li>
+<li>
+<p><strong>Character data</strong>: Special characters must be escaped using entities:</p>
+<ul>
+<li><code>&lt;</code> → <code>&amp;lt;</code></li>
+<li><code>&gt;</code> → <code>&amp;gt;</code></li>
+<li><code>&amp;</code> → <code>&amp;amp;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="attributes">Attributes </h3>
+<p>Attributes add metadata to elements. Syntax:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>elementName</span> <span class="token attr-name">attr1</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>value1<span class="token punctuation">"</span></span> <span class="token attr-name">attr2</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>value2<span class="token punctuation">'</span></span><span class="token punctuation">/&gt;</span></span>
+</code></pre><ul>
+<li>Must use either single or double quotes.</li>
+<li>Provide identifiers, properties, or configuration for the element.</li>
+</ul>
+<h3 id="entities">Entities </h3>
+<ul>
+<li>Like macros, <strong>entities</strong> let you assign identifiers to common strings.</li>
+<li><strong>Predefined XML entities</strong> include:
+<ul>
+<li><code>&amp;lt;</code> for <code>&lt;</code></li>
+<li><code>&amp;gt;</code> for <code>&gt;</code></li>
+<li><code>&amp;amp;</code> for <code>&amp;</code></li>
+<li><code>&amp;quot;</code> for <code>"</code></li>
+<li><code>&amp;apos;</code> for <code>'</code></li>
+</ul>
+</li>
+<li>Custom entities can be defined in DTDs.</li>
+</ul>
+<hr>
+<h3 id="comments">Comments </h3>
+<ul>
+<li>Comments are ignored by parsers and take this form:<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token comment">&lt;!-- This is a comment --&gt;</span>
+</code></pre></li>
+</ul>
+<hr>
+<h3 id="namespaces">Namespaces </h3>
+<ul>
+<li>Namespaces allow mixing elements from different vocabularies (e.g., MathML in HTML).</li>
+<li>Declare a namespace with <code>xmlns</code>:<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bestellung</span>
+  <span class="token attr-name"><span class="token namespace">xmlns:</span>produkt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://example.com/XML/produkt<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">xmlns:</span>kunde</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://example.com/XML/kunde<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">produkt:</span>nummer</span><span class="token punctuation">&gt;</span></span>p49393<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">produkt:</span>nummer</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">kunde:</span>name</span><span class="token punctuation">&gt;</span></span>Meier, Fritz<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">kunde:</span>name</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bestellung</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li>Elements in a namespace use the <code>prefix:localName</code> syntax.</li>
+<li>The <code>xmlns:prefix="URI"</code> attribute binds the prefix to a namespace URI.</li>
+</ul>
+<hr>
+<h3 id="well-formed-vs-valid">Well-Formed vs. Valid </h3>
+<ul>
+<li><strong>Well-formed</strong>: The document follows XML syntax rules (properly nested tags, single root element, valid characters, etc.).</li>
+<li><strong>Valid</strong>: A well-formed document that also conforms to a DTD or XML Schema.</li>
+<li>A <strong>validating parser</strong> checks both well-formedness and schema/DTD rules.</li>
+<li>A <strong>non-validating parser</strong> checks only well-formedness.</li>
+<li>XML documents that are <strong>not well-formed</strong> cannot be processed by most parsers.</li>
+</ul>
+<h3 id="dtd--document-type-definition">DTD – Document Type Definition </h3>
+<p>In einer DTD wird mit Hilfe einer erweiterten Backus-Naur-Form beschrieben, wie der Dokumentkörper eines XML-Dokuments aufgebaut sein muss – also welche Tag-Namen erlaubt sind, welche Elemente wie geschachtelt sein dürfen, welche Elemente welche Attribute haben dürfen usw.</p>
+<hr>
+<h4 id="elemente">Elemente </h4>
+<p>Das entscheidende Strukturprinzip in XML bilden die Elemente. Ein Element wird über seinen Namen identifiziert und hat einen definierten Inhalt:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">Name</span> <span class="token attr-name">Inhalt</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>Der Inhalt eines Elements kann aus einer Kombination von anderen Elementen und/oder Text bestehen oder leer sein. Mögliche Kombinationen:</p>
+<ul>
+<li><strong>Sequenz</strong><pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">Nachricht</span> <span class="token attr-name">(Absender,</span> <span class="token attr-name">Empfänger,</span> <span class="token attr-name">Nachrichtentext)</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li><strong>Option</strong><pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">Nachrichtentext</span> <span class="token attr-name">(Betreff?,</span> <span class="token attr-name">Textkörper)</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li><strong>Alternative</strong><pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">Block</span> <span class="token attr-name">(PARA</span> <span class="token attr-name">|</span> <span class="token attr-name">TABLE</span> <span class="token attr-name">|</span> <span class="token attr-name">IMG)</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li><strong>Iteration</strong><pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">Liste</span> <span class="token attr-name">(Name,</span> <span class="token attr-name">Item+)</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">Bus</span> <span class="token attr-name">(Fahrgast*)</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li><strong>Text-Inhalt</strong><pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">Name</span> <span class="token attr-name">(#PCDATA)</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li><strong>Gemischter Inhalt</strong><pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">PARA</span> <span class="token attr-name">(#PCDATA</span> <span class="token attr-name">|</span> <span class="token attr-name">I</span> <span class="token attr-name">|</span> <span class="token attr-name">B</span> <span class="token attr-name">|</span> <span class="token attr-name">A)*</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li><strong>Beliebiger Inhalt</strong><pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">Divers</span> <span class="token attr-name">ANY</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li><strong>Leere Elemente</strong><pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">BR</span> <span class="token attr-name">EMPTY</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+</ul>
+<hr>
+<h4 id="attribute">Attribute </h4>
+<p>Neben Inhalten können Elemente mit Attributen versehen werden. In der DTD definiert man Attributlisten so:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ATTLIST</span> <span class="token attr-name">Bus</span>
+    <span class="token attr-name">Fahrzeugtyp</span> <span class="token attr-name">CDATA</span> <span class="token attr-name">#IMPLIED</span>
+    <span class="token attr-name">Kennzeichen</span>  <span class="token attr-name">CDATA</span> <span class="token attr-name">#REQUIRED</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>Beispiel mit weiterem Element:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ATTLIST</span> <span class="token attr-name">Fahrgast</span>
+    <span class="token attr-name">id</span>          <span class="token attr-name">ID</span>     <span class="token attr-name">#REQUIRED</span>
+    <span class="token attr-name">stammkunde</span>  <span class="token attr-name">(ja</span> <span class="token attr-name">|</span> <span class="token attr-name">nein)</span> <span class="token attr-name">"nein"</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul>
+<li><strong>ID-Attribute</strong>: Müssen eindeutig sein – keine zwei Fahrgast-Elemente dürfen dieselbe <code>id</code> haben.</li>
+<li><strong>CDATA vs. PCDATA</strong>:
+<ul>
+<li><code>CDATA</code> (character data) wird vom Parser <strong>nicht</strong> weiter analysiert (Markup-Zeichen in Attributwerten werden ignoriert).</li>
+<li><code>#PCDATA</code> (parsable character data) wird im Element-Inhalt geparst und kann Entities enthalten.</li>
+</ul>
+</li>
+</ul>
+<h3 id="xml-schema">XML Schema </h3>
+<p>Die Nachteile von DTDs sind:</p>
+<ul>
+<li>Keine Unterstützung von Namespaces</li>
+<li>Sehr begrenzte Datentypen (z. B. keine Zahl-, Datumstypen)</li>
+<li>DTDs sind selbst keine XML-Dokumente</li>
+</ul>
+<p><strong>XML Schema</strong> (XSD) ist eine XML-basierte Sprache des W3C, die DTDs ablösen soll. Da XSD-Dokumente selbst XML sind, können sie mit denselben Werkzeugen verarbeitet werden (Parser, DOM, etc.).</p>
+<hr>
+<h4 id="grundlagen">Grundlagen </h4>
+<p>XSD-Dateien haben üblicherweise die Endung <code>.xsd</code>. Ein einfaches Schema sieht so aus:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xsd:</span>schema</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>xsd</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xsd:</span>annotation</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xsd:</span>documentation</span> <span class="token attr-name"><span class="token namespace">xml:</span>lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>de-DE<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      Dokumentation über das Schema
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">xsd:</span>documentation</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">xsd:</span>annotation</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xsd:</span>element</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>x<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xType<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+  <span class="token comment">&lt;!-- weitere Definitionen hier --&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">xsd:</span>schema</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul>
+<li><code>&lt;xsd:annotation&gt;</code> ist optional und enthält allgemeine Informationen zum Schema.</li>
+<li>Der Namespace <code>http://www.w3.org/2001/XMLSchema</code> ist zwingend für alle XSD-Elemente.</li>
+</ul>
+<hr>
+<h4 id="schemadateien-referenzieren">Schemadateien referenzieren </h4>
+<h5 id="mit-namespaces">Mit Namespaces </h5>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token prolog">&lt;?xml version="1.0"?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>person</span> 
+  <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.mysite.com<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.mysite.com person.xsd<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fullname</span><span class="token punctuation">&gt;</span></span>Andreas Brachinger<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fullname</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tel</span><span class="token punctuation">&gt;</span></span>+43 7412 52575513<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tel</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>person</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul>
+<li><code>xmlns</code> definiert den Standard-Namespace der Dokumentelemente.</li>
+<li><code>xmlns:xsi</code> bindet das Schema-Instance-Namespace.</li>
+<li><code>xsi:schemaLocation</code> ordnet Namespace und Schema-Datei-Pfad zu.</li>
+</ul>
+<h5 id="ohne-namespaces">Ohne Namespaces </h5>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token prolog">&lt;?xml version="1.0"?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>person</span> 
+  <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">xsi:</span>noNamespaceSchemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>person.xsd<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fullname</span><span class="token punctuation">&gt;</span></span>Andreas Brachinger<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fullname</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tel</span><span class="token punctuation">&gt;</span></span>+43 7412 52575513<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tel</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>person</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul>
+<li><code>xsi:noNamespaceSchemaLocation</code> wird verwendet, wenn kein Namespace definiert ist.</li>
+</ul>
+<hr>
+<h3 id="vergleich-dtd-vs-xml-schema">Vergleich DTD vs. XML Schema </h3>
+<p><strong>DTD-Definition:</strong></p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">note</span>     <span class="token attr-name">(to,</span> <span class="token attr-name">from,</span> <span class="token attr-name">heading,</span> <span class="token attr-name">body)</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">to</span>       <span class="token attr-name">(#PCDATA)</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">from</span>     <span class="token attr-name">(#PCDATA)</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">heading</span>  <span class="token attr-name">(#PCDATA)</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ELEMENT</span> <span class="token attr-name">body</span>     <span class="token attr-name">(#PCDATA)</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p><strong>XSD-Definition:</strong></p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token prolog">&lt;?xml version="1.0"?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xs:</span>schema</span> 
+    <span class="token attr-name"><span class="token namespace">xmlns:</span>xs</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema<span class="token punctuation">"</span></span>
+    <span class="token attr-name">targetNamespace</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3schools.com<span class="token punctuation">"</span></span>
+    <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3schools.com<span class="token punctuation">"</span></span>
+    <span class="token attr-name">elementFormDefault</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>qualified<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xs:</span>element</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xs:</span>complexType</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xs:</span>sequence</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xs:</span>element</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>to<span class="token punctuation">"</span></span>      <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xs:string<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xs:</span>element</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>from<span class="token punctuation">"</span></span>    <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xs:string<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xs:</span>element</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>heading<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xs:string<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">xs:</span>element</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>body<span class="token punctuation">"</span></span>    <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xs:string<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">xs:</span>sequence</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">xs:</span>complexType</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">xs:</span>element</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">xs:</span>schema</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p><strong>Erklärung:</strong></p>
+<ul>
+<li><code>xmlns:xs="http://www.w3.org/2001/XMLSchema"</code>: alle XSD-Elemente stammen aus diesem Namespace.</li>
+<li><code>targetNamespace="http://www.w3schools.com"</code>: Elemente im Schema gehören zu diesem Namespace.</li>
+<li><code>elementFormDefault="qualified"</code>: lokal definierte Elemente müssen das Schema-Namespace-Präfix verwenden (qualified).</li>
+</ul>
+<hr>
+<p><strong>Weitere Informationen und Beispiele</strong> findest du unter:<br>
+<a href="https://www.w3schools.com/xml/schema_intro.asp">https://www.w3schools.com/xml/schema_intro.asp</a></p>
+<hr>
+<h2 id="android-persistence">Android Persistence </h2>
+<p><a href="../Gestaltung%20von%20Web-%20und%20Mobilen%20Anwendungen/Gestaltung%20von%20Web-%20und%20Mobilen%20Anwendungen.html#databases">View This Page</a></p>
 <p style="page-break-before: always;"></p>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
