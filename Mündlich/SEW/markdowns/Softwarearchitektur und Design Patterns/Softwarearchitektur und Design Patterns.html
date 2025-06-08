@@ -84,9 +84,26 @@ h4::before {
 <ul>
 <li><a href="#-design-patterns">🧠 Design Patterns</a>
 <ul>
-<li><a href="#%EF%B8%8F-c">⚙️ C#</a></li>
-<li><a href="#-java">☕ Java</a></li>
-<li><a href="#-android">📱 Android</a></li>
+<li><a href="#why-design-patterns">Why Design Patterns?</a></li>
+<li><a href="#gof--gang-of-four">GoF – Gang of Four</a></li>
+<li><a href="#structural-patterns">Structural Patterns</a>
+<ul>
+<li><a href="#composite-pattern">Composite Pattern</a>
+<ul>
+<li><a href="#application">Application</a></li>
+<li><a href="#composite-pattern--unit-test-example">Composite Pattern – Unit Test Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#design-pattern">Design Pattern</a>
+<ul>
+<li><a href="#singleton">Singleton</a></li>
+</ul>
+</li>
+<li><a href="#%EF%B8%8F-c--commonly-used-design-patterns">⚙️ C# – Commonly Used Design Patterns</a></li>
+<li><a href="#-java--commonly-used-design-patterns">☕ Java – Commonly Used Design Patterns</a></li>
+<li><a href="#-android--commonly-used-design-patterns">📱 Android – Commonly Used Design Patterns</a></li>
 </ul>
 </li>
 <li><a href="#-mvvm-wpf">🧭 MVVM WPF</a>
@@ -98,19 +115,210 @@ h4::before {
 <li><a href="#example">Example</a></li>
 </ul>
 </li>
-<li><a href="#%EF%B8%8F-mvc">🏗️ MVC</a></li>
-<li><a href="#-android-1">📱 Android</a></li>
 <li><a href="#%EF%B8%8F-3-schichten-architektur">🏗️ 3 Schichten Architektur</a></li>
 </ul>
 </li>
 </ul>
 <h1 id="️-softwarearchitektur-und-design-patterns">🏛️ Softwarearchitektur und Design Patterns </h1>
 <h2 id="-design-patterns">🧠 Design Patterns </h2>
+<h3 id="why-design-patterns">Why Design Patterns? </h3>
+<ul>
+<li>Recurring design problems</li>
+<li>Proven solution templates</li>
+<li>Improve/simplify communication between developers</li>
+<li>Elements of reusable object-oriented software</li>
+</ul>
+<p><strong>Disadvantage:</strong></p>
+<ul>
+<li>“Fixation” on design patterns</li>
+</ul>
 <hr>
-<h3 id="️-c">⚙️ C# </h3>
-<h3 id="-java">☕ Java </h3>
-<h3 id="-android">📱 Android </h3>
+<h3 id="gof--gang-of-four">GoF – Gang of Four </h3>
+<ul>
+<li><em>Design Patterns: Elements of Reusable Object-Oriented Software</em> (book)</li>
+<li>Authors: Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides</li>
+<li>Patterns are grouped into:
+<ul>
+<li>Creational patterns</li>
+<li>Structural patterns</li>
+<li>Behavioral patterns</li>
+</ul>
+</li>
+</ul>
 <hr>
+<h3 id="structural-patterns">Structural Patterns </h3>
+<h4 id="composite-pattern">Composite Pattern </h4>
+<h5 id="application">Application </h5>
+<ul>
+<li>Mapping hierarchies</li>
+</ul>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Component
+  ├── Leaf
+  └── Composite
+      └── * (multiple children)
+</code></pre><p><img src="image-19.png" alt="alt text"></p>
+<hr>
+<h5 id="composite-pattern--unit-test-example">Composite Pattern – Unit Test Example </h5>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;&lt;interface&gt;&gt;
+Test
+ ├── TestCase
+ └── TestSuite
+      └── 1..n tests
+</code></pre><p><img src="image-20.png" alt="alt text"></p>
+<hr>
+<h3 id="design-pattern">Design Pattern </h3>
+<h4 id="singleton">Singleton </h4>
+<ul>
+<li>Creates and manages exactly <strong>one</strong> instance</li>
+<li>Provides global access via <code>getInstance()</code></li>
+</ul>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Singleton
+- Singleton : Singleton
+- Singleton()
++ getInstance() : Singleton
+</code></pre><h3 id="️-c--commonly-used-design-patterns">⚙️ C# – Commonly Used Design Patterns </h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Singleton</td>
+<td>Global logging, configuration access, dependency injection containers</td>
+</tr>
+<tr>
+<td>Factory</td>
+<td>Creation of objects without exposing instantiation logic</td>
+</tr>
+<tr>
+<td>Strategy</td>
+<td>Swap out algorithms (e.g., different sorting or validation strategies)</td>
+</tr>
+<tr>
+<td>Observer</td>
+<td>Event-driven systems, UI updates (e.g., INotifyPropertyChanged)</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>Data access layer abstraction</td>
+</tr>
+<tr>
+<td>Dependency Injection</td>
+<td>Used heavily with <a href="http://ASP.NET">ASP.NET</a> Core and Unity container</td>
+</tr>
+<tr>
+<td>Adapter</td>
+<td>Wrapping legacy interfaces</td>
+</tr>
+<tr>
+<td>Mediator</td>
+<td>Event messaging (e.g., with MediatR in <a href="http://ASP.NET">ASP.NET</a> Core)</td>
+</tr>
+<tr>
+<td>Decorator</td>
+<td>Extending functionality of services (e.g., adding logging)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-java--commonly-used-design-patterns">☕ Java – Commonly Used Design Patterns </h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Singleton</td>
+<td>Configuration managers, connection pools</td>
+</tr>
+<tr>
+<td>Factory / Abstract Factory</td>
+<td>For UI toolkit object creation (Swing, JavaFX), plugin loaders</td>
+</tr>
+<tr>
+<td>Builder</td>
+<td>Building complex objects (like HTTP requests or documents)</td>
+</tr>
+<tr>
+<td>Observer</td>
+<td>UI frameworks (Swing, JavaFX), event systems</td>
+</tr>
+<tr>
+<td>DAO (Data Access Object)</td>
+<td>Separating business logic from data persistence</td>
+</tr>
+<tr>
+<td>MVC (Model-View-Controller)</td>
+<td>Used in Spring MVC, JavaFX architecture</td>
+</tr>
+<tr>
+<td>Command</td>
+<td>Undo operations, GUI actions</td>
+</tr>
+<tr>
+<td>Proxy</td>
+<td>Lazy loading, access control</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-android--commonly-used-design-patterns">📱 Android – Commonly Used Design Patterns </h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Singleton</td>
+<td>Application-wide services (e.g., Retrofit, Room, App context)</td>
+</tr>
+<tr>
+<td>MVP / MVVM</td>
+<td>Used in UI architecture (Jetpack libraries use MVVM heavily)</td>
+</tr>
+<tr>
+<td>Observer (LiveData)</td>
+<td>React to lifecycle-aware data changes</td>
+</tr>
+<tr>
+<td>Factory</td>
+<td>ViewModelProviders, RecyclerView Adapter creation</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>Abstracting data sources (Room + Retrofit + Cache)</td>
+</tr>
+<tr>
+<td>Command</td>
+<td>Button click actions, animations</td>
+</tr>
+<tr>
+<td>Builder</td>
+<td>AlertDialog, Retrofit requests</td>
+</tr>
+<tr>
+<td>Decorator</td>
+<td>View modifications, or extending functionality of UI components</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>⭐ <strong>Note:</strong> Many Android apps use a combination of <strong>MVVM + Repository + Singleton + Observer</strong>, especially when using Jetpack, Room, and LiveData.</p>
+<pre data-role="codeBlock" data-info="kotlin" class="language-kotlin kotlin"><code><span class="token comment">// Example of MVVM + Repository pattern in Android (Kotlin)</span>
+<span class="token keyword keyword-class">class</span> <span class="token function">UserViewModel</span><span class="token punctuation">(</span><span class="token keyword keyword-private">private</span> <span class="token keyword keyword-val">val</span> repo<span class="token operator">:</span> UserRepository<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">ViewModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-val">val</span> users<span class="token operator">:</span> LiveData<span class="token operator">&lt;</span>List<span class="token operator">&lt;</span>User<span class="token operator">&gt;</span><span class="token operator">&gt;</span> <span class="token operator">=</span> repo<span class="token punctuation">.</span><span class="token function">getAllUsers</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
 <h2 id="-mvvm-wpf">🧭 MVVM WPF </h2>
 <p>WPF is kinda cringe ngl</p>
 <hr>
@@ -158,11 +366,6 @@ h4::before {
 <p><img src="image-2.png" alt="alt text"></p>
 <p><img src="image-3.png" alt="alt text"></p>
 <p><img src="image-4.png" alt="alt text"></p>
-<hr>
-<h2 id="️-mvc">🏗️ MVC </h2>
-<hr>
-<hr>
-<h2 id="-android-1">📱 Android </h2>
 <hr>
 <h2 id="️-3-schichten-architektur">🏗️ 3 Schichten Architektur </h2>
 <p><img src="image-10.png" alt="alt text"></p>

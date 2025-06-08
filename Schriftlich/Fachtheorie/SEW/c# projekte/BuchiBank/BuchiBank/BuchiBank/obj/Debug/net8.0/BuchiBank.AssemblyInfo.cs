@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BuchiBank")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+254513ad89c3687734b613cd158757dacb8cc4e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cdc4ecefc333c33f62efe8de569828e923ccb2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BuchiBank")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BuchiBank")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

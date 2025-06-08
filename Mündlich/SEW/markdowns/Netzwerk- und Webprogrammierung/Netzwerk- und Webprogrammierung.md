@@ -101,9 +101,23 @@ h4::before {
         - [Raw Socket Client Example](#raw-socket-client-example)
   - [🧵 Threads](#-threads)
     - [🧠 Threading in C#](#-threading-in-c)
-      - [🔄 Synchronisation](#-synchronisation)
+      - [🔄 Synchronization](#-synchronization)
       - [⏳ Tasks](#-tasks)
     - [☕ Threading in Java](#-threading-in-java)
+      - [BankAccount with synchronized](#bankaccount-with-synchronized)
+      - [Worker Runnables](#worker-runnables)
+      - [Orchestrating in `main`](#orchestrating-in-main)
+    - [⚙️ Thread Lifecycle](#️-thread-lifecycle)
+    - [🔀 Concurrency vs. Parallelism](#-concurrency-vs-parallelism)
+    - [🛡️ Thread Safety](#️-thread-safety)
+    - [🔒 Synchronization Primitives](#-synchronization-primitives)
+    - [🏊 Thread Pools \& Executors](#-thread-pools--executors)
+    - [⏳ Asynchronous Programming](#-asynchronous-programming)
+    - [📈 Parallel Libraries](#-parallel-libraries)
+    - [💡 Best Practices](#-best-practices)
+    - [⚠️ Common Pitfalls](#️-common-pitfalls)
+    - [🧰 Diagnostics \& Profiling](#-diagnostics--profiling)
+    - [🧵 Threads (Hofer)](#-threads-hofer)
 
 
 # 🌐 Netzwerk und Webprogrammierung
@@ -882,15 +896,292 @@ class SocketClient
 ---
 
 ## 🧵 Threads
----
 
 ### 🧠 Threading in C#
 
-#### 🔄 Synchronisation
+In C#, you can use both low-level `Thread` or the higher-level `Task`/async model. In our **BuchiBank** example, we leverage `async Task` combined with locks for safe concurrency.
+
+#### 🔄 Synchronization
+
+We use a private lock object to guard critical sections in `BankAccount`:
+
+```csharp
+public class BankAccount
+{
+    private readonly object _lock = new();
+
+    public async Task Deposit(double amount)
+    {
+        await Task.Run(() =>
+        {
+            lock (_lock)
+            {
+                Balance += amount;
+                TransactionHistory.Add(
+                    new Transaction(DateTime.UtcNow, amount, TransactionType.Incoming));
+            }
+        });
+    }
+
+    public async Task<bool> Withdraw(double amount)
+    {
+        return await Task.Run(() =>
+        {
+            lock (_lock)
+            {
+                if (amount > Balance)
+                {
+                    return false;
+                }
+
+                Balance -= amount;
+                TransactionHistory.Add(
+                    new Transaction(DateTime.UtcNow, amount, TransactionType.Outgoing));
+                return true;
+            }
+        });
+    }
+}
+```
+
+- `lock (_lock)` ensures only one thread mutates `Balance` or `TransactionHistory` at a time.
+- Without it, two workers could interleave and corrupt the account state.
 
 #### ⏳ Tasks
 
+Workers inherit from an abstract `Worker` and run repeatedly via `Task`:
+
+```csharp
+public abstract class Worker
+{
+    public BankAccount Account { get; }
+    public int WaitTime { get; }
+
+    public Worker(BankAccount account, int waitTime)
+    {
+        Account   = account;
+        WaitTime  = waitTime;
+    }
+
+    public async Task RunForDurationAsync(int seconds)
+    {
+        var stopwatch = Stopwatch.StartNew();
+
+        while (stopwatch.Elapsed.TotalSeconds < seconds)
+        {
+            await Action();
+            await Task.Delay(WaitTime * 1000);
+        }
+    }
+
+    public abstract Task Action();
+}
+```
+
+- `RunForDurationAsync` spins until the elapsed time exceeds the target.
+- `Action()` is implemented by `Depositer` and `Withdrawer`, using `await Account.Deposit(...)` or `await Account.Withdraw(...)`.
+- `Task.WhenAll(...)` in `Main` runs both workers concurrently and waits for them to finish.
+
+---
+
 ### ☕ Threading in Java
+
+In Java you can use `Thread` or `ExecutorService`. Here’s an analogous bank-account example with `synchronized` methods and `Runnable` workers.
+
+#### BankAccount with synchronized
+
+```java
+public class BankAccount
+{
+    private double balance = 0.0;
+
+    public synchronized void deposit(double amount)
+    {
+        balance += amount;
+        System.out.println("Deposited " + amount + ", balance is now " + balance);
+    }
+
+    public synchronized boolean withdraw(double amount)
+    {
+        if (amount > balance)
+        {
+            System.out.println("Withdraw failed: " + amount + ", balance is " + balance);
+            return false;
+        }
+
+        balance -= amount;
+        System.out.println("Withdrew " + amount + ", balance is now " + balance);
+        return true;
+    }
+
+    public double getBalance()
+    {
+        return balance;
+    }
+}
+```
+
+#### Worker Runnables
+
+```java
+public class Depositer implements Runnable
+{
+    private final BankAccount account;
+    private final int waitMillis;
+
+    public Depositer(BankAccount account, int waitMillis)
+    {
+        this.account    = account;
+        this.waitMillis = waitMillis;
+    }
+
+    @Override
+    public void run()
+    {
+        long end = System.currentTimeMillis() + 10_000;
+        while (System.currentTimeMillis() < end)
+        {
+            double amount = Math.random() * 100;
+            account.deposit(amount);
+            try
+            {
+                Thread.sleep(waitMillis);
+            }
+            catch (InterruptedException e)
+            {
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
+}
+
+public class Withdrawer implements Runnable
+{
+    private final BankAccount account;
+    private final int waitMillis;
+
+    public Withdrawer(BankAccount account, int waitMillis)
+    {
+        this.account    = account;
+        this.waitMillis = waitMillis;
+    }
+
+    @Override
+    public void run()
+    {
+        long end = System.currentTimeMillis() + 10_000;
+        while (System.currentTimeMillis() < end)
+        {
+            double amount = Math.random() * 100;
+            account.withdraw(amount);
+            try
+            {
+                Thread.sleep(waitMillis);
+            }
+            catch (InterruptedException e)
+            {
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
+}
+```
+
+#### Orchestrating in `main`
+
+```java
+public class Main
+{
+    public static void main(String[] args)
+    {
+        BankAccount account = new BankAccount();
+
+        Thread t1 = new Thread(new Depositer(account, 2000));
+        Thread t2 = new Thread(new Withdrawer(account, 1000));
+
+        t1.start();
+        t2.start();
+
+        try
+        {
+            t1.join();
+            t2.join();
+        }
+        catch (InterruptedException e)
+        {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.println("Final balance: " + account.getBalance());
+    }
+}
+```
+
+- `synchronized` ensures only one thread can enter the deposit/withdraw method at a time.
+- `Thread.sleep(...)` simulates work delay.
+- `join()` waits for both threads to complete before printing the final balance.
+
+
+### ⚙️ Thread Lifecycle
+- States: New, Runnable, Running, Blocked/Waiting, Terminated
+
+### 🔀 Concurrency vs. Parallelism
+- Concurrency: interleaving tasks on one or more cores  
+- Parallelism: truly simultaneous execution on multiple cores
+
+### 🛡️ Thread Safety
+- Race conditions, deadlocks, livelocks  
+- Immutability and reentrancy  
+
+### 🔒 Synchronization Primitives
+- Locks (`lock`/`Monitor`, `synchronized`)  
+- Mutexes, Semaphores, ReaderWriterLock  
+- `volatile`, `Interlocked` operations
+
+### 🏊 Thread Pools & Executors
+- .NET `ThreadPool` / `TaskScheduler`  
+- Java `ExecutorService`, `ForkJoinPool`
+
+### ⏳ Asynchronous Programming
+- `async`/`await` (C#) vs. `CompletableFuture` / `Future` (Java)  
+- Event-driven callbacks, reactive streams
+
+### 📈 Parallel Libraries
+- .NET Parallel LINQ (PLINQ), `Parallel.For`  
+- Java `Stream.parallel()`, `ForkJoinTask`
+
+### 💡 Best Practices
+- Keep tasks small and stateless  
+- Prefer high-level abstractions (`Task`/`ExecutorService`)  
+- Always clean up threads/tasks
+
+### ⚠️ Common Pitfalls
+- Thread starvation, priority inversion  
+- Blocking in async code  
+- Over-threading vs. under-threading
+
+### 🧰 Diagnostics & Profiling
+- .NET `dotnet-trace`, Visual Studio Concurrency Visualizer  
+- Java Flight Recorder, Thread Dump analysis
+
+### 🧵 Threads (Hofer)
+
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
+![alt text](image-11.png)
+![alt text](image-12.png)
+![alt text](image-13.png)
+![alt text](image-14.png)
+![alt text](image-15.png)
+![alt text](image-16.png)
+![alt text](image-17.png)
+
 
 ---
 

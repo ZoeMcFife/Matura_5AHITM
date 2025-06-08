@@ -57,29 +57,155 @@ h4::before {
 - [Table of Contents](#table-of-contents)
 - [🏛️ Softwarearchitektur und Design Patterns](#️-softwarearchitektur-und-design-patterns)
   - [🧠 Design Patterns](#-design-patterns)
-    - [⚙️ C#](#️-c)
-    - [☕ Java](#-java)
-    - [📱 Android](#-android)
+    - [Why Design Patterns?](#why-design-patterns)
+    - [GoF – Gang of Four](#gof--gang-of-four)
+    - [Structural Patterns](#structural-patterns)
+      - [Composite Pattern](#composite-pattern)
+        - [Application](#application)
+        - [Composite Pattern – Unit Test Example](#composite-pattern--unit-test-example)
+    - [Design Pattern](#design-pattern)
+      - [Singleton](#singleton)
+    - [⚙️ C# – Commonly Used Design Patterns](#️-c--commonly-used-design-patterns)
+    - [☕ Java – Commonly Used Design Patterns](#-java--commonly-used-design-patterns)
+    - [📱 Android – Commonly Used Design Patterns](#-android--commonly-used-design-patterns)
   - [🧭 MVVM WPF](#-mvvm-wpf)
     - [MVVM](#mvvm)
     - [View](#view)
     - [ViewModel](#viewmodel)
     - [Model](#model)
     - [Example](#example)
-  - [🏗️ MVC](#️-mvc)
-  - [📱 Android](#-android-1)
   - [🏗️ 3 Schichten Architektur](#️-3-schichten-architektur)
 
 # 🏛️ Softwarearchitektur und Design Patterns
 
 ## 🧠 Design Patterns
+
+### Why Design Patterns?
+
+- Recurring design problems  
+- Proven solution templates  
+- Improve/simplify communication between developers  
+- Elements of reusable object-oriented software  
+
+**Disadvantage:**  
+- “Fixation” on design patterns
+
 ---
 
-### ⚙️ C#
+### GoF – Gang of Four
 
-### ☕ Java
+- *Design Patterns: Elements of Reusable Object-Oriented Software* (book)  
+- Authors: Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides  
+- Patterns are grouped into:  
+  - Creational patterns  
+  - Structural patterns  
+  - Behavioral patterns
 
-### 📱 Android
+---
+
+### Structural Patterns
+
+#### Composite Pattern
+
+##### Application  
+- Mapping hierarchies
+
+```
+Component
+  ├── Leaf
+  └── Composite
+      └── * (multiple children)
+```
+
+![alt text](image-19.png)
+
+---
+
+##### Composite Pattern – Unit Test Example
+
+```
+<<interface>>
+Test
+ ├── TestCase
+ └── TestSuite
+      └── 1..n tests
+```
+
+![alt text](image-20.png)
+
+---
+
+### Design Pattern
+
+#### Singleton
+
+- Creates and manages exactly **one** instance  
+- Provides global access via `getInstance()`
+
+```
+Singleton
+- Singleton : Singleton
+- Singleton()
++ getInstance() : Singleton
+```
+
+
+### ⚙️ C# – Commonly Used Design Patterns
+
+| Pattern           | Use Case                                                                 |
+|-------------------|--------------------------------------------------------------------------|
+| Singleton         | Global logging, configuration access, dependency injection containers   |
+| Factory           | Creation of objects without exposing instantiation logic                |
+| Strategy          | Swap out algorithms (e.g., different sorting or validation strategies)  |
+| Observer          | Event-driven systems, UI updates (e.g., INotifyPropertyChanged)         |
+| Repository        | Data access layer abstraction                                            |
+| Dependency Injection | Used heavily with ASP.NET Core and Unity container                  |
+| Adapter           | Wrapping legacy interfaces                                               |
+| Mediator          | Event messaging (e.g., with MediatR in ASP.NET Core)                    |
+| Decorator         | Extending functionality of services (e.g., adding logging)              |
+
+---
+
+### ☕ Java – Commonly Used Design Patterns
+
+| Pattern           | Use Case                                                                 |
+|-------------------|--------------------------------------------------------------------------|
+| Singleton         | Configuration managers, connection pools                                |
+| Factory / Abstract Factory | For UI toolkit object creation (Swing, JavaFX), plugin loaders |
+| Builder           | Building complex objects (like HTTP requests or documents)              |
+| Observer          | UI frameworks (Swing, JavaFX), event systems                            |
+| DAO (Data Access Object) | Separating business logic from data persistence                  |
+| MVC (Model-View-Controller) | Used in Spring MVC, JavaFX architecture                       |
+| Command           | Undo operations, GUI actions                                             |
+| Proxy             | Lazy loading, access control                                             |
+
+---
+
+### 📱 Android – Commonly Used Design Patterns
+
+| Pattern           | Use Case                                                                 |
+|-------------------|--------------------------------------------------------------------------|
+| Singleton         | Application-wide services (e.g., Retrofit, Room, App context)            |
+| MVP / MVVM        | Used in UI architecture (Jetpack libraries use MVVM heavily)             |
+| Observer (LiveData) | React to lifecycle-aware data changes                                 |
+| Factory           | ViewModelProviders, RecyclerView Adapter creation                        |
+| Repository        | Abstracting data sources (Room + Retrofit + Cache)                       |
+| Command           | Button click actions, animations                                         |
+| Builder           | AlertDialog, Retrofit requests                                           |
+| Decorator         | View modifications, or extending functionality of UI components          |
+
+---
+
+⭐ **Note:** Many Android apps use a combination of **MVVM + Repository + Singleton + Observer**, especially when using Jetpack, Room, and LiveData.
+
+```kotlin
+// Example of MVVM + Repository pattern in Android (Kotlin)
+class UserViewModel(private val repo: UserRepository) : ViewModel()
+{
+    val users: LiveData<List<User>> = repo.getAllUsers()
+}
+```
+
 
 ---
 
@@ -134,13 +260,6 @@ WPF is kinda cringe ngl
 
 ---
 
-## 🏗️ MVC
----
-
----
-
-## 📱 Android
----
 
 ## 🏗️ 3 Schichten Architektur
 
